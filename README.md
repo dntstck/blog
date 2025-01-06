@@ -9,6 +9,8 @@
 <br><br>
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W, Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev. 
 <br><br>
+My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Home Development network, using CM5 as the central node & a Pi Zero2 as a data forwarder.
+<br><br>
 Please feel free to take a look around, or click on any relevant badges that interest you.</div><br>
 <div align="center"><a href="https://github.com/dntstck/blog/raspberrypi" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Raspberry%20Pi-8a3f8f?&logo=Raspberry-Pi&logoColor=C51A4A"></a></div>
  <div align="center"><a href="https://github.com/dntstck/blog/microcontrollers" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Microcontrollers-007A33?&logo=Arduino&logoColor=FE7A16"></a></div>
