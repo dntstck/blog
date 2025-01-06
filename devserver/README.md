@@ -6,12 +6,10 @@
 <div align="center"><a href="https://github.com/dntstck/blog/" target="_blank"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/cm5" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-CM5-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/picosystem" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/osnetworking" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-OS%20&%20Networking-151515?&logo=freebsd&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/thoughts" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Thoughts-151515?&logo=linux&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/tree/master/misc" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div><hr>
 <!-- Main --> 
 <div align="center"><a href="https://github.com/dntstck/blog/devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div>
+<br>
+<p align="center">Home Development Network with Raspberry Pi Compute Module 5<p>
 
-**Project Overview**
-
-**Title**: Home Development Network with Raspberry Pi Compute Module 5
-
-**Objective**: To create a Dev Server, or Home Development Network, utilizing Raspberry Pi Compute Module 5 (CM5) as the central node and Pi Zero 2 as a data forwarder.
+Dev Server, or Home Development Network, utilizing Raspberry Pi Compute Module 5 (CM5) as the central node and Pi Zero 2 as a data forwarder.
 
 ### Posts
 
