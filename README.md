@@ -3,7 +3,7 @@
 <!-- @dntstck -->
 <!-- Header -->
 <div align="center">    <a href="https://github.com/dntstck/blog" target="_blank"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br> 
-<div align="center"><a href="https://github.com/dntstck/blog/" target="_blank"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> <a href="./cm5" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-CM5-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="./picosystem" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href=".devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="./osnetworking" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-OS%20&%20Networking-151515?&logo=freebsd&logoColor=C51A4A"></a> <a href="./thoughts" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Thoughts-151515?&logo=linux&logoColor=C51A4A"></a> <a href="./misc" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div><hr>
+<div align="center"><a href="https://github.com/dntstck/blog/" target="_blank"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> <a href="./cm5" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-CM5-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="./picosystem" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href=".devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="./osnetworking" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-OS%20&%20Networking-151515?&logo=freebsd&logoColor=C51A4A"></a> <a href="./thoughts" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Thoughts-151515?&logo=linux&logoColor=C51A4A"></a> <a href="./misc" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div>
 <!-- Main --> 
 <div align="center">Hi! I'm Dru and welcome to my dev blog. I'm a junior dev with a huge passion for open-source, vim, embedded systems, operating systems, linux, raspberry pi, web development & game development. 
 <br><br>
@@ -16,7 +16,7 @@ Please feel free to take a look around, or click on any relevant badges that int
  <div align="center"><a href="./microcontrollers" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Microcontrollers-007A33?&logo=Arduino&logoColor=FE7A16"></a></div>
 <div align="center"><a href="./embeddedc" target="_blank"><img alt="C & Embedded" src="https://img.shields.io/badge/-C%20&%20Embedded-2A9D8F?&logo=C&logoColor=white"></a></div>
 <div align="center"><a href="./webdev" target="_blank"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-FF5733?&logo=html5&logoColor=white"></a></div>
-<hr>
+
 <!-- Footer -->
 <br>
 <div align="center">
