@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Segoe UI', Arial, sans-serif;
     font-size: small;
     background-color: #0d1117; 
     color: #c9d1d9; 
@@ -40,6 +40,7 @@ a:hover {
 
 
 pre, code {
+    font-family: monospace;
     background-color: #161b22;
     color: #c9d1d9; 
     padding: 0.5rem;
