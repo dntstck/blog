@@ -7,10 +7,53 @@
 <!-- Main --> 
 <div align="center"><a href="https://github.com/dntstck/blog/devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div>
 
+**Project Overview**
+
+**Title**: Home Development Network with Raspberry Pi Compute Module 5
+
+**Objective**: To create a Dev Server, or Home Development Network, utilizing Raspberry Pi Compute Module 5 (CM5) as the central node and Pi Zero 2 as a data forwarder.
+
+**Components**:
+- **CM5**: Central node managing overall network operations and data processing.
+- **Pi Zero 2**: Data forwarder, collecting and transmitting data to the CM5.
+
+**Network Architecture**:
+- **Topology**: Centralized architecture with CM5 at the core, connected to multiple nodes including the Pi Zero 2.
+- **Communication Protocols**: Using lightweight protocols such as MQTT for efficient data exchange between devices.
+
+**Software Stack**:
+- **Docker**: Containerizing applications to ensure smooth deployment, scalability, and management. 
+  - **Languages**: 
+    - **Backend**: Node.js, Python, C, Go, Ruby.
+    - **Frontend**: HTML5, CSS3, JavaScript, React.
+  - **Databases**: MongoDB, SQL.
+  - **APIs**: RESTful APIs using Express.js for backend services.
+  - **Tools**: 
+    - **Development**: Visual Studio Code, PlatformIO.
+    - **Version Control**: Git, GitHub.
+    - **Project Management**: CMake for build management.
+  - **Communication**: MQTT for messaging, with JSON and AJAX for data exchange.
+
+**Security**:
+- **Encryption**: Ensuring secure data transmission through strong encryption methods.
+- **Authentication**: Implementing robust authentication protocols to prevent unauthorized access.
+
+**Power Management**:
+- **UPS Systems**: Using UPS or battery backups for critical nodes to maintain network stability during power outages.
+
+**Scalability**:
+- **Future Expansion**: Designing the network with scalability in mind, allowing easy addition of new nodes and devices.
+
+**Applications**:
+- **Data Collection**: Gathering sensor data and managing smart home devices.
+- **Automation**: Automating various home development tasks for increased efficiency.
+
+**Monitoring and Management**:
+- **Tools**: Grafana and Prometheus for real-time network monitoring and performance tracking.
+
+---
+
 ### Posts
-
-- 
-
 
 <hr>
 <!-- Footer -->
