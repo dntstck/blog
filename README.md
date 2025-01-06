@@ -1,9 +1,9 @@
 <!-- Blog v1 -->
 <!-- Dru Delarosa -->
 <!-- @dntstck -->
-
 <!-- Header -->
-<div align="center">    <a href="https://github.com/dntstck/blog" target="_blank"><img alt="Articles & Blog" src="https://img.shields.io/badge/-Dev%20Blog-FE7A16?&logo=git&logoColor=white"></a><br>
+<div align="center">    <a href="https://github.com/dntstck/blog" target="_blank"><img alt="Articles & Blog" src="https://img.shields.io/badge/-Dev%20Blog-FE7A16?&logo=git&logoColor=white"></a>
+ 
 <div align="center"><a href="https://github.com/dntstck/blog/raspberrypi" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/CM5" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-CM5-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/picosystem" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/devserver" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/networking" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Networking-151515?&logo=freebsd&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/thoughts" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Thoughts-151515?&logo=linux&logoColor=C51A4A"></a> <a href="https://github.com/dntstck/blog/misc" target="_blank"><img alt="Pi" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a></div><hr>
 <!-- Main --> 
 <div align="center">Welcome to my dev blog.<br>
