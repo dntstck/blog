@@ -15,7 +15,8 @@ Currently tinkering with the Compute Module 5, Pico2 & Pico2W, Tiny2350, RP2040P
 My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server, or Home Development Network, using CM5 as the central node & a Pi Zero2 as a data forwarder.
 <br><br>
 Please feel free to take a look around, or click on any relevant badges that interest you.
-</div><br><hr>
+</div>
+<br><hr>
 <!-- Footer -->
 <br>
 <div align="center">
