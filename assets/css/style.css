@@ -68,7 +68,7 @@ hr {
 }
 
 .content {
-    max-width: 800px; /* Adjust the max-width to your preference */
-    margin: 0 auto; /* Center align the content */
-    padding: 0 20px; /* Optional padding */
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
