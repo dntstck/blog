@@ -49,16 +49,22 @@ try {
               console.log(`Tags: ${tags}`);
 
               tags.forEach(tag => {
-                const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
+                const tagDir = path.join(publishDir, tag.toLowerCase()); //  tag to lowercase
                 if (!fs.existsSync(tagDir)) {
                   console.log(`Creating directory: ${tagDir}`);
-                  fs.mkdirSync(tagDir, { recursive: true }); // Ensure parent directories are created
+                  fs.mkdirSync(tagDir, { recursive: true }); // verify par dirs are created
                 }
                 const publishPath = path.join(tagDir, file);
                 console.log(`Moving file from ${filePath} to ${publishPath}`);
                 try {
                   fs.renameSync(filePath, publishPath);
                   console.log(`Published ${file} to ${publishPath}`);
+                  // check file exists in new location
+                  if (fs.existsSync(publishPath)) {
+                    console.log(`File successfully moved to ${publishPath}`);
+                  } else {
+                    console.error(`File move failed: ${publishPath} not found`);
+                  }
                 } catch (err) {
                   console.error(`Failed to move file: ${err.message}`);
                 }
