@@ -21,27 +21,36 @@ try {
     const filePath = path.join(scheduledDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
 
-    // improved regex
-    const publishDateRegex = /publishDate:\s*["']?([^"'\n]+)["']?/;
-    const publishDateMatch = content.match(publishDateRegex);
-    if (publishDateMatch) {
-      const publishDate = new Date(publishDateMatch[1].trim());
-      console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
+    const frontMatterRegex = /---\n([\s\S]*?)\n---/;
+    const frontMatterMatch = content.match(frontMatterRegex);
 
-      if (!isNaN(publishDate)) {
-        if (new Date() >= publishDate) {
-          const publishPath = path.join(publishDir, file);
-          fs.writeFileSync(publishPath, content);
-          fs.unlinkSync(filePath);
-          console.log(`Published ${file}`);
+    if (frontMatterMatch) {
+      const frontMatter = frontMatterMatch[1];
+
+      const publishDateRegex = /publishDate:\s*["']?([^"'\n]+)["']?/;
+      const publishDateMatch = frontMatter.match(publishDateRegex);
+
+      if (publishDateMatch) {
+        const publishDate = new Date(publishDateMatch[1].trim());
+        console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
+
+        if (!isNaN(publishDate)) {
+          if (new Date() >= publishDate) {
+            const publishPath = path.join(publishDir, file);
+            fs.writeFileSync(publishPath, content);
+            fs.unlinkSync(filePath);
+            console.log(`Published ${file}`);
+          } else {
+            console.log(`Not yet time to publish ${file}`);
+          }
         } else {
-          console.log(`Not yet time to publish ${file}`);
+          console.log(`Invalid publish date for ${file}`);
         }
       } else {
-        console.log(`Invalid publish date for ${file}`);
+        console.log(`No publish date found for ${file}`);
       }
     } else {
-      console.log(`No publish date found for ${file}`);
+      console.log(`No front matter found for ${file}`);
     }
   });
 } catch (error) {
