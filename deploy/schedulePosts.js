@@ -55,6 +55,7 @@ try {
                   fs.mkdirSync(tagDir);
                 }
                 const publishPath = path.join(tagDir, file);
+                console.log(`Moving file from ${filePath} to ${publishPath}`);
                 fs.renameSync(filePath, publishPath);
                 console.log(`Published ${file} to ${publishPath}`);
               });
