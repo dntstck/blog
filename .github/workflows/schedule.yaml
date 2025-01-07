@@ -1,0 +1,21 @@
+name: Schedule Posts
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Run scheduling script
+      run: node deploy/schedulePosts.js
