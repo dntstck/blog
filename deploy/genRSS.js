@@ -2,7 +2,7 @@
 // Dru Delarosa | @dntstck
 // generates RSS
 
-import { writeFileSync } from 'fs';
+const fs = require('fs');
 import RSS from 'rss';
 
 const feed = new RSS({

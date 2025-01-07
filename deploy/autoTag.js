@@ -2,7 +2,7 @@
 // Dru Delarosa | @dntstck
 // automatically tags and catergorizes blog posts
 
-import { writeFileSync } from 'fs';
+const fs = require(fs);
 
 const categorizePost = (content) => {
   const tags = [];

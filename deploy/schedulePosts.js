@@ -2,8 +2,8 @@
 // Dru Delarosa | @dntstck
 // schedules posts
 
-import { readdirSync, readFileSync, renameSync } from 'fs';
-import { resolve, join } from 'path';
+const fs = require('fs');
+const path = require('path');
 
 const scriptDir = resolve(__dirname);
 const publishDir = resolve(scriptDir, '..');
