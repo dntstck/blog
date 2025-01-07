@@ -31,10 +31,12 @@ try {
       const publishDateMatch = frontMatter.match(publishDateRegex);
 
       if (publishDateMatch) {
-        const publishDate = new Date(publishDateMatch[1].trim());
-        console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
+        const publishDateString = publishDateMatch[1].trim();
+        console.log(`Publish Date String: ${publishDateString}`);
+        const publishDate = new Date(publishDateString);
+        console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
 
-        if (!isNaN(publishDate)) {
+        if (!isNaN(publishDate.getTime())) {
           if (new Date() >= publishDate) {
             const publishPath = path.join(publishDir, file);
             fs.writeFileSync(publishPath, content);
@@ -56,3 +58,4 @@ try {
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
+
