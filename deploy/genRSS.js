@@ -2,8 +2,8 @@
 // Dru Delarosa | @dntstck
 // generates RSS
 
-const fs = require('fs');
-const RSS = require('rss');
+import { writeFileSync } from 'fs';
+import RSS from 'rss';
 
 const feed = new RSS({
   title: 'Developer Blog',
@@ -32,6 +32,6 @@ posts.forEach(post => {
 });
 
 const rssXML = feed.xml({ indent: true });
-fs.writeFileSync('public/rss.xml', rssXML);
+writeFileSync('public/rss.xml', rssXML);
 console.log('RSS feed generated.');
 

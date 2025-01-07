@@ -2,7 +2,7 @@
 // Dru Delarosa | @dntstck
 // automatically tags and catergorizes blog posts
 
-const fs = require('fs');
+import { writeFileSync } from 'fs';
 
 const categorizePost = (content) => {
   const tags = [];
@@ -33,7 +33,7 @@ const categorizePost = (content) => {
 };
 
 const posts = [
-  { title: 'First Post', content: 'This post is about JavaScript and Node.js' },
+  { title: 'test', content: 'test' },
   // more posts here
 ];
 
@@ -41,6 +41,6 @@ posts.forEach(post => {
   post.tags = categorizePost(post.content);
 });
 
-fs.writeFileSync('public/posts.json', JSON.stringify(posts, null, 2));
+writeFileSync('public/posts.json', JSON.stringify(posts, null, 2));
 console.log('Posts tagged and categorized successfully.');
 
