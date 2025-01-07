@@ -5,21 +5,21 @@
 const fs = require('fs');
 const path = require('path');
 
-const scriptDir = resolve(__dirname);
-const publishDir = resolve(scriptDir, '..');
-const scheduledDir = resolve(scriptDir, '../scheduled');
+const scriptDir = path.resolve(__dirname);
+const publishDir = path.resolve(scriptDir, '..');
+const scheduledDir = path.resolve(scriptDir, '../scheduled');
 
 console.log(`Script Directory: ${scriptDir}`);
 console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 
 try {
-  const files = readdirSync(scheduledDir);
+  const files = fs.readdirSync(scheduledDir);
   console.log(`Scheduled files: ${files.join(', ')}`);
 
   files.forEach(file => {
-    const filePath = join(scheduledDir, file);
-    const content = readFileSync(filePath, 'utf8');
+    const filePath = path.join(scheduledDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
 
     console.log(`File Content: \n${content}`);
 
@@ -41,8 +41,8 @@ try {
 
         if (!isNaN(publishDate.getTime())) {
           if (new Date() >= publishDate) {
-            const publishPath = join(publishDir, file);
-            renameSync(filePath, publishPath); // Move the file
+            const publishPath = path.join(publishDir, file);
+            fs.renameSync(filePath, publishPath); // Move the file
             console.log(`Published ${file} to ${publishPath}`);
           } else {
             console.log(`Not yet time to publish ${file}`);
