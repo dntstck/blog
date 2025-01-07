@@ -21,11 +21,14 @@ try {
     const filePath = path.join(scheduledDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
 
+    console.log(`File Content: \n${content}`);
+
     const frontMatterRegex = /---\n([\s\S]*?)\n---/;
     const frontMatterMatch = content.match(frontMatterRegex);
 
     if (frontMatterMatch) {
       const frontMatter = frontMatterMatch[1];
+      console.log(`Front Matter: \n${frontMatter}`);
 
       const publishDateRegex = /publishDate:\s*["']?([^"'\n]+)["']?/;
       const publishDateMatch = frontMatter.match(publishDateRegex);
@@ -58,4 +61,3 @@ try {
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
-
