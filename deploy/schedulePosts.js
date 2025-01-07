@@ -23,7 +23,7 @@ try {
 
     console.log(`File Content: \n${content}`);
 
-    const frontMatterRegex = /---\n([\s\S]*?)\n---/;
+    const frontMatterRegex = /---\n([\\s\S]*?)\n---/;
     const frontMatterMatch = content.match(frontMatterRegex);
 
     if (frontMatterMatch) {
@@ -49,17 +49,21 @@ try {
               console.log(`Tags: ${tags}`);
 
               tags.forEach(tag => {
-                const tagDir = path.join(publishDir, tag.toLowerCase()); //  tag to lowercase
+                const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
                 if (!fs.existsSync(tagDir)) {
                   console.log(`Creating directory: ${tagDir}`);
-                  fs.mkdirSync(tagDir, { recursive: true }); // verify par dirs are created
+                  fs.mkdirSync(tagDir, { recursive: true }); // Ensure parent directories are created
                 }
                 const publishPath = path.join(tagDir, file);
                 console.log(`Moving file from ${filePath} to ${publishPath}`);
                 try {
+                  if (fs.existsSync(publishPath)) {
+                    console.log(`File already exists at ${publishPath}, deleting it.`);
+                    fs.unlinkSync(publishPath);
+                  }
                   fs.renameSync(filePath, publishPath);
                   console.log(`Published ${file} to ${publishPath}`);
-                  // check file exists in new location
+                  // Verify if the file exists in the new location
                   if (fs.existsSync(publishPath)) {
                     console.log(`File successfully moved to ${publishPath}`);
                   } else {
@@ -88,3 +92,4 @@ try {
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
+
