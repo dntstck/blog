@@ -14,14 +14,8 @@ console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 
 try {
-  // Verify if directories exist and are accessible
   if (!fs.existsSync(scheduledDir)) {
     console.error(`Scheduled directory does not exist: ${scheduledDir}`);
-    process.exit(1);
-  }
-
-  if (!fs.existsSync(publishDir)) {
-    console.error(`Publish directory does not exist: ${publishDir}`);
     process.exit(1);
   }
 
@@ -45,7 +39,7 @@ try {
       const publishDateMatch = frontMatter.match(publishDateRegex);
 
       if (publishDateMatch) {
-        const publishDateString = publishDateMatch[1].trim().split(' ')[0]; // Ignore comments
+        const publishDateString = publishDateMatch[1].trim().split(' ')[0];
         console.log(`Publish Date String: ${publishDateString}`);
         const publishDate = new Date(publishDateString);
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
@@ -60,20 +54,13 @@ try {
               console.log(`Tags: ${tags}`);
 
               tags.forEach(tag => {
-                const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
+                const tagDir = path.join(publishDir, tag.toLowerCase());
                 if (!fs.existsSync(tagDir)) {
                   console.log(`Creating directory: ${tagDir}`);
-                  fs.mkdirSync(tagDir, { recursive: true }); // Ensure parent directories are created
+                  fs.mkdirSync(tagDir, { recursive: true });
                 }
                 const publishPath = path.join(tagDir, file);
                 console.log(`Moving file from ${filePath} to ${publishPath}`);
-
-                // Check if the file exists before moving
-                if (!fs.existsSync(filePath)) {
-                  console.error(`Source file does not exist: ${filePath}`);
-                  return;
-                }
-
                 try {
                   if (fs.existsSync(publishPath)) {
                     console.log(`File already exists at ${publishPath}, deleting it.`);
@@ -82,11 +69,9 @@ try {
                   fs.renameSync(filePath, publishPath);
                   console.log(`Published ${file} to ${publishPath}`);
 
-                  // Verify if the file exists in the new location
                   if (fs.existsSync(publishPath)) {
                     console.log(`File successfully moved to ${publishPath}`);
 
-                    // Check if the file is no longer in the source directory
                     if (!fs.existsSync(filePath)) {
                       console.log(`File successfully removed from ${filePath}`);
                     } else {
@@ -115,6 +100,13 @@ try {
       console.log(`No front matter found for ${file}`);
     }
   });
+
+  // Retain scheduled directory
+  if (fs.readdirSync(scheduledDir).length === 0) {
+    console.log(`Scheduled directory is empty. No files to move.`);
+  } else {
+    console.log(`Scheduled directory still contains files.`);
+  }
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
