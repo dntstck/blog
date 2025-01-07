@@ -20,8 +20,10 @@ try {
   files.forEach(file => {
     const filePath = path.join(scheduledDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
-    
-    const publishDateMatch = content.match(/publishDate:\s*([^\n]*)/);
+
+    // improved regex
+    const publishDateRegex = /publishDate:\s*["']?([^"'\n]+)["']?/;
+    const publishDateMatch = content.match(publishDateRegex);
     if (publishDateMatch) {
       const publishDate = new Date(publishDateMatch[1].trim());
       console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
