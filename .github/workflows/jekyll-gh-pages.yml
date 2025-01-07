@@ -53,8 +53,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -m "Move scheduled posts"
-          git push
+          git commit -m "Move scheduled posts" || echo "No changes to commit"
+          git push || echo "No changes to push"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
