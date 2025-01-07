@@ -21,6 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify Scheduled Directory
+        run: |
+          if [ -d "/home/runner/work/blog/blog/scheduled" ]; then
+            echo "Scheduled directory exists.";
+          else
+            echo "Scheduled directory does not exist. Creating it.";
+            mkdir -p /home/runner/work/blog/blog/scheduled;
+          fi
+
       - name: List Files Before Move
         run: |
           echo "Files in repository before move:"
