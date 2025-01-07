@@ -41,7 +41,7 @@ try {
 
         if (!isNaN(publishDate.getTime())) {
           if (new Date() >= publishDate) {
-            const tagsRegex = /tags:\s* \[([^\] ]+)\]/;
+            const tagsRegex = /tags:\s*\[([^\]]+)\]/;
             const tagsMatch = frontMatter.match(tagsRegex);
 
             if (tagsMatch) {
@@ -49,8 +49,9 @@ try {
               console.log(`Tags: ${tags}`);
 
               tags.forEach(tag => {
-                const tagDir = path.join(publishDir, tag);
+                const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
                 if (!fs.existsSync(tagDir)) {
+                  console.log(`Creating directory: ${tagDir}`);
                   fs.mkdirSync(tagDir);
                 }
                 const publishPath = path.join(tagDir, file);
