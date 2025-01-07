@@ -34,7 +34,7 @@ try {
       const publishDateMatch = frontMatter.match(publishDateRegex);
 
       if (publishDateMatch) {
-        const publishDateString = publishDateMatch[1].trim().split(' ')[0]; // Ignore comments
+        const publishDateString = publishDateMatch[1].trim().split(' ')[0];
         console.log(`Publish Date String: ${publishDateString}`);
         const publishDate = new Date(publishDateString);
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
@@ -49,13 +49,20 @@ try {
               console.log(`Tags: ${tags}`);
 
               tags.forEach(tag => {
-                const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
+                const tagDir = path.join(publishDir, tag.toLowerCase()); // convert to lower case
                 if (!fs.existsSync(tagDir)) {
                   console.log(`Creating directory: ${tagDir}`);
-                  fs.mkdirSync(tagDir, { recursive: true }); // Ensure parent directories are created
+                  fs.mkdirSync(tagDir, { recursive: true }); // verify parent dirs are created
                 }
                 const publishPath = path.join(tagDir, file);
                 console.log(`Moving file from ${filePath} to ${publishPath}`);
+
+                // check file exists
+                if (!fs.existsSync(filePath)) {
+                  console.error(`Source file does not exist: ${filePath}`);
+                  return;
+                }
+
                 try {
                   if (fs.existsSync(publishPath)) {
                     console.log(`File already exists at ${publishPath}, deleting it.`);
@@ -63,14 +70,22 @@ try {
                   }
                   fs.renameSync(filePath, publishPath);
                   console.log(`Published ${file} to ${publishPath}`);
-                  // Verify if the file exists in the new location
+
+                  // verify file exists
                   if (fs.existsSync(publishPath)) {
                     console.log(`File successfully moved to ${publishPath}`);
+
+                    // verify file is not in src
+                    if (!fs.existsSync(filePath)) {
+                      console.log(`File successfully removed from ${filePath}`);
+                    } else {
+                      console.error(`File still exists in source directory: ${filePath}`);
+                    }
                   } else {
                     console.error(`File move failed: ${publishPath} not found`);
                   }
                 } catch (err) {
-                  console.error(`Failed to move file: ${err.message}`);
+                  console.error(`Failed to move file: ${err.message}`); // file wasnt moved
                 }
               });
             } else {
