@@ -41,9 +41,25 @@ try {
 
         if (!isNaN(publishDate.getTime())) {
           if (new Date() >= publishDate) {
-            const publishPath = path.join(publishDir, file);
-            fs.renameSync(filePath, publishPath); // Move the file
-            console.log(`Published ${file} to ${publishPath}`);
+            const tagsRegex = /tags:\s* \[([^\] ]+)\]/;
+            const tagsMatch = frontMatter.match(tagsRegex);
+
+            if (tagsMatch) {
+              const tags = tagsMatch[1].split(',').map(tag => tag.trim());
+              console.log(`Tags: ${tags}`);
+
+              tags.forEach(tag => {
+                const tagDir = path.join(publishDir, tag);
+                if (!fs.existsSync(tagDir)) {
+                  fs.mkdirSync(tagDir);
+                }
+                const publishPath = path.join(tagDir, file);
+                fs.renameSync(filePath, publishPath);
+                console.log(`Published ${file} to ${publishPath}`);
+              });
+            } else {
+              console.log(`No tags found for ${file}`);
+            }
           } else {
             console.log(`Not yet time to publish ${file}`);
           }
