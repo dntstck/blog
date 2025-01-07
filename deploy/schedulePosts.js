@@ -5,17 +5,15 @@
 const fs = require('fs');
 const path = require('path');
 
-// relative paths
 const scriptDir = path.resolve(__dirname);
-const publishDir = path.resolve(scriptDir, '..'); // root
-const scheduledDir = path.resolve(scriptDir, '../scheduled'); // scheduled
+const publishDir = path.resolve(scriptDir, '..');
+const scheduledDir = path.resolve(scriptDir, '../scheduled');
 
 console.log(`Script Directory: ${scriptDir}`);
 console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 
 try {
-  
   const files = fs.readdirSync(scheduledDir);
   console.log(`Scheduled files: ${files.join(', ')}`);
 
@@ -23,23 +21,25 @@ try {
     const filePath = path.join(scheduledDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
-    const parsedContent = matter(content);
-    const publishDate = new Date(parsedContent.data.publishDate);
-    
-    console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
+    const publishDateMatch = content.match(/publishDate:\s*([^\n]*)/);
+    if (publishDateMatch) {
+      const publishDate = new Date(publishDateMatch[1].trim());
+      console.log(`Publish Date: ${publishDate}, Current Date: ${new Date()}`);
 
-    if (!isNaN(publishDate)) {
-      // check dates
-      if (new Date() >= publishDate) {
-        const publishPath = path.join(publishDir, file);
-        fs.writeFileSync(publishPath, parsedContent.content);
-        fs.unlinkSync(filePath);
-        console.log(`Published ${file}`);
+      if (!isNaN(publishDate)) {
+        if (new Date() >= publishDate) {
+          const publishPath = path.join(publishDir, file);
+          fs.writeFileSync(publishPath, content);
+          fs.unlinkSync(filePath);
+          console.log(`Published ${file}`);
+        } else {
+          console.log(`Not yet time to publish ${file}`);
+        }
       } else {
-        console.log(`Not yet time to publish ${file}`);
+        console.log(`Invalid publish date for ${file}`);
       }
     } else {
-      console.log(`Invalid publish date for ${file}`);
+      console.log(`No publish date found for ${file}`);
     }
   });
 } catch (error) {
