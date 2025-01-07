@@ -102,8 +102,12 @@ try {
   });
 
   // Ensure the scheduled directory remains intact
-  console.log(`Ensuring the scheduled directory remains intact.`);
-  console.log(`Scheduled directory now contains: ${fs.readdirSync(scheduledDir).length} files.`);
+  if (fs.readdirSync(scheduledDir).length === 0) {
+    console.log(`Scheduled directory is empty. Adding a placeholder file to keep the directory.`);
+    fs.writeFileSync(path.join(scheduledDir, '.gitkeep'), '');
+  } else {
+    console.log(`Scheduled directory still contains files.`);
+  }
 
 } catch (error) {
   console.error(`Error: ${error.message}`);
