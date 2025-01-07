@@ -21,12 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify Directory Permissions
+      - name: List Files Before Move
         run: |
-          echo "Scheduled Directory Permissions before move:"
-          ls -l /home/runner/work/blog/blog/scheduled
-          echo "Publish Directory Permissions before move:"
-          ls -l /home/runner/work/blog/blog
+          echo "Files in repository before move:"
+          find /home/runner/work/blog/blog -type f -print
+
+      - name: Run Schedule Posts Script
+        run: node deploy/schedulePosts.js
+
+      - name: List Files After Move
+        run: |
+          echo "Files in repository after move:"
+          find /home/runner/work/blog/blog -type f -print
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -36,13 +42,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-
-      - name: Manual Check After Move
-        run: |
-          echo "Scheduled Directory Permissions after move:"
-          ls -l /home/runner/work/blog/blog/scheduled
-          echo "Publish Directory Permissions after move:"
-          ls -l /home/runner/work/blog/blog
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
