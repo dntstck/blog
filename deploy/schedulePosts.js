@@ -101,8 +101,9 @@ try {
     }
   });
 
-  // ensure scheduled dir remains intact
+  // Ensure the scheduled directory remains intact
   console.log(`Ensuring the scheduled directory remains intact.`);
+  console.log(`Scheduled directory now contains: ${fs.readdirSync(scheduledDir).length} files.`);
 
 } catch (error) {
   console.error(`Error: ${error.message}`);
