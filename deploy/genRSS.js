@@ -16,7 +16,7 @@ const posts = [
   {
     title: 'test post',
     description: 'test post',
-    url: 'https://your-github-username.github.io/test-post',
+    url: 'https://dntstck.github.io/test-post',
     date: '2025-01-01',
   },
   // more posts here
