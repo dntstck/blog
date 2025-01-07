@@ -45,7 +45,7 @@ try {
       if (publishDateMatch) {
         const publishDateString = publishDateMatch[1].trim();
         console.log(`Publish Date String: ${publishDateString}`);
-        const publishDate = new Date(publishDateString);
+        const publishDate = new Date(Date.parse(publishDateString)); 
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
 
         if (!isNaN(publishDate.getTime()) && new Date() >= publishDate) {
