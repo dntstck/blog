@@ -23,7 +23,7 @@ jobs:
 
       - name: List Files Before Move
         run: |
-          echo "Files in repository before move:"
+          echo "Files in repo before move:"
           find /home/runner/work/blog/blog -type f -print
 
       - name: Run Schedule Posts Script
@@ -31,7 +31,7 @@ jobs:
 
       - name: List Files After Move
         run: |
-          echo "Files in repository after move:"
+          echo "Files in repo after move:"
           find /home/runner/work/blog/blog -type f -print
 
       - name: Setup Pages
