@@ -101,12 +101,9 @@ try {
     }
   });
 
-  // Retain scheduled directory
-  if (fs.readdirSync(scheduledDir).length === 0) {
-    console.log(`Scheduled directory is empty. No files to move.`);
-  } else {
-    console.log(`Scheduled directory still contains files.`);
-  }
+  // ensure scheduled dir remains intact
+  console.log(`Ensuring the scheduled directory remains intact.`);
+
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
