@@ -52,12 +52,16 @@ try {
                 const tagDir = path.join(publishDir, tag.toLowerCase()); // Convert tag to lowercase
                 if (!fs.existsSync(tagDir)) {
                   console.log(`Creating directory: ${tagDir}`);
-                  fs.mkdirSync(tagDir);
+                  fs.mkdirSync(tagDir, { recursive: true }); // Ensure parent directories are created
                 }
                 const publishPath = path.join(tagDir, file);
                 console.log(`Moving file from ${filePath} to ${publishPath}`);
-                fs.renameSync(filePath, publishPath);
-                console.log(`Published ${file} to ${publishPath}`);
+                try {
+                  fs.renameSync(filePath, publishPath);
+                  console.log(`Published ${file} to ${publishPath}`);
+                } catch (err) {
+                  console.error(`Failed to move file: ${err.message}`);
+                }
               });
             } else {
               console.log(`No tags found for ${file}`);
