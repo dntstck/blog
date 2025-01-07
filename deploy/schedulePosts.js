@@ -23,7 +23,7 @@ try {
 
     console.log(`File Content: \n${content}`);
 
-    const frontMatterRegex = /---\n([\\s\S]*?)\n---/;
+    const frontMatterRegex = /---\s*\n([\s\S]*?)\n\s*---/;
     const frontMatterMatch = content.match(frontMatterRegex);
 
     if (frontMatterMatch) {
@@ -92,4 +92,3 @@ try {
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
-
