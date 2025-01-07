@@ -34,7 +34,7 @@ try {
       const publishDateMatch = frontMatter.match(publishDateRegex);
 
       if (publishDateMatch) {
-        const publishDateString = publishDateMatch[1].trim();
+        const publishDateString = publishDateMatch[1].trim().split(' ')[0]; // Ignore comments
         console.log(`Publish Date String: ${publishDateString}`);
         const publishDate = new Date(publishDateString);
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
@@ -42,9 +42,8 @@ try {
         if (!isNaN(publishDate.getTime())) {
           if (new Date() >= publishDate) {
             const publishPath = path.join(publishDir, file);
-            fs.writeFileSync(publishPath, content);
-            fs.unlinkSync(filePath);
-            console.log(`Published ${file}`);
+            fs.renameSync(filePath, publishPath); // Move the file
+            console.log(`Published ${file} to ${publishPath}`);
           } else {
             console.log(`Not yet time to publish ${file}`);
           }
