@@ -15,6 +15,15 @@ console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 console.log(`Index File Path: ${indexFilePath}`);
 
+function getDirectoryByTag(tag) {
+  const tagDirectoryMap = {
+    'tech': 'tech',
+    'personal': 'personal',
+    'misc': 'misc',
+  };
+  return tagDirectoryMap[tag] || 'misc';
+}
+
 try {
   if (!fs.existsSync(scheduledDir)) {
     console.error(`Scheduled directory does not exist: ${scheduledDir}`);
@@ -60,7 +69,7 @@ try {
             console.log(`Tags: ${tags}`);
 
             tags.forEach(tag => {
-              const tagDir = path.join(publishDir, tag.toLowerCase());
+              const tagDir = path.join(publishDir, getDirectoryByTag(tag.toLowerCase()));
               if (!fs.existsSync(tagDir)) {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
@@ -107,20 +116,21 @@ try {
     }
   });
 
-  // update index.md
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
-  const latestPostsSection = latestPosts.map(post => `- [${post.title}](./misc/${post.file})`).join('\n');
+  const latestPostsSection = latestPosts.map(post => {
+    const directory = getDirectoryByTag(post.tag);
+    return `<li><a href="./${directory}/${post.file}">${post.title}</a></li>`;
+  }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
   indexContent = indexContent.replace(
     /<!-- latest-posts-start -->([\s\S]*?)<!-- latest-posts-end -->/,
-    `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
+    `<!-- latest-posts-start -->\n<ul>\n${latestPostsSection}\n</ul>\n<!-- latest-posts-end -->`
   );
 
   fs.writeFileSync(indexFilePath, indexContent);
   console.log('Updated index.md with latest posts.');
 
-  // ensure the scheduled dir remains
   if (fs.readdirSync(scheduledDir).length === 0) {
     console.log(`Scheduled directory is empty. Adding a placeholder file to keep the directory.`);
     fs.writeFileSync(path.join(scheduledDir, '.gitkeep'), '');
