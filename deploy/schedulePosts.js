@@ -109,6 +109,40 @@ try {
     console.log(`Scheduled directory still contains files.`);
   }
 
+  const indexFilePath = path.resolve(scriptDir, '../index.md');
+
+// Collect latest posts
+const latestPosts = files.map(file => {
+  const filePath = path.join(scheduledDir, file);
+  const content = fs.readFileSync(filePath, 'utf8');
+  
+  const titleMatch = content.match(/title:\s*["']?([^"'\n]+)["']?/);
+  const publishDateMatch = content.match(/publishDate:\s*["']?([^"'\n]+)["']?/);
+
+  if (titleMatch && publishDateMatch) {
+    const title = titleMatch[1].trim();
+    const publishDateString = publishDateMatch[1].trim();
+    const publishDate = new Date(publishDateString);
+
+    if (!isNaN(publishDate.getTime()) && new Date() >= publishDate) {
+      return { title, file: file.replace('.md', '') };
+    }
+  }
+}).filter(post => post);
+
+// update index.md with latest posts
+let indexContent = fs.readFileSync(indexFilePath, 'utf8');
+const latestPostsSection = latestPosts.map(post => `- [${post.title}](./${post.file})`).join('\n');
+
+indexContent = indexContent.replace(
+  /<!-- latest-posts-start -->([\s\S]*?)<!-- latest-posts-end -->/,
+  `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
+);
+
+fs.writeFileSync(indexFilePath, indexContent);
+console.log('Updated index.md with latest posts.');
+
+
 } catch (error) {
   console.error(`Error: ${error.message}`);
 }
