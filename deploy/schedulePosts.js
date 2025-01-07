@@ -43,7 +43,7 @@ try {
       const publishDateMatch = frontMatter.match(publishDateRegex);
 
       if (publishDateMatch) {
-        const publishDateString = publishDateMatch[1].trim().split(' ')[0];
+        const publishDateString = publishDateMatch[1].trim();
         console.log(`Publish Date String: ${publishDateString}`);
         const publishDate = new Date(publishDateString);
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
@@ -96,11 +96,18 @@ try {
               latestPosts.push({ title, file });
             }
           }
+        } else {
+          console.log(`Not yet time to publish ${file}`);
         }
+      } else {
+        console.log(`No publish date found for ${file}`);
       }
+    } else {
+      console.log(`No front matter found for ${file}`);
     }
   });
 
+  // update index.md
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => `- [${post.title}](./misc/${post.file})`).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
@@ -113,6 +120,7 @@ try {
   fs.writeFileSync(indexFilePath, indexContent);
   console.log('Updated index.md with latest posts.');
 
+  // ensure the scheduled dir remains
   if (fs.readdirSync(scheduledDir).length === 0) {
     console.log(`Scheduled directory is empty. Adding a placeholder file to keep the directory.`);
     fs.writeFileSync(path.join(scheduledDir, '.gitkeep'), '');
