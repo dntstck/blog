@@ -90,11 +90,11 @@ try {
                 fs.mkdirSync(tagDir, { recursive: true });
               }
 
-              // Remove front matter from the content
+              // remove front matter
               content = content.replace(frontMatterRegex, '');
 
               const wrappedContent = `${header}\n${content}\n${footer}`;
-              const publishPath = path.join(tagDir, file); // Keep the same filename
+              const publishPath = path.join(tagDir, file); 
               console.log(`Moving file from ${filePath} to ${publishPath}`);
               try {
                 if (fs.existsSync(publishPath)) {
@@ -130,7 +130,7 @@ try {
 
             if (titleMatch) {
               const title = titleMatch[1];
-              latestPosts.push({ title, file, tag: tags[0] });  // Added tag for correct directory lookup
+              latestPosts.push({ title, file, tag: tags[0] });
             }
           }
         } else {
@@ -149,7 +149,7 @@ if (latestPosts.length > 0) {
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
     const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
-    return `<a href="/blog/${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`; // Replace .md with .html
+    return `<a href="/blog/${directory}/${post.file.replace('.md', '')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`; 
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
