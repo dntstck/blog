@@ -105,6 +105,9 @@ try {
                     console.log(`File successfully removed from ${filePath}`);
                   } else {
                     console.error(`File still exists in source directory: ${filePath}`);
+                    // Remove the original file after moving
+                    fs.unlinkSync(filePath);
+                    console.log(`Removed original file: ${filePath}`);
                   }
                 } else {
                   console.error(`File move failed: ${publishPath} not found`);
