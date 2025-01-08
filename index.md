@@ -20,7 +20,9 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a>
 <!-- latest-posts-start -->
+<ul>
 
+</ul>
 <!-- latest-posts-end -->
 </div>
 <br><hr>
