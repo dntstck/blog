@@ -11,7 +11,7 @@
 <a href="./webdev" target="_blank"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main --> 
-<div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br>
+<div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br>
 <br>
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network,<br> using CM5 as the central node & a Pi Zero2 as a data forwarder.<br><br>
