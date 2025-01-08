@@ -22,7 +22,7 @@
 <hr>
 <!-- Main --> 
 
-TEST: Post content
+<!-- Blog posts here -->
 
 <br><hr>
 <!-- Footer -->
