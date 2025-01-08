@@ -104,13 +104,18 @@ try {
                 if (fs.existsSync(publishPath)) {
                   console.log(`File successfully moved to ${publishPath}`);
 
-                  if (!fs.existsSync(filePath)) {
-                    console.log(`File successfully removed from ${filePath}`);
-                  } else {
+                  if (fs.existsSync(filePath)) {
                     console.error(`File still exists in source directory: ${filePath}`);
-                    // Remove the original file after moving
+                    console.log(`Attempting to remove the file from the source directory.`);
                     fs.unlinkSync(filePath);
-                    console.log(`Removed original file: ${filePath}`);
+                    
+                    if (!fs.existsSync(filePath)) {
+                      console.log(`File successfully removed from source directory: ${filePath}`);
+                    } else {
+                      console.error(`Failed to remove file from source directory: ${filePath}`);
+                    }
+                  } else {
+                    console.log(`File already removed from source directory: ${filePath}`);
                   }
                 } else {
                   console.error(`File move failed: ${publishPath} not found`);
@@ -138,9 +143,10 @@ try {
 
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => {
-  const directory = getDirectoryByTag(post.tag);
-  const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
-  return `<a href="/blog/${directory}/${post.file}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;}).join('\n');
+    const directory = getDirectoryByTag(post.tag);
+    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
+    return `<a href="/blog/${directory}/${post.file}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
+  }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
   indexContent = indexContent.replace(
