@@ -126,7 +126,7 @@ try {
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
-    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square`;
+    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
     return `<a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);

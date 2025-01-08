@@ -18,10 +18,9 @@ My most recent project involves utilizing Raspberry Pi Compute Module 5 to creat
 Please feel free to take a look around, or click on any relevant badges that interest you.<br>
 </div><br>
 <div id="latestposts">
-<a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a>
+<a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a><br>
 <!-- latest-posts-start -->
-<a href="./misc/newpost.html"><img src="https://img.shields.io/badge/Test%20Post2-151515?style=flat-square" alt="Test Post2"></a><br>
-<a href="./misc/test.html"><img src="https://img.shields.io/badge/Test%20Post2-151515?style=flat-square" alt="Test Post2"></a><br>
+
 <!-- latest-posts-end -->
 </div>
 <br><hr>
