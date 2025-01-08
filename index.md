@@ -21,7 +21,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a>
 <!-- latest-posts-start -->
 <ul>
-<li><a href="./misc/newpost.html"><img src="https://img.shields.io/badge/Test%20Post2-blue?style=flat-square" alt="Test Post2"></a></li>
+
 </ul>
 <!-- latest-posts-end -->
 </div>
