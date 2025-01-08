@@ -133,7 +133,7 @@ try {
 
   indexContent = indexContent.replace(
     /<!-- latest-posts-start -->([\s\S]*?)<!-- latest-posts-end -->/,
-    `<!-- latest-posts-start -->\n<ul>\n${latestPostsSection}\n</ul>\n<!-- latest-posts-end -->`
+    `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
   );
 
   fs.writeFileSync(indexFilePath, indexContent);
