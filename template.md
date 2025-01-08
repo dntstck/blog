@@ -1,6 +1,3 @@
-<!-- Blog v1 -->
-<!-- Dru Delarosa -->
-<!-- @dntstck -->
 <!-- Header -->
 <link rel="stylesheet" href="../../assets/css/style.css"/>
 <div align="center">    
