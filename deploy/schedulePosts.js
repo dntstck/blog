@@ -88,7 +88,7 @@ try {
               }
 
               const wrappedContent = `${header}\n${content}\n${footer}`;
-              const publishPath = path.join(tagDir, file.replace('.md', '.html'));
+              const publishPath = path.join(tagDir, file); // Keep the same filename
               console.log(`Moving file from ${filePath} to ${publishPath}`);
               try {
                 if (fs.existsSync(publishPath)) {
@@ -134,12 +134,12 @@ try {
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
     const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
-    return `<a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
+    return `<a href="./${directory}/${post.file}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`; // Keep the original file extension
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
   indexContent = indexContent.replace(
-    /<!-- latest-posts-start -->([\s\S]*?)<!-- latest-posts-end -->/,
+    /<!-- latest-posts-start -->([\\s\S]*?)<!-- latest-posts-end -->/,
     `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
   );
 
