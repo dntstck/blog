@@ -17,9 +17,16 @@ console.log(`Index File Path: ${indexFilePath}`);
 
 function getDirectoryByTag(tag) {
   const tagDirectoryMap = {
-    'tech': 'tech',
-    'personal': 'personal',
+    'cm5': 'cm5', 
+    'devserver': 'devserver',
+    'embedded': 'embeddedc',
+    'microcontrollers': 'microcontrollers',
     'misc': 'misc',
+    'osnetworking': 'osnetworking', 
+    'picosystem': 'picosystem',
+    'raspberrypi': 'raspberrypi',
+    'thoughts': 'thoughts',
+    'webdevelopment': 'webdev'
   };
   return tagDirectoryMap[tag] || 'misc';
 }
@@ -74,7 +81,7 @@ try {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
-              const publishPath = path.join(tagDir, file);
+              const publishPath = path.join(tagDir, file.replace('.md', '.html'));
               console.log(`Moving file from ${filePath} to ${publishPath}`);
               try {
                 if (fs.existsSync(publishPath)) {
@@ -102,7 +109,7 @@ try {
 
             if (titleMatch) {
               const title = titleMatch[1];
-              latestPosts.push({ title, file });
+              latestPosts.push({ title, file: file.replace('.md', '.html') });
             }
           }
         } else {
