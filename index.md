@@ -17,12 +17,9 @@ Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2
 My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network,<br> using CM5 as the central node & a Pi Zero2 as a data forwarder.<br><br>
 Please feel free to take a look around, or click on any relevant badges that interest you.<br>
 </div><br>
-<div id="latestposts" align=center>
+<div id="latestposts">
 <a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a>
 <!-- latest-posts-start -->
-<ul>
-
-</ul>
 <!-- latest-posts-end -->
 </div>
 <br><hr>

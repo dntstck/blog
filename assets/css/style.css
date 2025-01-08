@@ -67,7 +67,7 @@ div.content {
     overflow-wrap: break-word; 
 }
 
-.badge {
+.latestposts {
     display:flex;
     justify-content: center;
     align-items: center;
