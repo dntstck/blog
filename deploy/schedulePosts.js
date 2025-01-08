@@ -19,12 +19,12 @@ console.log(`Template File Path: ${templateFilePath}`);
 
 function getDirectoryByTag(tag) {
   const tagDirectoryMap = {
-    'cm5': 'cm5', 
+    'cm5': 'cm5',
     'devserver': 'devserver',
     'embedded': 'embeddedc',
     'microcontrollers': 'microcontrollers',
     'misc': 'misc',
-    'osnetworking': 'osnetworking', 
+    'osnetworking': 'osnetworking',
     'picosystem': 'picosystem',
     'raspberrypi': 'raspberrypi',
     'thoughts': 'thoughts',
@@ -66,7 +66,7 @@ try {
       if (publishDateMatch) {
         const publishDateString = publishDateMatch[1].trim();
         console.log(`Publish Date String: ${publishDateString}`);
-        const publishDate = new Date(Date.parse(publishDateString)); 
+        const publishDate = new Date(Date.parse(publishDateString));
         console.log(`Parsed Publish Date: ${publishDate}, Current Date: ${new Date()}`);
 
         if (!isNaN(publishDate.getTime()) && new Date() >= publishDate) {
