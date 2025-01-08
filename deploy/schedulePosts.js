@@ -49,7 +49,7 @@ try {
 
   files.forEach(file => {
     const filePath = path.join(scheduledDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     console.log(`Processing file: ${file}`);
     console.log(`File Content: \n${content}`);
 
@@ -86,6 +86,9 @@ try {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
+
+              // Remove front matter from the content
+              content = content.replace(frontMatterRegex, '');
 
               const wrappedContent = `${header}\n${content}\n${footer}`;
               const publishPath = path.join(tagDir, file); // Keep the same filename
