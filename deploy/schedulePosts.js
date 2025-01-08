@@ -2,6 +2,10 @@
 // Dru Delarosa | @dntstck
 // schedules posts
 
+// schedulePosts.js
+// Dru Delarosa | @dntstck
+// schedules posts
+
 const fs = require('fs');
 const path = require('path');
 
@@ -30,7 +34,7 @@ function getDirectoryByTag(tag) {
     'thoughts': 'thoughts',
     'webdevelopment': 'webdev'
   };
-  return tagDirectoryMap[tag] || 'misc';
+  return tagDirectoryMap[tag.toLowerCase()] || 'misc';
 }
 
 try {
@@ -41,6 +45,9 @@ try {
 
   const template = fs.readFileSync(templateFilePath, 'utf-8');
   const [header, footer] = template.split('<!-- Blog posts here -->');
+  if (header === undefined || footer === undefined) {
+    throw new Error('Template file is not formatted correctly.');
+  }
 
   const files = fs.readdirSync(scheduledDir);
   console.log(`Scheduled files: ${files.join(', ')}`);
@@ -108,7 +115,7 @@ try {
                     console.error(`File still exists in source directory: ${filePath}`);
                     console.log(`Attempting to remove the file from the source directory.`);
                     fs.unlinkSync(filePath);
-                    
+
                     if (!fs.existsSync(filePath)) {
                       console.log(`File successfully removed from source directory: ${filePath}`);
                     } else {
@@ -127,7 +134,7 @@ try {
 
             if (titleMatch) {
               const title = titleMatch[1];
-              latestPosts.push({ title, file });
+              latestPosts.push({ title, file, tag: tags[0] });  // Added tag for correct directory lookup
             }
           }
         } else {
@@ -141,21 +148,25 @@ try {
     }
   });
 
-  let indexContent = fs.readFileSync(indexFilePath, 'utf8');
-  const latestPostsSection = latestPosts.map(post => {
-    const directory = getDirectoryByTag(post.tag);
-    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
-    return `<a href="/blog/${directory}/${post.file}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
-  }).join('\n');
-  console.log(`Latest Posts Section: \n${latestPostsSection}`);
+  if (latestPosts.length > 0) {
+    let indexContent = fs.readFileSync(indexFilePath, 'utf8');
+    const latestPostsSection = latestPosts.map(post => {
+      const directory = getDirectoryByTag(post.tag);
+      const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
+      return `<a href="/blog/${directory}/${post.file}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
+    }).join('\n');
+    console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
-  indexContent = indexContent.replace(
-    /<!-- latest-posts-start -->([\\s\S]*?)<!-- latest-posts-end -->/,
-    `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
-  );
+    indexContent = indexContent.replace(
+      /<!-- latest-posts-start -->([\s\S]*?)<!-- latest-posts-end -->/,
+      `<!-- latest-posts-start -->\n${latestPostsSection}\n<!-- latest-posts-end -->`
+    );
 
-  fs.writeFileSync(indexFilePath, indexContent);
-  console.log('Updated index.md with latest posts.');
+    fs.writeFileSync(indexFilePath, indexContent);
+    console.log('Updated index.md with latest posts.');
+  } else {
+    console.log('No new posts to update in index.md.');
+  }
 
   if (fs.readdirSync(scheduledDir).length === 0) {
     console.log(`Scheduled directory is empty. Adding a placeholder file to keep the directory.`);
