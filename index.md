@@ -13,11 +13,9 @@
 <!-- Main --> 
 <div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br>
 <br>
-Currently tinkering with the Compute Module 5, Pico2 & Pico2W, Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br>
-<br>
-My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network, using CM5 as the central node & a Pi Zero2 as a data forwarder.<br>
-<br>
-Please feel free to take a look around, or click on any relevant badges that interest you.
+Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br>
+My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network,<br> using CM5 as the central node & a Pi Zero2 as a data forwarder.<br>
+Please feel free to take a look around, or click on any relevant badges that interest you.<br>
 </div><br>
 <div id="latestposts" align=center>
 <a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a>
