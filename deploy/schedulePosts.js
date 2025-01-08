@@ -127,7 +127,7 @@ try {
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
     const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-blue?style=flat-square`;
-    return `<a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
+    return `<div id="badge"><a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a></div>`;
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 

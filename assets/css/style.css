@@ -66,3 +66,9 @@ div.content {
     word-wrap: break-word;
     overflow-wrap: break-word; 
 }
+
+.badge {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
