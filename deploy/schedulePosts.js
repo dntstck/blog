@@ -77,7 +77,8 @@ try {
 
             tags.forEach(tag => {
               const tagDir = path.join(publishDir, getDirectoryByTag(tag.toLowerCase()));
-              if (!fs.existsSync(tagDir)) {console.log(`Creating directory: ${tagDir}`);
+              if (!fs.existsSync(tagDir)) {
+                console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
               const publishPath = path.join(tagDir, file.replace('.md', '.html'));
@@ -125,7 +126,8 @@ try {
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
-    return `<li><a href="./${directory}/${post.file.replace('.md', '.html')}">${post.title}</a></li>`;
+    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square`;
+    return `<li><a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a></li>`;
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
