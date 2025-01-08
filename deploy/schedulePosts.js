@@ -81,7 +81,7 @@ try {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
-              const publishPath = path.join(tagDir, file.replace('.md', '.html'));
+              const publishPath = path.join(tagDir, file);
               console.log(`Moving file from ${filePath} to ${publishPath}`);
               try {
                 if (fs.existsSync(publishPath)) {
@@ -109,7 +109,7 @@ try {
 
             if (titleMatch) {
               const title = titleMatch[1];
-              latestPosts.push({ title, file: file.replace('.md', '.html') });
+              latestPosts.push({ title, file });
             }
           }
         } else {
@@ -126,7 +126,7 @@ try {
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
-    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square`;
+    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-blue?style=flat-square`;
     return `<li><a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a></li>`;
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
