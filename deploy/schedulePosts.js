@@ -77,8 +77,7 @@ try {
 
             tags.forEach(tag => {
               const tagDir = path.join(publishDir, getDirectoryByTag(tag.toLowerCase()));
-              if (!fs.existsSync(tagDir)) {
-                console.log(`Creating directory: ${tagDir}`);
+              if (!fs.existsSync(tagDir)) {console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
               const publishPath = path.join(tagDir, file.replace('.md', '.html'));
@@ -126,7 +125,7 @@ try {
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
   const latestPostsSection = latestPosts.map(post => {
     const directory = getDirectoryByTag(post.tag);
-    return `<li><a href="./${directory}/${post.file}">${post.title}</a></li>`;
+    return `<li><a href="./${directory}/${post.file.replace('.md', '.html')}">${post.title}</a></li>`;
   }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
