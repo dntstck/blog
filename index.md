@@ -20,7 +20,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <a href="./blog" target="_blank"><img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"></a><br>
 <!-- latest-posts-start -->
-<a href="/blog/misc/test.md"><img src="https://img.shields.io/badge/Test%20Blog%20Post-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Test Blog Post"></a><br>
+<a href="/blog/misc/test.html"><img src="https://img.shields.io/badge/Test%20Blog%20Post-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Test Blog Post"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br><hr>
