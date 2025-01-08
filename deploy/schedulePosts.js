@@ -9,11 +9,13 @@ const scriptDir = path.resolve(__dirname);
 const publishDir = path.resolve(scriptDir, '..');
 const scheduledDir = path.resolve(scriptDir, '../scheduled');
 const indexFilePath = path.resolve(scriptDir, '../index.md');
+const templateFilePath = path.resolve(scriptDir, '../template.md');
 
 console.log(`Script Directory: ${scriptDir}`);
 console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 console.log(`Index File Path: ${indexFilePath}`);
+console.log(`Template File Path: ${templateFilePath}`);
 
 function getDirectoryByTag(tag) {
   const tagDirectoryMap = {
@@ -36,6 +38,9 @@ try {
     console.error(`Scheduled directory does not exist: ${scheduledDir}`);
     process.exit(1);
   }
+
+  const template = fs.readFileSync(templateFilePath, 'utf-8');
+  const [header, footer] = template.split('<!-- Blog posts here -->');
 
   const files = fs.readdirSync(scheduledDir);
   console.log(`Scheduled files: ${files.join(', ')}`);
@@ -81,14 +86,16 @@ try {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
               }
-              const publishPath = path.join(tagDir, file);
+
+              const wrappedContent = `${header}\n${content}\n${footer}`;
+              const publishPath = path.join(tagDir, file.replace('.md', '.html'));
               console.log(`Moving file from ${filePath} to ${publishPath}`);
               try {
                 if (fs.existsSync(publishPath)) {
                   console.log(`File already exists at ${publishPath}, deleting it.`);
                   fs.unlinkSync(publishPath);
                 }
-                fs.renameSync(filePath, publishPath);
+                fs.writeFileSync(publishPath, wrappedContent);
                 console.log(`Published ${file} to ${publishPath}`);
 
                 if (fs.existsSync(publishPath)) {
