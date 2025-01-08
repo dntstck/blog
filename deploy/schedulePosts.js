@@ -15,6 +15,22 @@ console.log(`Publish Directory: ${publishDir}`);
 console.log(`Scheduled Directory: ${scheduledDir}`);
 console.log(`Index File Path: ${indexFilePath}`);
 
+function getDirectoryByTag(tag) {
+  const tagDirectoryMap = {
+    'cm5': 'cm5', 
+    'devserver': 'devserver',
+    'embedded': 'embeddedc',
+    'microcontrollers': 'microcontrollers',
+    'misc': 'misc',
+    'osnetworking': 'osnetworking', 
+    'picosystem': 'picosystem',
+    'raspberrypi': 'raspberrypi',
+    'thoughts': 'thoughts',
+    'webdevelopment': 'webdev'
+  };
+  return tagDirectoryMap[tag] || 'misc';
+}
+
 try {
   if (!fs.existsSync(scheduledDir)) {
     console.error(`Scheduled directory does not exist: ${scheduledDir}`);
@@ -60,7 +76,7 @@ try {
             console.log(`Tags: ${tags}`);
 
             tags.forEach(tag => {
-              const tagDir = path.join(publishDir, tag.toLowerCase());
+              const tagDir = path.join(publishDir, getDirectoryByTag(tag.toLowerCase()));
               if (!fs.existsSync(tagDir)) {
                 console.log(`Creating directory: ${tagDir}`);
                 fs.mkdirSync(tagDir, { recursive: true });
@@ -107,9 +123,12 @@ try {
     }
   });
 
-  // update index.md
   let indexContent = fs.readFileSync(indexFilePath, 'utf8');
-  const latestPostsSection = latestPosts.map(post => `- [${post.title}](./misc/${post.file})`).join('\n');
+  const latestPostsSection = latestPosts.map(post => {
+    const directory = getDirectoryByTag(post.tag);
+    const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(post.title)}-151515?style=flat-square`;
+    return `<a href="./${directory}/${post.file.replace('.md', '.html')}"><img src="${badgeUrl}" alt="${post.title}"></a><br>`;
+  }).join('\n');
   console.log(`Latest Posts Section: \n${latestPostsSection}`);
 
   indexContent = indexContent.replace(
@@ -120,7 +139,6 @@ try {
   fs.writeFileSync(indexFilePath, indexContent);
   console.log('Updated index.md with latest posts.');
 
-  // ensure the scheduled dir remains
   if (fs.readdirSync(scheduledDir).length === 0) {
     console.log(`Scheduled directory is empty. Adding a placeholder file to keep the directory.`);
     fs.writeFileSync(path.join(scheduledDir, '.gitkeep'), '');
