@@ -30,7 +30,7 @@ body, .content {
   box-sizing: border-box;
   } /* fix blog text overflowing */ 
 #blog-post { 
-  max-width: 50%;
+  max-width: 80%;
   margin: 0 auto; 
   padding: 0 1rem; 
   word-wrap: break-word;
