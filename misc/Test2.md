@@ -35,6 +35,9 @@ body, .content {
   overflow-wrap: break-word;
   box-sizing: border-box;
   } 
+hr {
+  max-width: 100%
+}
 </style>
 <div id="blog-post">
 
