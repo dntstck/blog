@@ -22,9 +22,10 @@
 
 <!-- Blog posts here -->
 
+<br><hr>
 <!-- Footer -->
 </div>
-<br><hr>
+
 <br>
 <div align="center">
   <a href="../"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> 
