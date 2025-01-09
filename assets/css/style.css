@@ -7,13 +7,11 @@ body {
     padding: 0;
 }
 
-
 header {
     background-color: #0d1117; 
     color: #f0f6fc;
     text-align: center;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     color: #f0f6fc;
@@ -51,6 +49,12 @@ button:hover {
     background-color: #2ea043; 
 }
 
+body, .content { 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    box-sizing: border-box;
+}
+
 hr { 
     width: 50%;
     margin: 20px auto; 
@@ -58,16 +62,18 @@ hr {
     border-top: 2px solid #8b949e;
 }
 
-div.content {
-    max-width: 50%; 
-    margin: 0 auto; 
-    padding: 0 20px;
-    word-wrap: break-word;
-    overflow-wrap: break-word; 
-}
-
 .latestposts {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; 
+}
+
+#content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
