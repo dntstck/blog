@@ -79,3 +79,11 @@ hr {
     overflow-wrap: break-word;
     box-sizing: border-box;
 }
+
+.blog-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 50%; 
+}

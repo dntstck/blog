@@ -1,7 +1,7 @@
 <!-- Header -->
 <link rel="stylesheet" href="../../assets/css/style.css"/>
 <div align="center">    
-  <a href="../"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br> 
+  <a href="../"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br></div> 
 
   <div align="center">
     <a href="../"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> 
@@ -17,11 +17,13 @@
     <a href="/blog/webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a>
   </div>
 <hr>
+<div id="blog-post">
 <!-- Main --> 
 
 <!-- Blog posts here -->
 
 <!-- Footer -->
+</div>
 <br><hr>
 <br>
 <div align="center">
