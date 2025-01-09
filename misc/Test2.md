@@ -21,16 +21,32 @@
 
 <!-- Main --> 
 
-Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. !!!!
+<style> 
+body, .content { 
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  box-sizing: border-box;
+  } /* fix blog text overflowing */ 
+#blog-post { 
+  max-width: 80%;
+  margin: 0 auto; 
+  padding: 0 1rem; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  } 
+</style>
+<div id="blog-post">
+
+Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. 
 
 </div>
-<br>
+<br><hr>
 <!-- Footer -->
 
 </div>
 
 <br>
-<hr>
 <div align="center">
   <a href="../"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> 
   <a href="https://github.com/dntstck"><img alt="GitHub" src="https://img.shields.io/badge/-@dntstck-181717?style=flat-square&logo=GitHub&logoColor=white"></a> 
