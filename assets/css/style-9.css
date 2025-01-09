@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: medium; 
+    font-size: small; 
     background-color: #0d1117; 
     color: #c9d1d9; 
     margin: 0;
     padding: 0;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
-
 
 header {
     background-color: #0d1117; 
     color: #f0f6fc;
     text-align: center;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     color: #f0f6fc;
@@ -51,6 +51,13 @@ button:hover {
     background-color: #2ea043; 
 }
 
+body, .content { 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    box-sizing: border-box;
+    max-width: 50%;
+}
+
 hr { 
     width: 50%;
     margin: 20px auto; 
@@ -58,16 +65,19 @@ hr {
     border-top: 2px solid #8b949e;
 }
 
-div.content {
-    max-width: 50%; 
-    margin: 0 auto; 
-    padding: 0 20px;
-    word-wrap: break-word;
-    overflow-wrap: break-word; 
-}
-
 .latestposts {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; 
 }
+
+#content {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
