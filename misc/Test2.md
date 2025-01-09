@@ -18,6 +18,7 @@
   </div>
 <hr>
 <div id="blog-post">
+
 <!-- Main --> 
 
 
@@ -28,6 +29,7 @@ Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx
 
 
 <!-- Footer -->
+
 </div>
 <br><hr>
 <br>
