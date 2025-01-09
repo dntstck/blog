@@ -55,6 +55,7 @@ body, .content {
     word-wrap: break-word; 
     overflow-wrap: break-word; 
     box-sizing: border-box;
+    max-width: 50%;
 }
 
 hr { 
