@@ -22,9 +22,9 @@ Please feel free to take a look around, or click on any relevant badges that int
 <a href="/blog/misc/newpost"><img src="https://img.shields.io/badge/New%20Blog%20Post-151515?style=flat-square&logo=GitHub&logoColor=white" alt="New Blog Post"></a><br>
 <!-- latest-posts-end -->
 </div>
-<br><hr>
-<!-- Footer -->
 <br>
+<!-- Footer -->
+<br><hr>
 <div id="footer-badge" align="center">
 <a href="./"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> <a href="https://dntstck.github.io/blog/" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/-@dntstck-181717?style=flat-square&logo=GitHub&logoColor=white"></a> <a href="https://www.linkedin.com/in/drudelarosa" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=Linkedin&logoColor=white"></a> <a href="https://orcid.org/0009-0003-6755-7655" target="_blank"><img alt="ORCID" src="https://img.shields.io/badge/-ORCID-A6CE39?style=flat-square&logo=ORCID&logoColor=white"></a> <a href="https://stackoverflow.com/users/28874348/dru-delarosa" target="_blank"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=flat-square&logo=Stack-Overflow&logoColor=white"></a></div>
   
