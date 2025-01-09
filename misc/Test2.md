@@ -21,24 +21,7 @@
 
 <!-- Main --> 
 
-<style> 
-body, .content { 
-  word-wrap: break-word;
-  overflow-wrap: break-word; 
-  box-sizing: border-box;
-  } /* fix blog text overflowing */ 
-#blog-post { 
-  max-width: 50%;
-  margin: 0 auto; 
-  padding: 0 1rem; 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-  } 
-</style>
-<div id="blog-post">
-
-Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. 
+Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. !!!!
 
 </div>
 <br><hr>
