@@ -26,8 +26,8 @@ body, .content {
   word-wrap: break-word;
   overflow-wrap: break-word; 
   box-sizing: border-box;
-   } /* Style for horizontal rule */ 
- #blog-post { 
+  } /* fix blog text overflowing */ 
+#blog-post { 
   max-width: 100%;
   margin: 0 auto; 
   padding: 0 1rem; 
