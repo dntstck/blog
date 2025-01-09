@@ -36,11 +36,11 @@ body, .content {
   box-sizing: border-box;
   } 
 </style>
-
+<div id="blog-post">
 
 Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. Sphinx of black quartz judge my vow. 
 
-
+</div>
 <br><hr>
 <!-- Footer -->
 
