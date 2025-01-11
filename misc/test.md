@@ -31,7 +31,7 @@ body, .content {
   } /* fix blog text overflowing */ 
 #blog-post { 
   max-width: 80%;
-  margin: 0 auto; 
+  margin-left: 40px; 
   padding: 0 1rem; 
   word-wrap: break-word;
   overflow-wrap: break-word;
