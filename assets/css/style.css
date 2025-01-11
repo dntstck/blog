@@ -79,6 +79,9 @@ hr {
     padding: 1px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   
 /* Media query for devices */
