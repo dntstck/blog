@@ -74,7 +74,7 @@ hr {
   }
   
 #blog-post {
-    max-width: 600px;
+    max-width: 750px;
     margin: 10px auto; 
     padding: 1px;
     border-radius: 5px;
@@ -82,6 +82,7 @@ hr {
     overflow: hidden;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    white-space: normal;
   }
   
 /* Media query for devices */
