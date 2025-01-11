@@ -87,9 +87,10 @@ hr {
   
 /* Media query for devices */
 @media (max-width: 600px) {
-    .blog-post {
+    #blog-post {
         width: 90%; 
         margin: 10px auto;
+        padding: 15px;
     }
   }
   
