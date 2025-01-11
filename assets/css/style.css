@@ -56,23 +56,23 @@ hr {
     margin: 20px auto; 
     border: none; 
     border-top: 2px solid #8b949e;
-}
-
-div.content {
+  }
+  
+  div.content {
     max-width: 50%; 
     margin: 0 auto; 
     padding: 0 20px;
     word-wrap: break-word;
     overflow-wrap: break-word; 
-}
-
-.latestposts {
-    display:flex;
+  }
+  
+  .latestposts {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-blog-post {
+  }
+  
+  #blog-post {
     width: 300px; 
     margin: 10px auto; 
     padding: 10px;
@@ -80,9 +80,9 @@ blog-post {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* query for devices */
+  /* Media query for devices */
   @media (max-width: 600px) {
-    .post-entry {
+    .blog-post {
       width: 90%; 
       margin: 10px auto;
     }
