@@ -23,29 +23,10 @@
 
 
 
-<style> 
-body, .content { 
-  word-wrap: break-word;
-  overflow-wrap: break-word; 
-  box-sizing: border-box;
-  } /* fix blog text overflowing */ 
-#blog-post { 
-  max-width: 80%;
-  margin-left: 100px; 
-  padding: 0 1rem; 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-  } 
-hr {
-  max-width: 100%
-}
-</style>
-<div id="blog-post">
+
 
 Blog Content here. 
 
-</div>
 <br>
 
 
