@@ -58,7 +58,7 @@ hr {
     border-top: 2px solid #8b949e;
   }
   
-  div.content {
+#content {
     max-width: 50%; 
     margin: 0 auto; 
     padding: 0 20px;
@@ -66,13 +66,13 @@ hr {
     overflow-wrap: break-word; 
   }
   
-  .latestposts {
+#latestposts {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  #blog-post {
+#blog-post {
     width: 300px; 
     margin: 10px auto; 
     padding: 10px;
@@ -80,11 +80,11 @@ hr {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Media query for devices */
-  @media (max-width: 600px) {
+/* Media query for devices */
+@media (max-width: 600px) {
     .blog-post {
-      width: 90%; 
-      margin: 10px auto;
+        width: 90%; 
+        margin: 10px auto;
     }
   }
   
