@@ -1,12 +1,8 @@
-name: Generate Shields
+name: Generate Shields Daily
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  schedule:
+    - cron: '10 0 * * *'  # Run daily at 12:10 AM UTC
 
 jobs:
   generate-shields:
