@@ -59,7 +59,7 @@ hr {
   }
   
 #content {
-    max-width: 500px; 
+    max-width: 400px; 
     margin: 0 auto; 
     padding: 0 20px;
     word-wrap: break-word;
@@ -74,7 +74,7 @@ hr {
   }
   
 #blog-post {
-    max-width: 80%;
+    max-width: 400px;
     margin: 10px auto; 
     padding: 1px;
     border-radius: 5px;
