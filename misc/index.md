@@ -16,7 +16,6 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Misc-5e2750?&logo=github&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
 <!-- all-posts-end -->
 </div>
 <br>
