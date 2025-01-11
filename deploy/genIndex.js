@@ -5,7 +5,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
 const scriptDir = path.resolve(__dirname);
 const blogDirs = [
     path.resolve(scriptDir, '../cm5'),
@@ -23,7 +22,6 @@ const blogDirs = [
 // gen shields
 const generateBadgeUrl = (title) => `https://img.shields.io/badge/${encodeURIComponent(title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
 
-
 const updateIndexMd = (dir, files) => {
     const indexFilePath = path.resolve(dir, 'index.md');
     if (!fs.existsSync(indexFilePath)) {
@@ -39,8 +37,9 @@ const updateIndexMd = (dir, files) => {
     }
     
     const shields = files.map(file => {
-        const badgeUrl = generateBadgeUrl(file.replace('.md', ''));
-        return `<a href="${file}"><img src="${badgeUrl}" alt="${file}"></a><br>`;
+        const fileNameWithoutExt = file.replace('.md', '');
+        const badgeUrl = generateBadgeUrl(fileNameWithoutExt);
+        return `<a href="${fileNameWithoutExt}.html"><img src="${badgeUrl}" alt="${fileNameWithoutExt} Badge"></a><br>`;
     }).join('\n');
     
     indexContent = indexContent.replace(
@@ -55,7 +54,6 @@ const updateIndexMd = (dir, files) => {
         console.error(`Unable to write to index.md in ${dir}: ${err}`);
     }
 };
-
 
 blogDirs.forEach(dir => {
     console.log(`${path.basename(dir)}: ${dir}`);
@@ -72,6 +70,6 @@ blogDirs.forEach(dir => {
             }
         });
     } else {
-        console.log(`fatal error: directory ${dir} does not exist`);
+        console.log(`Fatal error: directory ${dir} does not exist`);
     }
 });
