@@ -3,7 +3,7 @@ name: Generate Shields Daily
 on:
   schedule:
     - cron: '10 0 * * *'  # Run daily at 12:10 AM UTC
-
+  workflow_dispatch:
 jobs:
   generate-shields:
     runs-on: ubuntu-latest
