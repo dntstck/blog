@@ -20,9 +20,6 @@
 <div id="blog-post">
 <!-- Main --> 
 
-
-
-
 ## *Setting up the Dev Server*
 
 The next step was to configure the CM5 itself as a development server. I installed all the relevant packages on the CM5:

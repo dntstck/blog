@@ -21,8 +21,6 @@
 <!-- Main --> 
 
 
-
-
 # *Unveiling the Compute Module 5: A Journey Through Innovation*
 
 ![Compute Module 5 Image](/img/cm5-full.png)
@@ -87,11 +85,6 @@ Until next time, Dru xo
   - **2 × 4-lane MIPI ports supporting both DSI (display port) and CSI-2 (camera port)**
 - **Video Support:** H.265 (4Kp60 decode), OpenGL ES 3.1 graphics, Vulkan 1.2
 - **Power:** 5V (up to 5A with USB-C PD)
-
----
-
-I made sure to address all the necessary corrections. Your blog post is now polished and ready to go! Is there anything else you'd like to review or any other project you'd like assistance with? 🌟🚀📂
-
 
 
 <br>
