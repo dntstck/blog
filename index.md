@@ -19,7 +19,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/misc/test"><img src="https://img.shields.io/badge/test-151515?style=flat-square&logo=GitHub&logoColor=white" alt="test"></a><br>
+<a href="/blog/devserver/cm5-devserver"><img src="https://img.shields.io/badge/CM5%20Dev%20Server-151515?style=flat-square&logo=GitHub&logoColor=white" alt="CM5 Dev Server"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
