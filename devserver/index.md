@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Dev%20Server-5e2750?&logo=raspberrypi&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="devserver-setup.md"><img src="https://img.shields.io/badge/devserver-setup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-setup.md"></a><br>
+<a href="devserver-setup.html"><img src="https://img.shields.io/badge/devserver-setup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-setup Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>

@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Compute%20Module%205-5e2750?&logo=raspberrypi&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="cm5-unveiled.md"><img src="https://img.shields.io/badge/cm5-unveiled-151515?style=flat-square&logo=GitHub&logoColor=white" alt="cm5-unveiled.md"></a><br>
+<a href="cm5-unveiled.html"><img src="https://img.shields.io/badge/cm5-unveiled-151515?style=flat-square&logo=GitHub&logoColor=white" alt="cm5-unveiled Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
