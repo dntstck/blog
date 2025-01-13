@@ -27,7 +27,7 @@
 id="unveiling-the-compute-module-5-a-journey-through-innovation"><em>Unveiling
 the Compute Module 5: A Journey Through Innovation</em></h1>
 <figure>
-<img src="/img/cm5-full.png" alt="Compute Module 5 Image" />
+<img src="{{ site.baseurl }}/img/cm5-full.png" alt="Compute Module 5 Image" />
 <figcaption aria-hidden="true">Compute Module 5 Image</figcaption>
 </figure>
 <p>Over the past two weeks, I’ve been diving deep into the capabilities
