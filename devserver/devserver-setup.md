@@ -48,8 +48,7 @@ and connect on my main machine using:</p>
 <p>After running Kubectl and seeing the master node (CM5) and a service
 (nginx), success was evident.</p>
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/kubectl-running.jpeg" alt="KubeCTL" />
-<figcaption aria-hidden="true">KubeCTL</figcaption>
+<img src="{{ site.baseurl }}/devserver/img/kubectl-running.png" alt="KubeCTL" />
 </figure>
 <h2 id="zero-time"><em>Zero Time</em></h2>
 <p>Now it’s time to set up the Zero as a data forwarder. This is incase
