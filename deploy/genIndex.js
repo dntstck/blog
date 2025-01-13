@@ -39,7 +39,7 @@ const updateIndexMd = (dir, files) => {
     const shields = files.map(file => {
         const fileNameWithoutExt = file.replace('.md', '');
         const badgeUrl = generateBadgeUrl(fileNameWithoutExt);
-        return `<a href="${fileNameWithoutExt}.html"><img src="${badgeUrl}" alt="${fileNameWithoutExt} Badge"></a><br>`;
+        return `<a href="${fileNameWithoutExt}"><img src="${badgeUrl}" alt="${fileNameWithoutExt} Badge"></a><br>`;
     }).join('\n');
     
     indexContent = indexContent.replace(
