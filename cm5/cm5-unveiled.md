@@ -109,6 +109,14 @@ does not give me that choice so I stuck with Raspbian for power,
 processing, and support, as well as the option of having a graphical
 interface if I ever choose to use it.</p>
 <h4 id="final-thoughts"><em>Final Thoughts</em></h4>
+<p>Exploring the Compute Module 5 has been an exciting adventure, 
+and I look forward to uncovering even more potential and seriously
+unlocking its power. I highly recommend them to anyone who is interested
+in Linux, Pi, embedded systems, etc. I wouldn't suggest them to a 
+novice,or someone with little experience so if this is you, 
+I'd start out with a Pi 4 or Pi 5 first.
+
+Until next time, Dru xo</p>
 <h5 id="compute-module-5-specifications"><strong>Compute Module 5
 Specifications:</strong></h5>
 <ul>
