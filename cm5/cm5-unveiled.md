@@ -86,7 +86,7 @@ within seconds! Faster than my main development machine (an Intel i5
 Dell Optiplex I grabbed off eBay last year and put 8GB of RAM in).
 Awesome.</p>
 <figure>
-<img src="{{ site.baseurl }}/cm5/img/diy-case.png" alt="Compute Module 5 Image" />
+<img src="{{ site.baseurl }}/cm5/img/diy-case.jpeg" alt="Compute Module 5 Image" />
 </figure>
 <h4 id="ideas-envisioned">Ideas, envisioned</h4>
 <p>My main idea with the CM5 was to utilize it as a development server,
