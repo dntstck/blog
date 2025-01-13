@@ -22,13 +22,11 @@
 
 
 
----
 <h1
 id="unveiling-the-compute-module-5-a-journey-through-innovation"><em>Unveiling
 the Compute Module 5: A Journey Through Innovation</em></h1>
 <figure>
-<img src="/img/cm5-full.png" alt="Compute Module 5 Image" />
-<figcaption aria-hidden="true">Compute Module 5 Image</figcaption>
+<img src="{{ site.baseurl }}/cm5/img/cm5-full.png" alt="Compute Module 5 Image" />
 </figure>
 <p>Over the past two weeks, I’ve been diving deep into the capabilities
 of the Compute Module 5 (CM5). From setting up a couple of IO boards,
@@ -72,10 +70,8 @@ some stage to enable PoE and it’s not a massive requirement at the
 minute, but will be useful when I buy a switch with more Ethernet ports
 and have all my Ethernet-enabled devices connected.</p>
 <figure>
-<img src="/img/waveshare-1.jpeg"
+<img src="{{ site.baseurl }}/cm5/img/waveshare-1.jpeg"
 alt="Waveshare CM4 Mini Base Board - No PoE" />
-<figcaption aria-hidden="true">Waveshare CM4 Mini Base Board - No
-PoE</figcaption>
 </figure>
 <h4 id="fashioning-a-case-and-nvme-drive"><em>Fashioning a Case and NVMe
 Drive</em></h4>
@@ -90,8 +86,7 @@ within seconds! Faster than my main development machine (an Intel i5
 Dell Optiplex I grabbed off eBay last year and put 8GB of RAM in).
 Awesome.</p>
 <figure>
-<img src="/img/diy-case.png" alt="Compute Module 5 Image" />
-<figcaption aria-hidden="true">Compute Module 5 Image</figcaption>
+<img src="{{ site.baseurl }}/cm5/img/diy-case.jpeg" alt="Compute Module 5 Image" />
 </figure>
 <h4 id="ideas-envisioned">Ideas, envisioned</h4>
 <p>My main idea with the CM5 was to utilize it as a development server,
@@ -114,6 +109,14 @@ does not give me that choice so I stuck with Raspbian for power,
 processing, and support, as well as the option of having a graphical
 interface if I ever choose to use it.</p>
 <h4 id="final-thoughts"><em>Final Thoughts</em></h4>
+<p>Exploring the Compute Module 5 has been an exciting adventure, 
+and I look forward to uncovering even more potential and seriously
+unlocking its power. I highly recommend them to anyone who is interested
+in Linux, Pi, embedded systems, etc. I wouldn't suggest them to a 
+novice,or someone with little experience so if this is you, 
+I'd start out with a Pi 4 or Pi 5 first.
+
+Until next time, Dru xo</p>
 <h5 id="compute-module-5-specifications"><strong>Compute Module 5
 Specifications:</strong></h5>
 <ul>
