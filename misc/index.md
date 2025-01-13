@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Misc-5e2750?&logo=github&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
+<a href="newpost.md"><img src="https://img.shields.io/badge/newpost-151515?style=flat-square&logo=GitHub&logoColor=white" alt="newpost.md"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
