@@ -25,35 +25,3 @@ theme: minima
 
 # Build settings
 markdown: kramdown
-collections:
-  cm5:
-    output: true
-    permalink: /cm5/:title.html
-  devserver:
-    output: true
-    permalink: /devserver/:title.html
-  embeddedc:
-    output: true
-    permalink: /embeddedc/:title.html
-  microcontrollers:
-    output: true
-    permalink: /microcontrollers/:title.html
-  misc:
-    output: true
-    permalink: /misc/:title.html
-  osnetworking:
-    output: true
-    permalink: /osnetworking/:title.html
-  picosystem:
-    output: true
-    permalink: /picosystem/:title.html
-  raspberrypi:
-    output: true
-    permalink: /raspberrypi/:title.html
-  thoughts:
-    output: true
-    permalink: /thoughts/:title.html
-  webdev:
-    output: true
-    permalink: /webdev/:title.html
-

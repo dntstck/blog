@@ -42,7 +42,7 @@ body, .content {
   } /* fix blog text overflowing */ 
 #blog-post { 
   max-width: 80%;
-  margin-left: 100px;  
+  margin: 0 auto; 
   padding: 0 1rem; 
   word-wrap: break-word;
   overflow-wrap: break-word;

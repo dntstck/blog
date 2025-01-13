@@ -1,7 +1,7 @@
 ---
 title: "Dev Server Setup"
 date: 2025-01-08T02:05:00Z
-publishDate: 2025-01-12T04:10:00Z
+publishDate: 2025-01-14T04:10:00Z
 tags: [webdev]
 ---
 

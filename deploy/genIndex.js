@@ -19,41 +19,29 @@ const blogDirs = [
     path.resolve(scriptDir, '../webdev')
 ];
 
-// gen shields
+// generate badge URL
 const generateBadgeUrl = (title) => `https://img.shields.io/badge/${encodeURIComponent(title)}-151515?style=flat-square&logo=GitHub&logoColor=white`;
 
+// update index.md with shields
 const updateIndexMd = (dir, files) => {
     const indexFilePath = path.resolve(dir, 'index.md');
     if (!fs.existsSync(indexFilePath)) {
         console.log(`index.md does not exist in ${dir}`);
         return;
     }
-    let indexContent;
-    try {
-        indexContent = fs.readFileSync(indexFilePath, 'utf8');
-    } catch (err) {
-        console.error(`Unable to read index.md in ${dir}: ${err}`);
-        return;
-    }
-    
+    let indexContent = fs.readFileSync(indexFilePath, 'utf8');
     const shields = files.map(file => {
-        const fileNameWithoutExt = file.replace('.md', '');
-        const badgeUrl = generateBadgeUrl(fileNameWithoutExt);
-        return `<a href="${fileNameWithoutExt}.html"><img src="${badgeUrl}" alt="${fileNameWithoutExt} Badge"></a><br>`;
+        const badgeUrl = generateBadgeUrl(file.replace('.md', ''));
+        return `<a href="${file}"><img src="${badgeUrl}" alt="${file}"></a><br>`;
     }).join('\n');
-    
     indexContent = indexContent.replace(
         /<!-- all-posts-start -->([\s\S]*?)<!-- all-posts-end -->/,
         `<!-- all-posts-start -->\n${shields}\n<!-- all-posts-end -->`
     );
-
-    try {
-        fs.writeFileSync(indexFilePath, indexContent);
-        console.log(`Updated ${indexFilePath} with shields.`);
-    } catch (err) {
-        console.error(`Unable to write to index.md in ${dir}: ${err}`);
-    }
+    fs.writeFileSync(indexFilePath, indexContent);
+    console.log(`Updated ${indexFilePath} with shields.`);
 };
+
 
 blogDirs.forEach(dir => {
     console.log(`${path.basename(dir)}: ${dir}`);
@@ -70,6 +58,6 @@ blogDirs.forEach(dir => {
             }
         });
     } else {
-        console.log(`Fatal error: directory ${dir} does not exist`);
+        console.log(`fatal error: directory ${dir} does not exist`);
     }
 });
