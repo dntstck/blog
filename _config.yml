@@ -18,7 +18,7 @@ jobs:
 
 title: Developer Blog
 description: "Welcome to my blog!"
-baseurl: "/blog" # Ensures subpath is used
+baseurl: "/blog"
 url: "https://dntstck.co.uk"
 theme: minima
 markdown: kramdown
