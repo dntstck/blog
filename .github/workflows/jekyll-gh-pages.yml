@@ -23,17 +23,17 @@ jobs:
 
       - name: Verify Scheduled Directory
         run: |
-          if [ -d "/home/runner/work/blog/blog/scheduled" ]; then
+          if [ -d "/home/runner/work/blog/scheduled" ]; then
             echo "Scheduled directory exists.";
           else
             echo "Scheduled directory does not exist. Creating it.";
-            mkdir -p /home/runner/work/blog/blog/scheduled;
+            mkdir -p /home/runner/work/blog/scheduled;
           fi
 
       - name: List Files Before Move
         run: |
           echo "Files in repository before move:"
-          find /home/runner/work/blog/blog -type f -print
+          find /home/runner/work/blog/ -type f -print
 
       - name: Run Schedule Posts Script
         run: node deploy/schedulePosts.js
@@ -41,7 +41,7 @@ jobs:
       - name: List Files After Move
         run: |
           echo "Files in repository after move:"
-          find /home/runner/work/blog/blog -type f -print
+          find /home/runner/work/blog/ -type f -print
 
       - name: Force Git to Detect Changes
         run: |
