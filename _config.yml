@@ -22,4 +22,3 @@ baseurl: "/blog" # Ensures subpath is used
 url: "https://dntstck.co.uk"
 theme: minima
 markdown: kramdown
-
