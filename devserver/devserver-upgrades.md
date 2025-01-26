@@ -92,7 +92,7 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 <p>I will definitely be buying more of these, they look great. Compute modules and carrier boards fit in them nicely, they drill really well and are extremely strong as well as being waterproof with the seal that comes with it. Even after drilling and not sanding they still look acceptable. Good value and great for quick projects to prevent dust and electro static discharge, the worst enemy of all. </p>
 
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/workstation.jpeg" alt="Workstation" />
+<img src="{{ site.baseurl }}/devserver/img/devserver.jpeg" alt="Workstation" />
 </figure>
 
 <p>Looks great, doesn't it?<br>
