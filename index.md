@@ -4,17 +4,19 @@
 
 - - -
 
-Hi! I'm Dru and welcome to my dev blog
+Hi! I'm Dru and welcome to my dev blog.
 
-I'm a junior developer with a passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development, and game development.
+I'm a junior dev with a huge passion for Open-Source, Vim, embedded systems, Raspberry Pi, Linux, web development & game development.
 
-Currently, I’m tinkering with the Compute Module 5, Pico2 & Pico2W, Tiny2350, RP2040Plus, and PicoSystem. I'm also studying Cloud Web Development with HyperionDev.
+Currently tinkering with the Compute Module 5, Pico2 & Pico2W,
+Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.
 
-My latest project involves utilizing the Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network. I'm using the CM5 as the central node and a Pi Zero2 as a data forwarder.
+My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network,
+using CM5 as the central node & a Pi Zero2 as a data forwarder.
 
-Feel free to look around or click on any relevant badges that catch your interest.
+Please feel free to take a look around, or click on any relevant badges that interest you.
+
 <br>
-
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&amp;logo=github&amp;logoColor=black">
 <a href="/devserver/devserver-upgrades"><img src="https://img.shields.io/badge/DevServer%20Upgrades-151515?style=flat-square&amp;logo=GitHub&amp;logoColor=white" alt="DevServer Upgrades"></a>
 
