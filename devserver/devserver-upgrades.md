@@ -71,7 +71,7 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 
 <h1 id="wq"><em>:wq</em></h1>
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/wqsticker.png" alt="wq Sticker" />
+<img src="{{ site.baseurl }}/devserver/img/wqsticker.jpeg" alt="wq Sticker" />
 </figure>
 
 <p>I have the perfect sticker for this box. found it while searching for a new Vim sticker for my laptop, a large <code>:wq</code> command</p> sticker that will look neat and be nice nod to Vim. I'd like a Pi Inside sticker on the front eventually also. 
