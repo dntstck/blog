@@ -58,7 +58,7 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 <p>After drilling the holes and installing the 5v fan, placing it incorrectly and then moving it into the correct position leaving lots of holes in the wrong place, (it's just more ventiilation dont worry) I attached the 5v wire and the GND wire into the correct GPIO pins. This IO board follows the same pinout as the Pi5, so we can use that as a reference.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/tag/devserver/cm5-fitted.jpeg" alt="CM5 Installed" />
+<img src="{{ site.baseurl }}/devserver/img/cm5-fitted.jpeg" alt="CM5 Installed" />
 </figure>
 
 <p>I had to attach this fans wires to a female to female dupont wire as there was no other way of connecting it, a gentle tug ensures it's connected properly. I then glued these to the side, positioning them apart from each other to prevent shorting.</p>
