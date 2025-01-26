@@ -86,7 +86,7 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 <p> It was heating up and running at unsafe temperatures, now it runs at a lovely 38c even when connected to the DevServer via SSH in VSCode and operating other processes such as Docker, k3s and mariadb.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/cm5temp.jpeg" alt="CM5 Temperature" />
+<img src="{{ site.baseurl }}/devserver/img/cm5temp.png" alt="CM5 Temperature" />
 </figure>
 
 <p>I will definitely be buying more of these, they look great. Compute modules and carrier boards fit in them nicely, they drill really well and are extremely strong as well as being waterproof with the seal that comes with it. Even after drilling and not sanding they still look acceptable. Good value and great for quick projects to prevent dust and electro static discharge, the worst enemy of all. </p>
