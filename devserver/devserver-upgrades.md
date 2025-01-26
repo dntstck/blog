@@ -63,11 +63,11 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 
 <p>I had to attach this fans wires to a female to female dupont wire as there was no other way of connecting it, a gentle tug ensures it's connected properly. I then glued these to the side, positioning them apart from each other to prevent shorting.</p>
 
-<h2 id="firstboot"><em>First Boot</em></h1>
+<h2 id="firstboot"><em>First Boot</em></h2>
 
 <p>Always a nerve wrecker, this one. Especially as the fan did not start spinning! Panic for a moment, noticed LED activity, quick prod of the power wire and the fan starts spinning at full speed. Phew. Just a loose connection. Even though I always wear my ESD bracelet when working with any open boards I do always worry.</p>
 
-<h2 id="fullspeed"><em>RPM Over 9000</em></h1>
+<h2 id="fullspeed"><em>RPM Over 9000</em></h2>
 
 <p>This is one issue we are going to encounter due to the fan we are using is a simple 2 wire 5v fan, it doesn't have a pwm/fan controller wire. No fan controller means the fan will simply run at full power (5v), full speed. Not usually a problem however I think this fan is quite old because it's a tad on the noisy side. I will have to look into getting a different fan for this, but it will suffice for now.</p>
 
