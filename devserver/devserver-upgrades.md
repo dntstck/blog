@@ -31,9 +31,7 @@ id="devserverupgrades"><em>DevServer Upgrades</em></h1>
 </figure>
 
 <p>Out of stock, forever. </p>
-<figure>
-<img src="{{ site.baseurl }}/devserver/img/outofstock.png" alt="Out of stock" />
-</figure>
+
 <p>That's how it feels waiting for the CM5 IO Case stock to replenish on the pi hut. So I decided to build my own. It can't be that hard, surely? Obviously it wouldn't be a pro finish as I am not a professional case maker, but I can give it a shot.</p>
 
 <h2 id="absjunctionbox"><em>ABS Junction Box</em></h2>
