@@ -19,8 +19,8 @@ echo "Setting Publish Date to midnight.."
 
 FILENAME=$(echo "$TITLE" | tr ' ' '-').md
 
-# relative path for the scheduled dir
-DIRECTORY="./scheduled"
+# relative path for the todo dir
+DIRECTORY="./todo"
 if [ ! -d "$DIRECTORY" ]; then
   mkdir -p $DIRECTORY
 fi
@@ -34,19 +34,17 @@ publishDate: $PUBLISH_DATE
 tags: [$TAGS]
 ---
 
-h1 id="title"><em>title</em></h1>
+<h1 id="$TITLE"><em>$TITLE</em></h1>
 
 <p>Content</p>
 
-<h2 id="title2"><em>FTitle2</em></h2>
+<h2 id="$TITLE"><em>$TITLE</em></h2>
 <p>Content2</p>
 
 <figure>
-<img src="{{ site.baseurl }}/CATEGORY/img/FILENAME.png" alt="IMG ALT" />
+<img src="{{ site.baseurl }}/$TAGS/img/$TITLE.png" alt="$TITLE" />
 <br><sup>img desc</sup>
 </figure>
-
-<h2 id="title3"><em>Title3</em></h2>
 
 EOF
 
