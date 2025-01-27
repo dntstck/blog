@@ -56,11 +56,11 @@ Now I wasn't aware of this until I googled it just now, but the PicoSystem also 
 <h1 id="specs"><em>Specs</em></h1>
 <p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br><sup>(overclocked to 250MHz)</sup><br>
 <em><b>RAM:</b></em> 264 kB of StaticRAM.<br>
-<em><b>Memory</b></em> 16 MB of QSPI flash <sup>(supporting XiP)</sup><br>
-<em><b>Display:</b></em> 1.54" color SPI IPS LCD <sup>(240 x 240 pixels)</sup><br>
+<em><b>Memory</b></em> 16 MB of QSPI flash <sup><br>(supporting XiP)</sup><br>
+<em><b>Display:</b></em> 1.54" color SPI IPS LCD <sup><br>(240 x 240 pixels)</sup><br>
 <em><b>Controls:</b></em> D-pad and four face buttons.<br>
-<em><b>Battery:</b></em> 525 mAh LiPo battery <sup>(6 hours+ of playtime)</sup><br>
-<em><b>Audio:</b></em> Piezo speaker.<br>
+<em><b>Battery:</b></em> 525 mAh LiPo battery<br> <sup>(6 hours+ of playtime)</sup><br>
+<em><b>Audio:</b></em> Piezo speaker.<br><sup>bleep boop</sup><br>
 <em><b>Power:</b></em> On/off power button, programmable and rechargeable via USB-C.<br>
 <em><b>Case:</b></em> CNC milled aluminum with a wrist strap.<br>
 <em><b>Programming:</b></em> Supports C++, MicroPython, and CircuitPython.<br>
