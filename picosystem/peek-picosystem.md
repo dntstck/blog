@@ -48,15 +48,16 @@ Nice in low light and viewable from every angle thanks to IPS technology. <br>
 The battery is a 525mAh LiPo, rechargeable via USB-C (another nice touch.) and boasts 6+ hours of playtime. I've been playing mine on and off since Christmas and I am yet to charge it! <br>
 While it's not massively powerful and is no home hi-fi system, the piezo speaker is definitely sufficient for the games you would create on it. Who doesn't love a bit of chiptune bleep-bloop? The only downside with this is theres no volume, or mute button to disable the sound would be a nice addition, as not everyone around you wants to hear it.<br>
 Honestly the USB-C is a dream, all devices should be USB-C. It irks me that the Pico, Pico2 and Pico2W are still microUSB. Even the Tiny2350 has USB-C! Anyways, tangent, the power off button doubles as a mass storage device toggle, so plug it in, hold X and power it on to access the PicoSystem from your PC as a USB Storage Device. The LED on the front is programmable, possibly to indicate low health, low battery, etc.<br>
-Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is heavenly! It feels such a dream to hold. My Nintendo Switch is very "clunky" in comparison. Its sleek, smooth and feels good in your hands. The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!<br>
+Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is heavenly! It feels such a dream to hold. My Nintendo Switch is very ..."clonky" in comparison. Its sleek, smooth and feels good in your hands. The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!<br>
 Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br>
 
 <h2 id="specs"><em>Specs</em></h2>
-<p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br>(overclocked to 250MHz) with 264 kB of SRAM.<br>
-<em><b>Memory</b></em> 16 MB of QSPI flash supporting XiP.<br>
-<em><b>Display:</b></em> 1.54" color SPI IPS LCD (240 x 240 pixels).<br>
+<p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br><sup>(overclocked to 250MHz)</sup><br>
+<em><b>RAM:</b></em> 264 kB of StaticRAM.<br>
+<em><b>Memory</b></em> 16 MB of QSPI flash <sup>(supporting XiP)</sup><br>
+<em><b>Display:</b></em> 1.54" color SPI IPS LCD <sup>(240 x 240 pixels)</sup><br>
 <em><b>Controls:</b></em> D-pad and four face buttons.<br>
-<em><b>Battery:</b></em> 525 mAh LiPo battery (6 hours+ of playtime).<br>
+<em><b>Battery:</b></em> 525 mAh LiPo battery <sup>(6 hours+ of playtime)</sup><br>
 <em><b>Audio:</b></em> Piezo speaker.<br>
 <em><b>Power:</b></em> On/off power button, programmable and rechargeable via USB-C.<br>
 <em><b>Case:</b></em> CNC milled aluminum with a wrist strap.<br>
