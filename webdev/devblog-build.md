@@ -28,14 +28,22 @@ Mostly coded in JavaScript, but there's some Ruby hidden in here too, some Bash 
 
 <h2 id="firststeps"><em>First Steps</em></h2>
 <p>Before coding the site, I had to decide what I wanted the site to do. I had a fair idea of my folder structure already with categories as folders such as raspberrypi, webdev, etc.
-and I wanted an easy to manage blog, something I could write a few posts for, place them in a "scheduled" directory, then when the time comes automatically push that post to the website and publishes it. However I wanted it to be sorted by category on push, and have either links or buttons that update on the website dependant where you are, such as the index or the root index of a category such as cm5/index.html so I needed to take this into consideration. I decided those two features will be enough for now, and if I write a script for post templates I could make writing blog posts easy to do and fully automated.
+and I wanted an easy to manage blog, something I could write a few posts for, place them in a "scheduled" directory, then when the time comes automatically push that post to the website and publishes it. However I wanted it to be sorted by category on push, and have either links or buttons that update on the website dependant where you are, such as the index.html so I needed to take this into consideration. I decided those two features will be enough for now, and if I write a script for post templates I could make writing blog posts easy to do and fully automated.
+
 So that's the folder structure sorted and an idea of what we want the code to do, now I needed to consider the visual aspect of the site and I very quickly fell into the idea of using the same style as GitHub, mainly because it's where it will be hosted so it will flow nicely, it's simple and pleasing as well as easy to replicate. While I was on my own GitHub, I took note of the shields I use in my README. These would be perfect as a quick and easy, as well as visually appealing and impactful design for the blog. Great for navigation, listing important items, links to posts... so that was that sorted. I would replicate what I saw on my GitHUb README and have it seamless and flowing, eventually I would also match my own website <a href="https://dntstck.co.uk" target="_blank">(shameless plug)</a> with the same style format, which has created a completely seamless transition throughout my GitHub, Dev Blog and personal website. </p>
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/filestructure.png" alt="Filesystem Structure" />
+<br><sup>File system structure.</sup>
 </figure>
 
 <h2 id="cicdjekyll"><em>CI/CD with Jekyll & GitHub Pages</em></h2>
+
+<figure>
+<img src="{{ site.baseurl }}/webdev/img/devblog-ghactions.png" alt="GitHub Actions" />
+<br><sup>GitHub Actions</sup>
+</figure>
+
 <p>Knowledge in hand of what I wanted the site to achieve, I set out trying to figure out GitHub Pages and Jekyll, after a few failed attempts and lots of what's up doc, I got a very basic site working and deployed with Jekyll. Jekyll is a neat little framework that allows Markdown files to be published and displayed as HTML files which is perfect for blogging and for our purposes. Markdown is easy to use, easy to implement and it also goes hand in hand with HTML, even in the same file allowing HTML to be encoded directly into your <code>.md</code> file. GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) tool that will allow us to automate our scripts and deploy the site on an action, such as when we push new posts to the repo. 
 Now implementing the JS scripts with the deployment was going to take some figuring out, I assumed it done it with some sort of config yml (later proven true) but for now I was more set on getting some JavaScript written down. Basic scripts were written out such as generating RSS but they achieved little yet, as there was no site to run them on. However the main basis is there:<br><br>
  <b>Jekyll</b> will manage the website<br>
@@ -44,15 +52,12 @@ Now implementing the JS scripts with the deployment was going to take some figur
     <b>JavaScript</b> will serve as the main development language, with room for assistant languages, ruby etc<br>
      <b>Automation</b> will schedule posts, sort them and publish them.<br></p>
 
-<figure>
-<img src="{{ site.baseurl }}/webdev/img/devblog-ghactions.png" alt="GitHub Actions" />
-</figure>
-
 <h2 id="yaml"><em>Delving into YAML/YML</em></h2>
 <p>Quickly discovering that GH Actions uses YAML scripts to work, I checked them out, I've never really had much experience with YAML but it was simple enough to follow along so I made use of the already generated jekyll-gh-pages.yml to have a peek of how it's constructed and the syntax</p>
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml.png" alt="Jekyll YAML" />
+<br><sup>_config.yml file for Jekyll.</sup>
 </figure>
 
 <p>Ok, not too bad. It looks a bit like Ruby with Python whitespace. I'm not a fan of Python, I just don't vibe with it even though I appreciate it's power as a scripting language and it's usability, I just don't get on with it. I'm definitely more of a JavaScript, PHP, Lua and C kinda guy. I'd  definitely like to give MicroPython a go at some stage, as I have lots of Microcontrollers (usually I use C), but that's a story for another day. Once the scripts are down, I'll look into writing these YML files out so they trigger when anything is pushed to the repo. I will also have one trigger at a certain time, using cron so I can schedule posts, leave them in the scheduled directory and they will post at the desired time, no matter what because the scheduled posts will be hosted on GitHub, meaning my computer can be off and I won't have to lift a finger. 
@@ -62,9 +67,13 @@ We should take note of the <code>workflow_dispatch:</code> trigger here in the Y
 
 <h2 id="sitedesign"><em>Site Design</em></h2>
 <p>So I got round to getting the dev blog styled to look like GitHub and replicated it in my css, then using shields.io shields, created a nabvar and a footer, with space as a body seperated by horizontal rules <code> hr</code>. These shields are awesome as well as super effective for most applications, you can even host them with your own container and they have very simple syntax that's easy to remember. I will post a few here so you can look at them, see how they work and potentially use them yourself.<br><br>
-<img src="https://img.shields.io/badge/Badge%20Example-151515"/> <br> code: <code>< img src="https://img.shields.io/badge/Badge%20Example-151515"/></code><br><br>
+<figure>
+<img src="https://img.shields.io/badge/Badge%20Example-151515"/>
+<br><sup>HTML:</sup>
+ <br><code>< img src="https://img.shields.io/badge/Badge%20Example-151515"/></code></figure><br><br>
 Simply replace <code>Badge%20Example</code> with your text, using <code>%20</code> for spaces. Colour is seperated by a hypen, supporting 6 digit RGB Codes. other options include using a logo, and even custom colours for logos:<br><br>
-<img src="https://img.shields.io/badge/Badge%20Example-151515?logo=github&logoColor=purple"/> <br> code: <code>< img src="https://img.shields.io/badge/Badge%20Example-151515?logo=github&logoColor=purple"/></code><br><br>
+<figure>
+<img src="https://img.shields.io/badge/Badge%20Example-151515?logo=github&logoColor=purple"/> <br><sup>HTML:</sup><br><code>< img src="https://img.shields.io/badge/Badge%20Example-151515?logo=github&logoColor=purple"/></code></figure><br><br>
 Neat, we can use the GH logo and style it any colour we want. I stuck with mostly GH colors across the Dev Blog, but incorporated some Ubuntu Orange, as a nod to the OS I use daily and a custom purple tint that I use for my custom Vim theme, ubuntu.vim in honour of both.
 
 That's pretty much it! I kept the design very simple for now, it doesn't need flamboyance at the minute as I'd rather work on getting it up and running, then writing content.
@@ -77,6 +86,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml2.png" alt="Jekyll YAML" />
+<br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
 <p>Here, we build and check the scheduled directory exists, if it doesn't it will create it. However it should always be there as we have placed a .gitkeep file there to prevent GitHUb from ignoring empty dirs.
@@ -84,6 +94,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml3.png" alt="Jekyll YAML" />
+<br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
 <p>Listing the files before moving them, if the script finds suitable files in the scheduled dir, it will list them
@@ -91,6 +102,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml4.png" alt="Jekyll YAML" />
+<br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
 <p>Forcing GitHub to detect changes, scripts need to run regardless of there being any actual changes in the repo.
@@ -98,6 +110,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml5.png" alt="Jekyll YAML" />
+<br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
 <p>Commiting and pushing the changes, this ensures files get moved and everything syncs properly
@@ -105,6 +118,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml6.png" alt="Jekyll YAML" />
+<br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
 <p>Success, build and deploy the site with Jekyll.
@@ -114,6 +128,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-scheduleyml1.png" alt="Schedule YAML" />
+<br><sup>schedule.yml</sup>
 </figure>
 
 <p>That's easily done by creating another workflow file named <code>schedule.yml</code> in our <code>/.github/workflows/</code> directory. Here we simply set it up using cron, with the on: and schedule: triggers. <code>0 0 * * *</code> is the 0 minute and 0 hour, with * * * being any day of the week. cron is very useful, if you aren't familiar with it I implore you to look into it.
@@ -121,6 +136,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-scheduleyml2.png" alt="Schedule YAML" />
+<br><sup>schedule.yml</sup>
 </figure>
 
 <p>Here, our workflow file points to the schedulePosts.js file, triggering it to run at midnight.
@@ -129,10 +145,11 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 <h2 id="bugs"><em>Bugs!</em></h2>
 <p>I encountered so many, so many. I won't even go into it here, although the commit history probably does it justice. I had lots of issues with Jeykll and the rendering of markdown to such an extent that I figured out that using a mix of HTML and Markdown as blog posts would solve the rendering issues. It does and it works well, I now write the posts in HTML which in turn gives me full control of the content, keeps my HMTL skills polished and keeps the Markdown, which is used for sorting the file on push, seperate from each other. It took some figuring out and lots of coffee, but I found a solution in the end.</p>
 
-<h2 id="commits9000"><em>Commits: over 9000</em></h2>
+<h2 id="commits9000"><em>Commits &amp; Workflow runs: over 9000 </em></h2>
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-410workflowruns.png" alt="Workflow Runs" />
+<br><sup>400+ Workflow runs</sup>
 </figure>
 
 <p></p>
@@ -153,6 +170,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-genpostscript1.png" alt="Generate Post Bash Script" />
+<br><sup>new.sh</sup>
 </figure>
 
 <p>Here, we echo what the script does if it is invoked without arguments.
@@ -161,6 +179,7 @@ When invoked, it starts the script and echoes the result of the agruments to the
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-genpostscript2.png" alt="Generate Post Bash Script" />
+<br><sup>new.sh</sup>
 </figure>
 
 <p>Set a var for todays date, retrieve said date and then echo it.
@@ -170,6 +189,7 @@ Set a var for the path for the scheduled dir and as you can see from the next im
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-genpostscript3.png" alt="Generate Post Bash Script" />
+<br><sup>new.sh</sup>
 </figure>
 
 <p>Here we create the front matter for the new blog post, this is essential as the JavaScript relies on it to find, sort and publish the file.
@@ -178,9 +198,18 @@ Set a var for the path for the scheduled dir and as you can see from the next im
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-genpostscript6.png" alt="Generate Post Bash Script" />
+<br><sup>new.sh</sup>
 </figure>
 
-<p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. The div tag is a workaround too, as I was running into rendering issues.  But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
+<p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. The div tag is a workaround too, as I was running into rendering issues, also removed now. But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
+
+<h2 id="imagesetc"><em>Images, Mobile functionality</em></h2>
+<p>The blog should be fully functional now and it also looks good on mobile devices as I wrote it in mind. For images, I will either take them with my phone, transfer them to icloud, convert them with a script I wrote for ImageMagick and it will automatically convert all images in whatever directory the script is in to 480x320. this is perfect for both desktop and mobile devices as it's still small enough for mobile devices, but big enough to read on a desktop. This applies to screenshots using Ubuntus nifty screenshot tool too. I am curently considering a more optimised way of doing this, but it suffices for now. </p>
+
+<figure>
+<img src="{{ site.baseurl }}/webdev/img/webdev-resizesh.png" alt="Resize IMG Bash Script" />
+<br><sup>resize.sh</sup>
+</figure>
 
 
 <p>Well that's it, EOF! now we have a blog-like experience that's hosted on GitHub Pages, as a GitHub Repository that's fully automated with CI/CD using GitHub Actions and Jekyll as a site renderer, which generates shields automatically and inserts them in their respective index.md's where needed. Some feat, that.
