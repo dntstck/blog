@@ -32,12 +32,14 @@ It's a pretty neat little RPG and considering what it runs on, and the device it
 and a lot of ideas.</p>
 
 <h2 id="closer-look"><em>Unboxing &amp; a closer look</em></h2>
+
+<p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
+
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-boxback.jpeg" alt="PicoSystem Box Back" />
 <br><sup>Box Details</sup>
 </figure>
 
-<p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
 It has dual cores of 133MHz, which is sufficent for 2D based games, handling game logic and frame rendering with ease. Even more so, as this is overclocked to 250MHz! Supporting PIO (Programmable IOs) and Direct Memory Access which can help offload tasks from the CPU, 
 allowing more efficient processing.<br>
 It also boasts 264kb of SRAM and for a little device that's primarily 2D focused (but 3D is definitely possible), it's plenty. 264kb will hold all state variables,
