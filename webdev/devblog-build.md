@@ -192,9 +192,8 @@ Thanks for following along if you made it to the end, if you succeeded in making
 
 
 <br>
-</div>
 <!-- Footer -->
-
+</div>
 
 <br>
 <div align="center"><hr>
