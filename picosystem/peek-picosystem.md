@@ -25,7 +25,7 @@
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-boxfront.jpeg" alt="PicoSystem Front" />
 <br><sup>Boxed PicoSystem</sup>
 </figure>
-<p>My beautiful partner very much suprised me with Pimoroni's PicoSystem at Christmas, so I have been lucky enough to get my hands on one.
+<p>I was pleasantly surprised with Pimoroni's PicoSystem at Christmas, so I have been lucky enough to get my hands on one.
 Although, admittedly I have had absolutely no time to get down to grips with it, but I have been picking it up and playing with it when I have 
 a spare five minutes. Currently have Gatekeeper loaded on it, which is a 3rd party RPG reminscent of Pokemon, but without the Pokemon! 
 It's a pretty neat little RPG and considering what it runs on, and the device itself, it's very impressive. I have high hopes for this device
