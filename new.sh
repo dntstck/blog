@@ -36,8 +36,6 @@ tags: [$TAGS]
 
 Blog Content here. 
 
-</div>
-
 EOF
 
 echo "$TITLE.md generated at $DIRECTORY/$FILENAME"
