@@ -40,7 +40,7 @@ and a lot of ideas.</p>
 <p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
 It has dual cores of 133MHz, which is sufficent for 2D based games, handling game logic and frame rendering with ease. Even more so, as this is overclocked to 250MHz! Supporting PIO (Programmable IOs) and Direct Memory Access which can help offload tasks from the CPU, 
 allowing more efficient processing.<br>
-It also boasts 256kb of SRAM and for a little device that's primarily 2D focused (but 3D is definitely possible), it's plenty. 256kb will hold all state variables, game logic and even small graphical assets with ease.<br>
+It also boasts 264kb of SRAM and for a little device that's primarily 2D focused (but 3D is definitely possible), it's plenty. 264kb will hold all state variables, game logic and even small graphical assets with ease.<br>
 16MB of QSPI flash supporting XiP is a nice touch also. 16mb is more than plenty for holding sprites, levels, small game assets, etc on the PicoSystem, with XiP (eXecute In Place) allowing the code to run directly from the flash memory, freeing up SRAM for other tasks.<br>
 The dinky 1.5" LCD display is super bright and clear, every pixel is visible. Just perfect especially for games that have that retro touch. Nice in low light and viewable from every angle thanks to IPS technology. <br>
 The battery is a 525mAh LiPo, rechargeable via USB-C (another nice touch.) and boasts 6+ hours of playtime. I've been playing mine on and off since Christmas and I am yet to charge it! <br>
