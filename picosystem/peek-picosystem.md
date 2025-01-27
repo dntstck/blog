@@ -124,8 +124,8 @@ too far into this subject as of yet due to time constraints and I didn't want th
 
 <h2 id="final-thoughts"><em>Final Thoughts</em></h2>
 
-<p>What it isn't: A Nintendo Switch clone with lots of games available<p>
-<p>What it is: A tiny, hackable games console that requires some programming knowledge<p>
+<p><b>What it isn't:</b> A Nintendo Switch clone with lots of games available<p>
+<p><b>What it is:</b> A tiny, hackable games console that requires some programming knowledge<p>
 
 <p>If you enjoy game development, love Raspberry Pi, want something cool to develop games with or are interested in the future and capabilities of this device,
 I strongly implore you to get one! Just such a beautiful little device to hold in your hands and is great for quickly picking up, playing a quick
