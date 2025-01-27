@@ -137,7 +137,7 @@ game or two, then powering off and putting away again for the next time. For tho
 it comes down to the power of this system and the diverse capabilities of the 32blit SDK.</p>
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-pxl.png" alt="PicoSystem Pixel Art" />
-<br><sup>pixelart</sup>
+
 </figure>
 
 <p>...Did I mention the weight of it?</p>
