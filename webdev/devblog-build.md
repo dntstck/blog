@@ -193,7 +193,6 @@ Thanks for following along if you made it to the end of if you succeeded in maki
 
 <br>
 <!-- Footer -->
-</div>
 
 <br>
 <div align="center"><hr>
