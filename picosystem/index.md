@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-PicoSystem-5e2750?&logo=raspberrypi&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
+<a href="peek-picosystem"><img src="https://img.shields.io/badge/peek-picosystem-151515?style=flat-square&logo=GitHub&logoColor=white" alt="peek-picosystem Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>

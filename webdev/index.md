@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Web%20Development-5e2750?&logo=html5&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
+<a href="devblog-build"><img src="https://img.shields.io/badge/devblog-build-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devblog-build Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
