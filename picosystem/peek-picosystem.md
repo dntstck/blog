@@ -31,9 +31,9 @@ a spare five minutes. Currently have Gatekeeper loaded on it, which is a 3rd par
 It's a pretty neat little RPG and considering what it runs on, and the device itself, it's very impressive. I have high hopes for this device
 and a lot of ideas.</p>
 
-<h2 id="closer-look"><em>Unboxing &amp; a closer look</em></h2>
+<h1 id="firstlook"><em>First Look</em></h1>
 
-<p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
+<p>A first look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-boxback.jpeg" alt="PicoSystem Box Back" />
@@ -53,7 +53,7 @@ Honestly the USB-C is a dream, all devices should be USB-C. It irks me that the 
 Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is heavenly! It feels such a dream to hold. My Nintendo Switch is very ..."clonky" in comparison. Its sleek, smooth and feels good in your hands. The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!<br>
 Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br>
 
-<h2 id="specs"><em>Specs</em></h2>
+<h1 id="specs"><em>Specs</em></h1>
 <p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br><sup>(overclocked to 250MHz)</sup><br>
 <em><b>RAM:</b></em> 264 kB of StaticRAM.<br>
 <em><b>Memory</b></em> 16 MB of QSPI flash <sup>(supporting XiP)</sup><br>
@@ -65,7 +65,7 @@ Now I wasn't aware of this until I googled it just now, but the PicoSystem also 
 <em><b>Case:</b></em> CNC milled aluminum with a wrist strap.<br>
 <em><b>Programming:</b></em> Supports C++, MicroPython, and CircuitPython.<br>
 
-<h2 id="unboxing"><em>Unboxing</em></h2><br>
+<h1 id="unboxing"><em>Unboxing</em></h1><br>
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-boxopen.jpeg" alt="PicoSystem Box Opened" />
 <br><sup>PicoSystem Unboxing</sup>
@@ -95,9 +95,9 @@ Now, this is new. Allen keys instead of a phillips. Luckily I have some tiny hex
 <br><sup>PicoSystem Unboxed</sup>
 </figure>
 
-<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the powerhouse of the device, the RP2040 right at it's core denoted by the Pi Logo <img src="https://img.shields.io/badge/%20-151515?logo=raspberrypi" alt="Pi Logo"/>
+<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the brains of the device, the RP2040 right at it's core denoted by the Pi Logo right next to the SWD pin.<br> <img src="https://img.shields.io/badge/%20-151515?logo=raspberrypi" alt="Pi Logo"/>
 
-<h2 id="closerlook"><em>Closer look</em></h2><br>
+<h1 id="closerlook"><em>Closer look</em></h1><br>
 </p>
 <p>Now we have opened the PicoSystem, found the SWD pin and had a good look inside, we can put it back together and have a deeper inspection, we can see the typical arrow keys, and button layout similar to a Nintendo. It feels great to hold and don't let the small
 size fool you, it's very comfortable and very much playable. I stil can't get over the balance of this thing, the weight is so comforting and I can
