@@ -45,10 +45,6 @@ get what you pay for in terms of build quality. Powering on the device and holdi
 Really nifty. The PicoSystem also boasts a little piezo speaker, for all the retro bleeps and bloops your heart can desire.</p>
 
 <h2 id="specs"><em>Specs</em></h2>
-<figure>
-<img src="{{ site.baseurl }}/picosystem/img/picosystem-back.jpeg" alt="PicoSystem Back" />
-</figure>
-
 <p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz with 264 kB of SRAM.<br>
 <em><b>Memory</b></em> 16 MB of QSPI flash supporting XiP.<br>
 <em><b>Display:</b></em> 1.54" color SPI IPS LCD (240 x 240 pixels).<br>
@@ -59,6 +55,11 @@ Really nifty. The PicoSystem also boasts a little piezo speaker, for all the ret
 <em><b>Case:</b></em> CNC milled aluminum with a wrist strap.<br>
 <em><b>Programming:</b></em> Supports C++, MicroPython, and CircuitPython.<br>
 </p>
+
+<figure>
+<img src="{{ site.baseurl }}/picosystem/img/picosystem-back.jpeg" alt="PicoSystem Back" />
+</figure>
+
 <h3 id="32blitsdk"><em>32blit SDK & MicroPython</em></h3>
 <p>The PicoSystem also boasts the ability to not just be programmable in MicroPython (and CircuitPython), but C++ too with the aid of the 32blit SDK. I have not delved
 too far into this subject as of yet due to time constraints, such as working on completing my Cloud Web Development course, managing this blog and 
@@ -75,9 +76,9 @@ other projects but I hope to get round to it soon and writing some more on the s
 I strongly implore you to get one! Just such a beautiful little device to hold in your hands and is great for quickly picking up, playing a quick
 game or two, then powering off and putting away again for the next time. For those interested in programming and development the world is your oyster when
 it comes down to the power of this system and the diverse capabilities of the 32blit SDK... buy one!</p>
-
+<figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-pxl.png" alt="PicoSystem Pixel Art" />
-
+</figure>
 <p>Did I mention the weight of it?</p>
 
 
