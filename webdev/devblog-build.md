@@ -20,14 +20,11 @@
 <div id="blog-post">
 <!-- Main --> 
 
-
-
-
 <h1 id="devblogbuild"><em>Building my Dev Blog</em></h1>
 
 <p>Wondered how to set up a blog-like experience using GitHub? Wondered what makes this site tick? Or how I write my posts and schedule them using CI/CD? Well today I'll be going over just that: how I coded this dev blog, that's hosted as a GitHub repo, rendered with Jekyll and deployed using CI/CD in the form of GitHUb Actions to automate scheduling, sorting and publishing.
 
-Mostly coded in JavaScript, but there's some Ruby hidden in here too, some Bash to generate new post templates using CLI and YAML to help guide GitHUb Actions to deploy scripts on push.</p>
+Mostly coded in JavaScript, but there's some Ruby hidden in here too, some Bash to generate new post templates using CLI and YAML to help guide GitHub Actions to deploy scripts on push.</p>
 
 <h2 id="firststeps"><em>First Steps</em></h2>
 <p>Before coding the site, I had to decide what I wanted the site to do. I had a fair idea of my folder structure already with categories as folders such as raspberrypi, webdev, etc.
@@ -123,7 +120,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 </p>
 
 <figure>
-<img src="{{ site.baseurl }}/webdev/img/devblog-scheduleyml1.png" alt="Schedule YAML" />
+<img src="{{ site.baseurl }}/webdev/img/devblog-scheduleyml2.png" alt="Schedule YAML" />
 </figure>
 
 <p>Here, our workflow file points to the schedulePosts.js file, triggering it to run at midnight.
@@ -183,10 +180,10 @@ Set a var for the path for the scheduled dir and as you can see from the next im
 <img src="{{ site.baseurl }}/webdev/img/devblog-genpostscript6.png" alt="Generate Post Bash Script" />
 </figure>
 
-<p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
+<p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. The div tag is a workaround too, as I was running into rendering issues.  But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
 
 
-<p>Well that's pretty much all bases covered and now we have a blog-like experience that's hosted on GitHub Pages, as a GitHub Repository that's fully automated with CI/CD using GitHub Actions and Jekyll as a site renderer. Some feat, that.
+<p>Well that's it, EOF! now we have a blog-like experience that's hosted on GitHub Pages, as a GitHub Repository that's fully automated with CI/CD using GitHub Actions and Jekyll as a site renderer, which generates shields automatically and inserts them in their respective index.md's where neeeded. Some feat, that.
 
 Thanks for following along if you made it to the end, if you succeeded in making something similar, awesome!
  catch you next time!</p>
@@ -195,8 +192,9 @@ Thanks for following along if you made it to the end, if you succeeded in making
 
 
 <br>
-<!-- Footer -->
 </div>
+<!-- Footer -->
+
 
 <br>
 <div align="center"><hr>
