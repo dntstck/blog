@@ -110,7 +110,7 @@ Really nifty.</p>
 <br><sup>Back view, sleek with hex nuts. Another nice touch.</sup>
 </figure>
 
-<h3 id="32blitsdk"><em>32blit SDK & MicroPython</em></h3>
+<h1 id="32blitsdk"><em>32blit SDK & MicroPython</em></h1>
 <p>The PicoSystem also boasts the ability to not just be programmable in MicroPython (and CircuitPython), but C++ too with the aid of the 32blit SDK. I have not delved
 too far into this subject as of yet due to time constraints and I didn't want this to be a tutorial as I have plans to explore that in a seperate blog post, but for now please take a look at the <a href="https://github.com/32blit/32blit-sdk" target="_blank">32blit SDK</a> to sate your desire for knowledge.</p>
 
@@ -122,7 +122,7 @@ too far into this subject as of yet due to time constraints and I didn't want th
 <br><sup>USB-C is always a bonus.</sup>
 </figure>
 
-<h2 id="final-thoughts"><em>Final Thoughts</em></h2>
+<h1 id="final-thoughts"><em>Final Thoughts</em></h1>
 
 <p><b>What it isn't:</b> A Nintendo Switch clone with lots of games available<p>
 <p><b>What it is:</b> A tiny, hackable games console that requires some programming knowledge<p>
