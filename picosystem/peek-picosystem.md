@@ -52,7 +52,7 @@ Honestly apart from the device itself and the powerhouse it is, the CNC milled a
 Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br>
 
 <h2 id="specs"><em>Specs</em></h2>
-<p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz (overclocked to 250MHz) with 264 kB of SRAM.<br>
+<p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br>(overclocked to 250MHz) with 264 kB of SRAM.<br>
 <em><b>Memory</b></em> 16 MB of QSPI flash supporting XiP.<br>
 <em><b>Display:</b></em> 1.54" color SPI IPS LCD (240 x 240 pixels).<br>
 <em><b>Controls:</b></em> D-pad and four face buttons.<br>
