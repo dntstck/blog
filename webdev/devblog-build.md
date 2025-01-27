@@ -203,7 +203,7 @@ Set a var for the path for the scheduled dir and as you can see from the next im
 
 <p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. The div tag is a workaround too, as I was running into rendering issues, also removed now. But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
 
-<h2 id="imagesetc"><em>Images, Mobile functionality</em></h2>
+<h2 id="imagesetc"><em>Images &amp; Mobile functionality</em></h2>
 <p>The blog should be fully functional now and it also looks good on mobile devices as I wrote it in mind. For images, I will either take them with my phone, transfer them to icloud, convert them with a script I wrote for ImageMagick and it will automatically convert all images in whatever directory the script is in to 480x320. this is perfect for both desktop and mobile devices as it's still small enough for mobile devices, but big enough to read on a desktop. This applies to screenshots using Ubuntus nifty screenshot tool too. I am curently considering a more optimised way of doing this, but it suffices for now. </p>
 
 <figure>
