@@ -107,6 +107,7 @@ Really nifty.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-back.jpeg" alt="PicoSystem Back" />
+<br><sup>Back view, sleek with hex nuts. Another nice touch.</sup>
 </figure>
 
 <h3 id="32blitsdk"><em>32blit SDK & MicroPython</em></h3>
@@ -118,6 +119,7 @@ too far into this subject as of yet due to time constraints and I didn't want th
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-edge.jpeg" alt="PicoSystem Edge" />
+<br><sup>USB-C is always a bonus.</sup>
 </figure>
 
 <h2 id="final-thoughts"><em>Final Thoughts</em></h2>
@@ -131,18 +133,15 @@ game or two, then powering off and putting away again for the next time. For tho
 it comes down to the power of this system and the diverse capabilities of the 32blit SDK... buy one!</p>
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-pxl.png" alt="PicoSystem Pixel Art" />
+<br><sup>pixelart</sup>
 </figure>
 <p>...Did I mention the weight of it?</p>
-
-
 
 <p>- Dru </p>
 
 
 <br>
 <!-- Footer -->
-</div>
-
 <br>
 <div align="center"><hr>
   <a href="../"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> 
