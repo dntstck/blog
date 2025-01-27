@@ -49,7 +49,7 @@ Now implementing the JS scripts with the deployment was going to take some figur
 </figure>
 
 <h2 id="yaml"><em>Delving into YAML/YML</em></h2>
-<p>Quickly discovering that GH Actions uses YAML scripts to work, I checked them out, I've never really had much experience with YMAL but it was simple enough to follow along so I made use of the already generated jekyll-gh-pages.yml to have a peek of how it's constructed and the syntax</p>
+<p>Quickly discovering that GH Actions uses YAML scripts to work, I checked them out, I've never really had much experience with YAML but it was simple enough to follow along so I made use of the already generated jekyll-gh-pages.yml to have a peek of how it's constructed and the syntax</p>
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/devblog-jekyllyml.png" alt="Jekyll YAML" />
@@ -57,7 +57,7 @@ Now implementing the JS scripts with the deployment was going to take some figur
 
 <p>Ok, not too bad. It looks a bit like Ruby with Python whitespace. I'm not a fan of Python, I just don't vibe with it even though I appreciate it's power as a scripting language and it's usability, I just don't get on with it. I'm definitely more of a JavaScript, PHP, Lua and C kinda guy. I'd  definitely like to give MicroPython a go at some stage, as I have lots of Microcontrollers (usually I use C), but that's a story for another day. Once the scripts are down, I'll look into writing these YML files out so they trigger when anything is pushed to the repo. I will also have one trigger at a certain time, using cron so I can schedule posts, leave them in the scheduled directory and they will post at the desired time, no matter what because the scheduled posts will be hosted on GitHub, meaning my computer can be off and I won't have to lift a finger. 
 
-We should take note of the <code>workflow_dispatch:</code> trigger here in the YML. These triggers as I learned through trial and error let GH Actions know you wish to run the workflow manually which is essential for testing, rather than waiting for a certain time to pass such as midnight, or forcing a deployment through an action suhc as a push to the repo.</p>
+We should take note of the <code>workflow_dispatch:</code> trigger here in the YML. These triggers as I learned through trial and error let GH Actions know you wish to run the workflow manually which is essential for testing, rather than waiting for a certain time to pass such as midnight, or forcing a deployment through an action such as a push to the repo.</p>
 
 
 <h2 id="sitedesign"><em>Site Design</em></h2>
@@ -183,9 +183,9 @@ Set a var for the path for the scheduled dir and as you can see from the next im
 <p>Pardon the style tag, this was part of a small workaround to fix the CSS but it is no longer needed and I forgot to remove it. The div tag is a workaround too, as I was running into rendering issues.  But ignoring that, this is the end of the script, and the end of the file that's going to be generated. Echoed is the directory it's generated in and it's filename, the script is invoked by simply running <code>bash new.sh</code> in the terminal, after making the script executable with <code> sudo chmod +x new.sh </code><p>
 
 
-<p>Well that's it, EOF! now we have a blog-like experience that's hosted on GitHub Pages, as a GitHub Repository that's fully automated with CI/CD using GitHub Actions and Jekyll as a site renderer, which generates shields automatically and inserts them in their respective index.md's where neeeded. Some feat, that.
+<p>Well that's it, EOF! now we have a blog-like experience that's hosted on GitHub Pages, as a GitHub Repository that's fully automated with CI/CD using GitHub Actions and Jekyll as a site renderer, which generates shields automatically and inserts them in their respective index.md's where needed. Some feat, that.
 
-Thanks for following along if you made it to the end, if you succeeded in making something similar, awesome!
+Thanks for following along if you made it to the end of if you succeeded in making something similar, awesome!
  catch you next time!</p>
 <p>
 - Dru</p>
