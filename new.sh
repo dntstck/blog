@@ -34,7 +34,19 @@ publishDate: $PUBLISH_DATE
 tags: [$TAGS]
 ---
 
-Blog Content here. 
+h1 id="title"><em>title</em></h1>
+
+<p>Content</p>
+
+<h2 id="title2"><em>FTitle2</em></h2>
+<p>Content2</p>
+
+<figure>
+<img src="{{ site.baseurl }}/CATEGORY/img/FILENAME.png" alt="IMG ALT" />
+<br><sup>img desc</sup>
+</figure>
+
+<h2 id="title3"><em>Title3</em></h2>
 
 EOF
 
