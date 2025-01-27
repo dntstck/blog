@@ -1,7 +1,7 @@
 ---
 title: "PicoSystem Peek"
 date: 2025-01-27T02:05:00Z
-publishDate: 2025-01-27T20:00:00Z
+publishDate: 2025-01-27T03:00:00Z
 tags: [picosystem]
 ---
 
