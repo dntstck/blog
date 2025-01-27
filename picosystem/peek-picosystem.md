@@ -33,13 +33,13 @@ and a lot of ideas.</p>
 
 <h1 id="firstlook"><em>First Look</em></h1>
 
-<p>A first look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
+<p>A first look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br></p>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-boxback.jpeg" alt="PicoSystem Box Back" />
 <br><sup>Box Details</sup>
 </figure>
-
+<p>
 It has dual cores of 133MHz, which is sufficent for 2D based games, handling game logic and frame rendering with ease. Even more so, as this is overclocked to 250MHz! Supporting PIO (Programmable IOs) and Direct Memory Access which can help offload tasks from the CPU, 
 allowing more efficient processing.<br>
 It also boasts 264kb of SRAM and for a little device that's primarily 2D focused (but 3D is definitely possible), it's plenty. 264kb will hold all state variables,
@@ -51,7 +51,7 @@ The battery is a 525mAh LiPo, rechargeable via USB-C (another nice touch.) and b
 While it's not massively powerful and is no home hi-fi system, the piezo speaker is definitely sufficient for the games you would create on it. Who doesn't love a bit of chiptune bleep-bloop? The only downside with this is theres no volume, or mute button to disable the sound would be a nice addition, as not everyone around you wants to hear it.<br>
 Honestly the USB-C is a dream, all devices should be USB-C. It irks me that the Pico, Pico2 and Pico2W are still microUSB. Even the Tiny2350 has USB-C! Anyways, tangent, the power off button doubles as a mass storage device toggle, so plug it in, hold X and power it on to access the PicoSystem from your PC as a USB Storage Device. The LED on the front is programmable, possibly to indicate low health, low battery, etc.<br>
 Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is heavenly! It feels such a dream to hold. My Nintendo Switch is very ..."clonky" in comparison. Its sleek, smooth and feels good in your hands. The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!<br>
-Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br>
+Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br></p>
 
 <h1 id="specs"><em>Specs</em></h1>
 <p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz <br><sup>(overclocked to 250MHz)</sup><br>
@@ -63,7 +63,7 @@ Now I wasn't aware of this until I googled it just now, but the PicoSystem also 
 <em><b>Audio:</b></em> Piezo speaker.<br><sup>bleep boop</sup><br>
 <em><b>Power:</b></em> On/off power button, programmable and rechargeable via USB-C.<br>
 <em><b>Case:</b></em> CNC milled aluminum with a wrist strap.<br>
-<em><b>Programming:</b></em> Supports C++, MicroPython, and CircuitPython.<br>
+<em><b>Programming:</b></em> Supports C++, MicroPython, and CircuitPython.<br></p>
 
 <h1 id="unboxing"><em>Unboxing</em></h1><br>
 <figure>
@@ -71,34 +71,38 @@ Now I wasn't aware of this until I googled it just now, but the PicoSystem also 
 <br><sup>PicoSystem Unboxing</sup>
 </figure>
 
-Looks great so far. I love all the details on the box. It has everything written where you need it. Let's open her up fully..
+<p>Looks great so far. I love all the details on the box. It has everything written where you need it. Let's open her up fully..</p>
+
+<figure>
+<img src="{{ site.baseurl }}/picosystem/img/picosystem-inbox.jpeg" alt="PicoSystem Unboxed" />
+<br><sup>PicoSystem Unboxed</sup>
+</figure>
+
+<p>Here we go, fully unboxed. Again, love all the details. It says there's a lanyard hidden inside which is useful as I'd want it secured around my wrist anyways as I'm a bit of a klutz! Looks great, really nice. Super sleek and so smol!</p>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-unboxed.jpeg" alt="PicoSystem Unboxed" />
 <br><sup>PicoSystem Unboxed</sup>
 </figure>
 
-Here we go, fully unboxed. Again, love all the details. It says there's a lanyard hidden inside which is useful as I'd want it secured around my wrist anyways as I'm a bit of a klutz! Looks great, really nice. Super sleek and so smol!
-
-I'm very interested after googling and seeing that it supports SWD debugging (it apparently has some other pinouts too), 
-so let's put an ESD bracelet on and take a peek.
+<p>I'm very interested after googling and seeing that it supports SWD debugging (it apparently has some other pinouts too), 
+so let's put an ESD bracelet on and take a peek.<p>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-backview.jpeg" alt="PicoSystem Back View" />
 <br><sup>Back view of the PicoSystem</sup>
 </figure>
 
-Now, this is new. Allen keys instead of a phillips. Luckily I have some tiny hex keys so let's pop her open.
+<p>Now, this is new. Allen keys instead of a phillips. Luckily I have some tiny hex keys so let's pop her open.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-opencircuit.jpeg" alt="PicoSystem Open with Circuitry" />
 <br><sup>PicoSystem Unboxed</sup>
 </figure>
 
-<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the brains of the device, the RP2040 right at it's core denoted by the Pi Logo right next to the SWD pin.<br> <img src="https://img.shields.io/badge/%20-151515?logo=raspberrypi" alt="Pi Logo"/>
+<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the brains of the device, the RP2040 right at it's core denoted by the Pi Logo right next to the SWD pin.<br> <img src="https://img.shields.io/badge/%20-151515?logo=raspberrypi" alt="Pi Logo"/></p>
 
 <h1 id="closerlook"><em>Closer look</em></h1><br>
-</p>
 <p>Now we have opened the PicoSystem, found the SWD pin and had a good look inside, we can put it back together and have a deeper inspection, we can see the typical arrow keys, and button layout similar to a Nintendo. It feels great to hold and don't let the small
 size fool you, it's very comfortable and very much playable. I stil can't get over the balance of this thing, the weight is so comforting and I can
 see it still being a comfortable weight after an hours play. Beautifully set USB-C slot positioned on the top and a power button, again, you really 
@@ -130,13 +134,15 @@ too far into this subject as of yet due to time constraints and I didn't want th
 <p>If you enjoy game development, love Raspberry Pi, want something cool to develop games with or are interested in the future and capabilities of this device,
 I strongly implore you to get one! Just such a beautiful little device to hold in your hands and is great for quickly picking up, playing a quick
 game or two, then powering off and putting away again for the next time. For those interested in programming and development the world is your oyster when
-it comes down to the power of this system and the diverse capabilities of the 32blit SDK... buy one!</p>
+it comes down to the power of this system and the diverse capabilities of the 32blit SDK.</p>
 <figure>
 <img src="{{ site.baseurl }}/picosystem/img/picosystem-pxl.png" alt="PicoSystem Pixel Art" />
 <br><sup>pixelart</sup>
 </figure>
+
 <p>...Did I mention the weight of it?</p>
 
+<p>Until next time</p>
 <p>- Dru </p>
 
 
