@@ -112,7 +112,7 @@ Really nifty.</p>
 
 <h3 id="32blitsdk"><em>32blit SDK & MicroPython</em></h3>
 <p>The PicoSystem also boasts the ability to not just be programmable in MicroPython (and CircuitPython), but C++ too with the aid of the 32blit SDK. I have not delved
-too far into this subject as of yet due to time constraints and I didn't want this to be a tutorial as I have plans to explore that in a seperate blog post, but for now please take a look at the <a href="https://github.com/32blit/32blit-sdk">32blit SDK</a> to sate your desire for knowledge.</p>
+too far into this subject as of yet due to time constraints and I didn't want this to be a tutorial as I have plans to explore that in a seperate blog post, but for now please take a look at the <a href="https://github.com/32blit/32blit-sdk" target="_blank">32blit SDK</a> to sate your desire for knowledge.</p>
 
 <h4 id="doom"><em>Does it run DOOM?</em></h4>
 <p>Yes, I think so. There is a RP2040 port for DOOM that I think I can get working with the PicoSystem, I will definitely be covering this in future blog posts so stay tuned.</p>
