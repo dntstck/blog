@@ -37,32 +37,17 @@ and a lot of ideas.</p>
 <br><sup>Box Details</sup>
 </figure>
 
-<p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the
- brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.
-It has dual cores of 133MHz, which is sufficent for 2D based games, handling game logic and frame rendering with ease. Even more so,
-as this is overclocked to 250MHz! Supporting PIO (Programmable IOs) and Direct Memory Access which can help offload tasks from the CPU, 
-allowing more efficient processing.
-It also boasts 256kb of SRAM, now this might not seem like much if you consider todays games, but for a little device like this that's only 
-probably ever going to produce 2D games (I reckon 3D is doable, too) it's definitely sufficient. I also have high hopes that it's sufficient 
-to run DOOM (more on that below). 256kb will hold all state variables, game logic and even small graphical assets with ease. 
-16MB of QSPI flash supporting XiP is a nice touch also. 16mb is more than plenty for holding sprites, levels, small game assets, etc on the 
-PicoSystem, with XiP (eXecute In Place) allowing the code to run directly from the flash memory, freeing up SRAM for other tasks.
-The dinky 1.5" LCD display is super bright and clear, every pixel is visible. Just perfect especially for games that have that retro touch.
-Nice in low light and viewable from every angle thanks to IPS technology.
-The battery is a 525mAh LiPo, rechargeable via USB-C (another nice touch.) and boasts 6+ hours of playtime. I've been playing mine on and off
-since Christmas and I am yet to charge it!
-While it's not massively powerful and is no home hi-fi system, the piezo speaker is definitely sufficient for the games you would create on it.
-Who doesn't love a bit of chiptune bleep-bloop? The only downside with this is theres no volume, or mute button. A button to disable the sound 
-would be a nice addition, as not everyone around you wants to hear it.
-Honestly the USB-C is a dream, all devices should be USB-C. It irks me that the Pico, Pico2 and Pico2W are still microUSB. Even the Tiny2350 
-has USB-C! Anyways, the power off button doubles as a mass storage device toggle, so plug it in, hold X and power it on to access the
- PicoSystem from your PC as a USB Storage Device. The LED on the front is programmable, meaning you could use it in your games to indicate 
- low health, low battery, etc. 
-Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is
- heavenly! It feels such a dream to hold. My Nintendo Switch is very "clunky" in comparison. Its sleek, smooth and feels good in your hands.
- The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!
-Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, 
-I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.
+<p>A quick look at the box shows a well thought out design, with all the info you need on the box itself. Looking at the back we can see the brains of this outfit being Raspberry Pi's RP2040 chip, the same that powers most (but not the newest) Pi devices.<br>
+It has dual cores of 133MHz, which is sufficent for 2D based games, handling game logic and frame rendering with ease. Even more so, as this is overclocked to 250MHz! Supporting PIO (Programmable IOs) and Direct Memory Access which can help offload tasks from the CPU, 
+allowing more efficient processing.<br>
+It also boasts 256kb of SRAM and for a little device that's primarily 2D focused (but 3D is definitely possible), it's plenty. 256kb will hold all state variables, game logic and even small graphical assets with ease.<br>
+16MB of QSPI flash supporting XiP is a nice touch also. 16mb is more than plenty for holding sprites, levels, small game assets, etc on the PicoSystem, with XiP (eXecute In Place) allowing the code to run directly from the flash memory, freeing up SRAM for other tasks.<br>
+The dinky 1.5" LCD display is super bright and clear, every pixel is visible. Just perfect especially for games that have that retro touch. Nice in low light and viewable from every angle thanks to IPS technology. <br>
+The battery is a 525mAh LiPo, rechargeable via USB-C (another nice touch.) and boasts 6+ hours of playtime. I've been playing mine on and off since Christmas and I am yet to charge it! <br>
+While it's not massively powerful and is no home hi-fi system, the piezo speaker is definitely sufficient for the games you would create on it. Who doesn't love a bit of chiptune bleep-bloop? The only downside with this is theres no volume, or mute button to disable the sound would be a nice addition, as not everyone around you wants to hear it.<br>
+Honestly the USB-C is a dream, all devices should be USB-C. It irks me that the Pico, Pico2 and Pico2W are still microUSB. Even the Tiny2350 has USB-C! Anyways, tangent, the power off button doubles as a mass storage device toggle, so plug it in, hold X and power it on to access the PicoSystem from your PC as a USB Storage Device. The LED on the front is programmable, meaning you could use it in your games to indicate low health, low battery, etc.<br>
+Honestly apart from the device itself and the powerhouse it is, the CNC milled aluminum case is the next best thing about this. The weight is heavenly! It feels such a dream to hold. My Nintendo Switch is very "clunky" in comparison. Its sleek, smooth and feels good in your hands. The Directional Pad and ABXY buttons have a lovely feel to them also. I can't get over the weight and balance of this thing, it's great!<br>
+Now I wasn't aware of this until I googled it just now, but the PicoSystem also supports SWD Debugging, I'll have to open mine up and have a look. I'll post some specs here; then we will carry on with unboxing.<br>
 
 <h2 id="specs"><em>Specs</em></h2>
 <p> <em><b>Processor:</b></em> Dual Arm Cortex M0+ running at up to 133 MHz (overclocked to 250MHz) with 264 kB of SRAM.<br>
@@ -105,7 +90,7 @@ Now, this is new. Allen keys instead of a phillips. Luckily I have some tiny hex
 <br><sup>PicoSystem Unboxed</sup>
 </figure>
 
-<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the unit of a device.
+<p> Yup, there it is. an SWD pin, I spy a 3v pin too as well as some others I'm not familiar with. Cool. So it fully supports Serial Wire Debugging. It's also neat to see the inside of the device too but be warned as I found out, the power button will just fall out so make sure you open it somewhere where it won't fall out and roll off never to be seen again! Looks great inside too, can see the LiPo battery right there powering the powerhouse of the device, the RP2040 right at it's core denoted by the Pi Logo <img src="https://img.shields.io/badge/%20-151515?logo=raspberrypi" alt="Pi Logo"/>
 
 <h2 id="closerlook"><em>Closer look</em></h2><br>
 </p>
