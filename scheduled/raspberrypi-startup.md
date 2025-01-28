@@ -45,7 +45,7 @@ Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for ge
 </figure>
 
 <p><b>Zero <sup>W/2W</sup></b><br>
-Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home. Zero's are usually used in setting up PiHole, which prevents network level adverts from reaching your devices so you never see adverts. I've not set one up yet, but plan to do so in the future.</p>
+Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users & developers, mostly for IoT (Internet of Things) Applications. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home. Zero's are usually used in setting up PiHole, which prevents network level adverts from reaching your devices so you never see adverts. I've not set one up yet, but plan to do so in the future.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-zero.png" alt="Raspberry Pi" />
@@ -91,7 +91,7 @@ So I hope that clears that up for you. Now we can decide...
 <h1 id="beforeyoubuy"><em>Before you buy</em></h1>
 
 <p><b>SD Card</b></p>
-<p>This is super important as you will need a microSD card in order to flash the operating system to it, so you can install it on your Pi. You can buy these preflashed from the Pi Hut, do it yourself with a spare memory card, or although a bit of an advanced topic,installing over a network if you choose, elimating the new for an SDcard entirely.</p>
+<p>This is super important as you will need a microSD card in order to flash the operating system to the Pi. You can buy these preflashed from the Pi Hut, do it yourself with a spare memory card, or although a bit of an advanced topic, installing over a network if you choose, elimating the new for an SDcard entirely. It's best to buy a kit so that you get the pre-flashed SDcard, or buy one seperately from the PiHut.</p>
 
 <p><b>If you're tinkering with open circuits, buy an ESD bracelet!</b><br>
 I can't stress this enough. Electro Static Discharge will fry your devices, even if they are off. If you have carpets, static will be a big issue and one day you may turn on your Pi to be welcomed by a cloud of blue smoke and a funky smell. Pi is dead after that I'm afraid. It's fried. So save yourself some heartache and get an ESD bracelet.</p>
