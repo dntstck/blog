@@ -18,7 +18,7 @@ tags: [raspberrypi]
 <h1 id="newdevice"><em>Your New Device</em></h1>
 <p>So you've found yourself stumbling into the world of Pi, welcome fellow Pidawan to this wonderful little world of micro-computing, which has gained popularity exponentially over the past decade.</p>
 
-<p>The Raspberry Pi is a single board computer (SBC) which is essentially a replica of a desktop computer, in micro format. SBCs use low power, are energy efficient and have a wide range of applications from education, hobbyist, to industry. SBCs have all the needed components on a single circuit board, however while not a complete replacement for a desktop computer (but that entirely depends on how you use a computer), nor a gaming machine, these little guys do pack a serious punch especially in the later modules such as the RaspberryPi 5.</p>
+<p>The Raspberry Pi is a single board computer (SBC) which is essentially a replica of a desktop computer, in micro format. SBCs use low power, are energy efficient and have a wide range of applications from education, hobbyist, to industry. SBCs have all the needed components on a single circuit board, however while not a complete replacement for a desktop computer (but that entirely depends on how you use a computer), nor a gaming machine, these little guys do pack a serious punch especially in the later revisions such as the RaspberryPi 5.</p>
 <p>
  Before we go any further, I'd like to cover a topic that I've found most novices get confused with:
 </p>
@@ -81,7 +81,7 @@ So I hope that clears that up for you. Now we can decide...
 <p>That, young Pidawan is entirely up to you.</p>
 <p> If you want my advice, as a general user and beginner; go for a Pi4 or Pi5. This gives you the range of having the full capabilities of the Pi, having access to GPIO if you want to tinker with electronics as well as the ability to use HATs (HArdware on Top) to upgrade your Pi (such as powering it via Ethernet). You'll be able to stream HD videos on youtube, multitask, run older games, run VSCode, do some programming.. whatever you want. Plus, at 55 moneys for the Pi5, it's a fair price for what you get.</p>
 
-<p> If your budget is tight and won't rely too heavily on GUI (Graphical User Interface) try the Zero2W. super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via your computer. You can even connect to them using your smartphone via WiFi and an SSH app such as Shelly (iPhone). </p>
+<p> If your budget is tight and won't rely too heavily on GUI (Graphical User Interface) try the Zero2W. super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via SSH using your computer. You can even connect to them using your smartphone via WiFi and an SSH app such as Shelly (iPhone). </p>
 
 <p>If you're more of a general user that won't do much programming or tinkering, go with the Pi500. It plays HD Youtube videos very well, will multitask just fine and be a breeze for internet browsing.</p>
 <p>If you're more starting out in development/programming, you can consider the Pi5. It has GPIO and is essentially the same as the CM5, but is a safe bet as it's pre-built and will come with a case (usually).</p>
@@ -116,7 +116,7 @@ If however, you intend on using the Pi directly, such as for running old games o
 </figure>
 
 <h1 id="ttfn"><em>TTFN</em></h1>
-<p>Well, that's it for now! I hope I covered an introduction the Pi well and explained the differences between the Pi, Compute Modules and the Pico and what you should choose depending on your requirements.
+<p>Well, that's it for now! I hope I covered a brief introduction to the Pi well and explained the differences between the Pi, Zero, Compute Modules and the Pico and what you should choose depending on your requirements.
 As you've ordered your Pi and all the stuff to go with it, all we have to do now is wait. In the next edition we will be covering your first boot, running your Pi headless (if required), explaining Linux, GPIO, SSH and lots lots more!</p>
 
 <p>Catch you next time
