@@ -7,7 +7,7 @@ tags: [devserver]
 
 <h1 id="devserver-portable-envrionments"><em>Creating portable environments for the CM5 DevServer </em></h1>
 
-<p>Today I'll be going over portable dev environments and why they are beneficial to every developer, no matter if you're just starting out or fully seasoned.</p>
+<p>Today I'll be going over portable dev environments on my CM%, why I use them and why they are beneficial to every developer, no matter if you're just starting out or fully seasoned.</p>
 
 <h1 id="why-tho"><em>Why, though?</em></h1>
 <p>Portable dev environments are incredibly useful and if you're just starting out, be thankful you never endured the pitfalls every developer did 20 years ago, such as machine downtime, version mismatch, operating system incompatability... Nowadays, these issues are rare. Now, we have tools that allow you to create and deploy from pretty much anywhere, on any machine. It doesn't matter if your OS is version 6.7, your colleagues machine is Grape, NodeJS is version 21 on the main project machine but verison 23 on all the other machines.. your project will still work and you can continue to develop and deploy even if these variables change further. The greastest strength is that with portable dev environments, you can run select versions of your project alongside other versions that are completely and totally isolated from each other. If you have a bug in one version, but the other version works perfectly, you can use each version to successfully identify the issue without suffering downtime on the version that has been released.</p>
@@ -18,7 +18,7 @@ tags: [devserver]
 </figure>
 
 <h1 id="VSCode"><em>VSCode</em></h1>
-<p>We're going to go off on a tangent here slightly and discuss VSCode, which has been a game changer in the development scene. Next to Vim, it's the most powerful code editor in your toolkit, highly customizable, has a vast range of plugins developed by a dedicated community, easy to use and better yet, allows you to connect and develop remotely via SHH. Tne best thing for me about VSCode is that it supports vim keybidings, so I get the full Vim experience while using VS. Vim is just as powerful and also has a vast array of plugins but harder to get to grips with and set up as an IDE. It's more suited to powerusers than hobbyists or general developers, but developing over SSH is also possible with Vim using an SSH tunnel. I will be covering more on Vim and VSCode in seperate posts in the future, including how to set up Vim as an IDE, so stay tuned for those.</p>
+<p>We're going to go off on a tangent here slightly and quickly touch on VSCode, which has been a game changer in the development scene. Next to Vim, it's the most powerful code editor in your toolkit, highly customizable, has a vast range of plugins developed by a dedicated community, easy to use and better yet, allows you to connect and develop remotely via SHH. Tne best thing for me about VSCode is that it supports vim keybidings, so I get the full Vim experience while using VS. Vim is just as powerful and also has a vast array of plugins but harder to get to grips with and set up as an IDE. It's more suited to powerusers than hobbyists or general developers, but developing over SSH is also possible with Vim using an SSH tunnel. I will be covering more on Vim and VSCode in seperate posts in the future, including how to set up Vim as an IDE, so stay tuned for those.</p>
 
 <h1 id="settingup"><em>Setting up &amp; scripting with Bash</em></h1>
 <p>Starting up the CM5, which is quite noisy at the minute due to the old fan (you'll be pleased to know I ordered 2 new fans, using the old fan is something I covered <a href="https://dntstck.github.io/blog/devserver/devserver-upgrades">here</a>), I will be going straight to the terminal on my main development machine and I won't have to wait long to connect as the CM5 is lightning fast to boot. </p>
@@ -45,7 +45,7 @@ tags: [devserver]
 <br><sup>kubernetes function</sup>
 </figure>
 
-<p>The next function executes code installs Kubernetes Lite. (K3s)</p>
+<p>The next function executes code that installs Kubernetes Lite. (K3s)</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/devenv-bash4.png" alt="Writing Bash Scripts" />
@@ -59,16 +59,16 @@ tags: [devserver]
 <br><sup>deploy function</sup>
 </figure>
 
-<p>The last function deploys the project to Kubernetes, which manages containers. After all the functions have been coded, we can write the section for accepting user input and store them as variables to be used elsewhere.</p>
+<p>The last function deploys the project to Kubernetes, which manages docker containers. After all the functions have been coded, we can write the section for accepting user input and store them as variables to be used elsewhere.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/devenv-bash6.png" alt="Writing Bash Scripts" />
 <br><sup>echoing success.</sup>
 </figure>
 
-<p>and finally, we tell the script to create the project in a specified directory and if it doesn't exist, creat eit. Then we echo to the user that it was successful.</p>
+<p>and finally, we tell the script to create the project in a specified directory and if it doesn't exist, create it. Then we echo to the user that it was successful.</p>
 
-<p>On first run, it didnt work. and that's ok! scripts should never work first try. It seems docker-compose is throwing up an error. So I will re-install it as not even asking it what version it is works:
+<p>On first run, it didnt work and that's ok! It seems docker-compose is throwing up an error. I get no response when I asked what version it is (<sup>--version</sup>) so I will re-install it:
 
 <code>sudo curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose</code>
@@ -80,7 +80,7 @@ sudo chmod +x /usr/local/bin/docker-compose</code>
 <br><sup>Success!</sup>
 </figure>
 
-<p>There you have it, a portable dev environment using docker and kubernetes, that you can take anywhere as a script and deploy anywhere you like.</p>
+<p>There we have it, portable dev environments on my CM5, which are created and deployed using a simply Bash script.</p>
 
 <p> Catch you next time, where we will be going a bit further with this script.
 - Dru</p>
