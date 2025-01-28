@@ -39,7 +39,7 @@ Single Board Computer, usable as a desktop PC and has accessible prefitted GPIO 
 </figure>
 
 <p><b>Raspberry Pi <sup>400/500</sup></b><br>
-Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for general users and novices to start out with, because it means you just need a HDMI screen to connect to and you have a full blown computer. If you want to watch youtube, play videos at 4k, tinker with programming, write emails and just use the Pi as a general desktop PC then the Pi500 is a good fit for you. There's even a cable you can buy to access the GPIO pins, so you can also tinker with it if you ever decide you want to delve into electronics with a breadboard.</p>
+Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for general users and novices to start out with, because (if you buy the Desktop Kit) all you need a is HDMI screen to connect to and you have a full blown computer. If you want to watch youtube, play videos at 4k, tinker with programming, write emails and just use the Pi as a general desktop PC then the Pi500 is a good fit for you. There's even a cable you can buy to access the GPIO pins, so you can also tinker with it if you ever decide you want to delve into electronics with a breadboard.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-500.png" alt="Raspberry Pi" />
@@ -47,7 +47,7 @@ Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for ge
 </figure>
 
 <p><b>Zero <sup>W/2W</sup></b><br>
-Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users & developers, mostly for IoT (Internet of Things) Applications. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home. Zero's are usually used in setting up PiHole, which prevents network level adverts from reaching your devices so you never see adverts. I've not set one up yet, but plan to do so in the future.</p>
+Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users & developers, mostly for IoT (Internet of Things) Applications. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home. Zero's are usually used in PiHole, which prevents network level adverts from reaching your devices so you never see them. Apparently it works really well for things like ITVX, but doesn't work with YouTube. I've not set one up yet, but plan to do so in the future.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-zero.png" alt="Raspberry Pi" />
@@ -64,7 +64,7 @@ Plus, they are difficult to use, set up and you need a fair knowledge of how the
 </figure>
 
 <p><b>Pico/Pico2<sup>W</sup></b><br>
-Picos are entirely different to what we've discussed so far, these are Microcontrollers. They are used in electronics and require programming knowledge in order to use. They have no Operating System (Windows, Linux etc) and run purely off the code you write and then flash (installing software permanently on storage) to the memory. They are not recommended for beginners (unless that sort of thing interests you of course), require a bit of setting up and you need a machine already in order to use one. There is no screen output on the Pico either, so you need knowledge with the shell and debugging in order to read any output it produces. There is a LOT I could cover on this subject, but I will not delve in too deep here. I have a whole section on my blog regarding Microcontrollers where I cover the Pico, Pico2W, RP2040plus, Tiny2350 and 2040Zero so feel free to check it out.</p>
+Picos are entirely different to what we've discussed so far, these are Microcontrollers. They are used in electronics and require programming knowledge in order to use. They have no Operating System (Windows, Linux etc) and run purely off the code you write and then flash (installing software permanently on storage) to the memory. They are not recommended for beginners (unless that sort of thing interests you of course), require a bit of setting up and you need a computer already in order to use one. There is no screen output on the Pico either, so you need knowledge with the shell and debugging in order to read any output it produces. There is a LOT I could cover on this subject, but I will not delve in too deep here. I have a whole section on my blog regarding Microcontrollers where I cover the Pico, Pico2W, RP2040plus, Tiny2350 and 2040Zero so feel free to check it out.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-pico.png" alt="Raspberry Pi" />
@@ -81,7 +81,7 @@ So I hope that clears that up for you. Now we can decide...
 <p>That, young Pidawan is entirely up to you.</p>
 <p> If you want my advice, as a general user and beginner; go for a Pi4 or Pi5. This gives you the range of having the full capabilities of the Pi, having access to GPIO if you want to tinker with electronics as well as the ability to use HATs (HArdware on Top) to upgrade your Pi (such as powering it via Ethernet). You'll be able to stream HD videos on youtube, multitask, run older games, run VSCode, do some programming.. whatever you want. Plus, at 55 moneys for the Pi5, it's a fair price for what you get.</p>
 
-<p> If your budget is tight and won't rely too heavily on GUI (Graphical User Interface) try the Zero2W. super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via SSH using your computer. You can even connect to them using your smartphone via WiFi and an SSH app such as Shelly (iPhone). </p>
+<p> If your budget is tight and won't rely too heavily on power, try the Zero2W. Super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via SSH using your computer. You can even connect to them using your smartphone via WiFi and an SSH app such as Shelly (on iPhone). </p>
 
 <p>If you're more of a general user that won't do much programming or tinkering, go with the Pi500. It plays HD Youtube videos very well, will multitask just fine and be a breeze for internet browsing.</p>
 <p>If you're more starting out in development/programming, you can consider the Pi5. It has GPIO and is essentially the same as the CM5, but is a safe bet as it's pre-built and will come with a case (usually).</p>
