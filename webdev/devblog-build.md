@@ -50,7 +50,6 @@ Now implementing the JS scripts with the deployment was going to take some figur
   <b>GitHub</b> will host the website<br>
    <b>GH Actions</b> will deploy our website &amp; automate scripts accordingly. <br>
     <b>JavaScript</b> will serve as the main development language, with room for assistant languages, ruby etc<br>
-     <b>Automation</b> will schedule posts, sort them and publish them.<br></p>
 
 <h2 id="yaml"><em>Delving into YAML/YML</em></h2>
 <p>Quickly discovering that GH Actions uses YAML scripts to work, I checked them out, I've never really had much experience with YAML but it was simple enough to follow along so I made use of the already generated jekyll-gh-pages.yml to have a peek of how it's constructed and the syntax</p>
