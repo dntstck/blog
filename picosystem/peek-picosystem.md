@@ -134,7 +134,7 @@ I strongly implore you to get one! Just such a beautiful little device to hold i
 game or two, then powering off and putting away again for the next time. For those interested in programming and development the world is your oyster when
 it comes down to the power of this system and the diverse capabilities of the 32blit SDK.</p>
 <figure>
-<img src="{{ site.baseurl }}/picosystem/img/picosystem-pxl.png" alt="PicoSystem Pixel Art" />
+<img src="{{ site.baseurl }}/picosystem/img/picosystem-front.png" alt="PicoSystem Pixel Art" />
 
 </figure>
 
