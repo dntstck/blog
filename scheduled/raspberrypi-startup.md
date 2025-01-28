@@ -25,7 +25,9 @@ tags: [raspberrypi]
 
 <h1 id="pi500"><em>Pi5, Pi400/500, Zero, Compute Module or Pico?</em></h1>
 
-<p>I've seen plenty of posts in such a short amount of time that most novices get befuddled over and it's a fair thing to get confused about. What is the difference between the Pi4/Pi5, Zero, Pi400/500, Compute Module 4/5 and the Pico<sup>/W</sup>/Pico2<sup>/W</sup>?</p>
+<p>What is the difference between the Pi4/Pi5, Zero, Pi400/500, Compute Module 4/5 and the Pico<sup>/W</sup>/Pico2<sup>/W</sup>?</p>
+
+<p>Let's break it down:</p>
 
 <p><b>Raspberry Pi <sup>A/B/3/4/5</sup></b><br>
 Single Board Computer, usable as a desktop PC and has accessible prefitted GPIO (General Purpose Input Output) pins for hacking (which just means tinkering with objects). Recommended for general users and beginners who want to try the Pi, but still want to dabble in the electronics/hacking side of things if they choose to. The Pi5 is the newest and most powerful version of the SBC, with the Pi4 coming in next. The A and B models are reworked versions of the earliest models.
