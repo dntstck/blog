@@ -22,7 +22,7 @@
 
 <h1 id="devblogbuild"><em>Building my Dev Blog</em></h1>
 
-<p>Wondered how to set up a blog-like experience using GitHub? Wondered what makes this site tick? Or how I write my posts and schedule them using CI/CD? Well today I'll be going over just that: how I coded this dev blog, that's hosted as a GitHub repo, rendered with Jekyll and deployed using CI/CD in the form of GitHUb Actions to automate scheduling, sorting and publishing.
+<p>Wondered how to set up a blog-like experience using GitHub? Wondered what makes this site tick? Or how I write my posts and schedule them using CI/CD? Well today I'll be going over just that: how I coded this dev blog, that's hosted as a GitHub repo, rendered with Jekyll and deployed using CI/CD in the form of GitHub Actions to automate scheduling, sorting and publishing.
 
 Mostly coded in JavaScript, but there's some Ruby hidden in here too, some Bash to generate new post templates using CLI and YAML to help guide GitHub Actions to deploy scripts on push.</p>
 
@@ -30,7 +30,7 @@ Mostly coded in JavaScript, but there's some Ruby hidden in here too, some Bash 
 <p>Before coding the site, I had to decide what I wanted the site to do. I had a fair idea of my folder structure already with categories as folders such as raspberrypi, webdev, etc.
 and I wanted an easy to manage blog, something I could write a few posts for, place them in a "scheduled" directory, then when the time comes automatically push that post to the website and publishes it. However I wanted it to be sorted by category on push, and have either links or buttons that update on the website dependant where you are, such as the index.html so I needed to take this into consideration. I decided those two features will be enough for now, and if I write a script for post templates I could make writing blog posts easy to do and fully automated.
 
-So that's the folder structure sorted and an idea of what we want the code to do, now I needed to consider the visual aspect of the site and I very quickly fell into the idea of using the same style as GitHub, mainly because it's where it will be hosted so it will flow nicely, it's simple and pleasing as well as easy to replicate. While I was on my own GitHub, I took note of the shields I use in my README. These would be perfect as a quick and easy, as well as visually appealing and impactful design for the blog. Great for navigation, listing important items, links to posts... so that was that sorted. I would replicate what I saw on my GitHUb README and have it seamless and flowing, eventually I would also match my own website <a href="https://dntstck.co.uk" target="_blank">(shameless plug)</a> with the same style format, which has created a completely seamless transition throughout my GitHub, Dev Blog and personal website. </p>
+So that's the folder structure sorted and an idea of what we want the code to do, now I needed to consider the visual aspect of the site and I very quickly fell into the idea of using the same style as GitHub, mainly because it's where it will be hosted so it will flow nicely, it's simple and pleasing as well as easy to replicate. While I was on my own GitHub, I took note of the shields I use in my README. These would be perfect as a quick and easy, as well as visually appealing and impactful design for the blog. Great for navigation, listing important items, links to posts... so that was that sorted. I would replicate what I saw on my GitHub README and have it seamless and flowing, eventually I would also match my own website <a href="https://dntstck.co.uk" target="_blank">(shameless plug)</a> with the same style format, which has created a completely seamless transition throughout my GitHub, Dev Blog and personal website. </p>
 
 <figure>
 <img src="{{ site.baseurl }}/webdev/img/filestructure.png" alt="Filesystem Structure" />
@@ -88,7 +88,7 @@ That's pretty much it! I kept the design very simple for now, it doesn't need fl
 <br><sup>jekyll-gh-pages.yml</sup>
 </figure>
 
-<p>Here, we build and check the scheduled directory exists, if it doesn't it will create it. However it should always be there as we have placed a .gitkeep file there to prevent GitHUb from ignoring empty dirs.
+<p>Here, we build and check the scheduled directory exists, if it doesn't it will create it. However it should always be there as we have placed a .gitkeep file there to prevent GitHub from ignoring empty dirs.
 </p>
 
 <figure>
