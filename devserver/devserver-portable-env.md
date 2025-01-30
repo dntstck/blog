@@ -25,7 +25,7 @@
 
 <h1 id="devserver-portable-envrionments"><em>Creating portable environments for the CM5 DevServer </em></h1>
 
-<p>Today I'll be going over portable dev environments on my CM%, why I use them and why they are beneficial to every developer, no matter if you're just starting out or fully seasoned.</p>
+<p>Today I'll be going over portable dev environments on my CM5, why I use them and why they are beneficial to every developer, no matter if you're just starting out or fully seasoned.</p>
 
 <h1 id="why-tho"><em>Why, though?</em></h1>
 <p>Portable dev environments are incredibly useful and if you're just starting out, be thankful you never endured the pitfalls every developer did 20 years ago, such as machine downtime, version mismatch, operating system incompatability... Nowadays, these issues are rare. Now, we have tools that allow you to create and deploy from pretty much anywhere, on any machine. It doesn't matter if your OS is version 6.7, your colleagues machine is Grape, NodeJS is version 21 on the main project machine but verison 23 on all the other machines.. your project will still work and you can continue to develop and deploy even if these variables change further. The greastest strength is that with portable dev environments, you can run select versions of your project alongside other versions that are completely and totally isolated from each other. If you have a bug in one version, but the other version works perfectly, you can use each version to successfully identify the issue without suffering downtime on the version that has been released.</p>
@@ -48,7 +48,7 @@
 <br><sup>Starting Vim</sup>
 </figure>
 
-<p>So first we open up Vim using the filename we want to create. I place all my scripts in a /script folder in my /dev directory, where all my projects are located. We start our bash script with a Shebang (#!/bin/bash) that tells Bash (the terminal) that this file is a bash script. Now if you have experience with bash commands you will start to notice commands that you recognise and this is all bash scripts are, executable terminal commands with a bit of extra functionality. Feel free to follow along with the pictures, some of the code is missing from the photos but don't fret, I'll post the full code at the end of the post.
+<p>So first we open up Vim using the filename we want to create. I place all my scripts in a /script folder in my /dev directory, where all my projects are located. We start our bash script with a Shebang (#!/bin/bash) that tells Bash (the terminal) that this file is a bash script. Now if you have experience with bash commands you will start to notice commands that you recognise and this is all bash scripts are, executable terminal commands with a bit of extra functionality. Feel free to follow along with the pictures, some of the code is missing from the photos but don't fret, I'll post the .sh file at the end of the post.
 </p>
 
 <figure>
@@ -88,8 +88,8 @@
 
 <p>On first run, it didnt work and that's ok! It seems docker-compose is throwing up an error. I get no response when I asked what version it is (<sup>--version</sup>) so I will re-install it:
 
-<code>sudo curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose</code>
+<p><code>sudo curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose</code></p>
 
 <p>Now, everything should work.</p>
 
@@ -105,110 +105,7 @@ sudo chmod +x /usr/local/bin/docker-compose</code>
 
 <h1 id="code"><em>Code</em></h1>
 
-<code>
-
-install_docker() {
-    echo "nstalling docker..."
-    sudo apt-get update
-    sudo apt-get install -y \
-        apt-transport-https \
-        ca-certificates \
-        curl \
-        software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository \
-       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-       $(lsb_release -cs) \
-       stable"
-    sudo apt-get update # sudo apt update if on Ubuntu
-    sudo apt-get install -y docker-ce # sudo apt install -y docker-ce if on ubuntu
-    sudo usermod -aG docker ${USER}
-    echo "docker installed."
-}
-
-install_k3s() {
-    echo "Installing K3s..."
-    curl -sfL https://get.k3s.io | sh -s - --docker
-    echo "K3s installed"
-}
-
-create_dockerfile() {
-    cat <<EOF > Dockerfile
-
-FROM node:14
-
-WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
-EOF
-    echo "Dockerfile created."
-}
-
-create_docker_compose() {
-    cat <<EOF > docker-compose.yml
-version: '3'
-services:
-  web:
-    image: my-node-app
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/app
-    environment:
-      - NODE_ENV=development
-EOF
-    echo "docker-compose.yml created."
-}
-
-
-deploy_k3s() {
-    kubectl create deployment $project_name --image=$image_name
-    kubectl expose deployment $project_name --type=LoadBalancer --port=8080
-    echo "Project deployed to K3s."
-}
-
-
-read -p "Enter project name: " project_name
-read -p "Enter project directory (absolute path): " project_directory
-read -p "Enter Docker image name: " image_name
-read -p "Do you want to install Docker? (yes/no): " install_docker_choice
-read -p "Do you want to install K3s? (yes/no): " install_k3s_choice
-read -p "Do you want to deploy the project with K3s? (yes/no): " deploy_k3s_choice
-
-
-if [ "$install_docker_choice" = "yes" ]; then
-    install_docker
-fi
-
-
-if [ "$install_k3s_choice" = "yes" ]; then
-    install_k3s
-fi
-
-mkdir -p $project_directory
-cd $project_directory
-
-create_dockerfile
-create_docker_compose
-
-docker-compose up -d
-
-if [ "$deploy_k3s_choice" = "yes" ]; then
-    deploy_k3s
-fi
-
-echo "setup complete."
-
-</code>
+<a href="./dev-env.sh" target="_blank">dev-env.sh</a>
 
 
 
