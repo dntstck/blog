@@ -38,13 +38,15 @@ tags: [$TAGS]
 
 <p>Content</p>
 
-<h2 id="$TITLE"><em>$TITLE</em></h2>
+<h1 id="$TITLE"><em>$TITLE</em></h1>
 <p>Content2</p>
 
 <figure>
 <img src="{{ site.baseurl }}/$TAGS/img/$TITLE.png" alt="$TITLE" />
 <br><sup>img desc</sup>
 </figure>
+
+<p><code>any code goes here.</code></p>
 
 EOF
 
