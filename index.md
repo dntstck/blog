@@ -25,7 +25,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
+<a href="/blog/devserver/devserver-portable-env"><img src="https://img.shields.io/badge/devserver-portable-envrionments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-portable-envrionments"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
