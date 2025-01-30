@@ -15,6 +15,7 @@
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 My most recent project involves utilizing Raspberry Pi Compute Module 5 to create a Dev Server/Home Development Network,<br> using CM5 as the central node & a Pi Zero2 as a data forwarder.<br><br>
 Please feel free to take a look around, or click on any relevant badges that interest you.<br>
+<iframe src="http://www.icj.me/plugins/nowplaying.php?username=dntstck&color=black" seamless></iframe>
 </div><br>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
