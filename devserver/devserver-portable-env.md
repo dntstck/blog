@@ -112,7 +112,6 @@ sudo chmod +x /usr/local/bin/docker-compose</code></p>
 
 <br>
 <!-- Footer -->
-</div>
 
 <br>
 <div align="center"><hr>
