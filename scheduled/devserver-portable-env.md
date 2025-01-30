@@ -52,7 +52,7 @@ tags: [devserver]
 <br><sup>docker_compose function</sup>
 </figure>
 
-<p>This function creates a compose file for Docker that holds all the container details, such as ports and the environment, here it's NodeJS.</p>
+<p>This function creates a compose file for Docker that holds all the container details, such as ports and the environment.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/devenv-bash5.png" alt="Writing Bash Scripts" />
@@ -80,9 +80,9 @@ sudo chmod +x /usr/local/bin/docker-compose</code>
 <br><sup>Success!</sup>
 </figure>
 
-<p>There we have it, portable dev environments on my CM5, which are created and deployed using a simply Bash script.</p>
+<p>There we have it, portable dev environments on my CM5, which are created and deployed using a simple Bash script.</p>
 
-<p> Catch you next time, where we will be going a bit further with this script.
+<p> Catch you next time, where we will be going a bit further with this script.<br>
 - Dru</p>
 
 <h1 id="code"><em>Code</em></h1>
