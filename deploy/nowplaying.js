@@ -24,13 +24,10 @@ async function fetchNowPlaying() {
   const nowPlaying = data.recenttracks.track[0];
   const artist = nowPlaying.artist["#text"].replace(/ /g, "%20");
   const track = nowPlaying.name.replace(/ /g, "%20");
-  const trackInfo = `${artist} - ${track}`;
-  const encodedTrackInfo = encodeURIComponent(trackInfo);
-  
-  const shieldUrl = `https://img.shields.io/badge/Now%20Playing-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
+  const trackInfo = `${artist}-${track}`;
+  const shieldUrl = `https://img.shields.io/badge/Now%20Playing-${trackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
   
   document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="${shieldUrl}">`;
 }
 
 fetchNowPlaying();
-
