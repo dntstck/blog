@@ -16,9 +16,9 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Dev%20Server-5e2750?&logo=raspberrypi&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="devserver-portable-env"><img src="https://img.shields.io/badge/devserver-portable-env-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-portable-env Badge"></a><br>
-<a href="devserver-setup"><img src="https://img.shields.io/badge/devserver-setup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-setup Badge"></a><br>
-<a href="devserver-upgrades"><img src="https://img.shields.io/badge/devserver-upgrades-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-upgrades Badge"></a><br>
+<a href="devserver-portable-env"><img src="https://img.shields.io/badge/Portable%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-portable-env Badge"></a><br>
+<a href="devserver-setup"><img src="https://img.shields.io/badge/DevServer%20Setup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-setup Badge"></a><br>
+<a href="devserver-upgrades"><img src="https://img.shields.io/badge/DevServer%20Upgrades-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-upgrades Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
