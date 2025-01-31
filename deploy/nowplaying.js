@@ -21,17 +21,13 @@ async function fetchNowPlaying() {
   );
   const data = await response.json();
   
-  console.log(data); // log response
-  
   const nowPlaying = data.recenttracks.track[0];
-  console.log(nowPlaying); // Log the now playing track
-  
   const trackInfo = `${nowPlaying.artist["#text"]} - ${nowPlaying.name}`;
   const encodedTrackInfo = encodeURIComponent(trackInfo);
-  
-  console.log(encodedTrackInfo); // log track info
-  
-  document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black">`;
+  const shieldUrl = `https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
+  const encodedShieldUrl = encodeURI(shieldUrl);
+
+  document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="${encodedShieldUrl}">`;
 }
 
 fetchNowPlaying();
