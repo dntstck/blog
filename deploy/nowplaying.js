@@ -27,7 +27,7 @@ async function fetchNowPlaying() {
   console.log(nowPlaying.artist);
   const track = nowPlaying.name.replace(/ /g, "_");
   console.log(nowPlaying.name);
-  const trackInfo = `${artist} ${track}`.replace(/ /g, "__"); // remove spaces so shield renders correctly.
+  const trackInfo = `${artist} ${track}`.replace(/ /g, "::"); // remove spaces so shield renders correctly.
   console.log(trackInfo);
   const encodedTrackInfo = encodeURIComponent(trackInfo);
   
