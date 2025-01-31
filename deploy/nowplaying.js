@@ -22,12 +22,10 @@ async function fetchNowPlaying() {
   const data = await response.json();
   
   const nowPlaying = data.recenttracks.track[0];
-  const trackInfo = `${nowPlaying.artist["#text"]} - ${nowPlaying.name}`;
+  const trackInfo = `${nowPlaying.artist["#text"]}-${nowPlaying.name}`; // Removing spaces around the hyphen
   const encodedTrackInfo = encodeURIComponent(trackInfo);
-  const shieldUrl = `https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
-  const encodedShieldUrl = encodeURI(shieldUrl);
-
-  document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="${encodedShieldUrl}">`;
+  
+  document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black">`;
 }
 
 fetchNowPlaying();
