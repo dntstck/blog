@@ -16,7 +16,7 @@
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 <br>
 Please feel free to take a look around, or click on any relevant badges that interest you.<br>
-<div id="now-playing"></div>
+<div id="now-playing">Now Playing:</div>
 </div><br>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
