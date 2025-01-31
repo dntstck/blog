@@ -11,12 +11,11 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main --> 
-<div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br>
-<br>
+<div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br><br>
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 <br>
-Please feel free to take a look around, or click on any relevant badges that interest you.<br>
-<div id="now-playing">Now Playing:</div>
+Please feel free to take a look around, or click on any relevant badges that interest you.<br><br>
+Now Playing:<div id="now-playing"></div>
 </div><br>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
