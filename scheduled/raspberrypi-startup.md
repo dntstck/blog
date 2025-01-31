@@ -47,7 +47,7 @@ Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for ge
 </figure>
 
 <p><b>Zero <sup>W/2W</sup></b><br>
-Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users & developers, mostly for IoT (Internet of Things) Applications. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home. Zero's are usually used in PiHole, which prevents network level adverts from reaching your devices so you never see them. Apparently it works really well for things like ITVX, but doesn't work with YouTube. I've not set one up yet, but plan to do so in the future.</p>
+Another single Board Computer, but a much, much smaller form factor (small form factor = it's smol) than the Pi4/Pi5. Aimed at general users & developers, mostly for IoT (Internet of Things) Applications. Not as powerful with only 1GHZ single core processor and 512mb RAM, but great for smaller applications where the normal Pi is simply too large. I run a Zero2W as a headless webserver at home, it's fantastic for small servers, testing environments, etc.  Zero's are usually used in PiHole, which prevents network level adverts from reaching your devices so you never see them. Apparently it works really well for things like ITVX, but doesn't work with YouTube. I've not set one up yet, but plan to do so in the future.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-zero.png" alt="Raspberry Pi" />
@@ -78,15 +78,46 @@ So I hope that clears that up for you. Now we can decide...
 </p>
 
 <h1 id="choosing"><em>What do I choose?</em></h1>
+
 <p>That, young Pidawan is entirely up to you.</p>
+
 <p> If you want my advice, as a general user and beginner; go for a Pi4 or Pi5. This gives you the range of having the full capabilities of the Pi, having access to GPIO if you want to tinker with electronics as well as the ability to use HATs (HArdware on Top) to upgrade your Pi (such as powering it via Ethernet). You'll be able to stream HD videos on youtube, multitask, run older games, run VSCode, do some programming.. whatever you want. Plus, at 55 moneys for the Pi5, it's a fair price for what you get.</p>
 
-<p> If your budget is tight and won't rely too heavily on power, try the Zero2W. Super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via SSH using your computer. You can even connect to them using your smartphone via WiFi and an SSH app such as Shelly (on iPhone). </p>
+<p> If your budget is tight and won't rely too heavily on power, try the Zero2W. Super cheap, not as powerful but sufficient for day to day tasks such as light scripting, connecting via SSH, running a web server and more. You can run these headless (nothing connected except power) and connect via SSH using your computer and even connect to them using your smartphone via WiFi and an SSH app such as Shelly (on iPhone). There is also the option for a Desktop Environment/Graphical User Interface but be aware with a single core of 1GHz and only 512mb of RAM you will be very limited in what you can do. High res YouTube is out of the question, as is Video Editing or anything system heavy. </p>
 
-<p>If you're more of a general user that won't do much programming or tinkering, go with the Pi500. It plays HD Youtube videos very well, will multitask just fine and be a breeze for internet browsing.</p>
-<p>If you're more starting out in development/programming, you can consider the Pi5. It has GPIO and is essentially the same as the CM5, but is a safe bet as it's pre-built and will come with a case (usually).</p>
-<p>If you're a developer or programmer and want to test yourself, get the CM5 DevKit.</p>
+
+<figure>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-zero.png" alt="Raspberry Pi Zero">
+<br><sup>Pi500</sup>
+</figure>
+
+<p>If you're more of a general user that won't do much programming or tinkering, go with the Pi500. It plays HD Youtube videos very well, will multitask just fine and be a breeze for internet browsing. It has the option of GPIO if you do ever decide you want to try tinkering with breadboard and circuits and is more than adequate for learning programming on but can be completely ignored if you just want the desktop aspect of a computer in a small format. The 500 will also run older games very well, controllers can easily be connected to it for a sweet little retro games system while still keeping a desktop pc at it's heart.</p>
+
+<figure>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-pi500.png" alt="Raspberry Pi500">
+<br><sup>Pi500</sup>
+</figure>
+
+<p>If you're more starting out in development/programming, you can consider the Pi5. It has GPIO and is essentially the same as the CM5, but is a safe bet as it's pre-built, cases are widely available and inexpensive, there are a lot of acessories and add-ons available while still remaining a good general all-rounder. If your budget is tight, a Pi4 is more than sufficient.</p>
+
+<figure>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-5.png" alt="Raspberry Pi5">
+<br><sup>Pi5</sup>
+</figure>
+
+<p>If you're a developer or programmer and want to test yourself, get the CM5 DevKit. It's extremely adaptable and upgradeable, HATs are availiable for training AI, the Compute Module Blade has just dropped for massive (or tiny!) server envrionments on a racked system, it's backwards compatible with <em>most</em> CM4 carrier boards and accessories</p>
+
+<figure>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-cm5devkit.png" alt="Raspberry Pi CM5 DevKit">
+<br><sup>CM5 DevKit</sup>
+</figure>
+
 <p>If you want to dabble in eletronics, creating robots and the like, then go for a Pi4/Pi5 for developing your code and a Pico2W for running the code (the W just means they have WiFi). The Pico's are super cheap. The Pico goes for around 4 moneys and the Pico2W retails at around 7. so really inexpensive. It's best to use a Pi4/5 for development and debugging the Pico because it supports it natively, you could also set up a second Pico as a dedicated debugger, eliminating the need to use Pi as a dev machine and use Windows or Linux to develop.</p>
+
+<figure>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-picow.png" alt="Raspberry Pi Pico">
+<br><sup>Pico</sup>
+</figure>
 
 <p>If you're still unsure after reading all these, try and figure out what you want to achieve with it, if you still can't decide it's stil a safe bet with a Pi4 or Pi5, as these are fully upgradeable, have good resale value and are great for a myriad of uses.</p>
 

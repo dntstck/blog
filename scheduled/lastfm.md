@@ -21,7 +21,7 @@ Anyways, I have faith that last.fm will track my music better, give me recommend
 
 <h1 id="lastfm"><em>Non-Native</em></h1>
 
-<p>Last.fm isn't Native to Linux, which means there is no official application for it and to get it to work on Linux requires some tweaking. VLC is supposed to support Last.fm natively, however when I tried setting it up in VLCs preferences I received module access errors and 403 bad requests in the message log. No matter what I tried nothing worked so I figured out how to use MPRIS which will scrobble my music in the background and send it to Last.fm, so let's get it set up.</p>
+<p>Last.fm isn't native to Linux, which means there is no official application for it and getting it to work on Linux requires some tweaking. VLC is supposed to support Last.fm natively, however when I tried setting it up in VLCs preferences I received module access errors and 403 bad requests in the message log. No matter what I tried nothing worked so I figured out how to use MPRIS which will scrobble my music in the background and send it to Last.fm, so let's get it set up.</p>
 
 <p>Before we get started, let's get an API key that we will need from Last.fm and all the packages we need to get going.</p>
 
@@ -136,7 +136,7 @@ Anyways, I have faith that last.fm will track my music better, give me recommend
 <code> systemctl --user start scrobbler.service</code><p>
 <code> systemctl --user status scrobbler.service</code><p>
 
-<p>You should see a bunch of lines, look for Loaded: loaded (/home/yourusername/.config/systemd/user/scrobbler.service), if you see it that means it's up and running! If you see errors, you have typos in your .service file. fix the typos and reload the daemon with:</p>
+<p>You should see output that fills the terminal, look for Loaded: loaded (/home/yourusername/.config/systemd/user/scrobbler.service), if you see it that means it's up and running! If you see errors, you have typos in your .service file. fix the typos and reload the daemon with:</p>
 
 <p><code> systemctl --user daemon</code><p>
 
