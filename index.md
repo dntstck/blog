@@ -15,8 +15,6 @@
 Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 <br>
 Please feel free to take a look around, or click on any relevant badges that interest you.<br><br>
-<img alt="Now Playing" src="https://img.shields.io/badge/-Now%20Playing:-DD4814?&logo=vlcmediaplayer&logoColor=black"><br><div id="now-playing"><img alt="Now Playing" src="https://img.shields.io/badge/-Offline-151515?&logo=applemusic&logoColor=DD4814"></div>
-</div><br>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
 <a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
@@ -30,6 +28,8 @@ Please feel free to take a look around, or click on any relevant badges that int
 <!-- latest-posts-end -->
 </div>
 <br>
+<img alt="Now Playing" src="https://img.shields.io/badge/-Now%20Playing:-DD4814?&logo=vlcmediaplayer&logoColor=black"><br><div id="now-playing"><img alt="Now Playing" src="https://img.shields.io/badge/-Offline-151515?&logo=applemusic&logoColor=DD4814"></div>
+</div><br>
 
 <!-- Footer -->
 <br><hr>
