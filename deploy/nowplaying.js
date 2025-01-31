@@ -6,7 +6,8 @@ async function fetchNowPlaying() {
   );
   const data = await response.json();
   const nowPlaying = data.recenttracks.track[0];
-  const trackInfo = `${nowPlaying.artist["#text"]}%20-%20${nowPlaying.name}`;
-  document.getElementById("now-playing").innerHTML = `<img alt=\"Now Playing\" src=\"https://img.shields.io/badge/-${trackInfo}-151515?&logo=vlcmediaplayer&logoColor=black\">`;
+  const trackInfo = `${nowPlaying.artist["#text"]} - ${nowPlaying.name}`;
+  const encodedTrackInfo = encodeURIComponent(trackInfo);
+  document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black">`;
 }
 fetchNowPlaying();
