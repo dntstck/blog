@@ -17,7 +17,7 @@ tags: [misc]
 <h1 id="whylastfm"><em>Why Last.fm?</em></h1>
 
 <p>I find tracking my music difficult. I have so many files and different genres that I decided to get back onto last.fm after over a decade of not using it. It's nice to see not much has changed and there's a few new features, like the song you're currently obsessed with.
-Anyways, I have faith that last.fm will track my music better, give me recommendations based on my tastes and give me the ability to see what music I listen most to, usually I flit between future garage and lofi hiphop but it all depends on my mood. I listen to a ton of other genres, but not as much as I do compared to future garage and lofi hiphop. </p>
+Anyways, I have faith that last.fm will track my music better, give me recommendations based on my tastes and give me the ability to see what music I listen most to.</p>
 
 <h1 id="lastfm"><em>Non-Native</em></h1>
 
