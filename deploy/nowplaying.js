@@ -28,7 +28,7 @@ async function fetchNowPlaying() {
   console.log(nowPlaying.artist);
   const track = nowPlaying.name;
   console.log(nowPlaying.name);
-  const trackInfo = `${artist}&20${track}`;
+  const trackInfo = `${artist}%20${track}`;
   console.log(trackInfo);
   const encodedTrackInfo = encodeURIComponent(trackInfo);
   
