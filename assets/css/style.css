@@ -63,7 +63,9 @@ hr {
     margin: 0 auto; 
     padding: 0 20px;
     word-wrap: break-word;
-    overflow-wrap: break-word; 
+    overflow-wrap: break-word;
+    font-family: monospace;
+    font-size: small; 
   }
   
 #latestposts {
