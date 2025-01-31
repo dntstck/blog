@@ -22,7 +22,7 @@ async function fetchNowPlaying() {
   const data = await response.json();
   
   const nowPlaying = data.recenttracks.track[0];
-  const trackInfo = `${nowPlaying.artist["#text"]}-${nowPlaying.name}`; // Removing spaces around the hyphen
+  const trackInfo = `${nowPlaying.artist["#text"]}-${nowPlaying.name}`; // removing spaces around the hyphen
   const encodedTrackInfo = encodeURIComponent(trackInfo);
   
   document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black">`;
