@@ -23,9 +23,9 @@ async function fetchNowPlaying() {
   
   const nowPlaying = data.recenttracks.track[0];
   console.log(nowPlaying);
-  const artist = nowPlaying.artist["#text"].replace(/ /g, "%20");
+  const artist = nowPlaying.artist["#text"].replace(/ /g, "_");
   console.log(nowPlaying.artist);
-  const track = nowPlaying.name.replace(/ /g, "%20");
+  const track = nowPlaying.name.replace(/ /g, "_");
   console.log(nowPlaying.name);
   const trackInfo = `${artist}::${track}`; // remove spaces so shield renders correctly.
   console.log(trackInfo);
