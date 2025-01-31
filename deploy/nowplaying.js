@@ -32,7 +32,7 @@ async function fetchNowPlaying() {
   console.log(trackInfo);
   const encodedTrackInfo = encodeURIComponent(trackInfo);
   
-  const shieldUrl = `https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
+  const shieldUrl = `https://img.shields.io/badge/-${encodedTrackInfo}-151515?&logo=applemusic&logoColor=black`;
   
   document.getElementById("now-playing").innerHTML = `<img alt="Now Playing" src="${shieldUrl}">`;
 }
