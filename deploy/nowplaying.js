@@ -22,9 +22,13 @@ async function fetchNowPlaying() {
   const data = await response.json();
   
   const nowPlaying = data.recenttracks.track[0];
+  console.log(nowPlaying);
+  
   const artist = nowPlaying.artist["#text"];
+  console.log(nowPlaying.artist)
   const track = nowPlaying.name;
-  const trackInfo = `${artist} - ${track}`;
+  console.log(nowPlaying.name)
+  const trackInfo = `${artist}&20${track}`;
   const encodedTrackInfo = encodeURIComponent(trackInfo);
   
   const shieldUrl = `https://img.shields.io/badge/Now%20Playing-${encodedTrackInfo}-151515?&logo=vlcmediaplayer&logoColor=black`;
