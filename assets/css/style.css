@@ -64,8 +64,7 @@ hr {
     padding: 0 20px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-family: Arial, sans-serif;
-    line-height: 1.6
+    font-family: monospace; 
   }
   
 #latestposts {
