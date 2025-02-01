@@ -38,13 +38,13 @@ If you can work your way around the command line, have a basic understanding of 
 
 <p>Developing C programs in these environments ensures your project is deployable across a myriad of machines, is easily maintainable and scalable. Development is simplified with the use of Docker and Kubernetes, projects are remotely accessible via SSH and remain completely consistent. Bash automates the entire project generation process giving us error free, consistent boilerplates. This doesn't just apply to C projects either, you can do the same with pretty much any language and pretty much any environment, I'm using C as an example because bar JavaScript and PHP, it's my favourite language.</p>
 
-<h1><b><em>Packages</em></b></h1>
+<h1><b><em>Now that's apt</em></b></h1>
 
-<p>Before we get started, we need to ensure we have the following installed on our system:
+<p>Before we get started, we need to ensure we have the following packages installed on our system:
 </p>
 
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/apt.png" alt="CM5 SSH" />
+<img src="{{ site.baseurl }}/devserver/img/aptget.png" alt="Apt" />
 <br><sup>Apting packages</sup>
 </figure>
 
@@ -66,48 +66,11 @@ If you can work your way around the command line, have a basic understanding of 
 <p><span><code>chmod +x create_c_project.sh</code></span></p>
 
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/cdevenvpng" alt="Creating C Dev Envs" />
+<img src="{{ site.baseurl }}/devserver/img/cdevenv.png" alt="Creating C Dev Envs" />
 <br><sup>Creating a C Dev Env</sup>
 </figure>
 
-<h3 id="devblogbuild"><em>Script</em></h3>
-
-<code>#!/bin/bash
-
-echo "Enter your project name:"
-read PROJECT_NAME
-echo "Creating project '$PROJECT_NAME'..."
-
-mkdir $PROJECT_NAME
-cd $PROJECT_NAME
-git init
-
-mkdir src include bin
-touch src/main.c
-touch Makefile
-
-cat \<\<EOL \> src\/main.c
-#include 
-
-int main() {
- printf\("helloworld"\);
- return 0;
-}
-EOL
-
-cat \<\<EOL \> Makefile
-CC=gcc
-CFLAGS=-Iinclude
-
-all: \$(PROJECT_NAME)
-
-\$(PROJECT_NAME): src/main.c
-$(CC) src/main.c -o bin/\$(PROJECT_NAME) \$(CFLAGS)
-EOL
-
-echo " '$PROJECT_NAME' created successfully"
-</code>
-
+<p>Download <a href="./scripts/newcproj.sh">sh script</a></p><br>
 <h3 id="dockering"><em>Dockerizing the Development Environment</em></h3>
 
 <p>Docker enables us to create consisent dev environments across mutiple machines.
@@ -117,15 +80,7 @@ In your project directory, create a `Dockerfile`.</p>
 <span><code>cd $PROJECT_NAME</code></span>
 <span><code>touch Dockerfile</code></span>
 
-Dockerfile
-
-FROM gcc:latest
-WORKDIR /usr/src/app
-COPY . .
-RUN apt-get update && apt-get install -y vim
-RUN make
-CMD ["vim"]
-<br>
+<p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
 <em><h3>Build the Docker Image</em></h3>
 
