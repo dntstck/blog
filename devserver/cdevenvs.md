@@ -61,9 +61,13 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3><em>Create the Script File</em></h3>
 
-<p><span><code>touch create_c_project.sh</code></span></p>
+<p><span><code>
+touch create_c_project.sh
+</code></span></p><br>
 
-<p><span><code>chmod +x create_c_project.sh</code></span></p>
+<p><span><code>
+chmod +x create_c_project.sh
+</code></span></p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cdevenv.png" alt="Creating C Dev Envs" />
@@ -82,9 +86,7 @@ In your project directory, create a Dockerfile.</p>
 
 <p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
-<em><h3>Build the Docker Image</em></h3>
-
-<p><b><em>Build the docker image with this command:</b></em></p>
+<p><b><em>Build the docker image with this command:</em></b></p>
 
 <span><code>docker build -t $PROJECT_NAME-image . </code></span>
 
