@@ -61,9 +61,9 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3><em>Create the Script File</em></h3>
 
-<p><span><code>touch create_c_project.sh</code></span></p><br>
+<p>touch create_c_project.sh</p><br>
 
-<p><span><code>chmod +x create_c_project.sh</code></span></p>
+<p>chmod +x create_c_project.sh</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cdevenv.png" alt="Creating C Dev Envs" />
@@ -77,22 +77,22 @@ If you can work your way around the command line, have a basic understanding of 
 
 In your project directory, create a Dockerfile.</p>
 
-<span><code>cd $PROJECT_NAME</code></span><br>
-<span><code>touch Dockerfile</code></span>
+cd $PROJECT_NAME<br>
+touch Dockerfile
 
 <p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
 Build the docker image with this command
 
-<span><code>
+
 docker build -t $PROJECT_NAME-image . 
-</code></span>
+
 
 <p><b><em>Run the Docker Container: </b></em></p><br>
 
-<span><code>
+
 docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
-</code></span>
+
 
 <p>This command starts the container and opens Vim inside it.</p>
 
@@ -104,33 +104,33 @@ docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
 
 <p>First, ensure Minikube is running.</p>
 
-<span><code>minikube start</code></span>
+minikube start
 
 <p><b><em>Create a Kubernetes Deployment</b></em></p>
-<p>Create a file named <span><a href="./scripts/deployment.yml">deployment.yml</a></span></p>
+<p>Create a file named <a href="./scripts/deployment.yml">deployment.yml</a></p>
 
 <h3><em>Apply the Deployment</em></h3>
 
-<span><code>
+
 kubectl apply -f deployment.yml
-</code></span>
+
 
 <h3><em>Expose the Deployment</h3></em>
 
-<span><code>
+
 kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080
-</code></span>
+
 
 <h3><em>Accessing the Application</h3></em>
 
 <p>Since our application is set to run Vim inside the container, we can exec into the pod.</p>
 
-<span><code>
+
 kubectl get pods
-</code></span>
-<span><code>
+
+
 kubectl exec -it \<pod-name\> -- /bin/bash
-</code></span>
+
 
 <p>Now we're inside the container's shell and can run Vim or any other commands.</p>
 
@@ -182,16 +182,16 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 <h3><em>Setting Up SSH Connections</em></h3>
 
 <p>First, we need to install the Remote Development Extension Pack, which can be located in the Extensions Marketplace<br> <b>(Ctrl + Shift + X)</b>:</p>
-<p><span><code>
+<p>
 Remote - SSH (ms-vscode-remote.remote-ssh)
-</code></span> </p>
+ </p>
 <br><sup>Core extension for SSH.</sup></p>
 
 <h3><em>Configure SSH in VS Code</em></h3>
 
 <p><b>1.</b> Press <sup>F1</sup> and select <b>Remote-SSH: Add New SSH Host...</b><br>
-<b>2.</b> Enter your SSH connection string, e.g. mine: <span><code>sysadmin@cm5.local</code></span><br>
-<b>3.</b> Choose the SSH configuration file to update (usually <span><code>~/.ssh/config</code></span>).</p>
+<b>2.</b> Enter your SSH connection string, e.g. mine: sysadmin@cm5.local<br>
+<b>3.</b> Choose the SSH configuration file to update (usually ~/.ssh/config).</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/vscode-connectssh.png" alt="Connecting to SSH" />
@@ -244,15 +244,15 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
 
 <h3><em>Basic SSH Connection</h3></em>
 
-<span><code>
+
 ssh user@remote-server
-</code></span>
 
-<h3><em><span><code>ssh</codde> Tunnel Command</h3></em>
 
-<span><code>
+<h3><em>ssh</codde> Tunnel Command</h3></em>
+
+
 ssh -L local_port:localhost:remote_port user@remote-server
-</code></span>
+
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cm5-sshtunnel.png" alt="SSH Tunnel" />
@@ -263,26 +263,26 @@ ssh -L local_port:localhost:remote_port user@remote-server
 
 <p><b>Forward local port 8080 to remote port 80:</b></p>
 
-<span><code>
+
 ssh -L 8080:localhost:80 sysadmin@cm5.local
-</code></span>
+
 
 <h3><em>Vim for Remote Development</h3></em>
 
 <p>Simply SSH into your remote server and run Vim to edit files.</p>
 
-<span><code>
+
 ssh user@remote-server
 vim /path/to/your/file.c
-</code></span>
+
 
 <h3><em>Using Vim's Native Remote Editing</h3></em>
 
-<p>Vim supports editing remote files using protocols like <span><code>scp</code></span> and <span><code>sftp</code></span>.</p>
+<p>Vim supports editing remote files using protocols like scp and sftp.</p>
 
-<span><code>
+
 vim scp://user@remote-server//path/to/your/file.c
-</code></span>
+
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/vim-scp.png" alt="Vim SCP" />
@@ -297,7 +297,7 @@ vim scp://user@remote-server//path/to/your/file.c
 
 <h3><em>vim-scp</h3></em>
 
-<span><code>vim scp://user@remote-server//path/to/your/project/</code></span>
+vim scp://user@remote-server//path/to/your/project/
 
 <p>Now you can navigate directories and edit files as needed.</p>
 
