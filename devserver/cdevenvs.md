@@ -71,27 +71,28 @@ If you can work your way around the command line, have a basic understanding of 
 </figure>
 
 <p>Download <a href="./scripts/newcproj.sh">sh script</a></p><br>
+
 <h3 id="dockering">Dockerizing the Development Environment</h1>
 
 <p>Docker enables us to create consisent dev environments across mutiple machines.
 
 In your project directory, create a Dockerfile.</p>
 
-cd $PROJECT_NAME<br>
-touch Dockerfile
+<p>cd projectname<br>
+touch Dockerfile<p>
 
 <p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
-Build the docker image with this command
+<p>Build the docker image with this command</p>
 
 
-docker build -t $PROJECT_NAME-image . 
+<p>docker build -t projectname-image . </p>
 
 
 <p><b>Run the Docker Container:</b></p><br>
 
 
-docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
+<p>docker run -it --name projectname-container project-image</p>
 
 
 <p>This command starts the container and opens Vim inside it.</p>
@@ -104,7 +105,7 @@ docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
 
 <p>First, ensure Minikube is running.</p>
 
-minikube start
+</p>minikube start</p>
 
 <p><b>Create a Kubernetes Deployment</b></p>
 <p>Create a file named <a href="./scripts/deployment.yml">deployment.yml</a></p>
@@ -112,13 +113,13 @@ minikube start
 <h1>Apply the Deployment</h1>
 
 
-kubectl apply -f deployment.yml
+<p>kubectl apply -f deployment.yml</p>
 
 
 <h1>Expose the Deployment</h1>
 
 
-kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080
+<p>kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080<p>
 
 
 <h1>Accessing the Application</h1>
@@ -126,7 +127,7 @@ kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080
 <p>Since our application is set to run Vim inside the container, we can exec into the pod.</p>
 
 
-kubectl get pods
+<p>kubectl get pods</p>
 
 
 kubectl exec -it \<pod-name\> -- /bin/bash
@@ -138,7 +139,7 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 
 <p>Let's begin by configuring VS Code for our C projects.</p>
 
-<p><b>Configuring VS Code for C Development<b></p>
+<p><b>Configuring VS Code for C Development</b></p>
 
 <p>Ensure you have VS Code installed along with the following extensions:</p>
 
@@ -245,13 +246,13 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
 <h1>Basic SSH Connection</h1>
 
 
-ssh user@remote-server
+<p>ssh user@remote-server</p>
 
 
 <h1>ssh</codde> Tunnel Command</h1>
 
 
-ssh -L local_port:localhost:remote_port user@remote-server
+<p>ssh -L local_port:localhost:remote_port user@remote-server</p>
 
 
 <figure>
@@ -264,7 +265,7 @@ ssh -L local_port:localhost:remote_port user@remote-server
 <p><b>Forward local port 8080 to remote port 80:</b></p>
 
 
-ssh -L 8080:localhost:80 sysadmin@cm5.local
+<p>ssh -L 8080:localhost:80 sysadmin@cm5.local</p>
 
 
 <h1>Vim for Remote Development</h1>
@@ -272,8 +273,8 @@ ssh -L 8080:localhost:80 sysadmin@cm5.local
 <p>Simply SSH into your remote server and run Vim to edit files.</p>
 
 
-ssh user@remote-server
-vim /path/to/your/file.c
+<p>ssh user@remote-server</p>
+<p>vim /path/to/your/file.c</p>
 
 
 <h1>Using Vim's Native Remote Editing</h1>
@@ -281,7 +282,7 @@ vim /path/to/your/file.c
 <p>Vim supports editing remote files using protocols like scp and sftp.</p>
 
 
-vim scp://user@remote-server//path/to/your/file.c
+<p>vim scp://user@remote-server//path/to/your/file.c</p>
 
 
 <figure>
