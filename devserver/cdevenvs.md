@@ -75,7 +75,7 @@ If you can work your way around the command line, have a basic understanding of 
 
 <p>Docker enables us to create consisent dev environments across mutiple machines.
 
-In your project directory, create a `Dockerfile`.</p>
+In your project directory, create a Dockerfile.</p>
 
 <span><code>cd $PROJECT_NAME</code></span>
 <span><code>touch Dockerfile</code></span>
@@ -163,7 +163,7 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h3><em>Docker Integration with VS Code</em></h3>
 
-<p>VS Code can interact directly with Docker to build and run containers. In your project directory, create a `.devcontainer` folder with two files: `devcontainer.json` and `Dockerfile`</p>
+<p>VS Code can interact directly with Docker to build and run containers. In your project directory, create a .devcontainer folder with two files: devcontainer.json and Dockerfile</p>
 
 <h3><em>devcontainer.json</h3></em>
 
@@ -190,7 +190,7 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h3><em>Open the Project in a Dev Container</em></h3>
 
-<p><b>1.</b> Press `F1` in VS Code.<br>
+<p><b>1.</b> Press F1 in VS Code.<br>
 <b>2.</b> Select **Remote-Containers: Open Folder in Container...<br>
 <b>3.</b> Choose your project folder.</p><br>
 
