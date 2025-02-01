@@ -24,7 +24,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/devserver/devserver-portable-env"><img src="https://img.shields.io/badge/Portable%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="portable dev environments"></a><br>
+<a href="/blog/devserver/cdevenvs"><img src="https://img.shields.io/badge/C%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="C Dev Environments"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
