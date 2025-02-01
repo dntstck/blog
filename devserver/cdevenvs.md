@@ -82,13 +82,17 @@ In your project directory, create a Dockerfile.</p>
 
 <p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
-<p><b><em> Build the docker image with this command: </em></b></p>
+Build the docker image with this command
 
-<span><code>docker build -t $PROJECT_NAME-image . </code></span>
+<span><code>
+docker build -t $PROJECT_NAME-image . 
+</code></span>
 
 <p><b><em>Run the Docker Container: </b></em></p><br>
 
-<span><code>docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image</code></span>
+<span><code>
+docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
+</code></span>
 
 <p>This command starts the container and opens Vim inside it.</p>
 
@@ -107,18 +111,26 @@ In your project directory, create a Dockerfile.</p>
 
 <h3><em>Apply the Deployment</em></h3>
 
-<span><code>kubectl apply -f deployment.yml</code></span>
+<span><code>
+kubectl apply -f deployment.yml
+</code></span>
 
 <h3><em>Expose the Deployment</h3></em>
 
-<span><code>kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080</code></span>
+<span><code>
+kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080
+</code></span>
 
 <h3><em>Accessing the Application</h3></em>
 
 <p>Since our application is set to run Vim inside the container, we can exec into the pod.</p>
 
-<span><code>kubectl get pods</code></span>
-<span><code>kubectl exec -it \<pod-name\> -- /bin/bash</code></span>
+<span><code>
+kubectl get pods
+</code></span>
+<span><code>
+kubectl exec -it \<pod-name\> -- /bin/bash
+</code></span>
 
 <p>Now we're inside the container's shell and can run Vim or any other commands.</p>
 
@@ -170,7 +182,9 @@ In your project directory, create a Dockerfile.</p>
 <h3><em>Setting Up SSH Connections</em></h3>
 
 <p>First, we need to install the Remote Development Extension Pack, which can be located in the Extensions Marketplace<br> <b>(Ctrl + Shift + X)</b>:</p>
-<p><span><code>Remote - SSH (ms-vscode-remote.remote-ssh)</code></span> </p>
+<p><span><code>
+Remote - SSH (ms-vscode-remote.remote-ssh)
+</code></span> </p>
 <br><sup>Core extension for SSH.</sup></p>
 
 <h3><em>Configure SSH in VS Code</em></h3>
@@ -183,13 +197,6 @@ In your project directory, create a Dockerfile.</p>
 <img src="{{ site.baseurl }}/devserver/img/vscode-connectssh.png" alt="Connecting to SSH" />
 <br><sup>Connecting to SSH with VSCode</sup>
 </figure>
-
-<h3><em>Example </em><span><code>~/.ssh/config</code></span> <em>Entry</em></h3>
-
-<span><code>Host remote-server</code></span>
-<span><code> HostName your.server.ip.address</code></span>
-<span><code> User your_username</code></span>
-<span><code> IdentityFile ~/.ssh/id_rsa</code></span>
 
 <h3><em>Remote Development over SSH</em></h3>
 
@@ -288,28 +295,7 @@ vim scp://user@remote-server//path/to/your/file.c
 
 <p>Enhance your Vim experience with plugins designed for remote development.</p>
 
-<h3><em>vim-ftp and vim-sftp</h3></em>
-
-<p><b>Installation:</b>
-
-Use a Vim plugin manager such as vundle or vim-plug.<br>
-<sup>.vimrc</sup><br>
-<span><code>call plug#begin('~/.vim/plugged')</code></span>
-<span><code>Plug 'tpope/vim-vinegar'</code></span>
-<span><code>call plug#end()</code></span>
-
-  </p>
-
-<h3><em>Netrw Configuration</h3></em>
-
-<p>Netrw is Vim's built-in file explorer, capable of handling remote files.</p><br>
-<sup>.vimrc</sup><br>
-<span><code>let g:netrw_banner=0</code></span>
-<span><code>let g:netrw_liststyle=3</code></span>
-
-<h3><em>Example Usage</h3></em>
-
-<p>Open the remote directory:</p>
+<h3><em>vim-scp</h3></em>
 
 <span><code>vim scp://user@remote-server//path/to/your/project/</code></span>
 
