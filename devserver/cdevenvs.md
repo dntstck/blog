@@ -61,13 +61,9 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3><em>Create the Script File</em></h3>
 
-<p><span><code>
-touch create_c_project.sh
-</code></span></p><br>
+<p><span><code>touch create_c_project.sh</code></span></p><br>
 
-<p><span><code>
-chmod +x create_c_project.sh
-</code></span></p>
+<p><span><code>chmod +x create_c_project.sh</code></span></p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cdevenv.png" alt="Creating C Dev Envs" />
@@ -81,16 +77,16 @@ chmod +x create_c_project.sh
 
 In your project directory, create a Dockerfile.</p>
 
-<span><code>cd $PROJECT_NAME</code></span>
+<span><code>cd $PROJECT_NAME</code></span><br>
 <span><code>touch Dockerfile</code></span>
 
 <p>Download <a href="./scripts/Dockerfile"> Dockerfile</a></p>
 
-<p><b><em>Build the docker image with this command:</em></b></p>
+<p><b><em> Build the docker image with this command: </em></b></p>
 
 <span><code>docker build -t $PROJECT_NAME-image . </code></span>
 
-<p><b><em>Run the Docker Container:</b></em></p><br>
+<p><b><em>Run the Docker Container: </b></em></p><br>
 
 <span><code>docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image</code></span>
 
@@ -107,29 +103,7 @@ In your project directory, create a Dockerfile.</p>
 <span><code>minikube start</code></span>
 
 <p><b><em>Create a Kubernetes Deployment</b></em></p>
-<p>Create a file named <span><code>deployment.yml</code></span><p>
-
-<b><sup>deployment.yml</sup></b>
-<span><code>apiVersion: apps/v1</code></span>
-<span><code>kind: Deployment</code></span>
-<span><code>metadata:</code></span>
-<span><code> name: $PROJECT_NAME-deployment</code></span>
-<span><code>spec:</code></span>
-<span><code> replicas: 1</code></span>
-<span><code> selector:</code></span>
-<span><code> matchLabels:</code></span>
-<span><code> app: $PROJECT_NAME</code></span>
-<span><code> template:</code></span>
-<span><code> metadata:</code></span>
-<span><code> labels:</code></span>
-<span><code> app: $PROJECT_NAME</code></span>
-<span><code> spec:</code></span>
-<span><code> containers:</code></span>
-<span><code> - name: $PROJECT_NAME-container</code></span>
-<span><code> image: $PROJECT_NAME-image</code></span>
-<span><code> imagePullPolicy: Never</code></span>
-<span><code> command: ["vim"]</code></span>
-</code></span>
+<p>Create a file named <span><a href="./scripts/deployment.yml">deployment.yml</a></span></p>
 
 <h3><em>Apply the Deployment</em></h3>
 
@@ -167,28 +141,9 @@ In your project directory, create a Dockerfile.</p>
 
 <p>VS Code can interact directly with Docker to build and run containers. In your project directory, create a .devcontainer folder with two files: devcontainer.json and Dockerfile</p>
 
-<h3><em>devcontainer.json</h3></em>
+<a href="./scripts/devcontainer.json">devcontainer.json</a><br>
 
-<span><code>{</code></span>
-<span><code> "name": "$PROJECT_NAME",</code></span><br>
-<span><code>    "dockerFile": "Dockerfile",</code></span><br>
-<span><code>    "extensions": [</code></span><br>
-<span><code>        "ms-vscode.cpptools"</code></span><br>
-<span><code>    ],</code></span><br>
-<span><code>    "settings": {},</code></span><br>
-<span><code>    "workspaceFolder": "/workspace",</code></span><br>
-<span><code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code></span><br>
-<span><code>}<br></code></span>
-
-<p><h3><em>Dockerfile</h3></em></p><br>
-
-<span><code>FROM gcc:latest</code></span>
-<span><code></code></span>
-<span><code>\# Install necessary packages</code></span>
-<span><code>RUN apt-get update && apt-get install -y vim</code></span>
-<span><code></code></span>
-<span><code>\# Set the working directory</code></span>
-<span><code>WORKDIR /workspace</code></span>
+<a href="./scripts/vsDockerfile">Dockerfile</a><br>
 
 <h3><em>Open the Project in a Dev Container</em></h3>
 
@@ -200,38 +155,8 @@ In your project directory, create a Dockerfile.</p>
 
 <h3><em>Automating Project Setup with Bash Scripts</em></h3>
 
-<p>Create a script <span><code>create_vs_project.sh</code></span> that automates the setup.</p>
+<p>Create a script <a href="./scripts/create_vs_project.sh">create_vs_project.sh</a> that automates the setup.</p>
 
-<span><code>#!/bin/bash</code></span><br>
-<span><code></code></span>
-<span><code>echo "Enter your project name:"</code></span>
-<span><code>read PROJECT_NAME</code></span>
-<span><code></code></span>
-<span><code> \# (Same as previous script, plus:)</code></span>
-<span><code>\# Create .devcontainer files</code></span>
-<span><code>mkdir .devcontainer</code></span>
-<span><code>cat \<\<EOL > .devcontainer/devcontainer.json</code></span>
-<span><code>{</code></span>
-<span><code> "name": "$PROJECT_NAME",</code></span>
-<span><code>    "dockerFile": "Dockerfile",</code></span>
-<span><code>    "extensions": [</code></span>
-<span><code>        "ms-vscode.cpptools"</code></span>
-<span><code>    ],</code></span>
-<span><code>    "settings": {},</code></span>
-<span><code>    "workspaceFolder": "/workspace",</code></span>
-<span><code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code></span>
-<span><code>}</code></span>
-<span><code>EOL</code></span>
-<span><code></code></span>
-<span><code>cat \<\<EOL \> .devcontainer/Dockerfile</code></span>
-<span><code>FROM gcc:latest</code></span>
-<span><code></code></span>
-<span><code>RUN apt-get update && apt-get install -y vim</code></span>
-<span><code>WORKDIR /workspace</code></span>
-<span><code>EOL</code></span>
-<span><code></code></span>
-<span><code>echo "VS Code dev container configured."</code></span>
-</code></span>
 
 <h1 id="vscodessh"><em>Using SSH with VS Code</em></h1>
 
