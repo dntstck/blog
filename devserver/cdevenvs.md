@@ -20,7 +20,7 @@
 <div id="blog-post">
 <!-- Main -->
 <script src=""></script>
-<h1 id="devblogbuild"><em>C Dev Environments ft. Docker &amp; Kubernetes, Vim, VSCode &amp; SSH </em></h1>
+<h1 id="devblogbuild">C Dev Environments ft. Docker &amp; Kubernetes, Vim, VSCode &amp; SSH </h1>
 
 <p>
 Today let's cover some more advanced topics; setting up C projects for Vim using Docker and Kubernetes, with a bash script that generates the project based on user input. We'll also cover how to achieve the same with VS Code, using SSH with VS Code to develop remotely, and explore using Vim through an SSH tunnel. By the end of this blog post, we will have some seriously powerful and adaptable C development environments tailored to our workflow.
@@ -38,7 +38,7 @@ If you can work your way around the command line, have a basic understanding of 
 
 <p>Developing C programs in these environments ensures your project is deployable across a myriad of machines, is easily maintainable and scalable. Development is simplified with the use of Docker and Kubernetes, projects are remotely accessible via SSH and remain completely consistent. Bash automates the entire project generation process giving us error free, consistent boilerplates. This doesn't just apply to C projects either, you can do the same with pretty much any language and pretty much any environment, I'm using C as an example because bar JavaScript and PHP, it's my favourite language.</p>
 
-<h1><b><em>Now that's apt</em></b></h1>
+<h1><b>Now that's apt</b></h1>
 
 <p>Before we get started, we need to ensure we have the following packages installed on our system:
 </p>
@@ -55,11 +55,11 @@ If you can work your way around the command line, have a basic understanding of 
 <b>Git/Github:</b> For version control.<br>
 <b>Dev Packages:</b> Essential Development Packages such as build-essentials or gcc.</p><br>
 
-<em><h1>Bash Scripting for Project Generation</h1></em>
+<h1>Bash Scripting for Project Generation</h1>
 
 <p>Let's create a bash script that generates a new C project based on user input. This script will set up the project structure and initialize a Git repository.</p>
 
-<h3><em>Create the Script File</em></h3>
+<h1>Create the Script File</h1>
 
 <p>touch create_c_project.sh</p><br>
 
@@ -71,7 +71,7 @@ If you can work your way around the command line, have a basic understanding of 
 </figure>
 
 <p>Download <a href="./scripts/newcproj.sh">sh script</a></p><br>
-<h3 id="dockering"><em>Dockerizing the Development Environment</em></h3>
+<h3 id="dockering">Dockerizing the Development Environment</h1>
 
 <p>Docker enables us to create consisent dev environments across mutiple machines.
 
@@ -88,7 +88,7 @@ Build the docker image with this command
 docker build -t $PROJECT_NAME-image . 
 
 
-<p><b><em>Run the Docker Container: </b></em></p><br>
+<p><b>Run the Docker Container:</b></p><br>
 
 
 docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
@@ -96,32 +96,32 @@ docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image
 
 <p>This command starts the container and opens Vim inside it.</p>
 
-<h3>Deploying with Kubernetes</h3>
+<h1>Deploying with Kubernetes</h1>
 
 <p>Let's deploy our Docker container using Kubernetes to orchestrate it.</p>
 
-<p><b><em>Start Minikube</b></em></p>
+<p><b>Start Minikube</b></p>
 
 <p>First, ensure Minikube is running.</p>
 
 minikube start
 
-<p><b><em>Create a Kubernetes Deployment</b></em></p>
+<p><b>Create a Kubernetes Deployment</b></p>
 <p>Create a file named <a href="./scripts/deployment.yml">deployment.yml</a></p>
 
-<h3><em>Apply the Deployment</em></h3>
+<h1>Apply the Deployment</h1>
 
 
 kubectl apply -f deployment.yml
 
 
-<h3><em>Expose the Deployment</h3></em>
+<h1>Expose the Deployment</h1>
 
 
 kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080
 
 
-<h3><em>Accessing the Application</h3></em>
+<h1>Accessing the Application</h1>
 
 <p>Since our application is set to run Vim inside the container, we can exec into the pod.</p>
 
@@ -134,11 +134,11 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 
 <p>Now we're inside the container's shell and can run Vim or any other commands.</p>
 
-<h1><em>Setting Up C Projects for VS Code with Docker and Kubernetes</em></h1>
+<h1>Setting Up C Projects for VS Code with Docker and Kubernetes</h1>
 
 <p>Let's begin by configuring VS Code for our C projects.</p>
 
-<p><b><em>Configuring VS Code for C Development<b></em></p>
+<p><b>Configuring VS Code for C Development<b></p>
 
 <p>Ensure you have VS Code installed along with the following extensions:</p>
 
@@ -149,7 +149,7 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 <b>Kubernetes (ms-kubernetes-tools.vscode-kubernetes-tools):</b> <br>
 <sup>For Kubernetes support.</sp<br></p>
 
-<h3><em>Docker Integration with VS Code</em></h3>
+<h1>Docker Integration with VS Code</h1>
 
 <p>VS Code can interact directly with Docker to build and run containers. In your project directory, create a .devcontainer folder with two files: devcontainer.json and Dockerfile</p>
 
@@ -157,7 +157,7 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 
 <a href="./scripts/vsDockerfile">Dockerfile</a><br>
 
-<h3><em>Open the Project in a Dev Container</em></h3>
+<h1>Open the Project in a Dev Container</h1>
 
 <p><b>1.</b> Press F1 in VS Code.<br>
 <b>2.</b> Select **Remote-Containers: Open Folder in Container...<br>
@@ -165,12 +165,12 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 
 <p>VS Code will build the Docker image and reopen the project inside the container.</p><br>
 
-<h3><em>Automating Project Setup with Bash Scripts</em></h3>
+<h1>Automating Project Setup with Bash Scripts</h1>
 
 <p>Create a script <a href="./scripts/create_vs_project.sh">create_vs_project.sh</a> that automates the setup.</p>
 
 
-<h1 id="vscodessh"><em>Using SSH with VS Code</em></h1>
+<h1 id="vscodessh">Using SSH with VS Code</h1>
 
 <p>VSCode has robust support for remote development over SSH, allowing us to work seamlessly on remote machines. Extremely useful for purposes like mine, using a CM5 DevServer to develop remotely... I can work on entire projects in any language, in any environment where ever I am.</p>
 
@@ -179,7 +179,7 @@ kubectl exec -it \<pod-name\> -- /bin/bash
 <br><sup>VSCode &amp; SSH</sup>
 </figure>
 
-<h3><em>Setting Up SSH Connections</em></h3>
+<h1>Setting Up SSH Connections</h1>
 
 <p>First, we need to install the Remote Development Extension Pack, which can be located in the Extensions Marketplace<br> <b>(Ctrl + Shift + X)</b>:</p>
 <p>
@@ -187,7 +187,7 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
  </p>
 <br><sup>Core extension for SSH.</sup></p>
 
-<h3><em>Configure SSH in VS Code</em></h3>
+<h1>Configure SSH in VS Code</h1>
 
 <p><b>1.</b> Press <sup>F1</sup> and select <b>Remote-SSH: Add New SSH Host...</b><br>
 <b>2.</b> Enter your SSH connection string, e.g. mine: sysadmin@cm5.local<br>
@@ -198,7 +198,7 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
 <br><sup>Connecting to SSH with VSCode</sup>
 </figure>
 
-<h3><em>Remote Development over SSH</em></h3>
+<h1>Remote Development over SSH</h1>
 
 <p><b>Press <sup>F1</sup></b> and select <b>Remote-SSH: Connect to Host...</b><br>
 
@@ -217,7 +217,7 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
 <img src="{{ site.baseurl }}/devserver/img/vscode-ssh.png" alt="VSCode SSH" />
 <br><sup>VSCode &amp; connected via SSH to cm5.local</sup>
 </figure>
-<h3><em>Enhancing Workflow with Extensions</h3></em>
+<h1>Enhancing Workflow with Extensions</h1>
 
 <p><b>Install Extensions on Remote:</b><br>
   When connected to the remote server, install any necessary extensions. VS Code will prompt you to install them on the remote host.
@@ -229,7 +229,7 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
   Use the integrated terminal to run commands on the remote machine.
 </p>
 
-<h1><em>Using Vim through an SSH Tunnel</h1></em>
+<h1>Using Vim through an SSH Tunnel</h1>
 
 <p>When you need to edit files on a remote server using Vim over SSH, tunneling can enhance security and flexibility.</p>
 
@@ -238,17 +238,17 @@ Remote - SSH (ms-vscode-remote.remote-ssh)
 <br><sup>Connected to CM5 with Vim via SCP</sup>
 </figure>
 
-<h3><em>Establishing an SSH Tunnel</h3></em>
+<h1>Establishing an SSH Tunnel</h1>
 
 <p>An SSH tunnel forwards a local port to a remote server.</p>
 
-<h3><em>Basic SSH Connection</h3></em>
+<h1>Basic SSH Connection</h1>
 
 
 ssh user@remote-server
 
 
-<h3><em>ssh</codde> Tunnel Command</h3></em>
+<h1>ssh</codde> Tunnel Command</h1>
 
 
 ssh -L local_port:localhost:remote_port user@remote-server
@@ -259,7 +259,7 @@ ssh -L local_port:localhost:remote_port user@remote-server
 <br><sup>SSH Tunnel</sup>
 </figure>
 
-<h3><em>Example</h3></em>
+<h1>Example</h1>
 
 <p><b>Forward local port 8080 to remote port 80:</b></p>
 
@@ -267,7 +267,7 @@ ssh -L local_port:localhost:remote_port user@remote-server
 ssh -L 8080:localhost:80 sysadmin@cm5.local
 
 
-<h3><em>Vim for Remote Development</h3></em>
+<h1>Vim for Remote Development</h1>
 
 <p>Simply SSH into your remote server and run Vim to edit files.</p>
 
@@ -276,7 +276,7 @@ ssh user@remote-server
 vim /path/to/your/file.c
 
 
-<h3><em>Using Vim's Native Remote Editing</h3></em>
+<h1>Using Vim's Native Remote Editing</h1>
 
 <p>Vim supports editing remote files using protocols like scp and sftp.</p>
 
@@ -291,19 +291,19 @@ vim scp://user@remote-server//path/to/your/file.c
 
 <p><b>Note the double slash</b>after the hostname.</p>
 
-<h3><em>Leveraging Vim Plugins for Remote Work</h3></em>
+<h1>Leveraging Vim Plugins for Remote Work</h1>
 
 <p>Enhance your Vim experience with plugins designed for remote development.</p>
 
-<h3><em>vim-scp</h3></em>
+<h1>vim-scp</h1>
 
 vim scp://user@remote-server//path/to/your/project/
 
 <p>Now you can navigate directories and edit files as needed.</p>
 
-<h1 id="wrapup"><em>Wrapping it up</em></h1>
+<h1 id="wrapup">Wrapping it up</h1>
 
-<p>We've journeyed through setting up C projects for Vim and VS Code using Docker and Kubernetes, automated project creation with bash scripts, and explored remote development over SSHin both editors. By harnessing containers and remote connections, we can create a consistent, portable development environment that suits our workflow, we have achieved a lot in this post so be proud of yourself if you got this far and start to utilise some of the aspects we've discussed here.</p>
+<p>We've journeyed through setting up C projects for Vim and VS Code using Docker and Kubernetes, automated project creation with bash scripts, and explored remote development over SSH in both editors. By harnessing containers and remote connections, we can create a consistent, portable development environment that suits our workflow, we have achieved a lot in this post so be proud of yourself if you got this far and start to utilise some of the aspects we've discussed here.</p>
 
 <p>Catch you next time<br>
 
