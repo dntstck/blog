@@ -1,7 +1,7 @@
 <!-- Header -->
 <link rel="stylesheet" href="../../assets/css/style.css"/>
 <div align="center">    
-  <a href="../"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br></div> 
+  <a href="../"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br></div>
 
   <div align="center">
     <a href="../"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> 
@@ -18,10 +18,7 @@
   </div>
 <hr>
 <div id="blog-post">
-<!-- Main --> 
-
-
-
+<!-- Main -->
 
 <h1 id="devblogbuild"><em>C Dev Environments ft. Docker &amp; Kubernetes, Vim, VSCode &amp; SSH </em></h1>
 
@@ -58,15 +55,15 @@ If you can work your way around the command line, have a basic understanding of 
 <b>Git/Github:</b> For version control.<br>
 <b>Dev Packages:</b> Essential Development Packages such as build-essentials or gcc.</p><br>
 
-<em><b><h1 id="bashgen">Bash Scripting for Project Generation</em></h1></b>
+<em><h1>Bash Scripting for Project Generation</h1></em>
 
 <p>Let's create a bash script that generates a new C project based on user input. This script will set up the project structure and initialize a Git repository.</p>
 
 <h3><em>Create the Script File</em></h3>
 
-<p><code>touch create_c_project.sh</code></p>
+<p><span><code>touch create_c_project.sh</code></span></p>
 
-<p><code>chmod +x create_c_project.sh</code></p>
+<p><span><code>chmod +x create_c_project.sh</code></span></p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cdevenvpng" alt="Creating C Dev Envs" />
@@ -75,42 +72,42 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3 id="devblogbuild"><em>Script</em></h3>
 
-<p><code>#!/bin/bash</code>
+<p><span><code>#!/bin/bash</code></span>
 
-<code>echo "Enter your project name:"</code>
-<code>read PROJECT_NAME</code>
+<span><code>echo "Enter your project name:"</code></span>
+<span><code>read PROJECT_NAME</code></span>
 
-<code>echo "Creating project '$PROJECT_NAME'..."</code>
+<span><code>echo "Creating project '$PROJECT_NAME'..."</code></span>
 
-<code>mkdir $PROJECT_NAME</code>
-<code>cd $PROJECT_NAME</code>
+<span><code>mkdir $PROJECT_NAME</code></span>
+<span><code>cd $PROJECT_NAME</code></span>
 
-<code>git init</code>
+<span><code>git init</code></span>
 
-<code>mkdir src include bin</code>
-<code>touch src/main.c</code>
-<code>touch Makefile</code>
+<span><code>mkdir src include bin</code></span>
+<span><code>touch src/main.c</code></span>
+<span><code>touch Makefile</code></span>
 
-<code>cat \<\<EOL > src/main.c</code>
-<code>#include <stdio.h></code>
+<span><code>cat \<\<EOL > src/main.c</code></span>
+<span><code>#include <stdio.h></code></span>
 
-<code>int main() {</code>
-<code>    printf("Hello, World!\\n");</code>
-<code>    return 0;</code>
-<code>}</code>
-<code>EOL</code>
+<span><code>int main() {</code></span>
+<span><code> printf("Hello, World!\\n");</code></span>
+<span><code> return 0;</code></span>
+<span><code>}</code></span>
+<span><code>EOL</code></span>
 
-<code>cat \<\<EOL \> Makefile</code>
-<code>CC=gcc</code>
-<code>CFLAGS=-Iinclude</code>
+<span><code>cat \<\<EOL \> Makefile</code></span>
+<span><code>CC=gcc</code></span>
+<span><code>CFLAGS=-Iinclude</code></span>
 
-<code>all: \$(PROJECT_NAME)</code>
+<span><code>all: \$(PROJECT_NAME)</code></span>
 
-<code>\$(PROJECT_NAME): src/main.c</code>
-<code>	\$(CC) src/main.c -o bin/\$(PROJECT_NAME) \$(CFLAGS)</code>
-<code>EOL</code>
+<span><code>\$(PROJECT_NAME): src/main.c</code></span>
+<span><code> \$(CC) src/main.c -o bin/\$(PROJECT_NAME) \$(CFLAGS)</code></span>
+<span><code>EOL</code></span>
 
-<code>echo " '$PROJECT_NAME' created successfully"</code></p>
+<span><code>echo " '$PROJECT_NAME' created successfully"</code></span></p>
 
 <h3 id="srclook"><em>Source Explained</em></h3>
 
@@ -122,32 +119,32 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3 id="dockering"><em>Dockerizing the Development Environment</em></h3>
 
-<p>Docker enables us to create consisent dev environments across mutiple machines. 
+<p>Docker enables us to create consisent dev environments across mutiple machines.
 
 In your project directory, create a `Dockerfile`.</p>
 
-<code>cd $PROJECT_NAME</code>
-<code>touch Dockerfile</code>
+<span><code>cd $PROJECT_NAME</code></span>
+<span><code>touch Dockerfile</code></span>
 
 <em><h3>Dockerfile</em></h3>
 
-<code>FROM gcc:latest</code><br>
-<code>WORKDIR /usr/src/app</code><br>
-<code>COPY . .</code><br>
-<code>RUN apt-get update && apt-get install -y vim</code><br>
-<code>RUN make</code><br>
-<code>CMD ["vim"]</code><br>
+<span><code>FROM gcc:latest</code></span><br>
+<span><code>WORKDIR /usr/src/app</code></span><br>
+<span><code>COPY . .</code></span><br>
+<span><code>RUN apt-get update && apt-get install -y vim</code></span><br>
+<span><code>RUN make</code></span><br>
+<span><code>CMD ["vim"]</code></span><br>
 <br>
 
 <em><h3>Build the Docker Image</em></h3>
 
 <p><b><em>Build the docker image with this command:</b></em></p>
 
-<code>docker build -t $PROJECT_NAME-image . </code>
+<span><code>docker build -t $PROJECT_NAME-image . </code></span>
 
 <p><b><em>Run the Docker Container:</b></em></p><br>
 
-<code>docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image</code>
+<span><code>docker run -it --name $PROJECT_NAME-container $PROJECT_NAME-image</code></span>
 
 <p>This command starts the container and opens Vim inside it.</p>
 
@@ -159,47 +156,47 @@ In your project directory, create a `Dockerfile`.</p>
 
 <p>First, ensure Minikube is running.</p>
 
-<code>minikube start</code>
+<span><code>minikube start</code></span>
 
 <p><b><em>Create a Kubernetes Deployment</b></em></p>
-<p>Create a file named <code>deployment.yml</code><p>
+<p>Create a file named <span><code>deployment.yml</code></span><p>
 
 <b><sup>deployment.yml</sup></b>
-<code>apiVersion: apps/v1</code>
-<code>kind: Deployment</code>
-<code>metadata:</code>
-<code>  name: $PROJECT_NAME-deployment</code>
-<code>spec:</code>
-<code>  replicas: 1</code>
-<code>  selector:</code>
-<code>    matchLabels:</code>
-<code>      app: $PROJECT_NAME</code>
-<code>  template:</code>
-<code>    metadata:</code>
-<code>      labels:</code>
-<code>        app: $PROJECT_NAME</code>
-<code>    spec:</code>
-<code>      containers:</code>
-<code>      - name: $PROJECT_NAME-container</code>
-<code>        image: $PROJECT_NAME-image</code>
-<code>        imagePullPolicy: Never</code>
-<code>        command: ["vim"]</code>
-</code>
+<span><code>apiVersion: apps/v1</code></span>
+<span><code>kind: Deployment</code></span>
+<span><code>metadata:</code></span>
+<span><code> name: $PROJECT_NAME-deployment</code></span>
+<span><code>spec:</code></span>
+<span><code> replicas: 1</code></span>
+<span><code> selector:</code></span>
+<span><code> matchLabels:</code></span>
+<span><code> app: $PROJECT_NAME</code></span>
+<span><code> template:</code></span>
+<span><code> metadata:</code></span>
+<span><code> labels:</code></span>
+<span><code> app: $PROJECT_NAME</code></span>
+<span><code> spec:</code></span>
+<span><code> containers:</code></span>
+<span><code> - name: $PROJECT_NAME-container</code></span>
+<span><code> image: $PROJECT_NAME-image</code></span>
+<span><code> imagePullPolicy: Never</code></span>
+<span><code> command: ["vim"]</code></span>
+</code></span>
 
 <h3><em>Apply the Deployment</em></h3>
 
-<code>kubectl apply -f deployment.yml</code>
+<span><code>kubectl apply -f deployment.yml</code></span>
 
 <h3><em>Expose the Deployment</h3></em>
 
-<code>kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080</code>
+<span><code>kubectl expose deployment $PROJECT_NAME-deployment --type=NodePort --port=8080</code></span>
 
 <h3><em>Accessing the Application</h3></em>
 
 <p>Since our application is set to run Vim inside the container, we can exec into the pod.</p>
 
-<code>kubectl get pods</code>
-<code>kubectl exec -it \<pod-name\> -- /bin/bash</code>
+<span><code>kubectl get pods</code></span>
+<span><code>kubectl exec -it \<pod-name\> -- /bin/bash</code></span>
 
 <p>Now we're inside the container's shell and can run Vim or any other commands.</p>
 
@@ -224,28 +221,26 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h3><em>devcontainer.json</h3></em>
 
-<code>{</code>
-<code>    "name": "$PROJECT_NAME",</code><br>
-<code>    "dockerFile": "Dockerfile",</code><br>
-<code>    "extensions": [</code><br>
-<code>        "ms-vscode.cpptools"</code><br>
-<code>    ],</code><br>
-<code>    "settings": {},</code><br>
-<code>    "workspaceFolder": "/workspace",</code><br>
-<code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code><br>
-<code>}<br></code>
-
+<span><code>{</code></span>
+<span><code> "name": "$PROJECT_NAME",</code></span><br>
+<span><code>    "dockerFile": "Dockerfile",</code></span><br>
+<span><code>    "extensions": [</code></span><br>
+<span><code>        "ms-vscode.cpptools"</code></span><br>
+<span><code>    ],</code></span><br>
+<span><code>    "settings": {},</code></span><br>
+<span><code>    "workspaceFolder": "/workspace",</code></span><br>
+<span><code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code></span><br>
+<span><code>}<br></code></span>
 
 <p><h3><em>Dockerfile</h3></em></p><br>
 
-<code>FROM gcc:latest</code>
-<code></code>
-<code>\# Install necessary packages</code>
-<code>RUN apt-get update && apt-get install -y vim</code>
-<code></code>
-<code>\# Set the working directory</code>
-<code>WORKDIR /workspace</code>
-
+<span><code>FROM gcc:latest</code></span>
+<span><code></code></span>
+<span><code>\# Install necessary packages</code></span>
+<span><code>RUN apt-get update && apt-get install -y vim</code></span>
+<span><code></code></span>
+<span><code>\# Set the working directory</code></span>
+<span><code>WORKDIR /workspace</code></span>
 
 <h3><em>Open the Project in a Dev Container</em></h3>
 
@@ -257,38 +252,38 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h3><em>Automating Project Setup with Bash Scripts</em></h3>
 
-<p>Create a script <code>create_vs_project.sh</code> that automates the setup.</p>
+<p>Create a script <span><code>create_vs_project.sh</code></span> that automates the setup.</p>
 
-<code>#!/bin/bash</code><br>
-<code></code>
-<code>echo "Enter your project name:"</code>
-<code>read PROJECT_NAME</code>
-<code></code>
-<code> \# (Same as previous script, plus:)</code>
-<code>\# Create .devcontainer files</code>
-<code>mkdir .devcontainer</code>
-<code>cat \<\<EOL > .devcontainer/devcontainer.json</code>
-<code>{</code>
-<code>    "name": "$PROJECT_NAME",</code>
-<code>    "dockerFile": "Dockerfile",</code>
-<code>    "extensions": [</code>
-<code>        "ms-vscode.cpptools"</code>
-<code>    ],</code>
-<code>    "settings": {},</code>
-<code>    "workspaceFolder": "/workspace",</code>
-<code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code>
-<code>}</code>
-<code>EOL</code>
-<code></code>
-<code>cat \<\<EOL \> .devcontainer/Dockerfile</code>
-<code>FROM gcc:latest</code>
-<code></code>
-<code>RUN apt-get update && apt-get install -y vim</code>
-<code>WORKDIR /workspace</code>
-<code>EOL</code>
-<code></code>
-<code>echo "VS Code dev container configured."</code>
-</code>
+<span><code>#!/bin/bash</code></span><br>
+<span><code></code></span>
+<span><code>echo "Enter your project name:"</code></span>
+<span><code>read PROJECT_NAME</code></span>
+<span><code></code></span>
+<span><code> \# (Same as previous script, plus:)</code></span>
+<span><code>\# Create .devcontainer files</code></span>
+<span><code>mkdir .devcontainer</code></span>
+<span><code>cat \<\<EOL > .devcontainer/devcontainer.json</code></span>
+<span><code>{</code></span>
+<span><code> "name": "$PROJECT_NAME",</code></span>
+<span><code>    "dockerFile": "Dockerfile",</code></span>
+<span><code>    "extensions": [</code></span>
+<span><code>        "ms-vscode.cpptools"</code></span>
+<span><code>    ],</code></span>
+<span><code>    "settings": {},</code></span>
+<span><code>    "workspaceFolder": "/workspace",</code></span>
+<span><code>    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"</code></span>
+<span><code>}</code></span>
+<span><code>EOL</code></span>
+<span><code></code></span>
+<span><code>cat \<\<EOL \> .devcontainer/Dockerfile</code></span>
+<span><code>FROM gcc:latest</code></span>
+<span><code></code></span>
+<span><code>RUN apt-get update && apt-get install -y vim</code></span>
+<span><code>WORKDIR /workspace</code></span>
+<span><code>EOL</code></span>
+<span><code></code></span>
+<span><code>echo "VS Code dev container configured."</code></span>
+</code></span>
 
 <h1 id="vscodessh"><em>Using SSH with VS Code</em></h1>
 
@@ -302,28 +297,26 @@ In your project directory, create a `Dockerfile`.</p>
 <h3><em>Setting Up SSH Connections</em></h3>
 
 <p>First, we need to install the Remote Development Extension Pack, which can be located in the Extensions Marketplace<br> <b>(Ctrl + Shift + X)</b>:</p>
-<p><code>Remote - SSH (ms-vscode-remote.remote-ssh)</code> </p>
+<p><span><code>Remote - SSH (ms-vscode-remote.remote-ssh)</code></span> </p>
 <br><sup>Core extension for SSH.</sup></p>
 
 <h3><em>Configure SSH in VS Code</em></h3>
 
 <p><b>1.</b> Press <sup>F1</sup> and select <b>Remote-SSH: Add New SSH Host...</b><br>
-<b>2.</b> Enter your SSH connection string, e.g. mine: <code>sysadmin@cm5.local</code><br>
-<b>3.</b> Choose the SSH configuration file to update (usually <code>~/.ssh/config</code>).</p>
+<b>2.</b> Enter your SSH connection string, e.g. mine: <span><code>sysadmin@cm5.local</code></span><br>
+<b>3.</b> Choose the SSH configuration file to update (usually <span><code>~/.ssh/config</code></span>).</p>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/vscode-connectssh.png" alt="Connecting to SSH" />
 <br><sup>Connecting to SSH with VSCode</sup>
 </figure>
 
-<h3><em>Example </em><code>~/.ssh/config</code> <em>Entry</em></h3>
+<h3><em>Example </em><span><code>~/.ssh/config</code></span> <em>Entry</em></h3>
 
-
-<code>Host remote-server</code>
-<code>    HostName your.server.ip.address</code>
-<code>    User your_username</code>
-<code>    IdentityFile ~/.ssh/id_rsa</code>
-
+<span><code>Host remote-server</code></span>
+<span><code> HostName your.server.ip.address</code></span>
+<span><code> User your_username</code></span>
+<span><code> IdentityFile ~/.ssh/id_rsa</code></span>
 
 <h3><em>Remote Development over SSH</em></h3>
 
@@ -358,7 +351,6 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h1><em>Using Vim through an SSH Tunnel</h1></em>
 
-
 <p>When you need to edit files on a remote server using Vim over SSH, tunneling can enhance security and flexibility.</p>
 
 <figure>
@@ -372,15 +364,15 @@ In your project directory, create a `Dockerfile`.</p>
 
 <h3><em>Basic SSH Connection</h3></em>
 
-<code>
+<span><code>
 ssh user@remote-server
-</code>
+</code></span>
 
-<h3><em><code>ssh</codde> Tunnel Command</h3></em>
+<h3><em><span><code>ssh</codde> Tunnel Command</h3></em>
 
-<code>
+<span><code>
 ssh -L local_port:localhost:remote_port user@remote-server
-</code>
+</code></span>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/cm5-sshtunnel.png" alt="SSH Tunnel" />
@@ -391,33 +383,33 @@ ssh -L local_port:localhost:remote_port user@remote-server
 
 <p><b>Forward local port 8080 to remote port 80:</b></p>
 
-<code>
+<span><code>
 ssh -L 8080:localhost:80 sysadmin@cm5.local
-</code>
+</code></span>
 
 <h3><em>Vim for Remote Development</h3></em>
 
-<p>Simply SSH into your remote server and run Vim to edit files.<p>
+<p>Simply SSH into your remote server and run Vim to edit files.</p>
 
-<code>
+<span><code>
 ssh user@remote-server
 vim /path/to/your/file.c
-</code>
+</code></span>
 
 <h3><em>Using Vim's Native Remote Editing</h3></em>
 
-<p>Vim supports editing remote files using protocols like <code>scp</code> and <code>sftp</code>.</p>
+<p>Vim supports editing remote files using protocols like <span><code>scp</code></span> and <span><code>sftp</code></span>.</p>
 
-<code>
+<span><code>
 vim scp://user@remote-server//path/to/your/file.c
-</code>
+</code></span>
 
 <figure>
 <img src="{{ site.baseurl }}/devserver/img/vim-scp.png" alt="Vim SCP" />
 <br><sup>Connecting to CM5 with Vim via SCP</sup>
 </figure>
 
-<p><b>Note the double slash</b>>after the hostname.</p>
+<p><b>Note the double slash</b>after the hostname.</p>
 
 <h3><em>Leveraging Vim Plugins for Remote Work</h3></em>
 
@@ -427,25 +419,26 @@ vim scp://user@remote-server//path/to/your/file.c
 
 <p><b>Installation:</b>
 
-  Use a Vim plugin manager such as vundle or vim-plug.<br>
-  <sup>.vimrc</sup><br>
-  <code>call plug#begin('~/.vim/plugged')</code>
-  <code>Plug 'tpope/vim-vinegar'</code>
-  <code>call plug#end()</code>
+Use a Vim plugin manager such as vundle or vim-plug.<br>
+<sup>.vimrc</sup><br>
+<span><code>call plug#begin('~/.vim/plugged')</code></span>
+<span><code>Plug 'tpope/vim-vinegar'</code></span>
+<span><code>call plug#end()</code></span>
+
   </p>
 
 <h3><em>Netrw Configuration</h3></em>
 
 <p>Netrw is Vim's built-in file explorer, capable of handling remote files.</p><br>
 <sup>.vimrc</sup><br>
-<code>let g:netrw_banner=0</code>
-<code>let g:netrw_liststyle=3</code>
+<span><code>let g:netrw_banner=0</code></span>
+<span><code>let g:netrw_liststyle=3</code></span>
 
 <h3><em>Example Usage</h3></em>
 
 <p>Open the remote directory:</p>
 
-<code>vim scp://user@remote-server//path/to/your/project/</code>
+<span><code>vim scp://user@remote-server//path/to/your/project/</code></span>
 
 <p>Now you can navigate directories and edit files as needed.</p>
 
@@ -456,9 +449,6 @@ vim scp://user@remote-server//path/to/your/file.c
 <p>Catch you next time<br>
 
 Dru</p>
-
-
-
 
 <br>
 <!-- Footer -->
