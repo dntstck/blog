@@ -1,0 +1,7 @@
+FROM gcc:latest
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y vim
+
+# Set the working directory
+WORKDIR /workspace
