@@ -1,7 +1,7 @@
 ---
 title: "C Dev Environments"
 date: 2025-01-31T04:05:00Z
-publishDate: 2025-02-01T07:00:00Z
+publishDate: 2025-02-01T03:00:00Z
 tags: [devserver]
 ---
 
