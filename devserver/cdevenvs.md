@@ -19,7 +19,7 @@
 <hr>
 <div id="blog-post">
 <!-- Main -->
-
+<script src=""></script>
 <h1 id="devblogbuild"><em>C Dev Environments ft. Docker &amp; Kubernetes, Vim, VSCode &amp; SSH </em></h1>
 
 <p>
@@ -72,50 +72,41 @@ If you can work your way around the command line, have a basic understanding of 
 
 <h3 id="devblogbuild"><em>Script</em></h3>
 
-<p><span><code>#!/bin/bash</code></span>
+<code>#!/bin/bash
 
-<span><code>echo "Enter your project name:"</code></span>
-<span><code>read PROJECT_NAME</code></span>
+echo "Enter your project name:"
+read PROJECT_NAME
+echo "Creating project '$PROJECT_NAME'..."
 
-<span><code>echo "Creating project '$PROJECT_NAME'..."</code></span>
+mkdir $PROJECT_NAME
+cd $PROJECT_NAME
+git init
 
-<span><code>mkdir $PROJECT_NAME</code></span>
-<span><code>cd $PROJECT_NAME</code></span>
+mkdir src include bin
+touch src/main.c
+touch Makefile
 
-<span><code>git init</code></span>
+cat \<\<EOL \> src\/main.c
+#include 
 
-<span><code>mkdir src include bin</code></span>
-<span><code>touch src/main.c</code></span>
-<span><code>touch Makefile</code></span>
+int main() {
+ printf\("helloworld"\);
+ return 0;
+}
+EOL
 
-<span><code>cat \<\<EOL > src/main.c</code></span>
-<span><code>#include <stdio.h></code></span>
+cat \<\<EOL \> Makefile
+CC=gcc
+CFLAGS=-Iinclude
 
-<span><code>int main() {</code></span>
-<span><code> printf("Hello, World!\\n");</code></span>
-<span><code> return 0;</code></span>
-<span><code>}</code></span>
-<span><code>EOL</code></span>
+all: \$(PROJECT_NAME)
 
-<span><code>cat \<\<EOL \> Makefile</code></span>
-<span><code>CC=gcc</code></span>
-<span><code>CFLAGS=-Iinclude</code></span>
+\$(PROJECT_NAME): src/main.c
+$(CC) src/main.c -o bin/\$(PROJECT_NAME) \$(CFLAGS)
+EOL
 
-<span><code>all: \$(PROJECT_NAME)</code></span>
-
-<span><code>\$(PROJECT_NAME): src/main.c</code></span>
-<span><code> \$(CC) src/main.c -o bin/\$(PROJECT_NAME) \$(CFLAGS)</code></span>
-<span><code>EOL</code></span>
-
-<span><code>echo " '$PROJECT_NAME' created successfully"</code></span></p>
-
-<h3 id="srclook"><em>Source Explained</em></h3>
-
-<p>
-<b>User Input:</b> The script prompts the user for a project name.<br>
-<b>Directory Structure</b> Creates `src`, `include`, and `bin` directories.<br>
-<b>Main File</b> Generates a simple `main.c` file.<br>
-<b>Makefile</b> Sets up a basic Makefile for building the project.</p>
+echo " '$PROJECT_NAME' created successfully"
+</code>
 
 <h3 id="dockering"><em>Dockerizing the Development Environment</em></h3>
 
@@ -126,14 +117,14 @@ In your project directory, create a `Dockerfile`.</p>
 <span><code>cd $PROJECT_NAME</code></span>
 <span><code>touch Dockerfile</code></span>
 
-<em><h3>Dockerfile</em></h3>
+Dockerfile
 
-<span><code>FROM gcc:latest</code></span><br>
-<span><code>WORKDIR /usr/src/app</code></span><br>
-<span><code>COPY . .</code></span><br>
-<span><code>RUN apt-get update && apt-get install -y vim</code></span><br>
-<span><code>RUN make</code></span><br>
-<span><code>CMD ["vim"]</code></span><br>
+FROM gcc:latest
+WORKDIR /usr/src/app
+COPY . .
+RUN apt-get update && apt-get install -y vim
+RUN make
+CMD ["vim"]
 <br>
 
 <em><h3>Build the Docker Image</em></h3>
@@ -358,7 +349,7 @@ In your project directory, create a `Dockerfile`.</p>
 <br><sup>Connected to CM5 with Vim via SCP</sup>
 </figure>
 
-<h3><em>Establishing an SSHTunnel</h3></em>
+<h3><em>Establishing an SSH Tunnel</h3></em>
 
 <p>An SSH tunnel forwards a local port to a remote server.</p>
 
