@@ -91,8 +91,8 @@
 <p>Shopping for a Module, Pi4 and everything else we needed turned out fruitful. This was definitely a right place, right time moment with the Pi4 4GB RAM + PoE HAT &amp; CM4 8GB RAM at such a great price, way more ram than I bargained for and the PoE HAT is a nice addition, especially for later down the line when I upgrade our current switch to PoE. Although, I do own a tiny 2 port POE Injector, so maybe I can incorporate this somehow as it would save me having to find a USB cable and dedicate a USB plug to it. I have plenty of cables and a few spare plugs, but would like to keep the plugs spare so using PoE in this fashion is an option, I grabbed plenty of ethernet cables in my order, also.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/raspberrypi/img/misc-cm4ebay.png" alt="CM4" />
-<br><sup>CM4 Modules on eBay</sup>
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-cm5.png" alt="CM5" />
+<br><sup>CM5, a possible upgrade in the future.</sup>
 </figure>
 
 <br>
