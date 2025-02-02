@@ -1,7 +1,7 @@
 ---
 title: "lastfm on linux"
 date: 2025-01-29T15:40:12Z
-publishDate: 2025-02-6T00:00:00Z
+publishDate: 2025-02-06T00:00:00Z
 tags: [misc]
 ---
 
