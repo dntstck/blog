@@ -12,13 +12,15 @@
 <hr>
 <!-- Main --> 
 <div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br><br>
-Currently tinkering with the Compute Module 5, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
+Currently tinkering with the Compute Module 5, Compute Module 4, Pi4, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 <br>
 Please feel free to take a look around, or click on any relevant badges that interest you.<br><br>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
 <a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
-<a href="/blog/webdev/devblog-build"><img src="https://img.shields.io/badge/Automated%20DevBlog-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
+<a href="/blog/devserver/cdevenvs"><img src="https://img.shields.io/badge/C%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="C Dev Environments"></a><br>
+<a href="/blog/devserver/devserver-portable-env"><img src="https://img.shields.io/badge/Portable%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Portable Dev Environments"></a><br>
+<a href="/blog/raspberrypi/pimediacenter"><img src="https://img.shields.io/badge/Pi%20Media%20Center-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Pi Media Center"></a><br>
 </div>
 <br>
 <div id="latestposts">
