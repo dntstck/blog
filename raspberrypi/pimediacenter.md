@@ -101,13 +101,11 @@
 <p>The media center itself can also be extended with a simple generic USB DVD/RW drive connected to the CM4 Module. Watching DVDs (<sup>extremely cheap to buy at all secondhand stores</sup>), as well as ripping them for use on the NAS would be completely viable. There are definite upgrades here, such a better external hard drives, SSDs or nVME drives. While not an upgrade for the media center itself, a larger ethernet switch is on the cards, especially one that is PoE enabled.</p>
 
 <p>Well, that's it for tonight. Simply have to wait for it all to arrive and then assemble it.</p>
-<p>Catch you next time, <br> Dru </b>
+<p>Catch you next time, <br> Dru
 
 
 <br>
 <!-- Footer -->
-</div>
-
 <br>
 <div align="center"><hr>
   <a href="../"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> 
