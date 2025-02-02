@@ -30,7 +30,7 @@
 
 <p>The solution is a media center &amp; NAS, that works over our network and can stream content such as video, audio or even large files across our network, internally and securely. I have actually been considering this for a while now and just in case it came to fruition, I bought a spare carrier board for a CM4/CM5 module if the situation ever arose and it seems like this is it's moment.</p>
 
-<h1 id="whymedia""><em>Why a Media Center?</em></h1>
+<h1 id="whymedia"><em>Why a Media Center?</em></h1>
 <p>The main reason is the price. Sure, the convenience is there, but functions such as play/pause and record are irrelevant with a media center as the files are hosted locally. We rarely watch live TV anyways, except for background noise which is a habit we can soon budge out of by streaming music instead. Sky sets us back over 400 moneys per year and I think I can build a decent media center for around 200 moneys. Saving 200 moneys in the first year and 400 thereafter.. Even with netflix it's still a massive saving, it's also fully upgradable and will always flow with current technologies.</p>
 
 <h1 id="choosingpi"><em>Choosing Pi</em></h1>
