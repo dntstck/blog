@@ -11,7 +11,7 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main -->
-<img src="./assets/favicon-32x32.png"></img> 
+<img src="./assets/favicon-32x32.png">
 <div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a junior dev with a huge passion for open-source, Vim, embedded systems, Linux, Raspberry Pi, web development & game development.<br><br>
 Currently tinkering with the Compute Module 5, Compute Module 4, Pi4, Pico2 & Pico2W,<br> Tiny2350, RP2040Plus & PicoSystem as well as studying Cloud Web Development with HyperionDev.<br><br>
 <br>
