@@ -27,7 +27,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/raspberrypi/pimediacenter"><img src="https://img.shields.io/badge/Pi%20Media%20Center-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Pi Media Center"></a><br>
+<a href="/blog/raspberrypi/raspberrypi-startup"><img src="https://img.shields.io/badge/RaspberryPi%20StartUp%20-%20Choosing%20Your%20First%20Pi-151515?style=flat-square&logo=GitHub&logoColor=white" alt="RaspberryPi StartUp - Choosing Your First Pi"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
