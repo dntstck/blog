@@ -60,7 +60,7 @@ Single Board Computer, usable as a desktop PC and has accessible prefitted GPIO 
 Complete desktop kit, with a Pi5 built into the keyboard. Also acceptable for general users and novices to start out with, because (if you buy the Desktop Kit) all you need a is HDMI screen to connect to and you have a full blown computer. If you want to watch youtube, play videos at 4k, tinker with programming, write emails and just use the Pi as a general desktop PC then the Pi500 is a good fit for you. There's even a cable you can buy to access the GPIO pins, so you can also tinker with it if you ever decide you want to delve into electronics with a breadboard.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-500.png" alt="Raspberry Pi" />
+<img src="{{ site.baseurl }}/raspberrypi/img/raspberrypi-pi500.png" alt="Raspberry Pi" />
 <br><sup>Pi500, Complete Desktop Kit</sup>
 </figure>
 
