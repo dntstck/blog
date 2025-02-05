@@ -72,7 +72,7 @@
 
 <h3><em>Main Modules</em></h3>
 
-<p>Upon my quest to the land of Bay, I discovered a Pi4 with PoE HAT for sale. An absolute steal at 43 moneys considered the HAT itself goes for around 35. That went straight in the basket. I wasn't holding out much hope for a good CM4 module, but surprise befelled me when I stumbled on a CM4 module with 16gb of eMMC and 8GB RAM for 50 moneys. Now, this was good. Okay, 16gb of eMMc wasn't but that was immaterial as the carrier board has a 128gb nVME installed on it. It's RAM I need and at 8GB for 50 moneys I wasn't saying no. Basket for you. That's the modules sorted at 93 moneys, I quickly bought these before someone else did and then got back to shopping.</p>
+<p>Upon my quest to the land of Bay, I discovered a Pi4 with PoE HAT for sale. An absolute steal at 43 moneys considering the HAT itself goes for around 35. That went straight in the basket. I wasn't holding out much hope for a good CM4 module, but surprise befelled me when I stumbled on a CM4 module with 16gb of eMMC and 8GB RAM for 50 moneys. Now, this was good. Okay, 16gb of eMMc wasn't but that was immaterial as the carrier board has a 128gb nVME installed on it. It's RAM I need and at 8GB for 50 moneys I wasn't saying no. Basket for you. That's the modules sorted at 93 moneys, I quickly bought these before someone else did and then got back to shopping.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/raspberrypi/img/pi4-poe.jpg" alt="Pi4 &amp; PoE" />
