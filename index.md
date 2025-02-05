@@ -31,7 +31,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <!-- latest-posts-end -->
 </div>
 <br>
-<img alt="Now Playing" src="https://img.shields.io/badge/-Now%20Playing:-DD4814?&logo=vlcmediaplayer&logoColor=black"><br><div id="now-playing"><img alt="Now Playing" src="https://img.shields.io/badge/-Offline-151515?&logo=applemusic&logoColor=DD4814"></div>
+<img alt="Now Playing" src="https://img.shields.io/badge/-Last%20Scrobbled:-DD4814?&logo=lastdotfm&logoColor=black"><br><div id="now-playing"><img alt="Now Playing" src="https://img.shields.io/badge/-Offline-151515?&logo=applemusic&logoColor=DD4814"></div>
 </div><br>
 
 <!-- Footer -->
