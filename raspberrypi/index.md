@@ -17,6 +17,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
 <a href="pimediacenter"><img src="https://img.shields.io/badge/pimediacenter-151515?style=flat-square&logo=GitHub&logoColor=white" alt="pimediacenter Badge"></a><br>
+<a href="raspberrypi-startup"><img src="https://img.shields.io/badge/raspberrypi-startup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="raspberrypi-startup Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
