@@ -27,7 +27,7 @@ Please feel free to take a look around, or click on any relevant badges that int
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/misc/lastfm"><img src="https://img.shields.io/badge/lastfm%20on%20linux-151515?style=flat-square&logo=GitHub&logoColor=white" alt="lastfm on linux"></a><br>
+<a href="/blog/misc/keychron-k11"><img src="https://img.shields.io/badge/keychron-k11-151515?style=flat-square&logo=GitHub&logoColor=white" alt="keychron-k11"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
