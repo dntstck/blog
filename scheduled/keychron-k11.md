@@ -22,7 +22,7 @@ tags: [misc]
 <br><sup>K11 Enter key</sup>
 </figure>
 
-<p>My first thoughts after a few days of using it however is just wow, it sounds great, looks great and is a dream to type on and use. I chose brown switches because I wanted some response and a slight noise, over red switches which are apparently silent with less response. I didn't choose the hotswappable version, because I'm not overly fussed about it and I'm glad I didn't becuase just after I ordered it I found a review video of a similar model that was hotswap where the reviewer had major issues with it. I've been informed that the hotswap version has a better resell value, but I reasoned that if I didn't enjoy it I would just send it back and I did enjoy it; I wouldn't re sell it anyways. Even if I got a better version in the future, I don't see myself getting rid of it. So not choosing the hotswap has worked out perfectly for me and honestly, the only thing I'd ever change on it are the keycaps.</p>
+<p>My first thoughts after a week of use is just wow, it sounds great, looks great and is a dream to type on and use. I chose brown switches because I wanted some response and a slight noise, over red switches which are apparently silent with less response. I didn't choose the hotswappable version, because I'm not overly fussed about it and I'm glad I didn't becuase just after I ordered it I found a review video of a similar model (that was hotswap) where the reviewer had major issues with it. I've been informed that the hotswap version has a better resell value, but I reasoned that if I didn't enjoy it I would just send it back and I did enjoy it; I wouldn't re sell it anyways. Even if I got a better version in the future, I don't see myself getting rid of it. So not choosing the hotswap has worked out perfectly for me and honestly, the only thing I'd ever change on it are the keycaps.</p>
 
 <figure>
 <img src="{{ site.baseurl }}/misc/img/k11-esc.jpeg" alt="keychron-k11" />
@@ -55,7 +55,8 @@ Then simply go to the Keychron Launcher web page, connect your keyboard and afte
 <h1 id="kde-return"><em>Final Thoughts</em></h1>
 
 <p>If you're looking to improve your typing skills, want a more comfortable keyboard, are a coder, do a lot of typing or simply want to treat yourself, I highly recommend this keyboard.
-Its a bit pricey at 100 moneys, but it's so worth every penny.
+Its a bit pricey at 100 moneys, but it's so worth every penny. 
+An absolute dream to type on, fully customizable and layers add a whole new dimension to productivity, highly recommend.  
 
 Catch you next time,
 
