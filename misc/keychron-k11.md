@@ -23,7 +23,7 @@
 
 
 
-<h1 id="keychron-k11"><em>keychron-k11</em>Keychron K11</h1>
+<h1 id="keychron-k11">Keychron K11</h1>
 
 <p>Recently, I treated myself to a new keyboard. Keychron's K11 Max, I've been looking for awhile and finally decided to treat myself for all the hard work I've achieved with my web dev course. First drawn to it by then split layout, then the customizable features... I'm not big into keyboards, I just wanted an upgrade, something to fix my bad habits, and something customizable and ergonomic. This ticked all the boxes. It's clean, minimalistic aspect really appealed to me also, no Function keys, no numpad, just all the keys I need right there in reach. With my old keyboard, I found my hands over stretching and flying all over the place! So I'm hoping this upgrade solves that issue. </p>
 
@@ -74,9 +74,9 @@ Then simply go to the Keychron Launcher web page, connect your keyboard and afte
 
 <p>If you're looking to improve your typing skills, want a more comfortable keyboard, are a coder, do a lot of typing or simply want to treat yourself, I highly recommend this keyboard.
 Its a bit pricey at 100 moneys, but it's so worth every penny. 
-An absolute dream to type on, fully customizable and layers add a whole new dimension to productivity, highly recommend.  
+An absolute dream to type on, fully customizable and layers add a whole new dimension to productivity, highly recommend.  </p>
 
-Catch you next time,
+<p>Catch you next time,
 
 Dru</p>
 
