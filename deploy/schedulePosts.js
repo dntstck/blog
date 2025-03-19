@@ -21,14 +21,14 @@ function getDirectoryByTag(tag) {
   const tagDirectoryMap = {
     'cm5': 'cm5',
     'devserver': 'devserver',
-    'embedded': 'embeddedc',
+    'embedded': 'embedded',
     'microcontrollers': 'microcontrollers',
     'misc': 'misc',
-    'osnetworking': 'osnetworking',
+    'rust': 'rust',
     'picosystem': 'picosystem',
     'raspberrypi': 'raspberrypi',
-    'thoughts': 'thoughts',
-    'webdevelopment': 'webdev'
+    'gamedev': 'gamedev',
+    'webdev': 'webdev'
   };
   return tagDirectoryMap[tag.toLowerCase()] || 'misc';
 }

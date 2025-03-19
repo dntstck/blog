@@ -9,13 +9,13 @@ const scriptDir = path.resolve(__dirname);
 const blogDirs = [
     path.resolve(scriptDir, '../cm5'),
     path.resolve(scriptDir, '../devserver'),
-    path.resolve(scriptDir, '../embeddedc'),
+    path.resolve(scriptDir, '../embedded'),
     path.resolve(scriptDir, '../microcontrollers'),
     path.resolve(scriptDir, '../misc'),
-    path.resolve(scriptDir, '../osnetworking'),
+    path.resolve(scriptDir, '../rust'),
     path.resolve(scriptDir, '../picosystem'),
     path.resolve(scriptDir, '../raspberrypi'),
-    path.resolve(scriptDir, '../thoughts'),
+    path.resolve(scriptDir, '../gamedev'),
     path.resolve(scriptDir, '../webdev')
 ];
 
