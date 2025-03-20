@@ -3,19 +3,10 @@
 <div align="center">    
   <a href="../"><img alt="Dev Blog" src="https://img.shields.io/badge/-Developer%20Blog-FE7A16?&logo=git&logoColor=white"></a><br><br></div> 
 
-  <div align="center">
-    <a href="../"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> 
-    <a href="/blog/cm5"><img alt="Pi" src="https://img.shields.io/badge/-CM5-151515?&logo=raspberrypi&logoColor=C51A4A"></a> 
-    <a href="/blog/picosystem"><img alt="PicoSystem" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> 
-    <a href="/blog/devserver"><img alt="Dev Server" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> 
-    <a href="/blog/osnetworking"><img alt="OS & Networking" src="https://img.shields.io/badge/-OS%20&%20Networking-151515?&logo=freebsd&logoColor=C51A4A"></a> 
-    <a href="/blog/thoughts"><img alt="Thoughts" src="https://img.shields.io/badge/-Thoughts-151515?&logo=linux&logoColor=C51A4A"></a> 
-    <a href="/blog/misc"><img alt="Misc" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a> 
-    <a href="/blog/raspberrypi"><img alt="Pi" src="https://img.shields.io/badge/-Raspberry%20Pi-151515?&logo=Raspberry-Pi&logoColor=C51A4A"></a>
-    <a href="/blog/microcontrollers"><img alt="Microcontrollers" src="https://img.shields.io/badge/-Microcontrollers-151515?&logo=Arduino&logoColor=FE7A16"></a>
-    <a href="/blog/embeddedc"><img alt="C & Embedded" src="https://img.shields.io/badge/-C%20&%20Embedded-151515?&logo=C&logoColor=8a3f8f"></a>
-    <a href="/blog/webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a>
-  </div>
+<div align="center"><a href="../"><img alt="Home" src="https://img.shields.io/badge/-Home-151515?&logo=Arduino&logoColor=C51A4A"></a> <a href="./development"><img alt="Development" src="https://img.shields.io/badge/-Development-151515?&logo=git&logoColor=C51A4A"></a> <a href="./picosystem"><img alt="PicoSystem" src="https://img.shields.io/badge/-PicoSystem-151515?&logo=raspberrypi&logoColor=C51A4A"></a> <a href="./devserver"><img alt="Dev Server" src="https://img.shields.io/badge/-Dev%20Server-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="./rust"><img alt="Rust" src="https://img.shields.io/badge/-Rust-151515?&logo=rust&logoColor=C51A4A"></a> <a href="./gamedev"><img alt="Game Development" src="https://img.shields.io/badge/-Game%20Development-151515?&logo=steam&logoColor=C51A4A"></a> <a href="./misc"><img alt="Misc" src="https://img.shields.io/badge/-Misc-151515?&logo=Ubuntu&logoColor=C51A4A"></a> <a href="./raspberrypi"><img alt="Pi" src="https://img.shields.io/badge/-Raspberry%20Pi-151515?&logo=Raspberry-Pi&logoColor=C51A4A"></a>
+<a href="./microcontrollers"><img alt="Microcontrollers" src="https://img.shields.io/badge/-Microcontrollers-151515?&logo=Arduino&logoColor=FE7A16"></a>
+<a href="./embedded"><img alt="Embedded" src="https://img.shields.io/badge/-Embedded-151515?&logo=C&logoColor=8a3f8f"></a>
+<a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <div id="blog-post">
 <!-- Main --> 
@@ -26,7 +17,7 @@
 id="unveiling-the-compute-module-5-a-journey-through-innovation"><em>Unveiling
 the Compute Module 5: A Journey Through Innovation</em></h1>
 <figure>
-<img src="{{ site.baseurl }}/cm5/img/cm5-full.png" alt="Compute Module 5 Image" />
+<img src="{{ site.baseurl }}/raspberrypi/img/cm5-full.png" alt="Compute Module 5 Image" />
 </figure>
 <p>Over the past two weeks, I’ve been diving deep into the capabilities
 of the Compute Module 5 (CM5). From setting up a couple of IO boards,
@@ -70,7 +61,7 @@ some stage to enable PoE and it’s not a massive requirement at the
 minute, but will be useful when I buy a switch with more Ethernet ports
 and have all my Ethernet-enabled devices connected.</p>
 <figure>
-<img src="{{ site.baseurl }}/cm5/img/waveshare-1.jpeg"
+<img src="{{ site.baseurl }}/raspberrypi/img/waveshare-1.jpeg"
 alt="Waveshare CM4 Mini Base Board - No PoE" />
 </figure>
 <h4 id="fashioning-a-case-and-nvme-drive"><em>Fashioning a Case and NVMe
@@ -86,7 +77,7 @@ within seconds! Faster than my main development machine (an Intel i5
 Dell Optiplex I grabbed off eBay last year and put 8GB of RAM in).
 Awesome.</p>
 <figure>
-<img src="{{ site.baseurl }}/cm5/img/diy-case.jpeg" alt="Compute Module 5 Image" />
+<img src="{{ site.baseurl }}/raspberrypi/img/diy-case.jpeg" alt="Compute Module 5 Image" />
 </figure>
 <h4 id="ideas-envisioned">Ideas, envisioned</h4>
 <p>My main idea with the CM5 was to utilize it as a development server,

@@ -19,7 +19,7 @@ console.log(`Template File Path: ${templateFilePath}`);
 
 function getDirectoryByTag(tag) {
   const tagDirectoryMap = {
-    'cm5': 'cm5',
+    'development': 'development',
     'devserver': 'devserver',
     'embedded': 'embedded',
     'microcontrollers': 'microcontrollers',
