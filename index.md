@@ -28,7 +28,7 @@ Feel free to have a look around and I hope you find something of interest.<br><b
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/misc/keychron-k11"><img src="https://img.shields.io/badge/keychron-k11-151515?style=flat-square&logo=GitHub&logoColor=white" alt="keychron-k11"></a><br>
+<a href="/blog/development/vim-for-development"><img src="https://img.shields.io/badge/vim-for-development-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-for-development"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
