@@ -32,7 +32,7 @@ Coupled with it's light memory footprint (meaning older machines and even embedd
 <li>Plugin management is tricky at first</li>
 <li>Doesn't hold your hand</li>
 </ul>
-These are the only downsides I've found, vim has a steep learning curve and is so customizable that it's easy to get lost and confused trying to customize it. It's not an out-of-the-box editor so it needs customizing to suit your needs, the UI is dated (not really a con in my eyes) and vim is notoriously ruthless; it does not hold your hand. You have to invest time into it to get the most out of it. However luckily for us, after reading this blog post you should only need to invest time in it. Adding features will be covered in this post and we are even going to touch on plugin management using vundle, by the end you will have a fully fledged custom vim setup that is prepped and ready to add more plugins to.</p>
+These are the only downsides I've found, vim has a steep learning curve and is so customizable that it's easy to get lost and confused trying to customize it. It's not an out-of-the-box editor so it needs customizing to suit your needs, the UI is dated (not really a con in my eyes) and vim is notoriously ruthless; it does not hold your hand. You have to invest time into it to get the most out of it. However luckily for us, after reading this blog post you should only need to invest time in it. Adding features will be covered in this post and we are even going to touch on plugin management using vundle, by the end you will have a fully fledged custom vim setup that is prepped and ready to add more plugins to. The steep learning curve will be evident by the end of the post, it's quite a long one so let's get started!</p>
 
 <h1 id="vim-for-development"><em>Building Vim from Source</em></h1>
 
@@ -45,7 +45,7 @@ These are the only downsides I've found, vim has a steep learning curve and is s
 
 <p>Now let's install some packages that might be required:</p>
 
-<p><code>sudo apt install git libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python3-dev python3-setuptools ruby-dev lua5.2 liblua5.2-dev libperl-dev git cmake clangd-19 checkinstall clang-tools-19 libclang-dev llvm clang-tools clang nodejs openjdk-17-jdk openjdk-17-jre npm</code></p>
+<p><code>sudo apt install libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python3-dev python3-setuptools ruby-dev lua5.2 liblua5.2-dev libperl-dev git cmake clangd-19 checkinstall clang-tools-19 libclang-dev llvm clang-tools clang nodejs openjdk-17-jdk openjdk-17-jre npm</code></p>
 
 <p>because we will need to clone the source</p>
 <p><code>git clone https://github.com/vim/vim.git</code></p>
@@ -111,8 +111,8 @@ set rtp+=~/.vim/bundle/Vundle.vim</code></p>
 
 <h1 id="vim-for-development"><em>.vimrc</em></h1>
 
-<p>What we have done so far is no mean feat and now we can start adding plugins, I have set up a .vimrc already for you to install as I appreciate that we've done a lot of typing so far. the .vimrc file is your "main base" for configuring vim, any keybindings, plugins or behaviours you want vim to do will be written in here and there is a lot to go over in it, so I have attached a sample .vimrc you can <a href="/development/vimrc">download</a> that I have pre configured, it contains vundle, YCM, a theme and a few simple plugins to get you started.<br/>
- Simply copy it to your home folder, open vim and run :PluginInstall, and it will install. F2 and F3 will toggle the tree and tagbar. Feel free to remap them and feel free to look through the vimrc itself, you'll be looking at it a lot until you get your vim setup polished. Remember, if you add any plugins to the vimrc you will need to execute :PluginInstall to install them. Any other settings such as keybindings or other vim settings are applied automatically on boot. </p>
+<p>What we have done so far is no mean feat and now we can start adding plugins, I have set up a .vimrc already for you to install as I appreciate that we've done a lot of typing so far. the .vimrc file is your "main base" for configuring vim, any keybindings, plugins or behaviours you want vim to do will be written in here and there is a lot to go over in it, so I have attached a sample .vimrc you can <a href="/development/vimrc.txt">download</a> that I have pre configured, it contains vundle, YCM, a theme and a few simple plugins to get you started.<br/>
+ Simply copy it to your home folder, rename it and remove the .txt extension then open vim and run :PluginInstall, and it will install. F2 and F3 will toggle the tree and tagbar. Feel free to remap them and feel free to look through the vimrc itself, you'll be looking at it a lot until you get your vim setup polished. Remember, if you add any plugins to the vimrc you will need to execute :PluginInstall to install them. Any other settings such as keybindings or other vim settings are applied automatically on boot. </p>
 
 <h1 id="vim-for-development"><em>Going forward</em></h1>
 <p>Well, that's us done! Vim is built from source, YCM is installed, we have a nice theme, a few keybindings have been remapped and a couple of plugins to get started. You're probably wondering where to go from here and we haven't really touched the surface with vim; all we have done is built it from source and installed a few plugins. There is so much I haven't covered and can't without us going down several rabbit holes. However, we have got a good basis here and honestly, the best way to go forward is to boot up vim and start coding.
