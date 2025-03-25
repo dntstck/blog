@@ -15,7 +15,7 @@
 
 <br>
 <!-- Footer -->
-</div>
+
 
 <br>
 <div align="center"><hr>
