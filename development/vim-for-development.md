@@ -77,10 +77,10 @@ These are the only downsides I've found, vim has a steep learning curve and is s
 <p><code>git clone https://github.com/universal-ctags/ctags.git</code></p>
 
 <p><code>cd ctags</code></p>
-<p><code>./autogen.sh</p></code>
-<p><code>./configure</p></code>
-<p><code>make</p></code>
-<p><code>sudo make install</p></code>
+<p><code>./autogen.sh</code</p>
+<p><code>./configure</code></p>
+<p><code>make</code></p>
+<p><code>sudo make install</code></p>
 
 <p>perfect, with this installed we can start installing YCM by editing our .vimrc in our home folder. </p>
 <p><code>touch .vimrc && vim .vimrc</code></p>
