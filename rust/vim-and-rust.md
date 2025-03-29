@@ -24,7 +24,7 @@
 <p>You may already know that YCM natively supports C, C++, Python, Typescript, Java etc. But what you might not know is that it also supports Rust! YCM is a language server protocol client; thus it enables another server to communicate to it, unlocking support for intelligent code completion, syntax checking, diagnostics and error checking which is fantastic for us as we can harness the power of rust-analyzer inside of vim. This powers-up vim further to be a fair combatant in the world of IDE's in 2025.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/rust/img/vim-ycm1.png" alt="YCM in action" style="max-width: 600px; height: auto;" />
+<img src="{{ site.baseurl }}/rust/img/vim-ycm1.png" alt="YCM in action" style="max-width: 80%; height: auto;" />
 <br><sup>YCM in action, working with rust-analyzer. In Vim's normal mode, highlighting keywords in the syntax will bring up detailed popups. I keep them on, but they can be disabled in the vimrc as seen below. I'm currently working through a Rust game development book; if you are interested about the code itself.</sup>
 </figure>
 
@@ -41,7 +41,7 @@
 
 
 <figure>
-<img src="{{ site.baseurl }}/rust/img/vimrc-ycm.png" alt="vimrc ycm settings" style="max-width: 600px; height: auto;" />
+<img src="{{ site.baseurl }}/rust/img/vimrc-ycm.png" alt="vimrc ycm settings" style="max-width: 80%; height: auto;" />
 <br><sup>A snippet from my personal vimrc, showing the config I use for YCM.  Note the setting for detailed dialog popups, they can be disabled by setting the value to 0.</sup>
 </figure>
 
@@ -55,7 +55,7 @@
 <p>You might get frustrated at using it at first as it is pretty brutal regarding rust code, but let it help you. Clippy is a valuable tool for teaching you how to write great code.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/rust/img/vim-ycm3.png" alt="YCM in action" style="max-width: 600px; height: auto;" />
+<img src="{{ site.baseurl }}/rust/img/vim-ycm3.png" alt="YCM in action" style="max-width: 80%; height: auto;" />
 <br><sup>YCM in action, showing a detailed description of "match"</sup>
 </figure>
 
@@ -95,14 +95,14 @@ There are more commands, if you're interested in diving further check out <a hre
 Going even further than that; we can even install <b>airblade/vim-gitgutter</b> to monitor files in real-time without running git diff. This enables you to check for modifications in your code, such as added or removed lines, all within vim.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/rust/img/vim-git2.png" alt="Vim, Rust & git" style="max-width: 600px; height: auto;" />
+<img src="{{ site.baseurl }}/rust/img/vim-git2.png" alt="Vim, Rust & git" style="max-width: 80%; height: auto;" />
 <br><sup>fugitive at work, showing a commit made entirely inside Vim with <code>:G commit -m "init"</code></sup>
 </figure>
 
 <p>You should have a <em>pretty decent</em> vim setup by now. We can extend it <em>even</em> further with themes (you could even create your own), however themes are a very personal matter and you will have to find the one that "speaks" to you. The same applies to <b>keybindings</b>, I could go on at length about keybindings, but these are also a personal thing and aren't generic. For instance I have "jj" remapped in vim to "esc" to escape normal mode without my fingers over-reaching and leaving the modal/vim keys (sdfg + hjkl), but I also have other keybindings that won't work unless you have a keyboard that has layers. You should be a .vimrc expert by now and remapping keys inside the vimrc shouldn't be a difficult task for you. </p>
 
 <figure>
-<img src="{{ site.baseurl }}/rust/img/vim-ycm4.png" alt="Vim, Rust & YCM" style="max-width: 600px; height: auto;" />
+<img src="{{ site.baseurl }}/rust/img/vim-ycm4.png" alt="Vim, Rust & YCM" style="max-width: 80%; height: auto;" />
 <br><sup>Vim, Rust & YCM working together in harmony. Tabbed workspaces, NERDTree and TagBar, showing the beauty of ayu-mirage theme and vim-rust-syntax-ext's extra syntax capabilities.</sup>
 </figure>
 
