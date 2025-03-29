@@ -28,7 +28,7 @@ Feel free to have a look around and I hope you find something of interest.<br><b
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/development/vim-and-rust"><img src="https://img.shields.io/badge/vim-and-rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust"></a><br>
+<a href="/blog/development/vim-and-rust"><img src="https://img.shields.io/badge/vim%20and%20rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
