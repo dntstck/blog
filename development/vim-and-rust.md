@@ -61,13 +61,8 @@
 
 
 <h1 id="rust-plugins"><em>Rust Plugins</em></h1>
-<p>There are a few rust plugins available for vim:
-<ul>
-<li>'rust-lang/rust.vim'</li>
-<li>'timonv/vim-cargo'</li>
-<li>'arzg/vim-rust-syntax-ext'</li>
-</ul>
-These three are the only ones I have discovered that are actually useful for Rust. Let's break them down together:</p>
+<p>There are a few rust plugins available for vim:</p>
+
 
 <p><b>rust-lang/rust.vim</b> - Rust Developer Essential. This plugin adds essential features: syntax highlighting, code formatting through rustfmt, and integration with the Rust Language Server.</p>
 <p><b>timonv/vim-cargo</b> - Adds cargo support directly to vim, enabing project building, testing and running straight from the editor. Typing <code>:CargoBuild</code>, <code>:CargoTest </code> or <code>:CargoRun</code> will build, test or run your project directly from vim's command mode.</p>
