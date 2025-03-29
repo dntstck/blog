@@ -78,8 +78,8 @@
 <b>:G push & :G pull</b> - Push and pull changes to/from your remote repository.<br/>
 <b>:G log</b> - View git log<br/>
 <b>:GBrowse</b> - opens the current file directly in your GH repo via your web browser. Extremely useful for sharing code to a friend or team-mate.
-<br/>
-There are more commands, if you're interested in diving further check out <a href="https://github.com/tpope/fugitive">tpope's fugitive repository</a>.
+<br/><br/>
+There are more commands, if you're interested in diving further check out <a href="https://github.com/tpope/vim-fugitive">tpope's fugitive repository</a>.
 
 Going even further than that; we can even install <b>airblade/vim-gitgutter</b> to monitor files in real-time without running git diff. This enables you to check for modifications in your code, such as added or removed lines, all within vim.</p>
 
