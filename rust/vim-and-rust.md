@@ -67,6 +67,17 @@
 <p><b>rust-lang/rust.vim</b> - Rust Developer Essential. This plugin adds essential features: syntax highlighting, code formatting through rustfmt, and integration with the Rust Language Server.</p>
 <p><b>timonv/vim-cargo</b> - Adds cargo support directly to vim, enabing project building, testing and running straight from the editor. Typing <code>:CargoBuild</code>, <code>:CargoTest </code> or <code>:CargoRun</code> will build, test or run your project directly from vim's command mode.</p>
 <p><b>arzg/vim-rust-syntax-ext</b> - This nifty little plugin enhances Vim's Rust syntax abilities, providing extra syntax rules and refinements. Makes Rust code more readable inside of vim.</p>
+
+<p>A few other non-rust plugins I will mention to improve your vim setup are:</p>
+
+<p><b>preservim/nerdtree</b> - NERDTree File browser, enables a file explorer inside vim.</p>
+<p><b>preservim/tagbar</b> - TagBar, generates tags based on your code showing functions, classes, variables, etc. Think of it as a table of contents for your code.</p>
+<p><b>vim-airline/vim-airline</b> - A beautiful statusline for vim, shows the current editing mode, encoding, cursor position and renders tabs beautifully. Highly configurable.</p>
+<p><b>vim-airline/vim-airline-themes</b> - Automatically matches airline with a visually appealing theme to compliment the theme you are using.</p>
+
+
+
+
 <p>Add these into your vimrc, run :PluginInstall (you should be an expert at this by now!) and enjoy the power these plugins add to your vim setup.
 
 <h1 id="extending-it-further"><em>Extending it further</em></h1>
