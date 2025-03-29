@@ -70,7 +70,25 @@
 <p>Add these into your vimrc, run :PluginInstall (you should be an expert at this by now!) and enjoy the power these plugins add to your vim setup.
 
 <h1 id="extending-it-further"><em>Extending it further</em></h1>
-<p>You should have a <em>pretty decent</em> vim setup by now. We can extend it further with themes (you could even create your own), however themes are a very personal matter and you will have to find the one that "speaks" to you. The same applies to <b>keybindings</b>, I could go on at length about keybindings, but these are also a personal thing and aren't generic. For instance I have "jj" remapped in vim to "esc" to escape normal mode without my fingers over-reaching and leaving the modal/vim keys (sdfg + hjkl), but I also have other keybindings that won't work unless you have a keyboard that has layers. You should be a .vimrc expert by now and remapping keys inside the vimrc shouldn't be a difficult task for you. </p>
+<p>We can extend our vim setup further with git integration, absolutely essential these days and luckily for us, <b>tpope/vim-fugitive</b> is perfect for this. Not only supporting git, but github also enabling you to manage your repo's all in the comfort of vim's command mode:<br/>
+ <br/>
+<b>:G status</b> - View the current status of your repository.<br/>
+<b>:G diff</b> - Compare changes in the current file with the last commit.<br/>
+<b>:G commit</b> - Stage changes and commit them, all from within Vim.<br/>
+<b>:G push & :G pull</b> - Push and pull changes to/from your remote repository.<br/>
+<b>:G log</b> - View git log<br/>
+<b>:GBrowse</b> - opens the current file directly in your GH repo via your web browser. Extremely useful for sharing code to a friend or team-mate.
+<br/>
+There are more commands, if you're interested in diving further check out <a href="https://github.com/tpope/fugitive">tpope's fugitive repository</a>.
+
+Going even further than that; we can even install <b>airblade/vim-gitgutter</b> to monitor files in real-time without running git diff. This enables you to check for modifications in your code, such as added or removed lines, all within vim.</p>
+
+<figure>
+<img src="{{ site.baseurl }}/development/img/vim-git2.png" alt="Vim, Rust & git" style="max-width: 600px; height: auto;" />
+<br><sup>fugitive at work, showing a commit made entirely inside Vim with <code>:G commit -m "inital commit"</code></sup>
+</figure>
+
+<p>You should have a <em>pretty decent</em> vim setup by now. We can extend it <em>even</em> further with themes (you could even create your own), however themes are a very personal matter and you will have to find the one that "speaks" to you. The same applies to <b>keybindings</b>, I could go on at length about keybindings, but these are also a personal thing and aren't generic. For instance I have "jj" remapped in vim to "esc" to escape normal mode without my fingers over-reaching and leaving the modal/vim keys (sdfg + hjkl), but I also have other keybindings that won't work unless you have a keyboard that has layers. You should be a .vimrc expert by now and remapping keys inside the vimrc shouldn't be a difficult task for you. </p>
 
 <figure>
 <img src="{{ site.baseurl }}/development/img/vim-ycm4.png" alt="Vim, Rust & YCM" style="max-width: 600px; height: auto;" />
@@ -78,7 +96,13 @@
 </figure>
 
 <h1 id="final-thoughts"><em>Final thoughts</em></h1>
-<p>Well that's it. Vim & Rust! I hope this post was helpful and enabled you to install support for Rust inside of Vim. Now get coding!<br/><br/>
+<p>Well that's it. Vim & Rust. Let's quickly cover the features we've added:<br/><br/>
+<b>YCM & rust-analyzer</b> - intelligent code completion<br/>
+<b>Clippy</b> - code syntax/guideline helper<br/>
+<b>Rust Plugins</b> - Essential plugins for Rust <br/>
+<b>fugitive & gitgutter</b> - git integration and real-time git diff<br/>
+
+ That's a pretty awesome Vim setup for Rust if you ask me. I hope this post was helpful and enabled you to install support for Rust inside of Vim. Now get coding!<br/><br/>
 Catch you next time, <br/> Dru x </p>
 
 
