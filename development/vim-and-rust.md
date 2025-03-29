@@ -56,7 +56,7 @@
 
 <figure>
 <img src="{{ site.baseurl }}/development/img/vim-ycm3.png" alt="YCM in action" style="max-width: 600px; height: auto;" />
-<br><sup>YCM in action, showing a detailed description of "fn"</sup>
+<br><sup>YCM in action, showing a detailed description of "match"</sup>
 </figure>
 
 
