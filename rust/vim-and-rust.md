@@ -85,7 +85,7 @@ Going even further than that; we can even install <b>airblade/vim-gitgutter</b> 
 
 <figure>
 <img src="{{ site.baseurl }}/rust/img/vim-git2.png" alt="Vim, Rust & git" style="max-width: 600px; height: auto;" />
-<br><sup>fugitive at work, showing a commit made entirely inside Vim with <code>:G commit -m "inital commit"</code></sup>
+<br><sup>fugitive at work, showing a commit made entirely inside Vim with <code>:G commit -m "init"</code></sup>
 </figure>
 
 <p>You should have a <em>pretty decent</em> vim setup by now. We can extend it <em>even</em> further with themes (you could even create your own), however themes are a very personal matter and you will have to find the one that "speaks" to you. The same applies to <b>keybindings</b>, I could go on at length about keybindings, but these are also a personal thing and aren't generic. For instance I have "jj" remapped in vim to "esc" to escape normal mode without my fingers over-reaching and leaving the modal/vim keys (sdfg + hjkl), but I also have other keybindings that won't work unless you have a keyboard that has layers. You should be a .vimrc expert by now and remapping keys inside the vimrc shouldn't be a difficult task for you. </p>
