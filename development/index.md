@@ -17,8 +17,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-General%20Development-5e2750?&logo=git&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
-<a href="vim-for-development"><img src="https://img.shields.io/badge/vim%20for%20development-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-for-development Badge"></a><br>
+<a href="vim-for-development"><img src="https://img.shields.io/badge/vim-for-development-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-for-development Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
