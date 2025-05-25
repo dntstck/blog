@@ -110,7 +110,7 @@ Going even further than that; we can even install <b>airblade/vim-gitgutter</b> 
 <p>Well that's it. Vim & Rust. Let's quickly cover the features we've added:<br/><br/>
 <b>YCM & rust-analyzer</b> - intelligent code completion<br/>
 <b>Clippy</b> - code syntax/guideline helper<br/>
-<b>Rust Plugins</b> - Essential plugins for Rust <br/>
+<b>Rust Plugins</b> - Essential plugins for Rust<br/>
 <b>fugitive & gitgutter</b> - git integration and real-time git diff<br/><br/>
 
  That's a pretty awesome Vim setup for Rust if you ask me. I hope this post was helpful and enabled you to install support for Rust inside of Vim. Now get coding!<br/><br/>
