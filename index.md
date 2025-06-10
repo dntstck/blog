@@ -15,7 +15,7 @@
 <div id="content" align="center">
 hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.<br>
 
-welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. <br>
+welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. <br><br>
 </div>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
