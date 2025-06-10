@@ -11,11 +11,11 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main -->
-<img src="./assets/favicon-32x32.png">
+<img src="./assets/favicon-32x32.png"><br>
 <div id="content" align="center">
-hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.
+hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.<br>
 
-welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. 
+welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. <br>
 </div>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
@@ -34,7 +34,8 @@ welcome to my little nook of the internet where i document most things tech, tin
 </div><br>
 
 <!-- Footer -->
-<br><hr>
+<br>
 <div align="center">
+<hr>
 <a href="./"><img alt="Blog" src="https://img.shields.io/badge/-Developer%20Blog-DD4814?style=flat-square&logo=github&logoColor=black"></a> <a href="https://github.com/dntstck" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/-@dntstck-181717?style=flat-square&logo=GitHub&logoColor=white"></a> <a href="https://www.linkedin.com/in/drudelarosa" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=Linkedin&logoColor=white"></a> <a href="https://orcid.org/0009-0003-6755-7655" target="_blank"><img alt="ORCID" src="https://img.shields.io/badge/-ORCID-A6CE39?style=flat-square&logo=ORCID&logoColor=white"></a> <a href="https://stackoverflow.com/users/28874348/dru-delarosa" target="_blank"><img alt="Stack Overflow" src="https://img.shields.io/badge/-Stack%20Overflow-FE7A16?style=flat-square&logo=Stack-Overflow&logoColor=white"></a></div>
   
