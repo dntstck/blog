@@ -1,7 +1,7 @@
 ---
 title: "Automating"
 date: 2025-06-10T00:32:51Z
-publishDate: 2025-06-11T00:00:00Z
+publishDate: 2025-06-10T00:00:00Z
 tags: [devserver]
 ---
 
