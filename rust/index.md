@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Rust-5e2750?&logo=rust&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="vim-and-rust"><img src="https://img.shields.io/badge/vim%20%26%20rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust Badge"></a><br>
+<a href="vim-and-rust"><img src="https://img.shields.io/badge/vim-and-rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
