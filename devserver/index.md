@@ -16,11 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Dev%20Server-5e2750?&logo=raspberrypi&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="devserver-automating"><img src="https://img.shields.io/badge/devserver-automating-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-automating Badge"></a><br>
-<a href="devserver-cenvironments"><img src="https://img.shields.io/badge/devserver-cenvironments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-cenvironments Badge"></a><br>
-<a href="devserver-environments"><img src="https://img.shields.io/badge/devserver-environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-environments Badge"></a><br>
-<a href="devserver-setup"><img src="https://img.shields.io/badge/devserver-setup-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-setup Badge"></a><br>
-<a href="devserver-upgrades"><img src="https://img.shields.io/badge/devserver-upgrades-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devserver-upgrades Badge"></a><br>
+
 <!-- all-posts-end -->
 </div>
 <br>
