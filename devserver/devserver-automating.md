@@ -53,7 +53,7 @@ so this now required building openssl from source for each architecture.. after 
 <p>the final hurdle! i love finally putting a script into cron, makes it feel finished. simple usage of crontab -e and the usual syntax means i now have builds for virgo over three architectures running every night at 2:00am, after a build a report is generated into a log file, attached to the email and sent. while i was here, i whipped up a few more scripts that run at different times, linting with clippys pedantic mode happens at 2:30, tests are run at 2:45:am and an overall system health report of the cm5 happens at 3am. all results are sent to me instantly via email, making my life a lot easier.</p>
 
 <figure>
-<img src="{{ site.baseurl }}/devserver/img/devserver-nightly2-bash.png" alt="nightly build script" />
+<img src="{{ site.baseurl }}/devserver/img/devserver-nightly-bash.png" alt="nightly build script" />
 <br><sup>crontab, with scripts executing at 2, 230, 245 and 3am respectively</sup>
 </figure>
 
