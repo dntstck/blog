@@ -11,12 +11,12 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main -->
-<img src="./assets/favicon-32x32.png">
-<div id="content" align="center">Hi! I'm Dru and welcome to my dev blog.<br><br> I'm a developer with a huge passion for Open-Source, Linux, Raspberry Pi, Microcontrollers, and the endless world that is development. Whether I'm getting dirty with systems programming, exploring embedded development with microcontrollers, or working with Rust and WebAssembly to push the boundaries of web development, I'm always exploring and finding something new to tackle.     <br><br>
-I also enjoy experimenting with game development (specifically on the PicoSystem with Rust), crafting Pixel Art and creating BSP worlds in UnrealEd'99 when I get the chance!<br>
-<br>
-From Web Development with JavaScript, PHP and React, Systems programming with Rust and C, Embedded Development with C/C++, to hacking Vim and scripting with Bash and Lua, or just tinkering, we do it all here, on my blog where I write about pretty much everything I do development-wise... including when things go wrong!  <br><br>
-Feel free to have a look around and I hope you find something of interest.<br><br>
+<img src="./assets/favicon-32x32.png"></img>
+<div id="content" align="center">
+hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.
+
+welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. 
+</div>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
 <a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
