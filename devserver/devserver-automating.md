@@ -30,7 +30,7 @@
 
 <h1 id="Automating"><em>Rookie error</em></h1>
 <p>we all make them. mine was the sudden realization i was only building and releasing for x86_64, lol. duh. other architectures are available.
-so this now required building openssl from source for each architecture.. after a few hours of trying to get rustc and linux to play ball, finally by actively selecting each compiler in the shell (CC=) before the compilation of each architecure, we was ready to go.</p>
+so this now required building openssl from source for each architecture.. after a few hours of trying to get rustc and linux to play ball, finally by actively selecting each compiler in the shell (CC=) before the compilation of each architecure, i was ready to go.</p>
 
 
 <h1 id="Automating"><em>Bash</em></h1>
