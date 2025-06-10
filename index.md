@@ -20,9 +20,7 @@ Feel free to have a look around and I hope you find something of interest.<br><b
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
 <a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
-<a href="/blog/devserver/cdevenvs"><img src="https://img.shields.io/badge/C%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="C Dev Environments"></a><br>
-<a href="/blog/devserver/devserver-portable-env"><img src="https://img.shields.io/badge/Portable%20Dev%20Environments-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Portable Dev Environments"></a><br>
-<a href="/blog/raspberrypi/pimediacenter"><img src="https://img.shields.io/badge/Pi%20Media%20Center-151515?style=flat-square&logo=GitHub&logoColor=white" alt="Pi Media Center"></a><br>
+<a href="/blog/rust/vim-and-rust"><img src="https://img.shields.io/badge/vim%20and%20rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust"></a><br>
 </div>
 <br>
 <div id="latestposts">
