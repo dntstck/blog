@@ -11,7 +11,7 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main -->
-<img src="./assets/favicon-32x32.png"></img>
+<img src="./assets/favicon-32x32.png">
 <div id="content" align="center">
 hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.
 
