@@ -24,5 +24,5 @@ id="header1"><em>Intro</em></h1>
 <figure>
 <img src="{{ site.baseurl }}/tag/img/img.png" alt="Image" />
 </figure>
-<h4 id="final-thoughts"><em>Outro</em></h4>
+<h4 id="final-thoughts"><em>Out</em></h4>
 <p></p>
