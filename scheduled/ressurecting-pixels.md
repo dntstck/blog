@@ -1,7 +1,7 @@
 ---
 title: "resurrecting-pixels"
 date: 2025-07-10T00:41:41Z
-publishDate: 2025-07-11T00:00:00Z
+publishDate: 2025-07-10T00:00:00Z
 tags: [embedded]
 ---
 
