@@ -16,7 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Embedded-5e2750?&logo=C&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-
+<a href="resurrecting-pixels"><img src="https://img.shields.io/badge/resurrecting-pixels-151515?style=flat-square&logo=GitHub&logoColor=white" alt="resurrecting-pixels Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
