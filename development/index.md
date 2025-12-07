@@ -17,7 +17,12 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-General%20Development-5e2750?&logo=git&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="vim-for-development"><img src="https://img.shields.io/badge/vim-for-development-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-for-development Badge"></a><br>
+<a href="devlog-v1"><img src="https://img.shields.io/badge/devlog-v1-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v1 Badge"></a><br>
+<a href="devlog-v2"><img src="https://img.shields.io/badge/devlog-v2-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v2 Badge"></a><br>
+<a href="devlog-v3"><img src="https://img.shields.io/badge/devlog-v3-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v3 Badge"></a><br>
+<a href="devlog-v4"><img src="https://img.shields.io/badge/devlog-v4-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v4 Badge"></a><br>
+<a href="devlog-v5"><img src="https://img.shields.io/badge/devlog-v5-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v5 Badge"></a><br>
+<a href="devlog-v6"><img src="https://img.shields.io/badge/devlog-v6-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v6 Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
