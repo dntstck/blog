@@ -14,7 +14,7 @@
 <div id="content" align="center">
 </div>
 <div id="allposts">
-<img alt="All Posts" src="https://img.shields.io/badge/-General%20Development-5e2750?&logo=git&logoColor=white"><br>
+<img alt="All Posts" src="https://img.shields.io/badge/-Devlogs-5e2750?&logo=git&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
 <a href="devlog-v1"><img src="https://img.shields.io/badge/devlog-v1-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v1 Badge"></a><br>
