@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v1"><em>⚙️ devlog v1 [ 2025‑11‑30 ]</em></h1>
+<h1 id="devlog-v1">⚙️ devlog v1 [ 2025‑11‑30 ]</h1>
 
 <p>-  installed debian bookworm + xfce <br>
   
@@ -30,7 +30,7 @@
   
 - monitored am1i load (23% cpu, 3–4 °c) and cm4 load (50% cpu, 46 °c)</p>
 
-<h1 id="devlog-v1"><em>🔍 insights</em></h1>
+<h1 id="devlog-v1">🔍 insights</h1>
 <p>- athlon idling at 4 °c vs cm4 at 48 °c. both safe, but wildly different envelopes and understandable regarding btops use of curses on the cm4's cortex a72. <br>
 - am1i runs absurdly cold under load. perfect example of its low power usage. <br>
 - mark text is extremely nice to use for instant preview markdown; vim is my favourite editor but lacks the ability to render markdown real-time. i will stick to vim for coding and mark text for writing devlogs, blogging and general note-keeping.</p>
