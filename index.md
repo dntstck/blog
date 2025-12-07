@@ -18,7 +18,7 @@ this is my space for devlogs, hardware manifests, and embedded tinkering, where 
 
 <br><br>
 </div>
-<div id="featuredposts">
+<div id="featuredposts"><br>
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
 <a href="/blog/picosystem/peek-picosystem"><img src="https://img.shields.io/badge/PicoSystem%20Peek-151515?style=flat-square&logo=GitHub&logoColor=white" alt="PicoSystem Peek"></a><br>
 <a href="/blog/rust/vim-and-rust"><img src="https://img.shields.io/badge/vim%20and%20rust-151515?style=flat-square&logo=GitHub&logoColor=white" alt="vim-and-rust"></a><br>
