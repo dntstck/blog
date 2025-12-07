@@ -1,7 +1,7 @@
 ---
 title: "devlog-v2"
 date: 2025-12-07T03:44:08Z
-publishDate: 2025-12-08T00:00:00Z
+publishDate: 2025-12-07T00:00:00Z
 tags: [development]
 ---
 
