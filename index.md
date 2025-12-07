@@ -26,7 +26,7 @@ welcome to my little nook of the internet where i document most things tech, tin
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/development/devlog-v1"><img src="https://img.shields.io/badge/devlog-v1-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v1"></a><br>
+<a href="/blog/development/devlog-v2"><img src="https://img.shields.io/badge/devlog-v2-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v2"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
