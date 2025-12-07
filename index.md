@@ -11,12 +11,12 @@
 <a href="./webdev"><img alt="Web Dev" src="https://img.shields.io/badge/-Web%20Development-151515?&logo=html5&logoColor=DD4814"></a></div>
 <hr>
 <!-- Main -->
-<img src="./assets/favicon-32x32.png"><br><br>
+<img src="./assets/favicon-32x32.png"><br>
 <div id="content" align="center">
 hi, i'm dru. systems engineer, rust & c dev, and vim nerd.<br><br>
 this is my space for devlogs, hardware manifests, and embedded tinkering, where i document my work and experiments.
 
-<br><br>
+<br>
 </div>
 <div id="featuredposts"><br>
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
