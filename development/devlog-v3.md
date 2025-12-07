@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v3">⚙️ devlog v3 [ 2025-12-02 ]</h1>
+<h1 id="devlog-v3">📝 devlog v3 [ 2025-12-02 ]</h1>
 
 <p>- installing debian on a dell vostro a100 x64 machine, for a low powered (under 25w) NAS <br>
 - staged sudo + passwd for clean privilege escalation <br>

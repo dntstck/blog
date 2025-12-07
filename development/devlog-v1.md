@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v1">⚙️ devlog v1 [ 2025‑11‑30 ]</h1>
+<h1 id="devlog-v1">📝 devlog v1 [ 2025‑11‑30 ]</h1>
 
 <p>-  installed debian bookworm + xfce <br>
   

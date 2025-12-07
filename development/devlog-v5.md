@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v5">📝 session notes</h1>
+<h1 id="devlog-v5">📝 devlog v5 [ 2025-12-06 ]</h1>
 
 <p>- restoring microcluster to LAN <br>
 - microcluster - cm5 4gb ram 128gb nvme (native) + wyse 3040 + wyse 3040<br>

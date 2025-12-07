@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v2">⚙️ devlog v2 [ 2025-12-01 ]</h1>
+<h1 id="devlog-v2">📝 devlog v2 [ 2025-12-01 ]</h1>
 
 <p>- prep and install packages for mcu development on debian <br>
 - rp2040, rp2040zero, rp2040plus, esp32-s3, esp32-c6, esp-wroom-32 <br>

@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v4">⚙️ devlog v4 [ 2025-12-03 ]</h1>
+<h1 id="devlog-v4">📝 devlog v4 [ 2025-12-03 ]</h1>
 
 <p>- external drive prep: deleting empty 300gb partition, resizing 600gb ntfs<br>
   

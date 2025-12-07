@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v6">⚙️ devlog v6 [ 2025-12-07 ]</h1>
+<h1 id="devlog-v6">📝 devlog v6 [ 2025-12-07 ]</h1>
 
 <p>- concern arising from space available on microcluster nodes <br>
 - native emmc has ~1.81gb space free on both nodes, most likely logs, crash dumps, apt cache and unused/stopped containers <br>
