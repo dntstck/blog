@@ -13,9 +13,10 @@
 <!-- Main -->
 <img src="./assets/favicon-32x32.png"><br>
 <div id="content" align="center">
-hi, im dru. rust developer, software engineer, vim nerd, and raspberry pi enthusiast.<br>
+hi, i'm dru. systems engineer, rust & c dev, and vim nerd.<br><br>
+this is my space for devlogs, hardware manifests, and embedded tinkering, where i document my work and experiments.
 
-welcome to my little nook of the internet where i document most things tech, tinker with most things embedded and mostly ramble. <br><br>
+<br><br>
 </div>
 <div id="featuredposts">
 <img alt="Featured Posts" src="https://img.shields.io/badge/-Featured%20Posts-DD4814?&logo=github&logoColor=black"><br>
