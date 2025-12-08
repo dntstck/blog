@@ -17,15 +17,15 @@
 <h2 class="atx" id="📝-devlog-v7--2025-12-08-">📝 devlog v7 [ 2025-12-08 ]</h2>
 <ul>
 <p>installing btop on luckfox max to monitor constraints</p>
-<li><code>sudo apt install g++ cmake git git clone https://github.com/aristocratos/btop.git cd btop &amp;&amp; git checkout v1.2.13 make sudo make install</code></li>
-<li>build failed - requires c++23. too heavy for this sbc</li>
-<li>reverted to version v.1.2.13 - <code>git checkout v1.2.13</code></li>
-</ul>
+<p><code>sudo apt install g++ cmake git git clone https://github.com/aristocratos/btop.git cd btop &amp;&amp; git checkout v1.2.13 make sudo make install</code>
+build failed - requires c++23. too heavy for this sbc
+reverted to version v.1.2.13 - <code>git checkout v1.2.13</code>
+</p>
 
 <h3 class="atx" id="🔍-insights">🔍 insights</h3>
 <ul>
-<li><p>luckfox pico max :</p>
-<table>
+<p>luckfox pico max :</p>
+<li><table>
 <thead>
 <tr>
 <th><strong>SoC</strong></th>
