@@ -16,7 +16,7 @@
 
 <h2 class="atx" id="📝-devlog-v7--2025-12-08-">📝 devlog v7 [ 2025-12-08 ]</h2>
 <ul>
-<li>installing btop on luckfox max to monitor constraints</li>
+<p>installing btop on luckfox max to monitor constraints</p>
 <li><code>sudo apt install g++ cmake git git clone https://github.com/aristocratos/btop.git cd btop &amp;&amp; git checkout v1.2.13 make sudo make install</code></li>
 <li>build failed - requires c++23. too heavy for this sbc</li>
 <li>reverted to version v.1.2.13 - <code>git checkout v1.2.13</code></li>
@@ -74,8 +74,8 @@
 </tr>
 </tbody></table>
 </li>
-<li><p>compile speeds for btop:</p>
-</li>
+<p>compile speeds for btop:</p>
+
 <li><p><code>Compiling btop.cpp 10% -&gt; obj/btop.o (1.8MiB) (01m:08s)Compiling btop_config.cpp 20% -&gt; obj/btop_config.o (1.4MiB) (55s) 
 Compiling btop_draw.cpp 30% -&gt; obj/btop_draw.o (2.3MiB) (01m:16s)
 Compiling btop_input.cpp 40% -&gt; obj/btop_input.o (1.4MiB) (55s) 
