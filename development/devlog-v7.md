@@ -16,10 +16,10 @@
 
 <h2 class="atx" id="📝-devlog-v7--2025-12-08-">📝 devlog v7 [ 2025-12-08 ]</h2>
 <ul>
-<p>installing btop on luckfox max to monitor constraints</p>
-<p><code>sudo apt install g++ cmake git git clone https://github.com/aristocratos/btop.git cd btop &amp;&amp; git checkout v1.2.13 make sudo make install</code>
-build failed - requires c++23. too heavy for this sbc
-reverted to version v.1.2.13 - <code>git checkout v1.2.13</code>
+<p>installing btop on luckfox max to monitor constraints</p><br>
+<p><code>sudo apt install g++ cmake git git clone https://github.com/aristocratos/btop.git cd btop &amp;&amp; git checkout v1.2.13 make sudo make install</code><br>
+build failed - requires c++23. too heavy for this sbc<br>
+reverted to version v.1.2.13 <br> - <code>git checkout v1.2.13</code>
 </p>
 
 <h3 class="atx" id="🔍-insights">🔍 insights</h3>
@@ -76,13 +76,15 @@ reverted to version v.1.2.13 - <code>git checkout v1.2.13</code>
 </li>
 <p>compile speeds for btop:</p>
 
-<li><p><code>Compiling btop.cpp 10% -&gt; obj/btop.o (1.8MiB) (01m:08s)Compiling btop_config.cpp 20% -&gt; obj/btop_config.o (1.4MiB) (55s) 
-Compiling btop_draw.cpp 30% -&gt; obj/btop_draw.o (2.3MiB) (01m:16s)
-Compiling btop_input.cpp 40% -&gt; obj/btop_input.o (1.4MiB) (55s) 
-Compiling btop_menu.cpp 50% -&gt; obj/btop_menu.o (2.0MiB) (01m:06s) 
-Compiling btop_shared.cpp 60% -&gt; obj/btop_shared.o (1.8MiB) (01m:04s) Compiling btop_theme.cpp 70% -&gt; obj/btop_theme.o (1.4MiB) (53s)
-Compiling btop_tools.cpp 80% -&gt; obj/btop_tools.o (1.4MiB) (59s) 
-Compiling linux/btop_collect.cpp 90% -&gt; obj/linux/btop_collect.o (3.1MiB) (01m:30s)
+<li><p><code>Compiling btop.cpp 10% -&gt; obj/btop.o (1.8MiB) (01m:08s) <br>
+Compiling btop_config.cpp 20% -&gt; obj/btop_config.o (1.4MiB) (55s) <br>
+Compiling btop_draw.cpp 30% -&gt; obj/btop_draw.o (2.3MiB) (01m:16s) <br>
+Compiling btop_input.cpp 40% -&gt; obj/btop_input.o (1.4MiB) (55s)  <br>
+Compiling btop_menu.cpp 50% -&gt; obj/btop_menu.o (2.0MiB) (01m:06s)  <br>
+Compiling btop_shared.cpp 60% -&gt; obj/btop_shared.o (1.8MiB) (01m:04s)  <br>
+Compiling btop_theme.cpp 70% -&gt; obj/btop_theme.o (1.4MiB) (53s) <br>
+Compiling btop_tools.cpp 80% -&gt; obj/btop_tools.o (1.4MiB) (59s) <br>
+Compiling linux/btop_collect.cpp 90% -&gt; obj/linux/btop_collect.o (3.1MiB) (01m:30s) <br>
 
 Linking and optimizing binary... 100% -&gt; bin/btop (1004KiB) (07m:31s)
 
