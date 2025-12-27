@@ -27,7 +27,7 @@ this is my space for devlogs, hardware manifests, and embedded tinkering, where 
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/development/devlog-v7"><img src="https://img.shields.io/badge/devlog-v7-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v7"></a><br>
+<a href="/blog/development/devlog-v8"><img src="https://img.shields.io/badge/devlog-v8-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v8"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
