@@ -14,7 +14,7 @@
 
 
 
-<h1 id="devlog-v8">📝 devlog v15 [ 2025-12-20 ]</h1>
+<h1 id="devlog-v8">📝 devlog v8 [ 2025-12-26 ]</h1>
 
 <h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up a micro llm on luckfox pico max (cortex a7 & 256mb ram)</h4>
 
