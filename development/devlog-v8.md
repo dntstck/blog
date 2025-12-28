@@ -16,7 +16,7 @@
 
 <h1 id="devlog-v8">📝 devlog v15 [ 2025-12-20 ]</h1>
 
-<h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up micro-llm on luckfox pico max (256mb)</h4>
+<h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up a micro llm on luckfox pico max (cortex a7 & 256mb ram)</h4>
 
 utilising the luckfox's integrated 1 tops npu to run micro llms
 <br>
