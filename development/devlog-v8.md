@@ -17,30 +17,30 @@
 <h1 id="devlog-v8">📝 devlog v15 [ 2025-12-20 ]</h1>
 
 <h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up micro-llm on luckfox pico max (256mb)</h4>
-
-<p>utilising the luckfox's integrated 1 tops npu to run micro llms</p>
+<p>
+utilising the luckfox's integrated 1 tops npu to run micro llms
 <br>
-<p>create dir architecture for cleanliness in opt</p><br>
-<p><code>/opt/llm</code></p><br>
-<p>in <code>llm</code>: <code>/src /bin /models /logs</code></p><br>
+create dir architecture for cleanliness in opt<br>
+<code>/opt/llm</code><br>
+in <code>llm</code>: <code>/src /bin /models /logs</code><br>
 
-<p>using llama.cpp and building from source in <code>/opt/llm/src</code>:</p><br>
-<p><code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code></p><br>
+using llama.cpp and building from source in <code>/opt/llm/src</code>:<br>
+<code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code><br>
 
-<p>after successful config; compile with <code>sudo make -j$(nproc)</code></p><br>
+after successful config; compile with <code>sudo make -j$(nproc)</code><br>
 
-<p>after compile move binaries; <code>sudo cp ./bin/* /opt/llm/bin/</code></p><br>
+after compile move binaries; <code>sudo cp ./bin/* /opt/llm/bin/</code><br>
 
-<p>place model(s) in /opt/llm/models, using gpt-mini 124m due to ram constraints</p><br>
+place model(s) in /opt/llm/models, using gpt-mini 124m due to ram constraints<br>
 
-<p>test: <code>./llama-cli -m /opt/llm/models/gpt-mini/gpt-mini-q6.gguf -c 160 -n 128 -t 2</code></p><br>
+test: <code>./llama-cli -m /opt/llm/models/gpt-mini/gpt-mini-q6.gguf -c 160 -n 128 -t 2</code><br>
 
-<p>success.</p><br>
+success.<br>
 
-<p>create <code>.service</code> file @ <code>/etc/systemd/system/llm.service</code></p><br>
+create <code>.service</code> file @ <code>/etc/systemd/system/llm.service</code><br>
 
-<p>unit file:</p><br>
-
+unit file:<br>
+</p>
 
 <pre><code class="fenced-code-block">[Unit]
 Description=Micro LLM
@@ -54,16 +54,16 @@ User=root
 
 [Install]
 WantedBy=multi-user.target </code></pre><br>
+<p>
+reload: <code>sudo systemctl daemon-reload</code><br>
 
-<p>reload: <code>sudo systemctl daemon-reload</code></p><br>
+enable: <code>sudo systemctl enable llm.service</code><br>
 
-<p>enable: <code>sudo systemctl enable llm.service</code></p><br>
+start: <code>sudo systemctl start llm.service</code><br>
 
-<p>start: <code>sudo systemctl start llm.service</code></p><br>
+now the luckfox max will run this model as a service on each boot.<br>
 
-<p>now the luckfox max will run this model as a service on each boot.</p><br>
-
-<p>model can be accessed via cli, or by accessing <code>&lt;luckfox-ip&gt;:8080</code> in browser.</p><br>
+model can be accessed via cli, or by accessing <code>&lt;luckfox-ip&gt;:8080</code> in browser.<br></p>
 
 
 <h3 class="atx" id="🔍-insights">🔍 insights</h3>
