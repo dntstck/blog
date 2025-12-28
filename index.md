@@ -14,7 +14,7 @@
 <br>
 <img src="./assets/favicon-32x32.png"><br>
 <div id="content" align="center">
-hi, i'm dru. systems engineer, rust & c dev, and vim nerd.<br>
+<br>hi, i'm dru. systems engineer, rust & c dev, and vim nerd.<br>
 <br>
 </div>
 <div id="featuredposts"><br>
