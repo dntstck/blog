@@ -14,7 +14,7 @@
 <img src="./assets/favicon-32x32.png"><br>
 <div id="content" align="center">
 hi, i'm dru. systems engineer, rust & c dev, and vim nerd.<br><br>
-this is my space for devlogs, hardware manifests, and embedded tinkering, where i document my work and experiments.
+
 
 <br>
 </div>
