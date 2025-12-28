@@ -17,7 +17,7 @@
 <h1 id="devlog-v8">📝 devlog v15 [ 2025-12-20 ]</h1>
 
 <h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up micro-llm on luckfox pico max (256mb)</h4>
-<p>
+
 utilising the luckfox's integrated 1 tops npu to run micro llms
 <br>
 create dir architecture for cleanliness in opt<br>
@@ -40,8 +40,6 @@ success.<br>
 create <code>.service</code> file @ <code>/etc/systemd/system/llm.service</code><br>
 
 unit file:<br>
-</p>
-
 <pre><code class="fenced-code-block">[Unit]
 Description=Micro LLM
 After=network.target
@@ -54,7 +52,7 @@ User=root
 
 [Install]
 WantedBy=multi-user.target </code></pre><br>
-<p>
+
 reload: <code>sudo systemctl daemon-reload</code><br>
 
 enable: <code>sudo systemctl enable llm.service</code><br>
@@ -63,7 +61,7 @@ start: <code>sudo systemctl start llm.service</code><br>
 
 now the luckfox max will run this model as a service on each boot.<br>
 
-model can be accessed via cli, or by accessing <code>&lt;luckfox-ip&gt;:8080</code> in browser.<br></p>
+model can be accessed via cli, or by accessing <code>&lt;luckfox-ip&gt;:8080</code> in browser.<br>
 
 
 <h3 class="atx" id="🔍-insights">🔍 insights</h3>
