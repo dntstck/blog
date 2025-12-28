@@ -19,10 +19,10 @@
 <h4 class="atx" id="setting-up-micro-llm-on-luckfox-pico-max-256mb">setting up a micro llm on luckfox pico max (cortex a7 & 256mb ram)</h4>
 
 utilising the luckfox's integrated 1 tops npu to run micro llms
-<br>
+<br><br>
 create dir architecture for cleanliness in opt<br><br>
-<code>/opt/llm</code><br><br>
-in <code>llm/</code>: <code>/src /bin /models /logs</code><br><br>
+<code>mkdir /opt/llm</code><br><br>
+in <code>llm/</code>: <code>mkdir src bin models logs</code><br><br>
 
 using llama.cpp and building from source:<br><br>
 <code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code><br><br>
