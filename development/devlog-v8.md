@@ -20,24 +20,24 @@
 
 utilising the luckfox's integrated 1 tops npu to run micro llms
 <br>
-create dir architecture for cleanliness in opt<br>
-<code>/opt/llm</code><br>
-in <code>llm</code>: <code>/src /bin /models /logs</code><br>
+create dir architecture for cleanliness in opt<br><br>
+<code>/opt/llm</code><br><br>
+in <code>llm/</code>: <code>/src /bin /models /logs</code><br>
 
-using llama.cpp and building from source in <code>/opt/llm/src</code>:<br>
-<code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code><br>
+using llama.cpp and building from source:<br><br>
+<code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code><br><br>
 
-after successful config; compile with <code>sudo make -j$(nproc)</code><br>
+after successful config; compile with <code>sudo make -j$(nproc)</code><br><br>
 
-after compile move binaries; <code>sudo cp ./bin/* /opt/llm/bin/</code><br>
+after compile move binaries; <code>sudo cp ./bin/* /opt/llm/bin/</code><br><br>
 
-place model(s) in /opt/llm/models, using gpt-mini 124m due to ram constraints<br>
+place model(s) in /opt/llm/models, using gpt-mini 124m due to ram constraints<br><br>
 
-test: <code>./llama-cli -m /opt/llm/models/gpt-mini/gpt-mini-q6.gguf -c 160 -n 128 -t 2</code><br>
+test: <code>./llama-cli -m /opt/llm/models/gpt-mini/gpt-mini-q6.gguf -c 160 -n 128 -t 2</code><br><br>
 
-success.<br>
+success.<br><br>
 
-create <code>.service</code> file @ <code>/etc/systemd/system/llm.service</code><br>
+create <code>.service</code> file @ <code>/etc/systemd/system/llm.service</code><br><br>
 
 unit file:<br>
 <pre><code class="fenced-code-block">[Unit]
