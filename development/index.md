@@ -24,6 +24,7 @@
 <a href="devlog-v5"><img src="https://img.shields.io/badge/devlog-v5-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v5 Badge"></a><br>
 <a href="devlog-v6"><img src="https://img.shields.io/badge/devlog-v6-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v6 Badge"></a><br>
 <a href="devlog-v7"><img src="https://img.shields.io/badge/devlog-v7-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v7 Badge"></a><br>
+<a href="devlog-v8"><img src="https://img.shields.io/badge/devlog-v8-151515?style=flat-square&logo=GitHub&logoColor=white" alt="devlog-v8 Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
