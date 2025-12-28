@@ -22,7 +22,7 @@ utilising the luckfox's integrated 1 tops npu to run micro llms
 <br>
 create dir architecture for cleanliness in opt<br><br>
 <code>/opt/llm</code><br><br>
-in <code>llm/</code>: <code>/src /bin /models /logs</code><br>
+in <code>llm/</code>: <code>/src /bin /models /logs</code><br><br>
 
 using llama.cpp and building from source:<br><br>
 <code>sudo git clone https://github.com/ggerganov/llama.cpp cd llama.cpp sudo make LLAMA_NO_ACCELERATE=1</code><br><br>
