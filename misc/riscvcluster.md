@@ -1,11 +1,3 @@
-<<<<<<< HEAD:scheduled/riscvcluster.md
----
-title: "riscvcluster"
-date: 2026-02-20T04:07:52Z
-publishDate: 2026-02-19T00:00:00Z
-tags: [misc]
----
-=======
 <!-- Header -->
 <link rel="stylesheet" href="../../assets/css/style.css"/>
 <div align="center">    
@@ -21,21 +13,20 @@ tags: [misc]
 
 
 
->>>>>>> 989f8e8ae00d2b55a095e9a09d86f309c5757ae8:misc/riscvcluster.md
 
 <h1 id="riscvcluster">risc-v distributed compute cluster - notes from a small, intentional datacenter</h1>
 
-for the past few months ive been building a microcluster/mini datacenter at home. however this isn't your usual cluster or server build. it's entirely in risc-v.<br>
+<p>for the past few months ive been building a microcluster/mini datacenter at home. however this isn't your usual cluster or server build. it's entirely in risc-v.</p><br>
 
-i wanted to build this for a few reasons:<br>
+<p>i wanted to build this for a few reasons:<br>
 
 to challenge myself<br>
 to experience risc-v on native hardware<br>
 experimentation<br>
 rust & risc-v development<br>
-to further my knowledge of clustered environments, kubernetes & docker.<br>
+to further my knowledge of clustered environments, kubernetes & docker.<br></p>
 
-this post is a short overview of the cluster, the design choices behind it, and what I learned from running real workloads on non‑x86 hardware.<br>
+<p>this post is a short overview of the cluster, the design choices behind it, and what I learned from running real workloads on non‑x86 hardware.<br>
 
 the cluster consists of:<br>
 
@@ -51,10 +42,10 @@ the cluster consists of:<br>
     
     5v usb-c poe splitters powering each node <br>
 
-each node sits on its own tray, making the whole system feel like a miniature datacenter: modular, accessible, and intentionally designed. <br>
+each node sits on its own tray, making the whole system feel like a miniature datacenter: modular, accessible, and intentionally designed. </p><br>
 
-<h2>networking & topology<h2>
-
+<h2>networking & topology</h2>
+<p>
 the cluster uses:<br>
 
     multi‑nic networking <br>
@@ -68,9 +59,10 @@ the cluster uses:<br>
     dedicated management network for ssh, metrics, and orchestration <br>
 
 the goal here wasn’t speed, more cohesion and i wanted a cluster that behaved like a single organism, not three boards taped together. <br>
+</p>
 
-software stack: <br>
-
+<h2>software stack</h2>
+<p>
 every node runs a minimal ubuntu server linux environment (not my ideal choice; but its what the board supports right now) with: <br>
 
     kubernetes (recompiled for RISC‑V) <br>
@@ -98,9 +90,9 @@ one of the main goals of this cluster was to explore: <br>
     behaviour differences between risc-v, arm, and x86 <br>
 
     how distributed workloads behave on low‑power hardware <br>
+</p>
 
-
-to test the cluster, i wrote several small Rust microservices: <br>
+<p>to test the cluster, i wrote several small Rust microservices: <br>
 
     simple message‑passing workloads <br>
 
@@ -140,9 +132,11 @@ i care a lot about observability, so the cluster exposes: <br>
 
     custom Rust exporter data <br>
 
-grafana dashboards reflect the living state of the cluster. <br>
+grafana dashboards reflect the living state of the cluster. </p><br>
 
-what i learned: <br>
+
+<h2>what i learned</h2>
+<p>
 
     risc-v is absolutely viable for real distributed workloads, not just hobby boards. <br>
 
@@ -152,7 +146,7 @@ what i learned: <br>
 
     small clusters teach you more than big ones because every detail is visible. <br>
 
-this project wasn’t about building something powerful, massive ram numbers, a huge amount of storage or raw cpu power, it was about building something honest, cohesive, and expressive; a system that reflects how i think about engineering. <br>
+this project wasn’t about building something powerful, massive ram numbers, a huge amount of storage or raw cpu power, it was about building something honest, cohesive, and expressive; a system that reflects how i think about engineering.</p> <br>
 
 
 
