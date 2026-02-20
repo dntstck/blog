@@ -20,11 +20,7 @@
 
 <p>i wanted to build this for a few reasons:<br>
 
-to challenge myself<br>
-to experience risc-v on native hardware<br>
-experimentation<br>
-rust & risc-v development<br>
-to further my knowledge of clustered environments, kubernetes & docker.<br></p>
+to challenge myself, to experience risc-v on native hardware, experimentation, rust & risc-v development, to further my knowledge of clustered environments, kubernetes & docker.<br></p>
 
 <p>this post is a short overview of the cluster, the design choices behind it, and what I learned from running real workloads on non‑x86 hardware.<br>
 
@@ -36,7 +32,7 @@ the cluster consists of:<br>
     <li>poe power via a tp-link switch</li>
     <li>custom microrack built from a modified phanteks hdd cage</li>
     <li>5v usb-c poe splitters powering each node </li></ul>
-
+<br>
 each node sits on its own tray, making the whole system feel like a miniature datacenter: modular, accessible, and intentionally designed. </p><br>
 
 <h2>networking & topology</h2>
@@ -47,7 +43,7 @@ the cluster uses:<br>
     <li>per‑node static addressing</li>
     <li>clean, predictable dns </li>
     <li>local registry for architecture‑specific container builds </li>
-    <li>dedicated management network for ssh, metrics, and orchestration</li></ul>
+    <li>dedicated management network for ssh, metrics, and orchestration</li></ul> <br>
 
 the goal here wasn’t speed, more cohesion and i wanted a cluster that behaved like a single organism, not three boards taped together. <br>
 </p>
@@ -61,7 +57,7 @@ every node runs a minimal ubuntu server linux environment (not my ideal choice; 
     <li>grafana</li>
     <li>private container registry & custom certificates (CA/SAN) </li>
     <li>rust‑based microservices </li>
-    <li>custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively </li></ul>
+    <li>custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively </li></ul> <br>
 
 entire stack is built from source where possible because risc-v support is still uneven and reproducibility matters <br>
 
@@ -71,7 +67,7 @@ one of the main goals of this cluster was to explore: <br>
     <li>architecture‑specific debugging</li>
     <li>reproducible builds</li>
     <li>behaviour differences between risc-v, arm, and x86</li>
-    <li>how distributed workloads behave on low‑power hardware</li></ul>
+    <li>how distributed workloads behave on low‑power hardware</li></ul> <br>
 </p>
 
 <p>to test the cluster, i wrote several small Rust microservices: <br>
@@ -79,7 +75,7 @@ one of the main goals of this cluster was to explore: <br>
     <ul><li>simple message‑passing workloads</li>
     <li>storage‑heavy tasks</li>
     <li>cpu‑bound tasks</li>
-    <li>mixed workloads to test scheduling behaviour</li></ul>
+    <li>mixed workloads to test scheduling behaviour</li></ul> <br>
 
 also built a custom nvme exporter to measure: <br>
 
