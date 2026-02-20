@@ -30,17 +30,12 @@ to further my knowledge of clustered environments, kubernetes & docker.<br></p>
 
 the cluster consists of:<br>
 
-    3× orange pi rv2 (8gb ram) <br>
-
-    nvme storage (2x nvme slots per node) <br>
-
-    dual gbe networking (2x gbe nic per node) <br>
-
-    poe power via a tp-link switch <br>
-
-    custom microrack built from a modified phanteks hdd cage <br>
-    
-    5v usb-c poe splitters powering each node <br>
+    <ul><li>3× orange pi rv2 (8gb ram) </li>
+    <li>nvme storage (2x nvme slots per node)</li>
+    <li>dual gbe networking (2x gbe nic per node)</li>
+    <li>poe power via a tp-link switch</li>
+    <li>custom microrack built from a modified phanteks hdd cage</li>
+    <li>5v usb-c poe splitters powering each node </li></ul>
 
 each node sits on its own tray, making the whole system feel like a miniature datacenter: modular, accessible, and intentionally designed. </p><br>
 
@@ -48,15 +43,11 @@ each node sits on its own tray, making the whole system feel like a miniature da
 <p>
 the cluster uses:<br>
 
-    multi‑nic networking <br>
-
-    per‑node static addressing <br>
-
-    clean, predictable dns <br>
-
-    local registry for architecture‑specific container builds <br>
-
-    dedicated management network for ssh, metrics, and orchestration <br>
+    <ul><li>multi‑nic networking</li>
+    <li>per‑node static addressing</li>
+    <li>clean, predictable dns </li>
+    <li>local registry for architecture‑specific container builds </li>
+    <li>dedicated management network for ssh, metrics, and orchestration</li></ul>
 
 the goal here wasn’t speed, more cohesion and i wanted a cluster that behaved like a single organism, not three boards taped together. <br>
 </p>
@@ -65,88 +56,62 @@ the goal here wasn’t speed, more cohesion and i wanted a cluster that behaved 
 <p>
 every node runs a minimal ubuntu server linux environment (not my ideal choice; but its what the board supports right now) with: <br>
 
-    kubernetes (recompiled for RISC‑V) <br>
-
-    prometheus + victoriametrics <br>
-
-    grafana <br>
-
-    private container registry & custom certificates (CA/SAN) <br>
-
-    rust‑based microservices <br>
-
-    custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively <br>
+    <ul><likubernetes (recompiled for RISC‑V) <li>
+    <li>prometheus + victoriametrics</li>
+    <li>grafana</li>
+    <li>private container registry & custom certificates (CA/SAN) </li>
+    <li>rust‑based microservices </li>
+    <li>custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively </li></ul>
 
 entire stack is built from source where possible because risc-v support is still uneven and reproducibility matters <br>
 
 one of the main goals of this cluster was to explore: <br>
 
-    cross‑compilation <br>
-
-    architecture‑specific debugging <br>
-
-    reproducible builds <br>
-
-    behaviour differences between risc-v, arm, and x86 <br>
-
-    how distributed workloads behave on low‑power hardware <br>
+    <ul><li>cross‑compilation</li>
+    <li>architecture‑specific debugging</li>
+    <li>reproducible builds</li>
+    <li>behaviour differences between risc-v, arm, and x86</li>
+    <li>how distributed workloads behave on low‑power hardware</li></ul>
 </p>
 
 <p>to test the cluster, i wrote several small Rust microservices: <br>
 
-    simple message‑passing workloads <br>
-
-    storage‑heavy tasks <br>
-
-    cpu‑bound tasks <br>
-
-    mixed workloads to test scheduling behaviour <br>
+    <ul><li>simple message‑passing workloads</li>
+    <li>storage‑heavy tasks</li>
+    <li>cpu‑bound tasks</li>
+    <li>mixed workloads to test scheduling behaviour</li></ul>
 
 also built a custom nvme exporter to measure: <br>
 
-    latency <br>
-
-    throughput <br>
-
-    queue depth <br>
-
-    thermal behaviour <br>
-
-    consistency under load <br>
+    <ul><li>latency</li>
+    <li>throughput</li>
+    <li>queue depth</li>
+    <li>thermal behaviour</li>
+    <li>consistency under load </li></ul>
 
 this gave me a real sense of how risc-v behaves under distributed pressure.. not theoretical benchmarks, but actual system behaviour. <br>
 
 i care a lot about observability, so the cluster exposes: <br>
 
-    cpu <br>
-
-    memory <br>
-
-    network <br>
-
-    nvme <br>
-
-    container metrics <br>
-
-    orchestration metrics <br>
-
-    custom Rust exporter data <br>
+    <ul><li>cpu</li>
+    <li>memory</li>
+    <li>network</li>
+    <li>nvme</li>
+    <li>container metrics</li>
+    <li>orchestration metrics</li>
+    <li>custom Rust exporter data</li></ul>
 
 grafana dashboards reflect the living state of the cluster. </p><br>
 
 
 <h2>what i learned</h2>
 <p>
+    risc-v is absolutely viable for real distributed workloads, not just hobby boards.
+    toolchain consistency matters more than raw performance.
+    kubernetes on RISC‑V works, but you need to build it yourself.
+    small clusters teach you more than big ones because every detail is visible.</p>
 
-    risc-v is absolutely viable for real distributed workloads, not just hobby boards. <br>
-
-    toolchain consistency matters more than raw performance. <br>
-
-    kubernetes on RISC‑V works, but you need to build it yourself. <br>
-
-    small clusters teach you more than big ones because every detail is visible. <br>
-
-this project wasn’t about building something powerful, massive ram numbers, a huge amount of storage or raw cpu power, it was about building something honest, cohesive, and expressive; a system that reflects how i think about engineering.</p> <br>
+<p>this project wasn’t about building something powerful, massive ram numbers, a huge amount of storage or raw cpu power, it was about building something honest, cohesive, and expressive; a system that reflects how i think about engineering.</p> <br>
 
 
 
