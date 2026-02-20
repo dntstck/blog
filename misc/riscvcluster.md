@@ -12,8 +12,6 @@
 <!-- Main --> 
 
 
-
-
 <h1 id="riscvcluster">risc-v distributed compute cluster - notes from a small, intentional datacenter</h1>
 
 <p>for the past few months ive been building a microcluster/mini datacenter at home. however this isn't your usual cluster or server build. it's entirely in risc-v.</p><br>
