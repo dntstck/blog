@@ -50,12 +50,13 @@ the goal here wasn’t speed, more cohesion and i wanted a cluster that behaved 
 <p>
 every node runs a minimal ubuntu server linux environment (not my ideal choice; but its what the board supports right now) with: <br>
 
-    <ul><likubernetes (recompiled for RISC‑V) <li>
+    <ul><li>kubernetes (recompiled for RISC‑V) </li>
     <li>prometheus + victoriametrics</li>
     <li>grafana</li>
     <li>private container registry & custom certificates (CA/SAN) </li>
     <li>rust‑based microservices </li>
-    <li>custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively </li></ul> <br>
+    <li>custom NVMe metrics exporter i wrote in rust for testing i/o behaviour and because this kernel doesn't expose nvme temps natively </li></ul> 
+    <br>
 
 entire stack is built from source where possible because risc-v support is still uneven and reproducibility matters <br>
 
