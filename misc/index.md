@@ -16,8 +16,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-Misc-5e2750?&logo=github&logoColor=white"><br>
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
-<a href="keychron-k11"><img src="https://img.shields.io/badge/keychron-k11-151515?style=flat-square&logo=GitHub&logoColor=white" alt="keychron-k11 Badge"></a><br>
-<a href="lastfm"><img src="https://img.shields.io/badge/lastfm-151515?style=flat-square&logo=GitHub&logoColor=white" alt="lastfm Badge"></a><br>
+<a href="riscvcluster"><img src="https://img.shields.io/badge/riscvcluster-151515?style=flat-square&logo=GitHub&logoColor=white" alt="riscvcluster Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
