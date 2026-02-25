@@ -26,7 +26,7 @@
 <div id="latestposts">
 <img alt="Latest Posts" src="https://img.shields.io/badge/-Latest%20Posts-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- latest-posts-start -->
-<a href="/blog/misc/riscvcluster"><img src="https://img.shields.io/badge/riscvcluster-151515?style=flat-square&logo=GitHub&logoColor=white" alt="riscvcluster"></a><br>
+<a href="/blog/misc/slurm-riscv"><img src="https://img.shields.io/badge/slurm-riscv-151515?style=flat-square&logo=GitHub&logoColor=white" alt="slurm-riscv"></a><br>
 <!-- latest-posts-end -->
 </div>
 <br>
