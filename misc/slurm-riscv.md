@@ -121,7 +121,7 @@ ExecReload=/bin/kill -HUP $MAINPID
 LimitNOFILE=65536
 
 [Install]
-WantedBy=multi-user.target/code></p>
+WantedBy=multi-user.target</code></p>
 
 <h1 id="slurm-riscv">enable the unit files</h1>
 <p>on the core:<br>
