@@ -17,6 +17,7 @@
 <img alt="All Posts" src="https://img.shields.io/badge/-[All%20Posts]-FFD1DC?&logo=github&logoColor=black"><br>
 <!-- all-posts-start -->
 <a href="riscvcluster"><img src="https://img.shields.io/badge/riscvcluster-151515?style=flat-square&logo=GitHub&logoColor=white" alt="riscvcluster Badge"></a><br>
+<a href="slurm-riscv"><img src="https://img.shields.io/badge/slurm-riscv-151515?style=flat-square&logo=GitHub&logoColor=white" alt="slurm-riscv Badge"></a><br>
 <!-- all-posts-end -->
 </div>
 <br>
