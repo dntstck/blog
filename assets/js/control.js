@@ -36,7 +36,7 @@ document.addEventListener("keydown", (e) => {
 
     // esc 
     if (e.key === "Escape") {
-        window.location = `${base}/main.html`;
+        window.location = `${base}/`;
     }
 });
 
