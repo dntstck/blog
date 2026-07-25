@@ -2,8 +2,6 @@
 // url: https://github.com/dntstck 
 // info: binds control keys for navigation
 
-const base = "{{ site.baseurl }}";
-
 document.addEventListener("keydown", (e) => {
     const sections = [
         `${base}/main.html`,
