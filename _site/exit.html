@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> DEVBLOG BIOS UTILITY</title>
+  <link id="theme-normal" rel="stylesheet" href="/assets/css/bios.css">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+  <div class="titlebar">DEVBLOG BIOS UTILITY</div>
+  <div class="menubar">
+  <a href="/" class="">MAIN</a>
+  <a href="/boot.html" class="">BOOT</a>
+  <a href="/advanced.html" class="">ADVANCED</a>
+  <a href="/info.html" class="">INFO</a>
+  <a href="/exit.html" class="active">EXIT</a>
+</div>
+<div class="screen">
+
+  <div class="left-pane">
+    
+  <h2>CONFIRMATION</h2>
+  <ul>
+    <li><a href="/">Return to Main</a></li>
+    <li><a>Exit System</a></li>
+  </ul>
+
+
+
+
+
+  </div>
+
+  <div class="right-pane" id="rightpane">
+    <div class="post-content">
+      <h2>SHUTDOWN</h2>
+
+<div id="post-output">
+<div>[  OK  ] Saving configuration...</div> 
+<div>[  OK  ] Unmounting /dev/nvme0n1p1 ...</div> 
+<div>[  OK  ] Stopping network services...</div>
+<div>[  OK  ] Flushing system logs...</div>
+<div>[  OK  ] Syncing disks...</div>
+<div>[  OK  ] Power management: entering shutdown state</div>
+<div>[  OK  ] System halted.</div>
+<div class="cursor"></div>
+</div>
+
+
+<script src="/assets/js/info.js"></script>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="statusbar">Exit | ↑↓ Select | F1 Help | <span onclick="toggleTheme()" style="color:#ffff00; cursor:pointer;">F8 Toggle Theme</span> | F10 Save & Exit | ESC Exit | © 1990-2026 dntstck | <a id="datetime" class="disabled"> --</a></div>
+<script src="/assets/js/time.js"></script>
+<script src="/assets/js/loader.js"></script>
+<script src="/assets/js/theme.js"></script>
+</body>
+</html>
+

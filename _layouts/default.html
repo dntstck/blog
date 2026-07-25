@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> {{ site.title }}</title>
+  <link id="theme-normal" rel="stylesheet" href="{{ site.baseurl }}/assets/css/bios.css">
+  <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" type="image/x-icon">
+
+</head>
+<body>
+  <div class="titlebar">DEVBLOG BIOS UTILITY</div>
+  <div class="menubar">
+  <a href="{{ site.baseurl }}/" class="{% if page.title == 'Main' %}active{% endif %}">MAIN</a>
+  <a href="{{ site.baseurl }}/boot.html" class="{% if page.title == 'Boot' %}active{% endif %}">BOOT</a>
+  <a href="{{ site.baseurl }}/advanced.html" class="{% if page.title == 'Advanced' %}active{% endif %}">ADVANCED</a>
+  <a href="{{ site.baseurl }}/info.html" class="{% if page.title == 'Info' %}active{% endif %}">INFO</a>
+  <a href="{{ site.baseurl }}/exit.html" class="{% if page.title == 'Exit' %}active{% endif %}">EXIT</a>
+</div>
+<div class="screen">
+
+  <div class="left-pane">
+    {% include leftpane.html %}
+  </div>
+
+  <div class="right-pane" id="rightpane">
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="statusbar">{{ page.title }} | ↑↓ Select | F1 Help | <span onclick="toggleTheme()" style="color:#ffff00; cursor:pointer;">F8 Toggle Theme</span> | F10 Save & Exit | ESC Exit | © 1990-2026 dntstck | <a id="datetime" class="disabled"> --</a></div>
+<script src="{{ site.baseurl }}/assets/js/time.js"></script>
+<script src="{{ site.baseurl }}/assets/js/loader.js"></script>
+<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
+</body>
+</html>
+

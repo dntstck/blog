@@ -1,0 +1,17 @@
+title: DEVBLOG BIOS UTILITY
+description: "Dru Delarosa - Devblog"
+
+markdown: kramdown
+highlighter: none
+
+collections:
+  scheduled:
+    output: true
+
+future: true
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: rss.xml

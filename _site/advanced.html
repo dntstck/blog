@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> DEVBLOG BIOS UTILITY</title>
+  <link id="theme-normal" rel="stylesheet" href="/assets/css/bios.css">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+  <div class="titlebar">DEVBLOG BIOS UTILITY</div>
+  <div class="menubar">
+  <a href="/" class="">MAIN</a>
+  <a href="/boot.html" class="">BOOT</a>
+  <a href="/advanced.html" class="active">ADVANCED</a>
+  <a href="/info.html" class="">INFO</a>
+  <a href="/exit.html" class="">EXIT</a>
+</div>
+<div class="screen">
+
+  <div class="left-pane">
+    
+
+  <h2>STATISTICS</h2>
+  <ul>
+    
+	
+    <li>Total Categories: <span style="color:#ffff00 !important;">5</span></li>
+    <li>Total Posts: <span style="color:#ffff00 !important;">2</span></li>
+
+
+
+    <li>Total Words: <span style="color:#ffff00 !important;">1099</span></li>
+
+
+
+    <li>Total Characters: <span style="color:#ffff00 !important;">10080</span></li>
+<br>
+
+
+
+
+
+
+    <li>Fastest Streak: <span style="color:#ffff00 !important;">0</span> hours <span style="color:#ffff00 !important;">10</span> minutes</li>
+
+
+
+
+
+
+    <li>Posts This Month: <span style="color:#ffff00 !important;">2</span></li>
+
+
+
+
+<li>Avg Words Per Post: <span style="color:#ffff00 !important;">549</span></li>
+
+
+    <li>Avg Post Length:  <span style="color:#ffff00 !important;">5040</span> chars</li>
+    <br>
+    <li>Query Cache:  <span style="color:#ffff00 !important;">4</span> entries</li>
+    <li>Total Assets:  <span style="color:#ffff00 !important;">126</span></li>
+    <li>Last Build:  <span style="color:#ffff00 !important;">2026-07-25 05:45:39</span></li>
+    <li id="uptime">Uptime:0h 0m 0s</li>
+
+<script>
+  const buildTime = 1784954739;
+  function updateUptime() {
+    const now = Math.floor(Date.now() / 1000);
+    let diff = now - buildTime;
+
+    const hours = Math.floor(diff / 3600);
+    diff %= 3600;
+    const minutes = Math.floor(diff / 60);
+    const seconds = diff % 60;
+
+    document.getElementById("uptime").textContent =
+      `Uptime: ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateUptime, 1000);
+  updateUptime();
+</script>
+
+    
+  </ul>
+<br>
+  <h2>ADVANCED</h2>
+  <div class="search-box">
+ QUERY: <input id="search" type="text" autocomplete="off">
+</div>
+
+<ul id="results"></ul>
+
+<script>
+fetch('/search.json')
+  .then(r => r.json())
+  .then(data => {
+    const box = document.getElementById('search');
+    const out = document.getElementById('results');
+
+    box.addEventListener('input', () => {
+      const q = box.value.toLowerCase();
+      out.innerHTML = '';
+
+      if (!q) return;
+
+      data.forEach(post => {
+        if (
+          post.title.toLowerCase().includes(q) ||
+	  post.tags.includes(q)
+        ) {
+          const li = document.createElement('li');
+	  li.innerHTML = `<a href="#" onclick="loadPane('${post.url}')">${post.title}</a>`;
+	  out.appendChild(li);
+
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+  </div>
+
+  <div class="right-pane" id="rightpane">
+    <div class="post-content">
+      <h2>ADVANCED</h2>
+<span style="color:#ffff00 !important;">></span> Awaiting user input...<br>
+<span style="color:#ffff00 !important;">></span> Enter a query to search for posts.<br>
+<span style="color:#ffff00 !important;">></span> Example queries: <<span style="color:#ffff00 !important;">devlog</span>> <<span style="color:#ffff00 !important;">riscv</span>> <<span style="color:#ffff00 !important;">linux</span>> <<span style="color:#ffff00 !important;">hpc</span>> <<span style="color:#ffff00 !important;">development</span>> <<span style="color:#ffff00 !important;">misc</span>>
+<br>
+<div class="cursor"></div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="statusbar">Advanced | ↑↓ Select | F1 Help | <span onclick="toggleTheme()" style="color:#ffff00; cursor:pointer;">F8 Toggle Theme</span> | F10 Save & Exit | ESC Exit | © 1990-2026 dntstck | <a id="datetime" class="disabled"> --</a></div>
+<script src="/assets/js/time.js"></script>
+<script src="/assets/js/loader.js"></script>
+<script src="/assets/js/theme.js"></script>
+</body>
+</html>
+

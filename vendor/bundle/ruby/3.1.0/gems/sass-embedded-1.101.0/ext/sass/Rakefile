@@ -1,0 +1,206 @@
+# frozen_string_literal: true
+
+require 'rake/clean'
+
+require_relative '../../lib/sass/elf'
+require_relative 'sass_config'
+require_relative 'file_utils'
+require_relative 'utils'
+
+ARCHDIR = File.absolute_path('sass', ENV.fetch('RUBYARCHDIR', File.absolute_path('../../lib', __dir__)))
+LIBDIR = File.absolute_path('sass', ENV.fetch('RUBYLIBDIR', File.absolute_path('../../lib', __dir__)))
+
+task default: %i[install clean]
+
+task install: %w[cli.rb] do
+  unless File.exist?(File.absolute_path('../../lib/sass/embedded_sass_pb.rb', __dir__))
+    Rake::Task['embedded_sass_pb.rb'].invoke
+  end
+end
+
+CLEAN.include %w[
+  protoc.exe
+  ruby
+  *.proto
+  *.tar.gz
+  *.zip
+]
+
+CLOBBER.include(%w[
+  dart-sass
+  cli.rb
+  node_modules
+  bun.lockb
+  package-lock.json
+  pnpm-lock.yaml
+  yarn.lock
+].map do |file|
+  File.absolute_path(file, ARCHDIR)
+end)
+
+CLOBBER.include(%w[
+  *_pb.rb
+].map do |file|
+  File.absolute_path(file, LIBDIR)
+end)
+
+file File.absolute_path('dart-sass/sass', ARCHDIR) do
+  mkdir_p ARCHDIR
+
+  begin
+    gem_install 'sass-embedded', SassConfig.gem_version, SassConfig.gem_platform do |installer|
+      gh_attestation_verify(installer.gem, repo: 'sass-contrib/sass-embedded-host-ruby')
+      mv File.absolute_path('lib/sass/dart-sass', installer.gem_dir), File.absolute_path('dart-sass', ARCHDIR)
+    end
+  rescue StandardError
+    archive = fetch(SassConfig.dart_sass)
+    gh_attestation_verify(archive, repo: 'sass/dart-sass')
+    unarchive archive, chdir: ARCHDIR
+    rm archive
+  end
+end
+
+file File.absolute_path('node_modules/sass', ARCHDIR) do
+  mkdir_p ARCHDIR
+
+  cp File.absolute_path('package.json', __dir__), ARCHDIR
+
+  # TODO: remove after https://github.com/sass/dart-sass/pull/2413
+  cp File.absolute_path("sass-#{SassConfig.dart_sass_version}.tgz", __dir__), ARCHDIR
+
+  begin
+    sh 'npm', 'install', chdir: ARCHDIR
+  rescue StandardError
+    begin
+      sh 'yarn', 'install', chdir: ARCHDIR
+    rescue StandardError
+      begin
+        sh 'pnpm', 'install', chdir: ARCHDIR
+      rescue StandardError
+        sh 'bun', 'install', chdir: ARCHDIR
+      end
+    end
+  end
+end
+
+task 'dart-sass' => (
+  if SassConfig.dart_support?
+    File.absolute_path('dart-sass/sass', ARCHDIR)
+  else
+    File.absolute_path('node_modules/sass', ARCHDIR)
+  end
+)
+
+file File.absolute_path('cli.rb', ARCHDIR) => %w[dart-sass] do |task|
+  begin
+    exe = 'dart-sass/sass'
+    exe = "#{exe}#{['', '.bat', '.exe'].find { |ext| File.exist?(File.absolute_path("#{exe}#{ext}", ARCHDIR)) }}"
+
+    raise Errno::ENOENT, exe unless File.exist?(File.absolute_path(exe, ARCHDIR))
+
+    runtime = 'dart-sass/src/dart'
+    runtime = "#{runtime}#{['', '.exe'].find { |ext| File.exist?(File.absolute_path("#{runtime}#{ext}", ARCHDIR)) }}"
+    snapshot = 'dart-sass/src/sass.snapshot'
+
+    command = if File.exist?(File.absolute_path(runtime, ARCHDIR)) &&
+                 File.exist?(File.absolute_path(snapshot, ARCHDIR))
+                [runtime, snapshot]
+              else
+                [exe]
+              end
+
+    interpreter = File.open(File.absolute_path(command[0], ARCHDIR), 'rb') do |file|
+      Sass.const_get(:ELF).new(file).interpreter
+    rescue ArgumentError
+      nil
+    end
+
+    command_source = command.map do |argument|
+      "File.absolute_path('#{argument}', __dir__).freeze"
+    end.join(',
+      ')
+  rescue Errno::ENOENT
+    package = 'node_modules/sass'
+
+    script = File.join(package, SassConfig.package_json(File.absolute_path(package, ARCHDIR))['bin']['sass'])
+
+    interpreter = nil
+
+    command_source = [
+      "'node'",
+      "File.absolute_path('#{script}', __dir__).freeze"
+    ].join(',
+      ')
+  end
+
+  if interpreter.nil?
+    File.write(task.name, <<~CLI_RB)
+      # frozen_string_literal: true
+
+      module Sass
+        module CLI
+          COMMAND = [
+            #{command_source}
+          ].freeze
+        end
+
+        private_constant :CLI
+      end
+    CLI_RB
+  else
+    File.write(task.name, <<~CLI_RB)
+      # frozen_string_literal: true
+
+      require 'sass/elf'
+
+      module Sass
+        module CLI
+          INTERPRETER = '#{interpreter}'
+
+          INTERPRETER_SUFFIX = '/#{File.basename(interpreter)}'
+
+          COMMAND = [
+            *(ELF::INTERPRETER if ELF::INTERPRETER != INTERPRETER && ELF::INTERPRETER&.end_with?(INTERPRETER_SUFFIX)),
+            #{command_source}
+          ].freeze
+        end
+
+        private_constant :CLI
+      end
+    CLI_RB
+  end
+end
+
+task 'cli.rb' => File.absolute_path('cli.rb', ARCHDIR)
+
+file 'protoc.exe' do |task|
+  begin
+    fetch(SassConfig.protoc, task.name)
+  rescue NotImplementedError
+    File.write(task.name, <<~PROTOC_EXE)
+      #!#{RbConfig.ruby}
+      # frozen_string_literal: true
+      Kernel.exec('protoc', *ARGV)
+    PROTOC_EXE
+  end
+
+  chmod 'a+x', task.name
+end
+
+file 'embedded_sass.proto' => %w[cli.rb] do |task|
+  fetch(SassConfig.embedded_sass_protocol, task.name)
+end
+
+file File.absolute_path('embedded_sass_pb.rb', LIBDIR) => %w[embedded_sass.proto protoc.exe] do |task|
+  mkdir_p File.dirname(task.name)
+  sh './protoc.exe', '--proto_path=.', "--ruby_out=#{LIBDIR}", File.basename(task.source)
+end
+
+task 'embedded_sass_pb.rb' => File.absolute_path('embedded_sass_pb.rb', LIBDIR)
+
+file File.absolute_path('../../sig/_sass/embedded_sass_pb.rbs', __dir__) => %w[embedded_sass.proto protoc.exe] do |task|
+  mkdir_p File.dirname(task.name)
+  sh './protoc.exe', '--proto_path=.', '--rbs_out=../../sig/_sass', File.basename(task.source)
+end
+
+task 'embedded_sass_pb.rbs' => File.absolute_path('../../sig/_sass/embedded_sass_pb.rbs', __dir__)

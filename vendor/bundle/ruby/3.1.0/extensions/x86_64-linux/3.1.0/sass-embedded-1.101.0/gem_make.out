@@ -1,0 +1,12 @@
+current directory: /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.101.0/ext/sass
+/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby -rrubygems /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/gems/rake-13.4.2/exe/rake RUBYARCHDIR\=/home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.101.0 RUBYLIBDIR\=/home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.101.0
+gem install --force --install-dir /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.101.0/ext/sass/ruby --no-document --ignore-dependencies --platform x86_64-linux-gnu --version 1.101.0 sass-embedded
+mkdir -p /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.101.0/sass
+fetch https://github.com/sass/dart-sass/releases/download/1.101.0/dart-sass-1.101.0-linux-x64.tar.gz
+tar -vxf dart-sass-1.101.0-linux-x64.tar.gz -C /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.101.0/sass --no-same-owner --no-same-permissions
+rm -rf /home/sysadmin/dev/blogtest/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.101.0/ext/sass/ruby
+dart-sass/src/LICENSE
+dart-sass/src/dart
+dart-sass/src/sass.snapshot
+dart-sass/sass
+rm dart-sass-1.101.0-linux-x64.tar.gz

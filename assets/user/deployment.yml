@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $PROJECT_NAME-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $PROJECT_NAME
+  template:
+    metadata:
+      labels:
+        app: $PROJECT_NAME
+    spec:
+      containers:
+      - name: $PROJECT_NAME-container
+        image: $PROJECT_NAME-image
+        imagePullPolicy: Never
+        command: ["vim"]
