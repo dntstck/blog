@@ -71,7 +71,7 @@ body {
   color: #000;
   align-items: stretch;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 91vh;
   height: auto;
   position: relative;
 }
@@ -380,7 +380,7 @@ code {
   color: #c0c0c0;
   align-items: stretch;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 91vh;
   height: auto;
   position: relative;
 }
