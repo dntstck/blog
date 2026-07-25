@@ -8,6 +8,7 @@ document.addEventListener("keydown", (e) => {
         `${base}/boot.html`,
         `${base}/advanced.html`,
         `${base}/info.html`
+        `${base}/exit.html`
     ];
 
     let current = sections.indexOf(window.location.pathname.replace(window.location.origin, ""));
@@ -45,7 +46,7 @@ function biosExit() {
 }
 
 function biosMain() {
-    window.location = `${base}/main.html`;
+    window.location = `${base}/`;
 }
 
 function biosInfo() {
