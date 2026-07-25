@@ -6,7 +6,7 @@ layout: none
   {
     "title": {{ post.title | jsonify }},
     "tags": "{{ post.tags | join: ' ' | downcase }}",
-    "url": {{ post.url | jsonify }}
+    "url": "{{ site.baseurl }}{{ post.url }}"
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]

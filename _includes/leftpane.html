@@ -4,7 +4,7 @@
   <h2>SYSTEM</h2>
   <ul>
     <li>Overview: Rust, RISC-V, HPC & Systems Dev Blog.</li>
-    <li>Latest Post: [<a href="#" onclick="loadPane('{{ site.posts[0].url }}')">{{ site.posts[0].title }}</a>]</li>
+    <li>Latest Post: [<a href="#" onclick="loadPane('{{ site.baseurl }}{{ site.posts[0].url }}')">{{ site.posts[0].title }}</a>]</li>
     <li><a href="{{ site.baseurl }}/boot.html">Recent Posts</a></li>
     <li><a href="{{ site.baseurl }}/advanced.html">All Posts</a></li>
     <li><a href="{{ site.baseurl }}/rss.xml" target="_blank" rel="noopener noreferrer">RSS</a></li>
@@ -98,9 +98,10 @@
   <ul>
   {% for post in site.posts limit:25 %}
     <li>
-      <a href="#" onclick="loadPane('{{ post.url }}')">
-  {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+      <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
+	{{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
       </a>
+
     </li>
   {% endfor %}
   </ul>
@@ -203,7 +204,7 @@
 <ul id="results"></ul>
 
 <script>
-fetch('../search.json')
+fetch('{{ site.baseurl }}/search.json')
   .then(r => r.json())
   .then(data => {
     const box = document.getElementById('search');
@@ -218,16 +219,16 @@ fetch('../search.json')
       data.forEach(post => {
         if (
           post.title.toLowerCase().includes(q) ||
-	  post.tags.includes(q)
+          post.tags.includes(q)
         ) {
           const li = document.createElement('li');
-	  li.innerHTML = `<a href="#" onclick="loadPane('${post.url}')">${post.title}</a>`;
-	  out.appendChild(li);
-
+          li.innerHTML = `<a href="#" onclick="loadPane('{{ site.baseurl }}${post.url}')">${post.title}</a>`;
+          out.appendChild(li);
         }
       });
     });
   });
+
 </script>
 
 {% when "info" %}
