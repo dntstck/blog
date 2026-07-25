@@ -16,12 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Ruby locally
+      - name: Install Ruby
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          echo 'export GEM_HOME="$HOME/gems"' >> $GITHUB_ENV
-          echo 'export PATH="$HOME/gems/bin:$PATH"' >> $GITHUB_ENV
+
+      - name: Configure gem paths
+        run: |
+          echo "GEM_HOME=$HOME/gems" >> $GITHUB_ENV
+          echo "PATH=$HOME/gems/bin:$PATH" >> $GITHUB_ENV
 
       - name: Install Jekyll
         run: gem install jekyll bundler
