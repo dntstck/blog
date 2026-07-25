@@ -2,55 +2,54 @@
 // url: https://github.com/dntstck 
 // info: binds control keys for navigation
 
+const base = "{{ site.baseurl }}";
+
 document.addEventListener("keydown", (e) => {
     const sections = [
-        "{{ site.baseurl }}/main.html",
-        "{{ site.baseurl }}/boot.html",
-        "{{ site.baseurl }}/adv.html",
-        "{{ site.baseurl }}/info.html"
+        `${base}/main.html`,
+        `${base}/boot.html`,
+        `${base}/adv.html`,
+        `${base}/info.html`
     ];
 
     let current = sections.indexOf(window.location.pathname.replace(window.location.origin, ""));
 
-    // Arrow Down → next section
+    // down - next section
     if (e.key === "ArrowDown") {
         current = (current + 1) % sections.length;
         window.location = sections[current];
     }
 
-    // Arrow Up → previous section
+    // up - previous section
     if (e.key === "ArrowUp") {
         current = (current - 1 + sections.length) % sections.length;
         window.location = sections[current];
     }
 
-    // F10 → Save & Exit
+    // f10 
     if (e.key === "F10") {
-        window.location = "{{ site.baseurl }}/exit.html";
+        window.location = `${base}/exit.html`;
     }
 
-    // F1 → Info
+    // f1 
     if (e.key === "F1") {
-        window.location = "{{ site.baseurl }}/info.html";
+        window.location = `${base}/info.html`;
     }
 
-    // Esc → back to MAIN
+    // esc 
     if (e.key === "Escape") {
-        window.location = "{{ site.baseurl }}/main.html";
+        window.location = `${base}/main.html`;
     }
-
-    
 });
 
 function biosExit() {
-    window.location = `{{ site.baseurl }}/exit.html`;
+    window.location = `${base}/exit.html`;
 }
 
 function biosMain() {
-    window.location = `{{ site.baseurl }}/main.html`;
+    window.location = `${base}/main.html`;
 }
 
 function biosInfo() {
-    window.location = `{{ site.baseurl }}/info.html`;
+    window.location = `${base}/info.html`;
 }
-
