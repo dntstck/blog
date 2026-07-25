@@ -7,20 +7,20 @@ document.addEventListener("keydown", (e) => {
         `${base}/`,
         `${base}/boot.html`,
         `${base}/advanced.html`,
-        `${base}/info.html`
+        `${base}/info.html`,
         `${base}/exit.html`
     ];
 
     let current = sections.indexOf(window.location.pathname.replace(window.location.origin, ""));
 
     // down - next section
-    if (e.key === "ArrowDown") {
+    if (e.key === "ArrowUp") {
         current = (current + 1) % sections.length;
         window.location = sections[current];
     }
 
     // up - previous section
-    if (e.key === "ArrowUp") {
+    if (e.key === "ArrowDown") {
         current = (current - 1 + sections.length) % sections.length;
         window.location = sections[current];
     }
