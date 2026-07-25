@@ -299,12 +299,40 @@ code {
   font-size: 14px;
 }
 
+.bios-dropdown {
+    background: #000;
+    color: #fff;
+    border: 1px solid #ffff00;
+    padding: 10px;
+    font-family: 'PxPlus IBM VGA8', monospace;
+    margin-top: 10px;
+}
+
+.bios-toggle {
+    cursor: pointer;
+    color: #ffff00;
+}
+
+.bios-dropdown a {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.bios-dropdown a:hover {
+    text-decoration: underline;
+}
+
+/* status bar fix for mobile */
+
 @media (max-width: 600px) {
-    .statusbar {
+    .statusbar,
+    .theme-dark .statusbar {
         white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        display: block;
+        width: max-content;
     }
 }
 
@@ -530,14 +558,15 @@ code {
   border-top: 1px solid #fff !important;
 }
 
-@media (max-width: 600px) {
-    .theme-dark .statusbar {
-        white-space: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
+.theme-dark .bios-dropdown {
+    background: #000;
+    border-color: #ffff00;
 }
+
+.theme-dark .bios-item {
+    color: #fff;
+}
+
 
 .theme-dark .cursor {
   display: inline-block;
