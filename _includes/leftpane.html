@@ -203,7 +203,7 @@
 <ul id="results"></ul>
 
 <script>
-fetch('/search.json')
+fetch('../search.json')
   .then(r => r.json())
   .then(data => {
     const box = document.getElementById('search');
