@@ -8,7 +8,7 @@ document.addEventListener("keydown", (e) => {
     const sections = [
         `${base}/main.html`,
         `${base}/boot.html`,
-        `${base}/adv.html`,
+        `${base}/advanced.html`,
         `${base}/info.html`
     ];
 
