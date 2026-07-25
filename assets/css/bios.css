@@ -323,20 +323,25 @@ code {
 }
 
 /* status bar fix for mobile */
-.statusbar * {
-    display: inline-block;
+
+.statusbar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     white-space: nowrap;
 }
 
+/* preserve spacing between items */
+.statusbar span {
+    display: inline-block;
+    margin-right: 8px;   /* restores readable spacing */
+}
+
+/* mobile smooth scroll */
 @media (max-width: 600px) {
     .statusbar,
     .theme-dark .statusbar {
-        white-space: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        display: block;
-        width: max-content;
     }
 }
 
