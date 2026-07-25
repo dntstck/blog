@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'Press Start 2P';
-  src: url('/assets/fonts/press-start-2p.woff2') format('woff2');
+  src: url('{ site.baseurl }}/assets/fonts/press-start-2p.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PxPlus IBM VGA8';
-  src: url('/assets/fonts/PxPlusIBM-VGA8.woff') format('woff');
+  src: url('{ site.baseurl }}/assets/fonts/PxPlusIBM-VGA8.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

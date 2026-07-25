@@ -4,6 +4,9 @@ description: "Dru Delarosa - Devblog"
 markdown: kramdown
 highlighter: none
 
+baseurl: "/blog"
+url: "https://dntstck.github.io"
+
 collections:
   scheduled:
     output: true
