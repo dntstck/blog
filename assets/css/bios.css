@@ -323,22 +323,22 @@ code {
 }
 
 /* status bar fix for mobile */
-
-.statusbar {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+.statusbar * {
+    display: inline-block;
     white-space: nowrap;
 }
-
 
 @media (max-width: 600px) {
     .statusbar,
     .theme-dark .statusbar {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        display: block;
+        width: max-content;
     }
 }
-
 
 /* blinking cursor */
 
