@@ -27,6 +27,9 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
 
+      - name: Force correct Ruby
+        run: sudo ln -sf "$(which ruby)" /usr/bin/ruby3.1
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
