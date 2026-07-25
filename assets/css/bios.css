@@ -299,6 +299,16 @@ code {
   font-size: 14px;
 }
 
+@media (max-width: 600px) {
+    .statusbar {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
 /* blinking cursor */
 
 .cursor {
@@ -518,6 +528,15 @@ code {
 
 .theme-dark .statusbar {
   border-top: 1px solid #fff !important;
+}
+
+@media (max-width: 600px) {
+    .theme-dark .statusbar {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 .theme-dark .cursor {
