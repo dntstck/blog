@@ -334,6 +334,12 @@ code {
     padding-left: 0.6ch;  
     padding-right: 0.6ch;
     line-height: 1;
+    vertical-align: top;
+    font-size: 0;
+}
+
+.statusbar * {
+    font-size: inherit;  
 }
 
 /* mobile smooth scroll */
