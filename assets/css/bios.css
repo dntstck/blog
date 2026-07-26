@@ -329,9 +329,13 @@ code {
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 1em;
     box-sizing: border-box;
+
+    padding-left: 0.6ch;   
+    padding-right: 0.6ch;  
+    line-height: 1;
 }
+
 
 .statusbar-inner {
     display: inline-flex;
