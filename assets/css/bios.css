@@ -329,7 +329,7 @@ code {
     justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 0.5em;
+    padding: 1em;
     box-sizing: border-box;
 }
 
