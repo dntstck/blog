@@ -329,12 +329,14 @@ code {
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
+    padding-left: 6px;
+    box-sizing: border-box;
 }
 
 /* preserve spacing between items */
 .statusbar span {
     display: inline-block;
-    margin-right: 8px;   /* restores readable spacing */
+    margin-right: 8px;   
 }
 
 /* mobile smooth scroll */
