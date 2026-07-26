@@ -326,18 +326,24 @@ code {
 
 .statusbar {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
     overflow-x: auto;
     white-space: nowrap;
-    padding-left: 0.8em;
+    padding: 0.5em;
     box-sizing: border-box;
 }
 
-/* preserve spacing between items */
-.statusbar span {
-    display: inline-block;
-    margin-right: 8px;   
+.statusbar-inner {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
+
+.statusbar-inner span {
+    display: inline-block;
+    margin-right: 8px;
+}
+
 
 /* mobile smooth scroll */
 @media (max-width: 600px) {
