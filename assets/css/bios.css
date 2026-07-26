@@ -335,11 +335,10 @@ code {
     padding-right: 0.6ch;
     line-height: 1;
     vertical-align: top;
-    font-size: 0;
 }
 
 .statusbar * {
-    font-size: inherit;  
+    font-size: inherit;    /* restores normal text size */
 }
 
 /* mobile smooth scroll */
