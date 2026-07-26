@@ -325,29 +325,15 @@ code {
 /* status bar fix for mobile */
 
 .statusbar {
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: block;
+    white-space: nowrap;       
+    overflow-x: auto;          
     box-sizing: border-box;
 
-    padding-left: 0.6ch;   
-    padding-right: 0.6ch;  
-    line-height: 1;
+    text-align: center;   
+    padding-left: 0.6ch;  
+    padding-right: 0.6ch;
 }
-
-
-.statusbar-inner {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-}
-
-.statusbar-inner span {
-    display: inline-block;
-    margin-right: 8px;
-}
-
 
 /* mobile smooth scroll */
 @media (max-width: 600px) {
@@ -356,6 +342,7 @@ code {
         -webkit-overflow-scrolling: touch;
     }
 }
+
 
 /* blinking cursor */
 
