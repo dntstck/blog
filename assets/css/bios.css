@@ -326,15 +326,13 @@ code {
 
 .statusbar {
     display: block;
-    white-space: nowrap;       
+    white-space: nowrap;      
     overflow-x: auto;          
     box-sizing: border-box;
 
-    text-align: center;   
-    padding-left: 0.6ch;  
-    padding-right: 0.6ch;
-    line-height: 1;
-    height: 1em;
+    text-align: center;        
+    padding: 0 0.5ch;           
+    line-height: 1.1;           
 }
 
 .statusbar * {
