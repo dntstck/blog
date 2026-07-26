@@ -329,7 +329,7 @@ code {
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    padding-left: 6px;
+    padding-left: 0.8em;
     box-sizing: border-box;
 }
 
