@@ -336,11 +336,21 @@ code {
     line-height: 1;
 }
 
+.statusbar * {
+    font-size: inherit;
+    vertical-align: middle;
+
+}
+
 /* mobile smooth scroll */
 @media (max-width: 600px) {
     .statusbar,
     .theme-dark .statusbar {
         -webkit-overflow-scrolling: touch;
+    }
+
+    .left-pane {
+    font-size: inherit;
     }
 }
 
