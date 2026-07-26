@@ -327,35 +327,33 @@ code {
 .statusbar {
     display: flex;
     justify-content: center;
+    align-items: center;       
     overflow-x: auto;
     white-space: nowrap;
     box-sizing: border-box;
 
-    padding-left: 0.6ch;   
-    padding-right: 0.6ch;  
-    line-height: 1;
+    padding-left: 0.4ch;
+    padding-right: 0.4ch;
+    height: 1.4em;
+    line-height: 1.4em;
 }
 
-
-.statusbar-inner {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-}
-
-.statusbar-inner span {
+.statusbar span,
+.statusbar a {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 0.5ch;       /* restores readable gaps */
+    vertical-align: middle;    /* keeps icons aligned */
 }
-
 
 /* mobile smooth scroll */
 @media (max-width: 600px) {
     .statusbar,
     .theme-dark .statusbar {
+        justify-content: flex-start;
         -webkit-overflow-scrolling: touch;
     }
 }
+
 
 /* blinking cursor */
 
