@@ -333,6 +333,7 @@ code {
     text-align: center;   
     padding-left: 0.6ch;  
     padding-right: 0.6ch;
+    line-height: 1;
 }
 
 /* mobile smooth scroll */
