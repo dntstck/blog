@@ -324,20 +324,21 @@ code {
 
 /* status bar fix for mobile */
 
-.statusbar {
+.statusbar,
+    .theme-dark .statusbar {
     display: block;
     white-space: nowrap;      
     overflow-x: auto;          
     box-sizing: border-box;
-
     text-align: center;        
-    padding: 0 0.5ch;           
-    line-height: 0.8;           
+    padding: 1 0.5ch;           
+    line-height: 1.4;           
 }
 
 .statusbar * {
     font-size: inherit;
 }
+
 
 /* mobile smooth scroll */
 @media (max-width: 600px) {
