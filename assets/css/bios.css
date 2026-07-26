@@ -347,7 +347,7 @@ code {
         -webkit-overflow-scrolling: touch;
     }
 
-    .left-pane {
+    .theme-dark .left-pane {
     font-size: inherit;
     }
 }
