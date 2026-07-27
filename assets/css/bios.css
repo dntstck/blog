@@ -342,9 +342,11 @@ code {
         font-size: 10px;
     }
 
-    .theme-dark .left-pane {
-    font-size: inherit;
+    .left-pane li,
+    .theme-dark .left-pane li {
+        font-size: 10px;
     }
+
 }
 
 /* blinking cursor */
