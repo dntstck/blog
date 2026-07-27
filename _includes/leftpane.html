@@ -221,7 +221,7 @@ fetch('{{ site.baseurl }}/search.json')
           post.tags.includes(q)
         ) {
           const li = document.createElement('li');
-          li.innerHTML = `<a href="#" onclick="loadPane('{{ site.baseurl }}${post.url}')">${post.title}</a>`;
+          li.innerHTML = `<a href="#" onclick="loadPane('${post.url}')">${post.title}</a>`;
           out.appendChild(li);
         }
       });

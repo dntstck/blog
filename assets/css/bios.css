@@ -339,6 +339,7 @@ code {
     .statusbar,
     .theme-dark .statusbar {
         -webkit-overflow-scrolling: touch;
+        font-size: 10px;
     }
 
     .theme-dark .left-pane {

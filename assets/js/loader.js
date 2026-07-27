@@ -7,7 +7,7 @@ function loadPane(url) {
     .then(r => r.text())
     .then(html => {
       const styled = `
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bios.css">
+        <link rel="stylesheet" href="/blog/assets/css/bios.css">
         <div class="post-content">${html}</div>
       `;
       document.getElementById("rightpane").innerHTML = styled;
