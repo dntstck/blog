@@ -35,18 +35,10 @@ document.addEventListener("keydown", (e) => {
         window.location = `${base}/info.html`;
     }
 
-    // esc 
-    if (e.key === "Escape") {
-        window.location = `${base}/`;
-    }
 });
 
 function biosExit() {
     window.location = `${base}/exit.html`;
-}
-
-function biosMain() {
-    window.location = `${base}/`;
 }
 
 function biosInfo() {
