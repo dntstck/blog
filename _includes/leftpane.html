@@ -238,13 +238,57 @@ fetch('{{ site.baseurl }}/search.json')
     <li>Email: dntstck@icloud.com</li>
     <li>Location: UK</li>
     <li>Availability: Available, Remote only.</li>
-    <li>Certifications: <a href="{{ site.baseurl }}/certs/fullstack-hyperiondev.pdf" target="_blank" rel="noopener noreferrer">FullStack</a> <a href="{{ site.baseurl }}/certs/backend-mimo.pdf" target="_blank" rel="noopener noreferrer">BackEnd</a> <a href="{{ site.baseurl }}/certs/sql-mimo.pdf" target="_blank" rel="noopener noreferrer">SQL</a> <a href="{{ site.baseurl }}/certs/typescript-mimo.pdf" target="_blank" rel="noopener noreferrer">TypeScript</a> <a href="{{ site.baseurl }}/certs/javascript-mimo.pdf" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
 <br>
     <li>Primary Stack: Linux, RISC-V, Rust, C, Lua</li>
     <li>Focus: Rust & RISC-V</li>
     <li>Roles: Systems, Rust & HPC Engineer</li>
     <li>Current Projects: <a href="https://github.com/dntstck/riscv-microcluster" target="_blank" rel="noopener noreferrer">RISC-V Microcluster</a> & <a href="https://github.com/dntstck/virgo" target="_blank" rel="noopener noreferrer">Virgo</a></li>
-  </ul>
+<br>
+    <div class="bios-toggle" onclick="toggle('certs')" style="">[+] Certificates</div>
+    <div id="certs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size:10px; margin-top: 0px;">
+        <ul>
+            <li><a href="{{ site.baseurl }}/certs/fullstack-hyperiondev.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">FullStack</a></li>
+            <li><a href="{{ site.baseurl }}/certs/backend-mimo.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">BackEnd</a></li>
+            <li><a href="{{ site.baseurl }}/certs/sql-mimo.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">SQL</a></li>
+            <li><a href="{{ site.baseurl }}/certs/typescript-mimo.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">TypeScript</a></li>
+            <li><a href="{{ site.baseurl }}/certs/javascript-mimo.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">JavaScript</a></li></li> 
+        </ul>
+     </div><br>
+     <div class="bios-toggle" onclick="toggle('langs')">[+] Languages</div>
+     <div id="langs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size:10px; margin-top: 0px;">
+        <ul>
+            <li><span style="color:#fff !important;">Rust</span></li>
+            <li><span style="color:#ffff !important;">C</span></li>
+            <li><span style="color:#ffff !important;">Bash<span></li>
+            <li><span style="color:#ffff !important;">Lua<span></li>
+        </ul>
+     </div><br>
+     <div class="bios-toggle" onclick="toggle('exp')">[+] Experience</div>
+     <div id="exp" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size:10px; margin-top: 0px;">
+        <ul>
+            <li><span style="color:#ffff !important;">RISC‑V cluster engineering</span></li>
+            <li><span style="color:#ffff !important;">High Performance Compute (HPC)<span></li>
+            <li><span style="color:#ffff !important;">Slurm, PMIx & OpenMPI<span></li>
+            <li><span style="color:#ffff !important;">x86, ARM & RISC‑V development</span></li>
+            <li><span style="color:#ffff !important;">ARM & RISC-V Embedded<span></li>
+            <li><span style="color:#ffff !important;">C Development</span></li>
+            <li><span style="color:#ffff !important;">Rust Development</span></li>
+            <li><span style="color:#ffff !important;">Bash & Lua Scripting<span></li>
+            <li><span style="color:#ffff !important;">Linux Administration<span></li>
+            <li><span style="color:#ffff !important;">Proxmox & Docker</span></li>
+            <li><span style="color:#ffff !important;">Networking | TCP/IP</span></li>
+        </ul>
+    </div>
+</ul>
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+  <br>  
+
+
   <br>
   <h2>SYSTEM</h2>
   <ul>
