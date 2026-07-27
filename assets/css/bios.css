@@ -647,8 +647,16 @@ code {
     margin: 10px auto !important;
     border-width: 1px !important;
     border: 2px solid #ffff00;
-    padding-left: 5px;
+    padding-left: 2px;
   }
 }
 
+@media (max-width: 898px) {
+  .sb-select,
+  .sb-info,
+  .sb-exit,
+  .sb-copy {
+    display: none;
+  }
+}
 
