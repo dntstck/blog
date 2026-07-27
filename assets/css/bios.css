@@ -659,6 +659,9 @@ code {
     margin: 0 0 1rem 0 !important;
     letter-spacing: 1px;
     font-size: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
 }
 
   code {
@@ -667,6 +670,9 @@ code {
     font-family: 'PxPlus IBM VGA8' !important;
     letter-spacing: 1px;
     font-size: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
 }
 
 }
