@@ -2,12 +2,12 @@ name: Schedule Posts
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight. 
+    - cron: '0 0 * * *'  # Runs every day at midnight.
   push:
     paths:
       - 'scheduled/**'
-
   workflow_dispatch:
+
 jobs:
   schedule:
     runs-on: ubuntu-latest
@@ -23,3 +23,15 @@ jobs:
 
     - name: Run scheduling script
       run: node deploy/schedulePosts.js
+
+    - name: Commit changes
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add _posts/*.md
+        git add scheduled/*.md
+        git commit -m "Auto-publish scheduled posts" || echo "No changes to commit"
+
+    - name: Push changes
+      run: git push
+
