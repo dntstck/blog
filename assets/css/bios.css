@@ -581,20 +581,6 @@ code {
    ============================================================ */
 
 @media (max-width: 600px) {
-    .statusbar,
-    .theme-dark .statusbar {
-        -webkit-overflow-scrolling: touch;
-        font-size: 10px;
-    }
-
-    .left-pane li,
-    .theme-dark .left-pane li {
-        font-size: 10px !important;
-    }
-
-}
-
-@media (max-width: 600px) {
 
 
   .screen,
@@ -602,13 +588,13 @@ code {
     grid-template-columns: 100% !important;
   }
 
-  /* kill the divider */
+
   .screen::before,
   .theme-dark .screen::before {
     display: none !important;
   }
 
-  /* make panes full width  */
+
   .left-pane,
   .right-pane,
   .theme-dark .left-pane,
@@ -617,13 +603,13 @@ code {
     padding: 6px !important;
   }
 
-  /* shrink fonts */
+
   body,
   .theme-dark body {
     font-size: 8px !important;
   }
 
-  /* list item scaling  */
+
   .left-pane li,
   .right-pane li,
   .post-content li,
@@ -633,12 +619,39 @@ code {
     font-size: inherit !important;
   }
 
+
+  .menubar,
+  .theme-dark .menubar {
+    padding: 2px 0 !important;
+  }
+
+  .menubar a,
+  .theme-dark .menubar a {
+    margin: 0 8px !important;
+    font-size: 8px !important;
+  }
+
+
   .statusbar,
   .theme-dark .statusbar {
-    font-size: 10px !important;
+    font-size: 8px !important;
+    padding: 2px 0 !important;
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+
+  .post-content img,
+  .theme-dark .post-content img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 480px !important;
+    max-height: 320px !important;
+    display: block;
+    margin: 10px auto !important;
+    border-width: 1px !important;
+    border: 2px solid #ffff00;
   }
 }
 
