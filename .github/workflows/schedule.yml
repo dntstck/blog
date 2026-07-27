@@ -40,3 +40,9 @@ jobs:
     - name: Push changes
       run: git push
 
+    - name: Trigger site rebuild
+      run: |
+       date > .rebuild
+       git add .rebuild
+       git commit -m "Trigger rebuild" || echo "No changes"
+       git push
