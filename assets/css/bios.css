@@ -644,10 +644,9 @@ code {
     max-width: 480px !important;
     max-height: 320px !important;
     display: block;
-    margin: 10px auto !important;
+    margin: 5px auto !important;
     border-width: 1px !important;
     border: 2px solid #ffff00;
-    padding-left: 2px;
   }
 }
 
@@ -659,4 +658,21 @@ code {
     display: none;
   }
 }
+
+@media (max-width: 900px) {
+  .theme-dark .left-pane {
+    border-bottom: 1px solid #444; 
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 900px) {
+  .left-pane {
+    border-bottom: 1px solid #FFF; 
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+}
+
 
