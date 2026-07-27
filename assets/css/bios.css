@@ -629,11 +629,12 @@ code {
   .theme-dark .statusbar {
     font-size: 8px !important;
     padding: 2px 0 !important;
-    white-space: normal !important;
-    overflow-x: visible !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
     line-height: 1.2 !important;
     text-align: center !important;
   }
+
 
   .post-content img,
   .theme-dark .post-content img {
