@@ -173,6 +173,12 @@ a:active {
   color: #ffff00;
 }
 
+/* global li rule to enforce readable text across all devices */
+
+li {
+  font-size: 10px;
+}
+
 .screen ul,
 .screen li {
   list-style: none !important;
