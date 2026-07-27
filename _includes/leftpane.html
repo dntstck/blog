@@ -241,9 +241,14 @@ fetch('{{ site.baseurl }}/search.json')
 <br>
     <li>Primary Stack: Linux, RISC-V, Rust, C, Lua</li>
     <li>Focus: Rust & RISC-V</li>
-    <li>Roles: Systems, Rust & HPC Engineer</li>
-    <li>Current Projects: <a href="https://github.com/dntstck/riscv-microcluster" target="_blank" rel="noopener noreferrer">RISC-V Microcluster</a> & <a href="https://github.com/dntstck/virgo" target="_blank" rel="noopener noreferrer">Virgo</a></li>
-<br>
+    <li>Roles: Systems, Rust & HPC Engineer</li><br>
+<div class="bios-toggle" onclick="toggle('projects')" style="">[+] Projects</div>
+    <div id="projects" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
+        <ul>
+            <li><a href="https://github.com/dntstck/riscv-microcluster" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">RISC-V Microcluster</a></li>
+            <li><a href="https://github.com/dntstck/virgo" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">Virgo</a></li>   
+        </ul>
+     </div><br>
     <div class="bios-toggle" onclick="toggle('certs')" style="">[+] Certificates</div>
     <div id="certs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
@@ -277,7 +282,7 @@ fetch('{{ site.baseurl }}/search.json')
             <li><span style="color:#ffff !important;">Bash & Lua Scripting<span></li>
             <li><span style="color:#ffff !important;">Linux Administration<span></li>
             <li><span style="color:#ffff !important;">Proxmox & Docker</span></li>
-            <li><span style="color:#ffff !important;">Networking | TCP/IP</span></li>
+            <li><span style="color:#ffff !important;">TCP/IP | Networking </span></li>
 	    <li><span style="color:#ffff !important;">CI/CD | Automation</span></li>
         </ul>
     </div>
