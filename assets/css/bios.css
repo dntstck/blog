@@ -334,20 +334,6 @@ code {
     padding: 1 0.5ch;           
     line-height: 1.2;           
 }
-/* mobile smooth scroll */
-@media (max-width: 600px) {
-    .statusbar,
-    .theme-dark .statusbar {
-        -webkit-overflow-scrolling: touch;
-        font-size: 10px;
-    }
-
-    .left-pane li,
-    .theme-dark .left-pane li {
-        font-size: 10px !important;
-    }
-
-}
 
 /* blinking cursor */
 
@@ -589,3 +575,70 @@ code {
   z-index: 9999;
   animation: blink 0.7s steps(1) infinite;
 }
+
+/* ============================================================
+   mobile 
+   ============================================================ */
+
+@media (max-width: 600px) {
+    .statusbar,
+    .theme-dark .statusbar {
+        -webkit-overflow-scrolling: touch;
+        font-size: 10px;
+    }
+
+    .left-pane li,
+    .theme-dark .left-pane li {
+        font-size: 10px !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+
+  .screen,
+  .theme-dark .screen {
+    grid-template-columns: 100% !important;
+  }
+
+  /* kill the divider */
+  .screen::before,
+  .theme-dark .screen::before {
+    display: none !important;
+  }
+
+  /* make panes full width  */
+  .left-pane,
+  .right-pane,
+  .theme-dark .left-pane,
+  .theme-dark .right-pane {
+    width: 100% !important;
+    padding: 6px !important;
+  }
+
+  /* shrink fonts */
+  body,
+  .theme-dark body {
+    font-size: 8px !important;
+  }
+
+  /* list item scaling  */
+  .left-pane li,
+  .right-pane li,
+  .post-content li,
+  .theme-dark .left-pane li,
+  .theme-dark .right-pane li,
+  .theme-dark .post-content li {
+    font-size: inherit !important;
+  }
+
+  .statusbar,
+  .theme-dark .statusbar {
+    font-size: 10px !important;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+

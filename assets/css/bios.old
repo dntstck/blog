@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'Press Start 2P';
-  src: url('/assets/fonts/press-start-2p.woff2') format('woff2');
+  src: url('../fonts/press-start-2p.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PxPlus IBM VGA8';
-  src: url('/assets/fonts/PxPlusIBM-VGA8.woff') format('woff');
+  src: url('../fonts/PxPlusIBM-VGA8.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -71,7 +71,7 @@ body {
   color: #000;
   align-items: stretch;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 90vh;
   height: auto;
   position: relative;
 }
@@ -299,6 +299,56 @@ code {
   font-size: 14px;
 }
 
+.bios-dropdown {
+    background: #000;
+    color: #fff;
+    border: 1px solid #ffff00;
+    padding: 10px;
+    font-family: 'PxPlus IBM VGA8', monospace;
+    margin-top: 10px;
+}
+
+.bios-toggle {
+    cursor: pointer;
+    color: #ffff00;
+}
+
+.bios-dropdown a {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.bios-dropdown a:hover {
+    text-decoration: underline;
+}
+
+/* status bar fix for mobile */
+
+.statusbar {
+    display: block;
+    white-space: nowrap;      
+    overflow-x: auto;          
+    box-sizing: border-box;
+
+    text-align: center;        
+    padding: 1 0.5ch;           
+    line-height: 1.2;           
+}
+/* mobile smooth scroll */
+@media (max-width: 600px) {
+    .statusbar,
+    .theme-dark .statusbar {
+        -webkit-overflow-scrolling: touch;
+        font-size: 10px;
+    }
+
+    .left-pane li,
+    .theme-dark .left-pane li {
+        font-size: 10px !important;
+    }
+
+}
+
 /* blinking cursor */
 
 .cursor {
@@ -370,7 +420,7 @@ code {
   color: #c0c0c0;
   align-items: stretch;
   overflow: hidden;
-  min-height: 92vh;
+  min-height: 90vh;
   height: auto;
   position: relative;
 }
@@ -418,7 +468,7 @@ code {
   font-size: 12px;
   text-align: center;
   padding: 4px;
-  border-top: none;
+  border-top: 1px solid #808080 !important;
 }
 
 .theme-dark .screen a:link,
@@ -519,6 +569,16 @@ code {
 .theme-dark .statusbar {
   border-top: 1px solid #fff !important;
 }
+
+.theme-dark .bios-dropdown {
+    background: #000;
+    border-color: #ffff00;
+}
+
+.theme-dark .bios-item {
+    color: #fff;
+}
+
 
 .theme-dark .cursor {
   display: inline-block;
