@@ -582,18 +582,15 @@ code {
 
 @media (max-width: 600px) {
 
-
   .screen,
   .theme-dark .screen {
     grid-template-columns: 100% !important;
   }
 
-
   .screen::before,
   .theme-dark .screen::before {
     display: none !important;
   }
-
 
   .left-pane,
   .right-pane,
@@ -603,12 +600,10 @@ code {
     padding: 6px !important;
   }
 
-
   body,
   .theme-dark body {
     font-size: 8px !important;
   }
-
 
   .left-pane li,
   .right-pane li,
@@ -618,7 +613,6 @@ code {
   .theme-dark .post-content li {
     font-size: inherit !important;
   }
-
 
   .menubar,
   .theme-dark .menubar {
@@ -631,16 +625,15 @@ code {
     font-size: 8px !important;
   }
 
-
   .statusbar,
   .theme-dark .statusbar {
     font-size: 8px !important;
     padding: 2px 0 !important;
-    white-space: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    white-space: normal !important;
+    overflow-x: visible !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
   }
-
 
   .post-content img,
   .theme-dark .post-content img {
@@ -654,4 +647,5 @@ code {
     border: 2px solid #ffff00;
   }
 }
+
 
