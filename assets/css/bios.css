@@ -344,7 +344,7 @@ code {
 
     .left-pane li,
     .theme-dark .left-pane li {
-        font-size: 10px;
+        font-size: 10px !important;
     }
 
 }
