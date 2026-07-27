@@ -71,7 +71,7 @@ body {
   color: #000;
   align-items: stretch;
   overflow: hidden;
-  min-height: 91vh;
+  min-height: 90vh;
   height: auto;
   position: relative;
 }
@@ -328,17 +328,18 @@ code {
     .theme-dark .statusbar {
     display: block;
     white-space: nowrap;      
-    overflow-x: auto;          
+    overflow-x: auto; 
+    overflow-y: hidden;         
     box-sizing: border-box;
     text-align: center;        
-    padding: 1 0.5ch;           
-    line-height: 1.4;           
+    padding: 10px 0.5ch;           
+    line-height: 1;
+    font-size: 11px;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    min-height: 1;
 }
-
-.statusbar * {
-    font-size: inherit;
-}
-
 
 /* mobile smooth scroll */
 @media (max-width: 600px) {
@@ -351,7 +352,6 @@ code {
     font-size: inherit;
     }
 }
-
 
 /* blinking cursor */
 
@@ -424,7 +424,7 @@ code {
   color: #c0c0c0;
   align-items: stretch;
   overflow: hidden;
-  min-height: 91vh;
+  min-height: 90vh;
   height: auto;
   position: relative;
 }
