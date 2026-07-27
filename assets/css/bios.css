@@ -658,7 +658,7 @@ code {
     padding: 8px !important;
     margin: 0 0 1rem 0 !important;
     letter-spacing: 1px;
-    font-size: 10px;
+    font-size: 10px; 
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-x: auto;
