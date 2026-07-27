@@ -288,7 +288,7 @@ pre {
   padding: 8px !important;
   margin: 0 0 1rem 0 !important;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 code {
@@ -296,7 +296,7 @@ code {
   padding: 2px 4px !important;
   font-family: 'PxPlus IBM VGA8' !important;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .bios-dropdown {
