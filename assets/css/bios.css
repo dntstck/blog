@@ -629,10 +629,11 @@ code {
     font-size: 8px !important;
     padding: 2px 0 !important;
     white-space: nowrap !important;
-    overflow: hidden !important;
     overflow-x: auto; 
+    overflow-y: hidden;
     line-height: 1.2 !important;
     text-align: center !important;
+    font-size: clamp(7px, 2.2vw, 10px);
   }
 
 
@@ -646,6 +647,7 @@ code {
     margin: 10px auto !important;
     border-width: 1px !important;
     border: 2px solid #ffff00;
+    padding-left: 5px;
   }
 }
 
