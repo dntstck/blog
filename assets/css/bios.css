@@ -324,23 +324,16 @@ code {
 
 /* status bar fix for mobile */
 
-.statusbar,
-    .theme-dark .statusbar {
+.statusbar {
     display: block;
     white-space: nowrap;      
-    overflow-x: auto; 
-    overflow-y: hidden;         
+    overflow-x: auto;          
     box-sizing: border-box;
-    text-align: center;        
-    padding: 10px 0.5ch;           
-    line-height: 1;
-    font-size: 11px;
-    bottom: 0;
-    left: 0;
-    height: auto;
-    min-height: 1;
-}
 
+    text-align: center;        
+    padding: 1 0.5ch;           
+    line-height: 1.2;           
+}
 /* mobile smooth scroll */
 @media (max-width: 600px) {
     .statusbar,
