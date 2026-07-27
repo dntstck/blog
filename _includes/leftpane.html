@@ -63,7 +63,7 @@
 {% if future.size > 0 %}
   {% assign sorted = future | sort: "publishDate" %}
   {% assign next = sorted.first %}
-  <li>Next Publish:<span style="color:#ffff00 !important;"> {{ next.publishDate | date: "%Y-%m-%d }}</span></li>
+  <li>Next Publish:<span style="color:#ffff00 !important;"> {{ next.publishDate | date: "%Y-%m-%d %H:%M"}}</span></li>
 {% else %}
   <li>Next Publish: none</li>
 {% endif %}
