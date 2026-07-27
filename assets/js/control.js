@@ -26,7 +26,7 @@ document.addEventListener("keydown", (e) => {
     }
 
     // f10 
-    if (e.key === "F10") {
+    if (e.key === "F9") {
         window.location = `${base}/exit.html`;
     }
 
@@ -37,7 +37,7 @@ document.addEventListener("keydown", (e) => {
 
     // esc 
     if (e.key === "Escape") {
-        window.location = `${base}/`;
+        window.location = `${base}`;
     }
 });
 
