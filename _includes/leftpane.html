@@ -63,7 +63,7 @@
 {% if future.size > 0 %}
   {% assign sorted = future | sort: "publishDate" %}
   {% assign next = sorted.first %}
-  <li>Next Publish:<span style="color:#ffff00 !important;"> {{ next.publishDate | date: "%Y-%m-%d %H:%M" }}</span></li>
+  <li>Next Publish:<span style="color:#ffff00 !important;"> {{ next.publishDate | date: "%Y-%m-%d }}</span></li>
 {% else %}
   <li>Next Publish: none</li>
 {% endif %}
@@ -264,7 +264,7 @@ fetch('{{ site.baseurl }}/search.json')
         </ul>
      </div><br>
      <div class="bios-toggle" onclick="toggle('exp')">[+] Experience</div>
-     <div id="exp" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: 10px; margin-top: 0px;">
+     <div id="exp" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
             <li><span style="color:#ffff !important;">RISC‑V Clusters</span></li>
             <li><span style="color:#ffff !important;">High Performance Compute<span></li>
