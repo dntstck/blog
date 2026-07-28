@@ -579,7 +579,7 @@ code {
    mobile 
    ============================================================ */
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (orientation: landscape) {
 
   .screen,
   .theme-dark .screen {
@@ -686,7 +686,7 @@ code {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 898px) {
   .theme-dark .left-pane {
     border-bottom: 1px solid #444; 
     margin-bottom: 6px;
@@ -694,7 +694,7 @@ code {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 898px) {
   .left-pane {
     border-bottom: 1px solid #FFF; 
     margin-bottom: 6px;
