@@ -242,14 +242,14 @@ fetch('{{ site.baseurl }}/search.json')
     <li>Primary Stack: Linux, RISC-V, Rust, C, Lua</li>
     <li>Focus: Rust & RISC-V</li>
     <li>Roles: Systems, Rust & HPC Engineer</li><br>
-<div class="bios-toggle" onclick="toggle('projects')" style="">[+] Projects</div>
+<div class="bios-toggle" onclick="toggle('projects')" style=""><span class="icon">[+]</span> Projects</div>
     <div id="projects" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
             <li><a href="https://github.com/dntstck/riscv-microcluster" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">RISC-V Microcluster</a></li>
             <li><a href="https://github.com/dntstck/virgo" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">Virgo</a></li>   
         </ul>
      </div><br>
-    <div class="bios-toggle" onclick="toggle('certs')" style="">[+] Certificates</div>
+    <div class="bios-toggle" onclick="toggle('certs')" style=""><span class="icon">[+]</span> Certificates</div>
     <div id="certs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
             <li><a href="{{ site.baseurl }}/certs/fullstack-hyperiondev.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">FullStack</a></li>
@@ -259,7 +259,7 @@ fetch('{{ site.baseurl }}/search.json')
             <li><a href="{{ site.baseurl }}/certs/javascript-mimo.pdf" target="_blank" rel="noopener noreferrer" style="color:#fff !important;">JavaScript</a></li></li> 
         </ul>
      </div><br>
-     <div class="bios-toggle" onclick="toggle('langs')">[+] Languages</div>
+     <div class="bios-toggle" onclick="toggle('langs')"><span class="icon">[+]</span> Languages</div>
      <div id="langs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
             <li><span style="color:#fff !important;">Rust</span></li>
@@ -290,7 +290,12 @@ fetch('{{ site.baseurl }}/search.json')
 <script>
 function toggle(id) {
   const el = document.getElementById(id);
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  const toggleEl = el.previousElementSibling;        // the .bios-toggle div
+  const icon = toggleEl.querySelector('.icon');      // the [+/−] span
+
+  const isOpen = el.style.display === 'block';
+  el.style.display = isOpen ? 'none' : 'block';
+  icon.textContent = isOpen ? '[+]' : '[-]';
 }
 </script>
   <br>  
