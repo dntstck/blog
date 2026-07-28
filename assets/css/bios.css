@@ -702,4 +702,12 @@ code {
   }
 }
 
+/* force portait mode everywhere */
+
+@media (orientation: landscape) and (max-width: 900px) {
+  body {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
 
