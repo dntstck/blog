@@ -9,7 +9,7 @@ OUTPUT_DIR="$SCRIPT_DIR/assets/img"
 for IMAGE in $INPUT_DIR/*.{jpg,jpeg,png}; do
   if [[ -f "$IMAGE" ]]; then
     BASENAME=$(basename "$IMAGE")
-    convert "$IMAGE" -resize 480x320\! "$OUTPUT_DIR/$BASENAME"
+    convert "$IMAGE" -resize 480 "$OUTPUT_DIR/$BASENAME"
     echo "Resized $IMAGE → $OUTPUT_DIR/$BASENAME"
   fi
 done
