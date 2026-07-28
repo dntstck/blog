@@ -579,7 +579,7 @@ code {
    mobile 
    ============================================================ */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
   .screen,
   .theme-dark .screen {
@@ -677,7 +677,7 @@ code {
 
 }
 
-@media (max-width: 898px) {
+@media (max-width: 900px) {
   .sb-select,
   .sb-info,
   .sb-exit,
@@ -699,15 +699,6 @@ code {
     border-bottom: 1px solid #FFF; 
     margin-bottom: 6px;
     padding-bottom: 6px;
-  }
-}
-
-/* force portait mode everywhere */
-
-@media (orientation: landscape) and (max-width: 900px) {
-  body {
-    max-width: 480px;
-    margin: 0 auto;
   }
 }
 
