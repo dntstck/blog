@@ -112,6 +112,18 @@
   updateUptime();
 </script>
 
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  const toggleEl = el.previousElementSibling;        
+  const icon = toggleEl.querySelector('.icon');      
+
+  const isOpen = el.style.display === 'block';
+  el.style.display = isOpen ? 'none' : 'block';
+  icon.textContent = isOpen ? '[+]' : '[-]';
+}
+</script>
+
 {% when "boot" %}
   <h2>LATEST POSTS</h2>
   <ul>
