@@ -2,6 +2,7 @@
 title: "slurm-riscv"
 date: 2026-07-22T04:58:17Z
 publishDate: 2026-07-25T00:00:00Z
+featured: false
 tags: [riscv, linux, hpc, slurm]
 ---
 

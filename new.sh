@@ -13,7 +13,7 @@ shift
 
 RAW_TAGS="$*"
 
-# replace commas with spaces / normalize spacing & convert to YAML array
+# replace commas with spaces / normalize spacing & convert
 
 TAG_LIST=$(echo "$RAW_TAGS" | tr ',' ' ' | xargs)
 TAGS_YAML="[${TAG_LIST// /, }]"
@@ -34,11 +34,19 @@ FILENAME="${DATE_PREFIX}-${SAFE_TITLE}.md"
 DIRECTORY="./todo"
 mkdir -p "$DIRECTORY"
 
+read -p "Is this post featured? (y/n): " FEATURED
+if [[ "$FEATURED" =~ ^[Yy]$ ]]; then
+  FEATURED_FLAG="featured: true"
+else
+  FEATURED_FLAG="featured: false"
+fi
+
 cat <<EOF > "$DIRECTORY/$FILENAME"
 ---
 title: "$TITLE"
 date: $DATE
 publishDate: $PUBLISH_DATE
+$FEATURED_FLAG
 tags: $TAGS_YAML
 ---
 
