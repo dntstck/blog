@@ -290,8 +290,8 @@ fetch('{{ site.baseurl }}/search.json')
 <script>
 function toggle(id) {
   const el = document.getElementById(id);
-  const toggleEl = el.previousElementSibling;        // the .bios-toggle div
-  const icon = toggleEl.querySelector('.icon');      // the [+/−] span
+  const toggleEl = el.previousElementSibling;        
+  const icon = toggleEl.querySelector('.icon');      
 
   const isOpen = el.style.display === 'block';
   el.style.display = isOpen ? 'none' : 'block';
