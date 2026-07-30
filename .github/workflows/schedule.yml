@@ -20,11 +20,17 @@ jobs:
       uses: actions/checkout@v4
       with:
         clean: false
+        ref: master
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '24'
+
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
 
     - name: Run scheduling script
       run: node deploy/schedulePosts.js
