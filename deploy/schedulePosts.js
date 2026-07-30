@@ -38,7 +38,7 @@ fs.readdirSync(scheduledDir).forEach(file => {
   }
 });
 
-// commit & push only if something moved
+// commit & push if something moved
 if (movedPost) {
   try {
     execSync('git add .');
