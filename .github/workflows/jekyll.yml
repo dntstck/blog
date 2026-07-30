@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      - name: Build with Jekyll (use your config, no overrides)
+      - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
