@@ -2,11 +2,13 @@ name: Schedule Posts
 
 permissions:
   contents: write
-  actions: write
 
 on:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    paths:
+      - 'scheduled/**'
   workflow_dispatch:
 
 jobs:
@@ -19,6 +21,9 @@ jobs:
         with:
           ref: master
           clean: false
+
+      - name: Ensure we are on master
+        run: git checkout master
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,23 +41,8 @@ jobs:
       - name: Commit and push changes
         run: |
           git add .
-          git commit -m "Publish scheduled posts" || echo "No changes"
+          git commit -m "Publish scheduled posts" || echo "No changes to commit"
           git push origin master
 
-      - name: Get new commit SHA
-        id: sha
-        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-
-      - name: Trigger Jekyll build with SHA
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: "jekyll.yml",
-              ref: "master",
-              inputs: {
-                sha: "${{ steps.sha.outputs.sha }}"
-              }
-            })
+      - name: Log new commit SHA
+        run: git rev-parse HEAD
