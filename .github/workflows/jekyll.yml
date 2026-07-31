@@ -19,19 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Determine target SHA
-        id: target
-        run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            echo "sha=${{ github.sha }}" >> $GITHUB_OUTPUT
-          else
-            echo "sha=master" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Clone repo at target SHA
+      - name: Clone repo
         run: |
           git clone https://github.com/${{ github.repository }} .
-          git checkout ${{ steps.target.outputs.sha }}
+          git checkout ${{ github.sha }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
