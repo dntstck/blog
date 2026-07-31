@@ -19,9 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repo
+      - name: Clone repo correctly
         run: |
-          git clone https://github.com/${{ github.repository }} .
+          git clone https://github.com/${{ github.repository }} repo
+          cd repo
           git checkout ${{ github.sha }}
 
       - name: Setup Ruby
@@ -31,9 +32,11 @@ jobs:
           bundler-cache: false
 
       - name: Install dependencies
+        working-directory: repo
         run: bundle install
 
       - name: Build with Jekyll
+        working-directory: repo
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
@@ -41,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: repo/_site
 
   deploy:
     environment:
