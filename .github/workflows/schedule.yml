@@ -4,11 +4,11 @@ permissions:
   contents: write
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
     paths:
       - 'scheduled/**'
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -35,6 +35,15 @@ jobs:
     - name: Run scheduling script
       run: node deploy/schedulePosts.js
 
+    - name: Wait for GitHub to register the new commit
+      run: |
+        NEW_SHA=$(git rev-parse HEAD)
+        echo "Waiting for remote to show commit $NEW_SHA"
+        until git ls-remote origin master | grep -q "$NEW_SHA"; do
+          sleep 3
+        done
+        echo "Remote updated."
+
     - name: Trigger Jekyll build workflow
       run: |
         COMMIT_SHA=$(git rev-parse HEAD)
@@ -42,5 +51,4 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/jekyll.yml/dispatches \
-          -d "{\"ref\":\"master\",\"inputs\":{\"ref\":\"$COMMIT_SHA\"}}"
-
+          -d "{\"ref\":\"$COMMIT_SHA\"}"

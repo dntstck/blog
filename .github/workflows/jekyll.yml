@@ -1,12 +1,14 @@
 name: Deploy Jekyll site to GitHub Pages
 
 on:
+  push:
+    branches: ["master"]
   workflow_dispatch:
     inputs:
       ref:
         description: "Commit SHA to build"
         required: false
-        default: ""
+        default: "master"
 
 permissions:
   contents: read
