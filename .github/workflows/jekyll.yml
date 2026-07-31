@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref || github.ref }}
+          ref: "${{ github.event.inputs.ref || github.ref }}"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
