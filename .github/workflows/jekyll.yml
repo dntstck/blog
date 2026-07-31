@@ -5,7 +5,8 @@ on:
     inputs:
       ref:
         description: "Commit SHA to build"
-        required: true
+        required: false
+        default: "master"
 
 permissions:
   contents: read

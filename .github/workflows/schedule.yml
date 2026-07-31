@@ -4,11 +4,11 @@ permissions:
   contents: write
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   push:
     paths:
       - 'scheduled/**'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
