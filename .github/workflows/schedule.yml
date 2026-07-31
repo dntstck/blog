@@ -6,6 +6,9 @@ permissions:
 on:
   schedule:
     - cron: '0 0 * * *'
+  push:
+    paths:
+      - 'scheduled/**'
   workflow_dispatch:
 
 jobs:
