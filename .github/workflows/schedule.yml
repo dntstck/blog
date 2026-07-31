@@ -16,33 +16,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          clean: false
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        clean: false
+        ref: master
 
-      - name: Ensure we are on master
-        run: git checkout master
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24'
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
 
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+    - name: Run scheduling script
+      run: node deploy/schedulePosts.js
 
-      - name: Run scheduling script
-        run: node deploy/schedulePosts.js
+    - name: Wait for GitHub to register the new commit
+      run: |
+        NEW_SHA=$(git rev-parse HEAD)
+        echo "Waiting for remote to show commit $NEW_SHA"
+        until git ls-remote origin master | grep -q "$NEW_SHA"; do
+          sleep 3
+        done
+        echo "Remote updated."
 
-      - name: Commit and push changes
-        run: |
-          git add .
-          git commit -m "Publish scheduled posts" || echo "No changes to commit"
-          git push origin master
+    - name: Trigger Jekyll build workflow
+      run: |
+        COMMIT_SHA=$(git rev-parse HEAD)
+        curl -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/repos/${{ github.repository }}/actions/workflows/jekyll.yml/dispatches \
+          -d "{\"ref\":\"$COMMIT_SHA\"}"
 
-      - name: Log new commit SHA
-        run: git rev-parse HEAD
