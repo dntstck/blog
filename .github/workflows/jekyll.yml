@@ -33,6 +33,11 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: false
+     
+      - name: Debug workspace
+        run: |
+          pwd
+          ls -R .
 
       - name: Install dependencies
         run: bundle install
