@@ -49,6 +49,6 @@ jobs:
         COMMIT_SHA=$(git rev-parse HEAD)
         curl -X POST \
           -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Authorization: Bearer ${{ secrets.BLOG_SECRET }}" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/jekyll.yml/dispatches \
           -d "{\"ref\":\"master\", \"inputs\": { \"ref\": \"$COMMIT_SHA\" }}"
