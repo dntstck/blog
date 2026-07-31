@@ -38,7 +38,7 @@ jobs:
       - name: Run scheduling script
         run: node deploy/schedulePosts.js
 
-      - name: Push changes
+      - name: Commit and push changes
         run: |
           git add .
           git commit -m "Publish scheduled posts" || echo "No changes to commit"
