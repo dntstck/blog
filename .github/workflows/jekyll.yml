@@ -6,7 +6,7 @@ on:
       ref:
         description: "Commit SHA to build"
         required: false
-        default: "master"
+        default: ""
 
 permissions:
   contents: read
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref }}
+          ref: ${{ github.event.inputs.ref || github.ref }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

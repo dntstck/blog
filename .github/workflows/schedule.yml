@@ -42,4 +42,5 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/jekyll.yml/dispatches \
-          -d "{\"ref\":\"$COMMIT_SHA\"}"
+          -d "{\"ref\":\"master\",\"inputs\":{\"ref\":\"$COMMIT_SHA\"}}"
+
