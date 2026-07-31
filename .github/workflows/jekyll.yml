@@ -1,5 +1,7 @@
 name: Deploy Jekyll site to GitHub Pages
 
+
+
 on:
   push:
     branches: ["master"]
@@ -23,21 +25,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for commit propagation
+        run: sleep 15
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref || github.ref }}
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.ref || github.sha }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: false
-     
-      - name: Debug workspace
-        run: |
-          pwd
-          ls -R .
 
       - name: Install dependencies
         run: bundle install
