@@ -34,11 +34,18 @@ FILENAME="${DATE_PREFIX}-${SAFE_TITLE}.md"
 DIRECTORY="./todo"
 mkdir -p "$DIRECTORY"
 
-read -p "Is this post featured? (y/n): " FEATURED
+read -p "featured? (y/n): " FEATURED
 if [[ "$FEATURED" =~ ^[Yy]$ ]]; then
   FEATURED_FLAG="featured: true"
 else
   FEATURED_FLAG="featured: false"
+fi
+
+read -p "devlog? (y/n): " DEVLOG
+if [[ "$DEVLOG" =~ ^[Yy]$ ]]; then
+  DEVLOG_FLAG="devlog: true"
+else
+  DEVLOG_FLAG="devlog: false"
 fi
 
 cat <<EOF > "$DIRECTORY/$FILENAME"
@@ -47,6 +54,7 @@ title: "$TITLE"
 date: $DATE
 publishDate: $PUBLISH_DATE
 $FEATURED_FLAG
+$DEVLOG_FLAG
 tags: $TAGS_YAML
 ---
 

@@ -3,6 +3,7 @@ title: "gitserver-setup"
 date: 2026-07-29T18:46:27Z
 publishDate: 2026-07-30T00:00:00Z
 featured: false
+devlog: false
 tags: [development, git, server, linux]
 ---
 

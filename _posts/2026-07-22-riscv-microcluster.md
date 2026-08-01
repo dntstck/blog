@@ -3,6 +3,7 @@ title: "riscv-microcluster"
 date: 2026-07-22T04:48:04Z
 publishDate: 2026-07-25T00:00:00Z
 featured: false
+devlog: false
 tags: [riscv, linux, hpc, orangepi]
 ---
 

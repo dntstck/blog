@@ -8,19 +8,33 @@
     <div class="bios-toggle" onclick="toggle('recent')" style=""><span class="icon">[+]</span> Recent Posts</div>
     <div id="recent" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
-          {% for post in site.posts limit:5 %}
-      <li>
-      <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
-	{{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
-      </a>
-    </li>
-  {% endfor %}</ul>
+	{% assign recent_non_devlogs = site.posts | where_exp: "post", "post.devlog != true" %}
+          {% for post in recent_non_devlogs limit:5 %}
+  	<li>
+   	  <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
+   	   {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+ 	  </a>
+  	</li>
+	{% endfor %}
+	</ul>
      </div><br>
     <div class="bios-toggle" onclick="toggle('featured')" style=""><span class="icon">[+]</span> Featured Posts</div>
     <div id="featured" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
         <ul>
               {% assign featured_posts = site.posts | where: "featured", true %}
       {% for post in featured_posts %}
+        <li>
+          <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
+            {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}</ul>
+     </div><br>
+    <div class="bios-toggle" onclick="toggle('devlogs')" style=""><span class="icon">[+]</span> Devlogs</div>
+    <div id="devlogs" class="bios-dropdown" style="display:none; border:none; background:none; font-family: 'Press Start 2P'; font-size: inherit; margin-top: 0px;">
+        <ul>
+              {% assign devlog_posts = site.posts | where: "devlog", true %}
+      {% for post in devlog_posts %}
         <li>
           <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
             {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
@@ -126,16 +140,17 @@ function toggle(id) {
 
 {% when "boot" %}
   <h2>LATEST POSTS</h2>
+{% assign non_devlogs = site.posts | where_exp: "post", "post.devlog != true" %}
   <ul>
-  {% for post in site.posts limit:25 %}
-    <li>
-      <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
-	{{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
-      </a>
-
-    </li>
-  {% endfor %}
+    {% for post in non_devlogs limit:25 %}
+      <li>
+        <a href="#" onclick="loadPane('{{ site.baseurl }}{{ post.url }}')">
+          {{ post.date | date: "%Y-%m-%d" }} — {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
+
 
 {% when "advanced" %}
 
