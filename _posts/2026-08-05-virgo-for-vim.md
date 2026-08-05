@@ -1,7 +1,7 @@
 ---
 title: "virgo-for-vim"
 date: 2026-08-05T08:39:37
-publishDate: 2026-08-05T00:00:00
+publishDate: 2026-08-05T23:00:00
 featured: true
 devlog: false
 tags: [rust, vim, development, ssh, terminal, ide]
