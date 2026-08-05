@@ -153,22 +153,6 @@ reproducible build environments for:
 
 these machines allow native risc‑v builds inside containers, backed by the private registry.
 
-the private registry itself runs on `riscv-core` and stores images on nvme:
-
-```
-/srv/nvme/registry
-```
-
-it is used for:
-
-- risc‑v container builds
-- kubernetes deployments
-- slurm/mpi job containers
-- ci pipelines
-- reproducible builds
-
-certificates are generated via scripts in `scripts/`, and the registry is deployed via manifests in `k8s/registry/`.
-
 ### docker/observability/
 full grafana + prometheus + loki stack:
 
@@ -222,23 +206,6 @@ this directory is the declarative layer for the entire k3s cluster.
 take heed that running kubernetes on risc‑v is not a turnkey operation.
  the rv2 cluster uses a **custom‑compiled k3s build**,
 built from source with risc‑v patches applied to the kubelet, containerd, and cni plugins.
-
-the build process produces:
-
-- `k3s` (risc‑v elf)
-- `kubelet`
-- `kubectl`
-- `containerd`
-- `runc`
-- `flannel` or `calico` cni plugins
-- supporting binaries for cluster networking
-
-all binaries are stored under `bin/` for reproducible deployment.
-
-the control plane runs on **riscv-core**, while worker nodes (`riscv-node-1`, `riscv-node-2`) join via kubeadm‑style bootstrap scripts.
-the cluster runs full workloads: dev pods, ci runners, observability stack, registry, ingress, and internal services.
-
-this is a **native risc‑v kubernetes cluster**, not emulated, not cross‑arch.
 
 ### dev pods for risc‑v development
 
@@ -399,7 +366,7 @@ hardware:
 - static ips
 - microrack chassis
 
-software (from this repo):
+software:
 - custom k3s/k8s
 - custom slurm
 - custom pmix/openmpi
@@ -434,8 +401,6 @@ the architecture supports:
 - adding more ci runners
 - adding more dev pods
 - adding more observability exporters
-
-the repo already contains the modular structure needed for expansion.
 
 # 10. why this cluster matters
 
