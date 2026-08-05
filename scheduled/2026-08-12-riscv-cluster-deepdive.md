@@ -24,17 +24,16 @@ with its local registry for risc‑v containers, on‑device metrics collection,
 - dual nvme slots
 - dual gbe nics
 - risc‑v cpu (xuantie c910)
-- nvme layout
-- rv2‑1 (riscv-core): 2× 128gb nvme
-- rv2‑2 (riscv-node-1): 1× 128gb nvme
-- rv2‑3 (riscv-node-2): 1× 128gb nvme
+- nvme:
+-  rv2‑1 (riscv-core): 2× 128gb nvme
+-  rv2‑2 (riscv-node-1): 1× 128gb nvme
+-  rv2‑3 (riscv-node-2): 1× 128gb nvme
 - networking
-- tp‑link 5‑port poe switch
+-  tp‑link 5‑port poe switch
 - chassis
 - modified phanteks 3‑bay hdd caddy
 - each rv2 mounted on its own tray
 - nvme drives mounted directly under each board
-- cabling routed through the rear channel for airflow
 
 ![rv2 trays](assets/img/rv2-trays.png)
 
@@ -49,6 +48,7 @@ cluster ips:
 - riscv-node-2: 192.168.10.66
 
 these ips are static and defined in `/etc/hosts` across all nodes.
+
 each rv2 has dual gbe:
 - nic0: cluster‑internal traffic
 - nic1: external services, registry, grafana, ingress
@@ -86,6 +86,9 @@ all nodes run a minimal ubuntu server distribution tuned for:
 - fast nvme i/o
 - clean systemd service orchestration
 - predictable boot behavior
+
+ubuntu server is not my first choice, i would have much preferred debian or alpine; but this is the only stable linux distro
+ that currently runs on the orangepi rv2. 
 
 ## git repo as a service
 
@@ -202,10 +205,6 @@ kubernetes deployment layer, all kubernetes manifests live here:
 - smoke tests
 
 this directory is the declarative layer for the entire k3s cluster.
-
-take heed that running kubernetes on risc‑v is not a turnkey operation.
- the rv2 cluster uses a **custom‑compiled k3s build**,
-built from source with risc‑v patches applied to the kubelet, containerd, and cni plugins.
 
 ### dev pods for risc‑v development
 
@@ -351,7 +350,7 @@ minimal system roots used by:
 
 these miniroots ensure consistent base systems across all nodes.
 
-# software & hardware in unison
+## software & hardware in unison
 
 the rv2 microrack is the hardware.
 the `riscv-core` repo is the software distribution.
@@ -389,7 +388,63 @@ the repo is designed so the entire cluster can be rebuilt from scratch using onl
 
 it is a **cluster distribution**, not a config dump.
 
-# **future expansion**
+# deployment
+
+## deployment workflow: building + pushing a risc‑v container
+
+the rv2 cluster uses a tight build loop for container development.
+a typical cycle looks like:
+
+```bash
+# build container
+docker build -t rust-alpine-env:latest .
+
+# tag + push to local registry
+docker tag rust-alpine-env:latest registry:5000/rust-alpine-env:latest
+docker push registry:5000/rust-alpine-env:latest
+
+# verify registry contents
+curl -k https://registry:5000/v2/_catalog 
+```
+
+## deployment workflow: deploying dev pods
+
+dev pods are rebuilt constantly during development, so the workflow is intentionally simple:
+
+```bash
+# remove old pod to force a fresh pull
+kubectl delete pod rust-dev -n dev
+
+# apply updated manifest
+kubectl apply -f rust-dev.yaml
+
+# inspect pod state
+kubectl describe pod rust-dev -n dev
+
+# enter the environment
+kubectl exec -it rust-dev -n dev -- bash
+```
+
+containers are always built natively on rv2 hardware, ensuring reproducible risc‑v artifacts.
+
+### deployment workflow: submitting an mpi job
+
+```bash
+sbatch jobs/matmul.slurm
+squeue
+cat slurm-*.out
+```
+
+### deployment workflow: running mpi workloads directly
+
+```bash
+mpirun -np 4 --host riscv-node-1,riscv-node-2 ./mpi/tests/riscv-vectorbench
+```
+
+the rv2 microcluster runs mpi workloads across nodes using pmix/openmpi built from source.
+
+
+# future expansion
 
 the architecture supports:
 
@@ -402,13 +457,12 @@ the architecture supports:
 - adding more dev pods
 - adding more observability exporters
 
-# 10. why this cluster matters
+# why this cluster matters
 
 this microrack is not just a hobby project.
 it represents a shift toward:
 
-- risc‑v as a first‑class compute architecture
-- hpc as a long‑term professional identity
+- risc‑v as first‑class compute architecture
 - systems engineering with cutting edge architectures
 - reproducible infrastructure
 - low‑power supercomputing
