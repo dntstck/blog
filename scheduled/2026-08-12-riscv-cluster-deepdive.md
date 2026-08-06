@@ -443,6 +443,18 @@ mpirun -np 4 --host riscv-node-1,riscv-node-2 ./mpi/tests/riscv-vectorbench
 
 the rv2 microcluster runs mpi workloads across nodes using pmix/openmpi built from source.
 
+# metrics
+
+this microcluster benefits from the beauty of grafana, compiling all scraped data from
+ prometheus & node_exporter into a visually aesthetic format.
+
+i split the dashboards in two, keeping one for general metrics and another purely for kubernetes metrics.
+
+![rv2 grafana, general dashboard](assets/img/devlog-v7-grafana.png)
+
+and the kubernetes dashboard:
+
+![rv2 grafana, kubernetes dashboard](assets/img/devlog-v7-grafana-k3s.png)
 
 # future expansion
 
