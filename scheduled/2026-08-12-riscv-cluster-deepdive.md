@@ -13,7 +13,7 @@ in 2025 i put together a fully‑functional risc‑v microrack supercomputer bui
  despite the small footprint, this cluster is anything but a toy; it runs kubernetes, slurm, pmix, openmpi, a private docker registry, grafana, prometheus, loki, and multiple web portals;
  all on native risc‑v silicon. the result is a compact but serious hpc system capable of driving multiple buildfarms, modern development environments, and ai workloads.
 with its local registry for risc‑v containers, on‑device metrics collection, native grafana stack, dual‑network backplane, and pure nvme storage, the setup delivers real performance.
- 24gb of combined ram and over 400gb of nvme give this machine more punch than its size suggests.
+ 24gb of combined ram and over 400gb of nvme give this machine far more punch than its small size suggests.
 
 ![rv2 cluster](assets/img/rv2-cluster.png)
 
@@ -25,11 +25,11 @@ with its local registry for risc‑v containers, on‑device metrics collection,
 - dual gbe nics
 - risc‑v cpu (xuantie c910)
 - nvme:
--  rv2‑1 (riscv-core): 2× 128gb nvme
--  rv2‑2 (riscv-node-1): 1× 128gb nvme
--  rv2‑3 (riscv-node-2): 1× 128gb nvme
+-rv2‑1 (riscv-core): 2× 128gb nvme
+-rv2‑2 (riscv-node-1): 1× 128gb nvme
+-rv2‑3 (riscv-node-2): 1× 128gb nvme
 - networking
--  tp‑link 5‑port poe switch
+-tp‑link 5‑port poe switch
 - chassis
 - modified phanteks 3‑bay hdd caddy
 - each rv2 mounted on its own tray
@@ -74,21 +74,18 @@ registry:5000
 this registry is used for:
 - risc‑v container builds
 - cluster‑wide deployments
-- artifact‑clean reproducible workflows
-- local ci for rust, c, and microservices
+- clean reproducible workflows
+- local ci for rust, c & microservices
 
 ## operating system 
 
 ### ubuntu server
 
 all nodes run a minimal ubuntu server distribution tuned for:
-- low‑latency networking
-- fast nvme i/o
-- clean systemd service orchestration
-- predictable boot behavior
-
-ubuntu server is not my first choice, i would have much preferred debian or alpine; but this is the only stable linux distro
- that currently runs on the orangepi rv2. 
+- risc-v, few stable linux builds exist for risc-v; but ubuntu is one of them.
+- networking, ubuntu server is a powerful distro for networking, server applications & more
+- stability, a reliable choice; the only stable operating system currently available for this hardware.
+- user experience, nearly every dev has used some variant of ubuntu. 
 
 ## git repo as a service
 
@@ -234,7 +231,7 @@ this allows:
 
 the dev pods turn the rv2 cluster into a full risc‑v development environment.
 
-## /k8s examples
+### /k8s examples;
 
 ### deploying a risc‑v rust service
 
@@ -390,58 +387,130 @@ it is a **cluster distribution**, not a config dump.
 
 # deployment
 
-## deployment workflow: building + pushing a risc‑v container
+## building containers (native risc‑v)
 
-the rv2 cluster uses a tight build loop for container development.
-a typical cycle looks like:
+containers are built directly on `riscv-core` using the toolchains in `docker/machines/`.
+a typical build cycle looks like:
 
 ```bash
-# build container
 docker build -t rust-alpine-env:latest .
-
-# tag + push to local registry
 docker tag rust-alpine-env:latest registry:5000/rust-alpine-env:latest
 docker push registry:5000/rust-alpine-env:latest
-
-# verify registry contents
-curl -k https://registry:5000/v2/_catalog 
 ```
 
-## deployment workflow: deploying dev pods
+the registry is always local:
 
-dev pods are rebuilt constantly during development, so the workflow is intentionally simple:
+```
+registry:5000
+```
+
+backed by:
+
+```
+/srv/nvme/registry
+```
+
+## verifying registry state
 
 ```bash
-# remove old pod to force a fresh pull
+curl -s https://registry:5000/v2/ --cacert /etc/registry/ca.crt
+```
+
+this confirms that the pushed image is available for k3s.
+
+## containerd cache control
+
+k3s uses containerd internally, so stale layers must be removed before redeploying:
+
+```bash
+sudo ctr -n k8s.io images rm registry:5000/rust-alpine-env:latest
+```
+
+this forces a clean pull from the registry on the next deployment.
+
+
+# kubernetes deployment workflows
+
+dev pods are rebuilt constantly during development.
+the workflow is intentionally simple:
+
+```bash
 kubectl delete pod rust-dev -n dev
-
-# apply updated manifest
 kubectl apply -f rust-dev.yaml
-
-# inspect pod state
 kubectl describe pod rust-dev -n dev
-
-# enter the environment
 kubectl exec -it rust-dev -n dev -- bash
 ```
 
-containers are always built natively on rv2 hardware, ensuring reproducible risc‑v artifacts.
+deleting the pod ensures that k3s pulls the latest image from the registry.
 
-### deployment workflow: submitting an mpi job
+## iterating manifests
 
 ```bash
-sbatch jobs/matmul.slurm
-squeue
-cat slurm-*.out
+vim rust-dev.yaml
+kubectl apply -f rust-dev.yaml
+kubectl describe pod rust-dev -n dev
 ```
 
-### deployment workflow: running mpi workloads directly
+this loop is used for:
+
+- rust dev pods
+- c dev pods
+- go dev pods
+- python dev pods
+- vim environments
+- sqlite/postgres test pods
+
+each environment is defined in `k8s/systems/`.
+
+## multi‑pod deployment
+
+```bash
+kubectl apply -f dev-riscv64-c.yaml \
+-f dev-riscv64-go.yaml \
+-f dev-riscv64-py.yaml \
+-f dev-riscv64-rust.yaml \
+-f dev-riscv64-vim.yaml
+```
+
+these manifests provide isolated, reproducible risc‑v development shells.
+
+## service deployment
+
+```bash
+kubectl apply -f postgres.yaml
+kubectl apply -f sqlite.yaml
+kubectl apply -f nginx-ingress.yaml
+kubectl apply -f grafana.yaml
+```
+
+the cluster uses:
+
+- local ingress
+- local observability stack
+- local databases
+- local dev pods
+- local registry
+
+everything runs inside the cluster
+
+## debugging workloads
+
+```bash
+kubectl get pods --all-namespaces
+kubectl describe pod nginx-ingress
+kubectl describe pod rust-dev -n dev
+kubectl get pv,pvc -n dev
+```
+
+# hpc workflows
+
+the rv2 microrack runs mpi workloads across nodes using pmix/openmpi built from source.
+
+## running mpi workloads directly
 
 ```bash
 mpirun -np 4 --host riscv-node-1,riscv-node-2 ./mpi/tests/riscv-vectorbench
 ```
-
-the rv2 microcluster runs mpi workloads across nodes using pmix/openmpi built from source.
 
 # metrics
 
@@ -471,15 +540,9 @@ the architecture supports:
 
 # why this cluster matters
 
-this microrack is not just a hobby project.
-it represents a shift toward:
-
-- risc‑v as first‑class compute architecture
-- systems engineering with cutting edge architectures
-- reproducible infrastructure
-- low‑power supercomputing
-
-the rv2 cluster is a miniature datacenter built from scratch, running a full hpc stack on open silicon.
+this microrack is not just a hobby project, or a "bunch of sbcs" connected together with kubernetes slapped on top. it is proof of what can be achieved 
+wtihout limit, without criticism & without judgement, but with curiosity, knowledge and discovery. a true "supercomputer"; completely on risc-v, running 
+slurm, openmpi, pmix and kubernetes... a miniature datacenter built from scratch, running a cutting edge architecture & full hpc stack on open silicon.
 
 essentially a supercomputer in a shoebox.
 
