@@ -181,6 +181,7 @@ the mainframe is the backbone of my virtual infrastructure. it’s just an old o
  but it runs every vServer in the homelab & despite the age, proxmox runs flawlessly on it.
  alpine vms keep resource usage low enough that i can comfortably run 20+ virtual nodes without issue. 
 not powerful, but reliable, predictable and stable.
+
 ### stream‑x64 (laptop)
 
 `4gb ram, 60gb emmc, debian 12`
@@ -229,8 +230,9 @@ the rv2 cluster handles all heavy compute:
 
 anything that requires speed, parallelism or architecture‑specific testing is offloaded to rv2. 
 this keeps the dev machines responsive and ensures that heavy workloads never interfere with day‑to‑day development.
+ 
+### gitserver
 
-### gitserver as the central hub
 `2gb ram, 500gb hdd, debian 12`
 
 code, manifests, configs and repos flow through the gitserver. 
@@ -243,8 +245,10 @@ it acts as the source of truth, the root of all knowledge and the core of all:
 - blog pulls updates
 
 ### ai cluster
+
 `wyse 3040 - 2gb ram, 8gb emmc`
 `luckfox pico max- 256mb ram, 32gb sd card`
+
 the ai cluster is the smallest part of the homelab, but it has a very specific purpose.
  it consists of one wyse 3040 thin client and three luckfox pico max sbcs. despite their extremely limited hardware,
  they form a functional micro‑llm cluster that handles lightweight inference tasks.
