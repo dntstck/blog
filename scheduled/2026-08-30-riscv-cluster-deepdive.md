@@ -1,7 +1,7 @@
 ---
 title: "riscv-cluster-deepdive"
 date: 2026-08-30T23:07:50
-publishDate: 2026-08-31T23:00:00
+publishDate: 2026-09-31T23:00:00
 featured: true
 devlog: false
 tags: [riscv, risc, cluster, rv2, homelab, networking, linux]
