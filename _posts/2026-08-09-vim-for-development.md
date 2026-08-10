@@ -174,45 +174,45 @@ that's the beauty of vim, so exceptionally customisable that no two custom build
 
 ### rust development
 
-`Plugin 'rust-lang/rust.vim'` - essential for rust development. adds language support & more
-`Plugin 'timonv/vim-cargo'` - enables the use of cargo inside vims command window.
-`Plugin 'arzg/vim-rust-syntax-ext'` - provides extended syntax highlighting.
-`Plugin 'dntstck/virgo'` - rust crate management tool for vim.
+`Plugin 'rust-lang/rust.vim'` - essential for rust development. adds language support & more <br>
+`Plugin 'timonv/vim-cargo'` - enables the use of cargo inside vims command window.<br>
+`Plugin 'arzg/vim-rust-syntax-ext'` - provides extended syntax highlighting.<br>
+`Plugin 'dntstck/virgo'` - rust crate management tool for vim.<br>
 
 ### ui enhancements
 
-`Plugin 'preservim/tagbar'` -  ctags‑powered symbol/tag viewer in a right‑side pane.
-`Plugin 'preservim/nerdtree'` - file explorer, viewable in a left pane.
-`Plugin 'vim-airline/vim-airline'` - adds a  lightweight statusline with mode, branch, file info etc.
-`Plugin 'vim-airline/vim-airline-themes'`- themes for airline.
-`Plugin 'jistr/vim-nerdtree-tabs'` -  keeps nerdtree open across tabs; syncs nerdtree state between tabpages.
-`Plugin 'ntpeters/vim-better-whitespace'` - highlights and optionally strips trailing whitespace.
-`Plugin 'luochen1990/rainbow'` - colour codes brackets () & braces {}, exceptional for deep nests in code.
-`Plugin 'mhinz/vim-startify'` - start screen with recent files, sessions, bookmarks.
-`Plugin 'Yggdroot/indentLine'` - displays indentation guides, exceptional for deep nests in code.
-`Plugin 'vimlab/split-term.vim'` - adds terminal split window for vim.
-`Plugin 'junegunn/goyo.vim'`- enables the use of "zen mode" which lets you focus on code.
-`Plugin 'junegunn/limelight.vim'` - limelight highlights your current line/code block & dims unfocused sections.
+`Plugin 'preservim/tagbar'` -  ctags‑powered symbol/tag viewer in a right‑side pane.<br>
+`Plugin 'preservim/nerdtree'` - file explorer, viewable in a left pane.<br>
+`Plugin 'vim-airline/vim-airline'` - adds a  lightweight statusline with mode, branch, file info etc.<br>
+`Plugin 'vim-airline/vim-airline-themes'`- themes for airline.<br>
+`Plugin 'jistr/vim-nerdtree-tabs'` -  keeps nerdtree open across tabs; syncs nerdtree state between tabpages.<br>
+`Plugin 'ntpeters/vim-better-whitespace'` - highlights and optionally strips trailing whitespace.<br>
+`Plugin 'luochen1990/rainbow'` - colour codes brackets () & braces {}, exceptional for deep nests in code.<br>
+`Plugin 'mhinz/vim-startify'` - start screen with recent files, sessions, bookmarks.<br>
+`Plugin 'Yggdroot/indentLine'` - displays indentation guides, exceptional for deep nests in code.<br>
+`Plugin 'vimlab/split-term.vim'` - adds terminal split window for vim.<br>
+`Plugin 'junegunn/goyo.vim'`- enables the use of "zen mode" which lets you focus on code.<br>
+`Plugin 'junegunn/limelight.vim'` - limelight highlights your current line/code block & dims unfocused sections.<br>
 
 ### navigation
-`Plugin 'ludovicchabant/vim-gutentags'` - automatic tag generation; keeps tags updated in the background.
-`Plugin 'junegunn/fzf.vim'` - enables fuzzy searching inside vim.
-`Plugin 'scrooloose/nerdcommenter'` - smart commenting/uncommenting for many languages.
-`Plugin 'Townk/vim-autoclose'` -  auto‑closes brackets, quotes, and pairs; (), {}, [], "", etc.
-`Plugin '907th/vim-auto-save'` - enables autosaving.
+`Plugin 'ludovicchabant/vim-gutentags'` - automatic tag generation; keeps tags updated in the background.<br>
+`Plugin 'junegunn/fzf.vim'` - enables fuzzy searching inside vim.<br>
+`Plugin 'scrooloose/nerdcommenter'` - smart commenting/uncommenting for many languages.<br>
+`Plugin 'Townk/vim-autoclose'` -  auto‑closes brackets, quotes, and pairs; (), {}, [], "", etc.<br>
+`Plugin '907th/vim-auto-save'` - enables autosaving.<br>
 
 ### git integration
-`Plugin 'tpope/vim-fugitive'` - definitive git interface for vim (:Gstatus, :Gdiff, :Gblame, etc.).
-`Plugin 'airblade/vim-gitgutter'` - shows git diff signs in the gutter (added/modified/removed lines).
+`Plugin 'tpope/vim-fugitive'` - definitive git interface for vim (:Gstatus, :Gdiff, :Gblame, etc.).<br>
+`Plugin 'airblade/vim-gitgutter'` - shows git diff signs in the gutter (added/modified/removed lines).<br>
 
 ### code completion
-`Plugin 'vim-scripts/ctags.vim'` - helper for ctags navigation; integrates tag lookups with vim commands.
-`Plugin 'ycm-core/YouCompleteMe'` - semantic code completion engine.
+`Plugin 'vim-scripts/ctags.vim'` - helper for ctags navigation; integrates tag lookups with vim commands.<br>
+`Plugin 'ycm-core/YouCompleteMe'` - semantic code completion engine.<br>
 
 ### themes
 
-`Plugin 'ayu-theme/ayu-vim'`  - ayu is a good call if you appreciate a light theme. the dark and mirage variants are even nicer.
-`Plugin 'dntstck/vim-rusted'` - my own creation, pairs well with breeze dark / adwaita dark.
+`Plugin 'ayu-theme/ayu-vim'`  - ayu is a good call if you appreciate a light theme. the dark and mirage variants are even nicer.<br>
+`Plugin 'dntstck/vim-rusted'` - my own creation, pairs well with breeze dark / adwaita dark.<br>
 
 ## vim tweaks
 
