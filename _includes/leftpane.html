@@ -56,9 +56,14 @@
    {% assign top_count = 0 %}
 
    {% for tag in tag_list %}
-    {% assign name = tag[0] %}
-    {% assign posts = tag[1] %}
-    {% assign count = posts | size %}
+  {% assign name = tag[0] %}
+
+  {% if name == "devlogs" %}
+    {% continue %}
+  {% endif %}
+
+  {% assign posts = tag[1] %}
+  {% assign count = posts | size %}
 
   {% if count > top_count %}
     {% assign top_tag = name %}
