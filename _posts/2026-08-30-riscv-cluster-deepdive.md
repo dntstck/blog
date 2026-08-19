@@ -35,7 +35,7 @@ with its local registry for risc‑v containers, on‑device metrics collection,
 - each rv2 mounted on its own tray
 - nvme drives mounted directly under each board
 
-![rv2 trays](assets/img/rv2-trays.png)
+![rv2 trays](assets/img/rv2-trays.jpeg)
 
 ## network
 
